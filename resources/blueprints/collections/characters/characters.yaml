@@ -1,0 +1,51 @@
+title: Characters
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          width: 66
+          validate:
+            - required
+      -
+        handle: image
+        field:
+          mode: list
+          container: assets
+          folder: img/encyclopedias/npc
+          restrict: false
+          allow_uploads: false
+          show_filename: true
+          max_files: 1
+          display: Image
+          type: assets
+          icon: assets
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - characters
+          max_items: 1
+          listable: false
+          localizable: true

@@ -1,0 +1,54 @@
+title: Abilities
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          width: 33
+          validate:
+            - required
+      -
+        handle: new_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'New Name'
+          type: text
+          icon: text
+          width: 33
+          listable: true
+          instructions_position: above
+      -
+        handle: prerequisite
+        field:
+          mode: typeahead
+          create: false
+          collections:
+            - abilities
+          display: Prerequisite
+          type: entries
+          icon: entries
+          width: 33
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - abilities
+          max_items: 1
+          listable: false
+          localizable: true

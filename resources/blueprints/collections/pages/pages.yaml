@@ -1,0 +1,83 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          width: 50
+      -
+        handle: subtext
+        field:
+          input_type: text
+          antlers: false
+          display: Subtext
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: below
+          width: 25
+      -
+        handle: thumbnail
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: false
+          show_filename: true
+          max_files: 1
+          display: Thumbnail
+          type: assets
+          icon: assets
+          width: 25
+          listable: hidden
+          instructions_position: above
+      -
+        handle: content
+        field:
+          type: markdown
+          localizable: true
+          instructions_position: above
+          listable: hidden
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: true
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true
+  meta:
+    display: Meta
+    fields:
+      -
+        import: meta

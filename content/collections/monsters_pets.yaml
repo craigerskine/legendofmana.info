@@ -1,0 +1,13 @@
+title: 'Monsters & Pets'
+template: default
+layout: layout
+taxonomies:
+  - monster_type
+revisions: false
+route: '/encyclopedias/{parent_uri}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false

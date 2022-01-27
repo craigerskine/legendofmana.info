@@ -1,0 +1,64 @@
+{{ content }}
+
+{{ partial:_partials/heading
+  tag="h2" 
+  subtext="& Categories" 
+  img="/assets/img/encyclopedias/en-shops.png" 
+  border="yes" 
+}}
+Shop Item Types
+{{ /partial:_partials/heading }}
+
+<p>Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton? Check out the following tables to see which items are located at what Level Shop. There is also a list of the seeds and jewels available at the Bone Fortress and Bejeweled City.</p>
+
+<ul class="m-0 mb-12 grid(& flow-row cols-2) gap-4 md:(grid-cols-4)">
+  {{ collection:shops type:is="town" sort="order" }}
+    <li class="flex flex-col">
+      <p class="mb-1 py-px font-bold">{{ title }}</p>
+      <ul class="m-0 text-sm flex-1 space-y-1">
+        {{ shop_types }}
+          <li><i class="fal fa-level-up fa-fw fa-rotate-90 mr-2 opacity-50"></i> {{ value }}</li>
+        {{ /shop_types }}
+      </ul>
+    </li>
+  {{ /collection:shops }}
+</ul>
+
+<hr class="mb-12 invisible" />
+
+{{ partial:_partials/heading
+  tag="h2" 
+  subtext="& Material Prices" 
+  img="/assets/img/encyclopedias/en-shops.png" 
+  border="yes" 
+}}
+Shop Levels
+{{ /partial:_partials/heading }}
+
+<p><b>Note:</b> These items may not always appear. Your shop levels and their inventory will depend on how/when you placed your Artifacts on the world map. If you are following the guide on this site you should find these ingredients at these shops:</p>
+
+<ul class="m-0">
+  {{ collection:shops type:is="price" sort="order" }}
+    <li id="technique-{{ slug }}">
+      <div class="mb-12 lg:(flex)">
+        <div class="lg:(w-1/3)">
+          {{ partial:_partials/heading
+            tag="h2" 
+            :subtext="location:title" 
+            border="yes" 
+          }}
+          {{ title }}
+          {{ /partial:_partials/heading }}
+        </div>
+        <ul class="m-0 flex-1 lg:(ml-2)">
+          <li><h6 class="mb-2 px-2 border(b pri-500 opacity-50) font-bold hidden items-center lg:(flex)">Material <small class="ml-auto text-xs uppercase opacity-90">Price</small></h6></li>
+          {{ materials }}
+            <li class="mb-1 py-1 px-2 flex items-center rounded{{ if count % 2 == 0 }} bg-pri-800 bg-opacity-10{{ /if }}">
+              <strong>{{ material }}</strong> <span class="ml-auto text-right">{{ cost }} <sup class="italic opacity-90">$L</sup></span>
+            </li>
+          {{ /materials }}
+        </ul>
+      </div>
+    </li>
+  {{ /collection:shops }}
+</ul>

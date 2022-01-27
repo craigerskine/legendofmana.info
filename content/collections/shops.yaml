@@ -1,0 +1,10 @@
+title: Shops
+template: shops/index
+layout: layout
+revisions: false
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+structure:
+  root: false

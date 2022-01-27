@@ -1,0 +1,28 @@
+title: Site
+data:
+  name: 'Legend of Mana Info'
+  description: 'Legend of Mana walkthrough, guide, recipes, encyclopedias. Fan Site by Craig Erskine.'
+  author: 'Craig Erskine'
+  donate:
+    -
+      title: Paypal
+      icon: paypal
+      link: 'https://paypal.me/qrayg'
+      type: sponsor
+      enabled: true
+    -
+      title: Patreon
+      icon: patreon
+      link: 'https://patreon.com/qrayg/'
+      type: sponsor
+      enabled: true
+    -
+      title: Github
+      icon: github
+      link: 'https://github.com/sponsors/craigerskine'
+      type: sponsor
+      enabled: true
+  analytics: |-
+    // google analytics
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-6318307-4', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')

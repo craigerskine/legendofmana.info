@@ -1,0 +1,7 @@
+---
+id: d458ad46-e6da-4c81-a611-39ec54a948ae
+blueprint: abilities
+title: Jump
+updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
+updated_at: 1642794925
+---

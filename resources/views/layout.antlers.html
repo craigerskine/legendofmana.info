@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" class="bg-[#0A0D0A]" hidden>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>
+      {{ meta_title ?? title }} - 
+      {{ if segment_2 == 'monsters-pets' }}Monsters & Pets - {{ /if }}
+      {{ if segment_2 == 'produce' }}Produce - {{ /if }}
+      {{ site:name ?? 'Legend of Mana Fan Site' }}
+    </title>
+    <meta name="description" content="{{ site:description }}" />
+    <meta name="author" content="{{ site:author }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6d6156d427.js" crossorigin="anonymous"></script>
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
+  </head>
+  <body id="sect-" class="font-serif text-pri-900">
+
+    <div class="page min-h-screen flex flex-col divide(y gray-500 opacity-10)" v-cloak>
+      <header class="bg-sec-500 relative z-10 overflow-hidden">
+        <nav class="nav relative z-20">
+          <ul class="container mx-auto mb-0 lg:py-4 px-4 uppercase flex flex-wrap items-center lg:space-x-8">
+            <li class="flex-1 lg:flex-none order-first">
+              <a href="/" class="hover:animate-waggle focus:animate-waggle inline-block">
+                <img src="/assets/img/logo.png" alt="Legend of Mana: Fan Site" />
+              </a>
+            </li>
+            <li class="w-full lg:w-auto lg:flex-1 flex lg:justify-end">
+              <ul class="mx-auto lg:m-0 py-12 lg:py-0 text-pri-700 text-sm lg:text-base flex items-center space-x-5 lg:space-x-8">
+                {{ nav:main }}
+                  <li class="leading-tight">
+                    <a href="{{ url }}" class="group text-pri-700 hover:text-pri-900 focus:text-pri-900 font-normal flex flex-col lg:items-end relative{{ is_current || is_parent ?= ' active' }}">
+                      {{ title }}
+                      <small class="text-xs normal-case tracking-widest order-first">{{ subtext }}</small>
+                      <b class="w-full flex absolute -bottom-1 inset-x-0 transition-all"><b class="m-auto py-px group-hover:w-full bg-pri-700 opacity-50 transition-all {{ is_current || is_parent ? 'w-full' : 'w-0' }}"></b></b>
+                    </a>
+                  </li>
+                {{ /nav:main }}
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section class="mast relative z-50">
+          {{ if is_homepage }}
+            <div class="container mx-auto pt-4 px-0 pb-48 text-center lg:(pt-16 px-4 text-left)">
+              <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
+                {{ nav:home_mast }}
+                <li {{ if first }}class="row-span-2"{{ /if }}>
+                  <a href="{{ url }}" class="group block relative hover:animate-waggle focus:animate-waggle{{ if first }} lb{{ /if }}">
+                    <figure>
+                      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] rounded shadow-md ring-1 ring-black ring-opacity-75" />
+                      <figcaption class="py-px px-3 bg-pri-900 text(white xs) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ title }}</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                {{ /nav:home_mast }}
+              </ul>            
+            </div>
+          {{ else }}
+            <div class="container mx-auto pt-4 px-0 pb-32 lg:(pt-16 px-4)">
+              <h1 class="m-0 pt-4 px-2 text-lg flex items-center justify-center sm:(text-3xl) lg:(pt-0 justify-start)">
+                <img alt="{{ title | substr:0:1 }}" class="mr-1" src="/assets/img/ltr/{{ if meta_title }}{{ meta_title | substr:0:1 | lower }}{{ else }}{{ title | substr:0:1 | lower }}{{ /if }}.png" />
+                <i class="sr-only">{{ if meta_title }}{{ meta_title | substr:0:1 }}{{ else }}{{ title | substr:0:1 }}{{ /if }}</i>
+                <b class="relative">
+                  {{ if meta_title }}{{ meta_title | substr:1 }}{{ else }}{{ title | substr:1 }}{{ /if }}
+                  {{ if story_arc }}<small class="py-px px-3 ring-1 ring-inset ring-current text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }}{{ title }}{{ /story_arc }}</small>{{ /if }}
+                </b>
+              </h1>
+            </div>
+          {{ /if }}
+          <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100"><div class="mountains h-32 bg(repeat-x top) opacity-25" style="background-image: url('/assets/img/mountains.png')"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40"><div class="tree-line h-32 bg(no-repeat bottom) flex" style="background-image: url('/assets/img/tree-line-center.png');"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-40" data-modifier="30"><div class="mist h-32" style="background-image: linear-gradient(180deg, rgba(255,255,255,0) 50%, #FFF 100%);"></div></div>
+          <div class="tree hidden absolute right-4 z-20 animate-float top-0 lg:(block)"><img src="/assets/img/tree.png" alt="Mana Tree"{{ if ! is_homepage }} class="w-48"{{ /if }} /></div>
+        </section>
+        <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] animate-slide" data-modifier="400" style="background-image: url('/assets/img/clouds.png');" aria-hidden="true"></div>
+        <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
+          <img src="/assets/img/dotw/{{ now format='D' }}.png" alt="{{ partial:_partials/mana_day }}{{ now format='D' }}{{ /partial:_partials/mana_day }}" class="animate-wiggle group-hover:animate-none" />
+          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 group-hover:opacity-75 absolute left-2 group-hover:left-6 top-1/2 rounded shadow-lg transform -translate-y-1/2 transition-all duration-200"><small class="block opacity-50">Today is</small>{{ partial:_partials/mana_day }}{{ now format="D" }}{{ /partial:_partials/mana_day }} Day</b>
+        </p>
+      </header>
+      <main class="py-8 pb-16 bg-pri-400 relative z-20">
+        <b class="-mt-4 w-full h-8 bg(top repeat-x) absolute top-1 inset-x-0" style="background-image: url('/assets/img/grass.png')"></b>
+        <div class="container mx-auto p-4">
+          <section class="row md:(-mx-4 flex)">
+            <article class="prose col w-full flex-1 md:(px-4)">
+              {{ template_content }}
+            </article>
+            <aside class="col flex md:(px-4 w-4/12)">
+              <div class="border(t l-0 black opacity-10) pt-8 pl-0 text-sm flex-1 space-y-10 md:(pt-0 pl-8 border(t-0 l))">
+                <section>
+                  {{ partial:_partials/heading
+                    tag="h3" 
+                    subtext="Guide" 
+                    link="/walkthrough" 
+                    img="/assets/img/encyclopedias/en-events.png" 
+                    border="yes" 
+                  }}
+                    Walkthrough
+                  {{ /partial:_partials/heading }}
+                  <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                    {{ nav from="walkthrough" }}
+                      {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
+                        {{ title }}
+                      {{ /partial:_partials/link_aside }}
+                    {{ /nav }}
+                  </ul>
+                </section>
+                <section>
+                  {{ partial:_partials/heading
+                    tag="h3" 
+                    subtext="Info" 
+                    link="/encyclopedias" 
+                    img="/assets/img/encyclopedias/en-info.png" 
+                    border="yes" 
+                  }}
+                    Encyclopedias
+                  {{ /partial:_partials/heading }}
+                  <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                    {{ nav from="encyclopedias" }}
+                      {{ if count <= 6 }}
+                      {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
+                        {{ title }}
+                      {{ /partial:_partials/link_aside }}
+                      {{ /if }}
+                    {{ /nav }}
+                  </ul>
+                </section>
+              </div>
+            </aside>
+          </section>
+        </div>
+        <div class="h-[32px] bg(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/assets/img/border-bottom.png');"/>
+      </main>
+      <footer class="pt-10 pb-6 text-pri-500 text-sm">
+        <div class="container mx-auto px-4">
+          <div class="row -mx-4 flex">
+            <div class="col px-4 w-1/2 md:w-3/4">
+              <div class="row md:(-mx-4 flex)">
+                <div class="col md:px-4 md:w-1/3">
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Game</li>
+                    {{ partial:_partials/nav_footer link="/" }} Home {{ /partial:_partials/nav_footer }}
+                    {{ partial:_partials/nav_footer link="https://www.play-asia.com/search/LOMR?tagid=145091" }} Buy Game {{ /partial:_partials/nav_footer }}
+                    {{ partial:_partials/nav_footer link="https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091" }} Buy OST {{ /partial:_partials/nav_footer }}
+                  </ul>
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Walkthrough</li>
+                    {{ nav from="walkthrough" }}
+                      {{ partial:_partials/nav_footer :link="url" }}
+                        {{ meta_title ?? title }}
+                      {{ /partial:_partials/nav_footer }}
+                    {{ /nav }}
+                  </ul>
+                </div>
+                <div class="col md:px-4 md:w-1/3">
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Encyclopedias</li>
+                    {{ nav from="encyclopedias" }}
+                      {{ partial:_partials/nav_footer :link="url" }}
+                        {{ meta_title ?? title }}
+                      {{ /partial:_partials/nav_footer }}
+                    {{ /nav }}
+                  </ul>
+                </div>
+                <div class="col md:px-4 md:w-1/3">
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Extras</li>
+                    {{ partial:_partials/nav_footer link="/extras/" }} Wallpaper {{ /partial:_partials/nav_footer }}
+                    {{ partial:_partials/nav_footer link="/extras/" }} Game Manual {{ /partial:_partials/nav_footer }}
+                    {{ partial:_partials/nav_footer link="/extras/" }} Save File {{ /partial:_partials/nav_footer }}
+                  </ul>
+                  <ul class="m-0 mb-4 space-y-2"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="col px-4 w-1/2 md:w-1/4 text-xs text-right">
+              <p class="foot-copy mb-5">&copy;{{ now format="Y" }} all rights reserved.<br />media copyright Square Enix.</p>
+              <p class="foot-credit mb-5">Lovingly crafted by <a href="http://craigerskine.com/" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 inline-block hover:underline focus:underline">{{ site:author }}</a></p>
+              <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate/Tip/Support</h4>
+              <ul class="foot-donate m-0 inline-flex space-x-4">
+                {{ site:donate }}
+                  <li>
+                    <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 transition">
+                      <i class="fab fa-fw fa-2x fa-{{ icon }}" title="Donate via {{ title }}"></i>
+                    </a>
+                  </li>
+                {{ /site:donate }}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div id="mast-story" class="modal">
+        <img src="/assets/img/mana-story.jpg" alt="The Many Story" />
+      </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+    <script>
+      // twind
+      twind.setup({
+        mode: "silent",
+        theme: {
+          screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+          },
+          extend: {
+            colors: {
+              gray: twindColors.gray,
+              'pri': {
+                '50': '#F8F9F8', 
+                '100': '#F2F4F1', 
+                '200': '#DDE3DD', 
+                '300': '#C9D3C9', 
+                '400': '#A1B1A0', 
+                '500': '#789077', 
+                '600': '#6C826B', 
+                '700': '#5A6C59', 
+                '800': '#485647', 
+                '900': '#151A15',
+              },
+              'sec': {
+                '50': '#FEFEFF',
+                '100': '#FCFEFE',
+                '200': '#F8FCFD',
+                '300': '#F4FAFB',
+                '400': '#ECF7F9',
+                '500': '#E4F3F6',
+                '600': '#CDDBDD',
+                '700': '#ABB6B9',
+                '800': '#899294',
+                '900': '#707779',
+              },
+            },
+            spacing: {
+              '50': '50px',
+            },
+            fontFamily: (theme) => ({ serif: 'Noto Serif,'+ theme('fontFamily.serif') }),
+            keyframes: {
+              'sk-stretchdelay': {
+                '0%,40%,100%': { transform: 'scaleY(0.5)' },
+                '20%': { transform: 'scaleY(1.0)' },
+              },
+              'waggle': {
+                '0%': { transform: 'rotate(-2deg)' },
+                '50%': { transform: 'rotate(1deg)' },
+                '100%': { transform: 'rotate(0deg)' },
+              },
+              'wiggle': {
+                '0%': { transform: 'rotate(-20deg)' },
+                '10%': { transform: 'rotate(10deg)' },
+                '25%': { transform: 'rotate(0deg)' },
+              },
+              'float': {
+               '0%': { transform: 'translate(0, 0)' },
+               '100%': { transform: 'translate(0, 1rem)' },
+              },
+              'slide': {
+                'from': { 'background-position': '0 0' },
+                'to': { 'background-position': '-639px 0' },
+              },
+            },
+            animation: {
+              'waggle': 'waggle .25s',
+              'wiggle': 'wiggle 1s alternate infinite',
+              'float': 'float 4s ease-in-out alternate infinite',
+              'slide': 'slide 60s linear infinite',
+            },
+          },
+        },
+      })
+      twind.tw(() => ({
+        '@global': {
+          'a:not([class]),a[class="lb"]': { '@apply': 'text-black font-bold transition', },
+          'a:not([class]):hover,a:not([class]):focus,a[class="lb"]:hover,a[class="lb"]:focus': { '@apply': 'text-opacity-90 underline', },
+          'p:not([class]),ul:not([class]),ol:not([class]),table:not([class])': { '@apply': 'mb-5 border-current', },
+          'ul:not([class]) ul:not([class]),ul:not([class]) ol:not([class]),ol:not([class]) ol:not([class]),ol:not([class]) ul:not([class])': { '@apply': 'mb-0', },
+          'ul:not([class])': { '@apply': 'ml-5 list-disc', },
+          'ol:not([class])': { '@apply': 'ml-5 list-decimal', },
+          'blockquote:not([class])': { '@apply': 'ml-5 pl-5 border(l-2 pri-500 opacity-50)', },
+          'i:not([class]),em:not([class])': { '@apply': 'font-bold', },
+          'hr,hr:not([class])': { '@apply': 'mb-5 border-current opacity-20', },
+          'h1,h1:not([class]),h2,h2:not([class]),h3,h3:not([class]),h4,h4:not([class]),h5,h5:not([class]),h6,h6:not([class])': { '@apply': 'mb-5 text(3xl gray-800 opacity-90) font-bold', },
+          'h2,h2:not([class])': { '@apply': 'text-2xl', },
+          'h3,h3:not([class])': { '@apply': 'text-xl', },
+          'h4,h4:not([class])': { '@apply': 'text-lg', },
+          'h5,h5:not([class])': { '@apply': 'text-base', },
+          'h6,h6:not([class])': { '@apply': 'text-sm', },
+          'table:not([class])': { '@apply': 'w-full divide(y gray-600 opacity-25)', },
+          'table:not([class]) thead tr': { '@apply': 'text(sm gray-700) uppercase', },
+          'table:not([class]) th,table:not([class]) td': { '@apply': 'py-[2px] px-2 text-left', },
+          'table:not([class]) tbody': { '@apply': 'divide(y gray-600 opacity-25)', },
+          'table:not([class]) th': { '@apply': 'text(xs pri-900) uppercase', },
+          '.aspect-wide': { '@apply': 'mb-5 pb-[56.25%] h-0 block overflow-hidden relative', },
+          '.aspect-wide > iframe,.aspect-wide > embed,.aspect-wide > object,.aspect-wide > video': { '@apply': 'm-0 border-0 w-full h-full absolute inset-0', },
+          '.prose h3:not([class]),.prose h2:not([class])': { '@apply': 'font-bold leading-normal text-pri-900 uppercase flex items-center', },
+          '.prose h3:not(:first-child)': { '@apply': 'mt-16', },
+          '.prose h3:not([class]):before,.prose h3:not([class]):after,.prose h2:not([class]):before,.prose h2:not([class]):after': { '@apply': 'mr-3 w-4 h-4 bg-current opacity-20 transform -skew-x-12', 'content': '""', },
+          '.prose h3:after,.prose h2:after': { '@apply': 'mr-0 ml-3 w-auto flex-1', },
+          '.prose h3 a,.prose h2 a': { '@apply': 'text-current', },
+          '.prose h3 a:hover,.prose h3 a:focus,.prose h2 a:hover,.prose h2 a:focus': { '@apply': 'text-current text-opacity-50 no-underline', },
+          '.btn': { '@apply': 'px-3 py-2 bg(pri-200 opacity-25) font-normal inline-flex items-center uppercase rounded ring(1 pri-900 opacity-50) transition', },
+          '.btn:hover,.btn:focus': { '@apply': 'bg-opacity-50 ring-opacity-100 shadow-lg', },
+          '.lb': { '@apply': 'inline-block relative', },
+          '.lb .img-th + .img-note': { '@apply': 'p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded transition', },
+          '.lb:hover .img-th + .img-note,.lb:focus .img-th + .img-note': { '@apply': 'opacity-100', },
+          '.modal': { '@apply': 'p-0 max-w-md text-left align-middle hidden relative z-[2]', },
+          '.modal a.close-modal': {'@apply': 'w-10 h-10 block bg(contain norepeat center) absolute -top-5 -right-5', 'font-size': '0px', 'text-indent': '-9999px', 'background-image': 'url(\'/assets/img/modal-close.svg\')', },
+          '.modal img': { '@apply': 'w-auto h-auto max-w-full max-h-[90vh]', },
+          '.blocker': { '@apply': 'p-5 w-full h-full bg(black opacity-75) text-center overflow-auto z-[9999] flex items-center justify-center fixed inset-0', },
+          '.blocker:before': { 'content': '""', '@apply': 'mr-[-0.05em] h-full align-middle inline-block', },
+          '.blocker.behind': { '@apply': 'bg-transparent', },
+          '.scene': { 'transform': 'translateY(var(--translateY))', 'will-change': 'transform', },
+          '.tree-line:before,.tree-line:after': { 'margin': '0 12rem 0 0', 'background': 'url(\'/assets/img/tree-line.png\') repeat-x bottom', 'content': '""', 'flex': '1 1 0%', 'position': 'relative', 'z-index': '-1', },
+          '.tree-line:after': { 'margin': '0 0 0 12rem', },
+        }
+      }))
+      twindObserve.observe(document.documentElement);
+      document.documentElement.removeAttribute('hidden');
+    </script>
+
+  </body>
+</html>

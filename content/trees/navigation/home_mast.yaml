@@ -1,0 +1,43 @@
+tree:
+  -
+    id: c4ab92cb-8d3f-49b9-a87d-7cc7bea4c3a4
+    title: 'The Mana Story'
+    url: '#mast-story'
+    data:
+      image: cta-mana-story.png
+  -
+    id: d3bfe402-2978-4f19-bd9a-708b92a00713
+    title: 'Event Walkthrough'
+    url: /walkthrough/events/
+    data:
+      image: cta-event-walkthrough.png
+  -
+    id: a18a1f40-93af-4a10-8b85-29ddb9283b17
+    title: Produce
+    url: /encyclopedias/produce/
+    data:
+      image: cta-produce.png
+  -
+    id: cc28fa69-281d-4be1-91c0-3baec4211265
+    title: 'Maps / Artifacts'
+    url: /walkthrough/maps/
+    data:
+      image: cta-maps-af.png
+  -
+    id: d97bfa4b-d1b0-4241-96d0-8c5be861573a
+    title: 'Abilities / ST Techs'
+    url: /encyclopedias/abilities-techniques/
+    data:
+      image: cta-abilties-techs.png
+  -
+    id: 18f20410-0d04-425d-8cdf-04312c5eacd7
+    title: 'Monsters / Pets'
+    url: /encyclopedias/monsters-pets/
+    data:
+      image: cta-monsters-pets.png
+  -
+    id: b55b72f1-2ca2-4f07-ac55-c9ccefc83917
+    title: 'Tempering Recipes'
+    url: /encyclopedias/recipes/
+    data:
+      image: cta-tempering-recipes.png

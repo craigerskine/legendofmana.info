@@ -1,0 +1,14 @@
+{{# 
+  {{ partial:_partials/nav_footer
+    link="#" 
+  }}
+    Foo
+  {{ /partial:_partials/nav_footer }}
+#}}
+
+<li>
+  <a href="{{ link }}" class="font-normal text-pri-400 inline-flex items-center transition hover:(text-pri-100 underline) focus:(text-pri-100 underline)">
+    <img src="/assets/img/li.png" alt="Swirl" class="mr-2" />
+    {{ slot }}
+  </a>
+</li>

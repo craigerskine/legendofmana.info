@@ -1,0 +1,140 @@
+title: 'Monsters & Pets'
+sections:
+  monster:
+    display: Monster
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          width: 75
+      -
+        handle: monster_type
+        field:
+          type: terms
+          taxonomies:
+            - monster_type
+          display: 'Monster Type'
+          mode: select
+          width: 25
+          instructions_position: above
+          listable: hidden
+          max_items: 1
+          create: false
+      -
+        handle: monster_locations
+        field:
+          mode: select
+          create: false
+          collections:
+            - maps
+          display: 'Monster Locations'
+          type: entries
+          icon: entries
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: egg_locations
+        field:
+          mode: select
+          create: false
+          collections:
+            - maps
+          display: 'Egg Locations'
+          type: entries
+          icon: entries
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: monster_drops
+        field:
+          mode: keyed
+          keys:
+            1: null
+            2: null
+            3: null
+            4: null
+            5: null
+            6: null
+            7: null
+            8: null
+          display: 'Monster Drops'
+          type: array
+          icon: array
+          width: 50
+          listable: hidden
+          instructions_position: above
+      -
+        handle: pet_stats
+        field:
+          mode: keyed
+          keys:
+            Pow: null
+            Skl: null
+            Def: null
+            Mgc: null
+            HP: null
+            Spr: null
+            Chm: null
+            Lck: null
+          display: 'Pet Stats'
+          type: array
+          icon: array
+          listable: hidden
+          instructions_position: above
+          width: 50
+      -
+        handle: syncro_effect
+        field:
+          input_type: text
+          antlers: false
+          display: 'Syncro Effect'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: required_mana
+        field:
+          input_type: text
+          antlers: false
+          display: 'Required Mana'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+      -
+        handle: sell_price
+        field:
+          input_type: number
+          antlers: false
+          display: 'Sell Price'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - monsters_pets
+          max_items: 1
+          listable: false
+          localizable: true

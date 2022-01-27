@@ -1,0 +1,14 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: subtext
+        field:
+          input_type: text
+          antlers: false
+          display: Subtext
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

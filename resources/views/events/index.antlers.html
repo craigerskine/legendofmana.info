@@ -1,0 +1,15 @@
+<h2>Event Order</h2>
+
+<ul class="ml-0 mb-10 md:mb-0 text-xs grid grid-flow-row grid-cols-1 gap-y-10 gap-x-5 md:text-base md:grid-cols-2">
+  {{ collection:events sort="order" }}
+    <li>
+      <a href="{{ url }}" class="group inline-flex items-center">
+        <b class="mr-3 w-8 h-8 text-lg bg-pri-200 bg-opacity-25 font-normal inline-flex items-center justify-center uppercase rounded ring-1 ring-pri-900 ring-opacity-50 rounded-full group-hover:bg-opacity-50 group-hover:ring-opacity-100 group-hover:shadow-lg transition duration-200">{{ count }}</b>
+        <div class="flex-1">
+          <strong>{{ title }}</strong>
+          <small class="text-sm block opacity-90">{{ if story_arc }}{{ story_arc }}{{ title }}{{ /story_arc }}{{ else }}<i class="opacity-25" aria-hidden="true">~~~</i>{{ /if }}</small>
+        </div>
+      </a>
+    </li>
+  {{ /collection:events }}
+</ul>

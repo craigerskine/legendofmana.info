@@ -1,0 +1,16 @@
+{{# 
+  {{ partial:_partials/link_aside
+    link="#" 
+    lightbox="yes" 
+    subtext="Subtext" 
+  }}
+    Foo
+  {{ /partial:_partials/link_aside }}
+#}}
+
+<li>
+  <a href="{{ link }}" class="pb-4 border(b pri-500 opacity-50) font-bold block hover:(border(pri-900 opacity-100)) focus:(border(pri-900 opacity-100)) transition{{ if lightbox }} lb{{ /if }}">
+    {{ slot }}
+    {{ if subtext }}<b class="text-xs font-normal uppercase block opacity-75">{{ subtext }}</b>{{ /if }}
+  </a>
+</li>

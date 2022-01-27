@@ -1,0 +1,34 @@
+title: Color
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          width: 50
+          validate:
+            - required
+      -
+        handle: seed
+        field:
+          input_type: text
+          antlers: false
+          display: Seed
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          validate:
+            - required

@@ -1,0 +1,27 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          type: text
+          display: Name
+          width: 50
+      -
+        handle: email
+        field:
+          type: text
+          input: email
+          display: Email
+          width: 50
+          instructions_position: above
+          listable: hidden
+          input_type: text
+          antlers: false
+      -
+        handle: avatar
+        field:
+          type: assets
+          max_files: 1
+          container: assets

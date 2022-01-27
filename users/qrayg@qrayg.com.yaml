@@ -1,0 +1,12 @@
+name: qrayg
+super: true
+avatar: q-insta.jpg
+id: ea6393ed-5c2e-4abf-b78d-80b9488e0102
+password_hash: $2y$10$qUHV5kekNzUjH3yDwGFlyeyOixmiw3BHiubS98Oy1bfjYkB8CbByW
+preferences:
+  taxonomies:
+    monster_type:
+      after_save: create_another
+  collections:
+    monsters_pets:
+      per_page: 100
