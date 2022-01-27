@@ -24,19 +24,19 @@
     <div class="page min-h-screen flex flex-col divide(y gray-500 opacity-10)" v-cloak>
       <header class="bg-sec-500 relative z-10 overflow-hidden">
         <nav class="nav relative z-20">
-          <ul class="container mx-auto mb-0 lg:py-4 px-4 uppercase flex flex-wrap items-center lg:space-x-8">
-            <li class="flex-1 lg:flex-none order-first">
-              <a href="/" class="hover:animate-waggle focus:animate-waggle inline-block">
+          <ul class="container mx-auto mb-0 px-4 uppercase flex(& col) items-center lg:(py-4 flex-row space-x-8)">
+            <li class="pt-2 flex-1 lg:(pt-0 flex-none)">
+              <a href="/" class="inline-block hover:(animate-waggle) focus:(animate-waggle)">
                 <img src="/assets/img/logo.png" alt="Legend of Mana: Fan Site" />
               </a>
             </li>
-            <li class="w-full lg:w-auto lg:flex-1 flex lg:justify-end">
-              <ul class="mx-auto lg:m-0 py-12 lg:py-0 text-pri-700 text-sm lg:text-base flex items-center space-x-5 lg:space-x-8">
+            <li class="w-full flex lg:(w-auto flex-1 justify-end)">
+              <ul class="mx-auto py-5 text-pri-700 text-xs flex items-center space-x-5 lg:(m-0 py-0 text-base space-x-8)">
                 {{ nav include_home="false" }}
                   <li class="leading-tight">
-                    <a href="{{ url }}" class="group text-pri-700 hover:text-pri-900 focus:text-pri-900 font-normal flex flex-col lg:items-end relative{{ is_current || is_parent ?= ' active' }}">
+                    <a href="{{ url }}" class="group text-pri-700 font-bold flex(& col) hover:(text-pri-900) focus:(text-pri-900) lg:(font-normal items-end) relative{{ is_current || is_parent ?= ' active' }}">
                       {{ title }}
-                      <small class="text-xs normal-case tracking-widest order-first">{{ subtext }}</small>
+                      <small class="text-xs normal-case font-normal order-first lg:(tracking-widest)">{{ subtext }}</small>
                       <b class="w-full flex absolute -bottom-1 inset-x-0 transition-all"><b class="m-auto py-px group-hover:w-full bg-pri-700 opacity-50 transition-all {{ is_current || is_parent ? 'w-full' : 'w-0' }}"></b></b>
                     </a>
                   </li>
@@ -50,11 +50,11 @@
             <div class="container mx-auto pt-4 px-0 pb-48 text-center lg:(pt-16 px-4 text-left)">
               <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
                 {{ nav:home_mast }}
-                <li {{ if first }}class="row-span-2"{{ /if }}>
+                <li{{ if first }} class="row-span-2"{{ /if }}>
                   <a href="{{ url }}" class="group block relative hover:animate-waggle focus:animate-waggle{{ if first }} lb{{ /if }}">
                     <figure>
                       <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] rounded shadow-md ring-1 ring-black ring-opacity-75" />
-                      <figcaption class="py-px px-3 bg-pri-900 text(white xs) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ title }}</figcaption>
+                      <figcaption class="py-px px-3 bg-pri-900 text(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ title }}</figcaption>
                     </figure>
                   </a>
                 </li>
@@ -80,8 +80,8 @@
         </section>
         <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] animate-slide" data-modifier="400" style="background-image: url('/assets/img/clouds.png');" aria-hidden="true"></div>
         <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
-          <img src="/assets/img/dotw/{{ now format='D' }}.png" alt="{{ partial:_partials/mana_day }}{{ now format='D' }}{{ /partial:_partials/mana_day }}" class="animate-wiggle group-hover:animate-none" />
-          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 group-hover:opacity-75 absolute left-2 group-hover:left-6 top-1/2 rounded shadow-lg transform -translate-y-1/2 transition-all duration-200"><small class="block opacity-50">Today is</small>{{ partial:_partials/mana_day }}{{ now format="D" }}{{ /partial:_partials/mana_day }} Day</b>
+          <img src="/assets/img/dotw/!!!NOW!!!.png" alt="!!!NAME!!!" class="animate-wiggle group-hover:animate-none" />
+          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 group-hover:opacity-75 absolute left-2 group-hover:left-6 top-1/2 rounded shadow-lg transform -translate-y-1/2 transition-all duration-200"><small class="block opacity-50">Today is</small><span>!!!NAME!!!</span> Day</b>
         </p>
       </header>
       <main class="py-8 pb-16 bg-pri-400 relative z-20">
@@ -137,7 +137,7 @@
         </div>
         <div class="h-[32px] bg(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/assets/img/border-bottom.png');"/>
       </main>
-      <footer class="pt-10 pb-6 text-pri-500 text-sm">
+      <footer class="pt-10 pb-6 text(pri-500 xs) md:(text-sm)">
         <div class="container mx-auto px-4">
           <div class="row -mx-4 flex">
             <div class="col px-4 w-1/2 md:w-3/4">
@@ -182,7 +182,7 @@
             <div class="col px-4 w-1/2 md:w-1/4 text-xs text-right">
               <p class="foot-copy mb-5">&copy;{{ now format="Y" }} all rights reserved.<br />media copyright Square Enix.</p>
               <p class="foot-credit mb-5">Lovingly crafted by <a href="http://craigerskine.com/" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 inline-block hover:underline focus:underline">{{ site:author }}</a></p>
-              <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate/Tip/Support</h4>
+              <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
               <ul class="foot-donate m-0 inline-flex space-x-4">
                 {{ site:donate }}
                   <li>

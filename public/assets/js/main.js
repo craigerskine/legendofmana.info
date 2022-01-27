@@ -36,26 +36,14 @@ $(function(){
     }).start()
   });
 
-  // list check
-  // function nextCheck(e){
-  //  var list = $('.list-check li').removeClass('hot');
-  //  var index = list.index($(e.target));
-  //  index = (index + 1) % list.length;
-  //  list.eq(index).focus().addClass('hot');
-  // }
-
-  // $('.list-check li:not(:has(.hot))').attr('tabindex', 0).on('click', function(){
-  //   nextCheck;
-  //   if(!$(this).hasClass('active')){
-  //     $(this).addClass('active');
-  //   }
-  // }).on('keydown', function(e){
-  //   if(e.keyCode === 32 || e.keyCode === 13){
-  //     e.preventDefault();
-  //     $(this).click();
-  //   }
-  // });
-  // $('.list-check li').click(nextCheck).first().focus();
+  // mana day
+  var realDate = new Date();
+  var realDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var manaDays = ['Mana Holy', 'Aura', 'Salamander', 'Undine', 'Dryad', 'Jinn', 'Gnome'];
+  var realDay = realDays[realDate.getDay()];
+  var manaDay = manaDays[realDate.getDay()];
+  $('#head-day img').attr({'src': '/assets/img/dotw/'+ realDay +'.png', 'alt': manaDay});
+  $('#head-day b span').text(manaDay);
 
   // modal
   $('.lb').on('click', function(e){
