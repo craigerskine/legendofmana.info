@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>
-      {{ meta_title ?? title }} - 
-      {{ if segment_2 == 'monsters-pets' }}Monsters & Pets - {{ /if }}
-      {{ if segment_2 == 'produce' }}Produce - {{ /if }}
+      {{ if ! is_homepage }}
+        {{ meta_title ?? title }} - 
+        {{ if segment_2 == 'monsters-pets' }}Monsters & Pets - {{ /if }}
+        {{ if segment_2 == 'produce' }}Produce - {{ /if }}
+      {{ /if }}
       {{ site:name ?? 'Legend of Mana Fan Site' }}
     </title>
     <meta name="description" content="{{ site:description }}" />
