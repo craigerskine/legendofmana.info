@@ -32,7 +32,7 @@
             </li>
             <li class="w-full lg:w-auto lg:flex-1 flex lg:justify-end">
               <ul class="mx-auto lg:m-0 py-12 lg:py-0 text-pri-700 text-sm lg:text-base flex items-center space-x-5 lg:space-x-8">
-                {{ nav:main }}
+                {{ nav include_home="false" }}
                   <li class="leading-tight">
                     <a href="{{ url }}" class="group text-pri-700 hover:text-pri-900 focus:text-pri-900 font-normal flex flex-col lg:items-end relative{{ is_current || is_parent ?= ' active' }}">
                       {{ title }}
@@ -40,7 +40,7 @@
                       <b class="w-full flex absolute -bottom-1 inset-x-0 transition-all"><b class="m-auto py-px group-hover:w-full bg-pri-700 opacity-50 transition-all {{ is_current || is_parent ? 'w-full' : 'w-0' }}"></b></b>
                     </a>
                   </li>
-                {{ /nav:main }}
+                {{ /nav }}
               </ul>
             </li>
           </ul>

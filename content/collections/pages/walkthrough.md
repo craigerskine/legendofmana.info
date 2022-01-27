@@ -3,8 +3,8 @@ id: 90ab4953-7ba7-49bf-9699-87cd1e8baca1
 blueprint: pages
 title: Walkthrough
 updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
-updated_at: 1643211674
-subtext: Guide
+updated_at: 1643247137
+subtext: 'Game Guide'
 ---
 ## Game Systems
 
