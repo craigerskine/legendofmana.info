@@ -4,9 +4,9 @@ blueprint: monsters_pets
 title: 'Dark Stalker'
 monster_type: demonic
 monster_locations:
-  - 'Bejeweled City'
-  - 'Tower of Leires'
-  - Underworld
+  - 1d688ea1-febb-43a7-879a-1626dafb29a7
+  - 1b81296f-e448-4faa-9423-879638b59d06
+  - d6d66be8-d4c3-4842-ac87-ad79aa5385dd
 egg_locations: Jungle
 syncro_effect: Darkness
 sell_price: '600'

@@ -4,13 +4,13 @@ blueprint: monsters_pets
 title: 'Rattler Boa'
 monster_type: reptile
 monster_locations:
-  - 'Gato Grottoes'
-  - Lucemia
-  - 'Mindas Ruins'
-  - 'White Forest'
+  - 8be3dc98-1680-4a9b-9b2f-08868bb276bb
+  - ed397928-b478-4ce6-b35e-93731aca1436
+  - 6b3b7cac-0422-4e4c-8be2-acd6482c1adb
+  - b98bee9c-556e-4876-99d3-d13226edf59d
 egg_locations:
-  - 'Luon Highway'
-  - 'Mekiv Caverns'
+  - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
+  - 45401104-03f6-4dcd-8543-373ed020605d
 syncro_effect: Poison
 sell_price: '100'
 slug: rattler-boa

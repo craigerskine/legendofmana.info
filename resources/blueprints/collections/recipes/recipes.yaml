@@ -23,7 +23,7 @@ sections:
           listable: hidden
           instructions_position: above
       -
-        handle: content
+        handle: bard
         field:
           always_show_set_button: true
           sets:

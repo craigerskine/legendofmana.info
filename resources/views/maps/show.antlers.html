@@ -1,0 +1,69 @@
+{{ content }}
+
+<hr />
+
+<div class="md:flex md:space-x-6">
+  <div class="mb-8 w-full flex-1">
+    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-y-6 gap-x-4">
+      {{ collection:maps order:lte="26" sort="order" }}
+        <li>
+          <a href="#map-{{ slug }}" class="inline-flex items-center group lb">
+            <b class="mr-3 w-8 h-8 text-lg bg-pri-200 bg-opacity-25 font-normal inline-flex items-center justify-center uppercase rounded ring-1 ring-pri-900 ring-opacity-50 rounded-full group-hover:bg-opacity-50 group-hover:ring-opacity-100 group-hover:shadow-lg transition duration-200">{{ order }}</b>
+            <div>{{ title }}<small class="font-normal block opacity-90">{{ artifact }}</small></div>
+          </a>
+        </li>
+      {{ /collection:maps }}
+    </ul>
+  </div>
+  <div class="flex-none">
+    <ul class="mx-auto mb-5 w-48 h-48 bg-cover text(black opacity-75) font-bold inline-flex flex-wrap relative">
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center">25</li>
+      <li class="w-8 h-8 flex items-center justify-center">24</li>
+      <li class="w-8 h-8 flex items-center justify-center">16</li>
+      <li class="w-8 h-8 flex items-center justify-center">15</li>
+      <li class="w-8 h-8 flex items-center justify-center">14</li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center">22</li>
+      <li class="w-8 h-8 flex items-center justify-center">20</li>
+      <li class="w-8 h-8 flex items-center justify-center">17</li>
+      <li class="w-8 h-8 flex items-center justify-center">23</li>
+      <li class="w-8 h-8 flex items-center justify-center">12</li>
+      <li class="w-8 h-8 flex items-center justify-center">18</li>
+      <li class="w-8 h-8 flex items-center justify-center">10</li>
+      <li class="w-8 h-8 flex items-center justify-center">13</li>
+      <li class="w-8 h-8 flex items-center justify-center">19</li>
+      <li class="w-8 h-8 flex items-center justify-center">11</li>
+      <li class="w-8 h-8 flex items-center justify-center">8</li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center">9</li>
+      <li class="w-8 h-8 flex items-center justify-center">26</li>
+      <li class="w-8 h-8 flex items-center justify-center">2</li>
+      <li class="w-8 h-8 flex items-center justify-center">21</li>
+      <li class="w-8 h-8 flex items-center justify-center">7</li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="w-8 h-8 flex items-center justify-center">4</li>
+      <li class="w-8 h-8 flex items-center justify-center">3</li>
+      <li class="w-8 h-8 flex items-center justify-center">1</li>
+      <li class="w-8 h-8 flex items-center justify-center">5</li>
+      <li class="w-8 h-8 flex items-center justify-center">6</li>
+      <li class="w-8 h-8 flex items-center justify-center"></li>
+      <li class="absolute inset-0 z-[-1]">
+        <img src="/assets/img/walkthrough/maps/world-zoom.jpg" alt="map" class="w-full h-full" />
+      </li>
+    </ul>
+    <ul class="ml-0">
+      <li>
+        <a href="#map-the-flames" class="inline-flex items-center group lb">
+          <b class="mr-3 w-8 h-8 text-lg bg-pri-200 bg-opacity-25 font-normal inline-flex items-center justify-center uppercase rounded ring-1 ring-pri-900 ring-opacity-50 rounded-full group-hover:bg-opacity-50 group-hover:ring-opacity-100 group-hover:shadow-lg transition duration-200">14<sup class="text-xs mt-1">*</sup></b>
+          <div>The Flames<small class="font-normal block opacity-90">Underworld</small></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

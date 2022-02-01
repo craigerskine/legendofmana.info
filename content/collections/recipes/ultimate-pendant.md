@@ -5,7 +5,7 @@ title: 'Ultimate Pendant'
 subtext: Emerald
 updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
 updated_at: 1643055577
-content:
+bard:
   -
     type: set
     attrs:

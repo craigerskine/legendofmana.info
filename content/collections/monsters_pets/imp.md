@@ -4,9 +4,9 @@ blueprint: monsters_pets
 title: Imp
 monster_type: demonic
 monster_locations:
-  - Junkyard
-  - Lucemia
-  - 'Luon Highway'
+  - 1704c29d-b3e9-49d9-8952-e297718e9846
+  - ed397928-b478-4ce6-b35e-93731aca1436
+  - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
 egg_locations: Jungle
 syncro_effect: 'Bonus XP'
 sell_price: '300'

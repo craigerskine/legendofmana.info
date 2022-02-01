@@ -30,8 +30,12 @@ sections:
       -
         handle: content
         field:
-          type: markdown
-          localizable: true
+          antlers: false
+          display: Content
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
   sidebar:
     display: Sidebar
     fields:

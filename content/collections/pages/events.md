@@ -4,7 +4,8 @@ blueprint: pages
 title: Events
 parent: 90ab4953-7ba7-49bf-9699-87cd1e8baca1
 updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
-updated_at: 1643218167
+updated_at: 1643402362
 template: events/index
 subtext: Guide
+thumbnail: img/walkthrough/events.png
 ---

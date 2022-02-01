@@ -1,5 +1,5 @@
 title: Characters
-template: default
+template: characters/index
 layout: layout
 revisions: false
 sort_dir: asc

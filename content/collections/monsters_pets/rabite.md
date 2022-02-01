@@ -4,12 +4,12 @@ blueprint: monsters_pets
 title: Rabite
 monster_type: beast
 monster_locations:
-  - 'Fieg Snowfields'
-  - 'Luon Highway'
-  - 'White Forest'
+  - c834ae7c-df9f-49b5-9259-b9d8ee50d684
+  - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
+  - b98bee9c-556e-4876-99d3-d13226edf59d
 egg_locations:
-  - 'Lake Kilma'
-  - 'White Forest'
+  - d788eaf2-761b-4e4a-b17f-035e9670b950
+  - b98bee9c-556e-4876-99d3-d13226edf59d
 syncro_effect: 'HP Recovery'
 sell_price: '50'
 slug: rabite

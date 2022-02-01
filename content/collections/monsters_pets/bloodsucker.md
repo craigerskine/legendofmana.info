@@ -4,11 +4,11 @@ blueprint: monsters_pets
 title: Bloodsucker
 monster_type: aerial
 monster_locations:
-  - 'Mekiv Caverns'
-  - 'Tower of Leires'
+  - 45401104-03f6-4dcd-8543-373ed020605d
+  - 1b81296f-e448-4faa-9423-879638b59d06
 egg_locations:
-  - 'Luon Highway'
-  - 'Norn Peaks'
+  - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
+  - 696e2839-b3f7-481a-ab2a-4d8431ba6260
 syncro_effect: 'DEF: Confusion'
 sell_price: '70'
 slug: bloodsucker

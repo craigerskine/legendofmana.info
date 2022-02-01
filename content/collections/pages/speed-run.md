@@ -4,7 +4,372 @@ blueprint: pages
 title: 'Speed Run'
 parent: 90ab4953-7ba7-49bf-9699-87cd1e8baca1
 updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
-updated_at: 1643218161
+updated_at: 1643578489
 subtext: Guide
+thumbnail: img/walkthrough/speed-run.png
 ---
-Speed Run...
+If you are doing a true speed run, choose the *2H Sword*. If you eventually want to get max stats on a New Game+, choose: *1H Sword*.
+
+{.float-right .ml-4 .mb-5}[{.lb}![Play Area](/assets/img/walkthrough/speed-run/map-th.jpg){.img-th}__{.img-note}Zoom +__](#map-speedrun)
+
+* *Play Area:* Far Right / 5 space from the top
+* *Mailbox:* Center
+
+{.mb-5 .p-4 .inline-block .bg-pri-900 .bg-opacity-10 .rounded} *Skills*
+Lunge
+Spin
+ST: Rising Crush
+
+* Exit house
+* Talk to Sproutling, top answer
+* Exit to world map
+* *Colorblocks:* Below Home
+
+### [The Lost Princess](/walkthrough/events/the-lost-princess/)
+
+* Enter Domina
+* Follow Elazul into Pub
+
+(bottom answers)
+
+* Exit to world map
+* *Jade Egg*: Below Domina
+* Enter Mekiv
+
+{.mb-5 .p-4 .bg-pri-900 .bg-opacity-10 .rounded}*Battle Basics*
+Follow a power attack with an empty ST hotkey trigger - [Battle Mechanics](https://www.youtube.com/playlist?list=PL-gSoxtNFZV_eNWKT31J2EWgP9u51tVM3)
+
+* Lower Right
+* Lower Right
+* Right
+* Lower Left
+* Lower Left
+* Left
+
+Answer *"Side with Elazul"*
+
+* Re-enter Mekiv
+* Teleport using bottom Hippo
+* Up
+* Fight two enemies and try to get Earth Splitter or Black Elk
+* Lower Right
+* Lower Left
+* Upper Left
+* Left
+* Upper Left
+* Exit to world map
+
+### [Monster Corral](/walkthrough/events/the-monster-corral/)
+
+* Enter Domina
+* Go to top center point on map and talk to Niccolo
+* Answer *"No"*, then *"Yes"*
+* Go to the first area and enter the lower left house, talk to Teapo
+* Go to left-most point on map
+* Bottom answers
+
+_*HEADS UP:* If you are planning on doing a 100% run on a New Game+, make sure to talk to the Cactus in your bedroom after completing this event. This quest is "missable" in the Cactus Log_
+
+### [Niccolo's Business Unusual](/walkthrough/events/niccolos-business-unusual/)
+
+* *"Wheel:* Above Home
+* Enter Luon Highway
+* Keep going right, upper right at fork
+* Give money
+
+After:
+
+* *Firefly Lamp:* Left of Luon Highway
+* *Medallion:* Above Lumina
+
+### [Faerie's Light](/walkthrough/events/faeries-light/)
+
+* Enter Lumina
+* Upper right to Monique’s Shop
+* Talk to Horse guy, sell lamps
+* Talk to puzzel Guy
+
+1. Top Level Bear: B, B, A, C
+2. Bottom Level Bear: A, A, A, C
+3. Shopping District Bear: B, B, A, C
+
+After:
+
+* *Trembling Spoon:* Left of Home
+* *Stone Eye:* Left of Lumina
+* Enter Lumina
+* Enter the bottom left map point; go down left across the bridge then up to the right; then go right and down the stairs to grab the monster companion
+* Exit to the world map
+
+### [The Fallen Emperor](/walkthrough/events/the-fallen-emperor/)
+
+* Enter the Underworld
+* Answer *"Dra...what?"* then *"Alright"*
+* Left
+* Right
+* Right
+* Right, 1st Door
+* Upper Left
+* Right
+* Lower Left
+* Right
+* Right, 1st Door
+* Talk to NPC
+* Talk to Shadole
+* Choose Baptismal Chamber
+* Talk to upper left Shadole
+* Exit
+* Lower Left
+* Right, 2nd Door
+* Right
+* Right
+* Right, 1st Door
+* Answer *"I am ready"*
+
+After:
+
+* *Skull Lantern:* Below Underworld
+* *Broken Doll:* Below Norn Peaks
+
+### [The Guardian Of Winds](/walkthrough/events/the-guardian-of-winds/)
+
+* Enter Norn Peaks (make sure you have Larc in the party)
+* Right
+* Right
+* Right
+* Talk to the Windcallers in the Upper Right side of Town
+* Exit Upper Right
+
+---
+
+* Upper Right
+* Upper Right
+
+---
+
+* Upper Left
+* Left
+* Upper Left
+* Left
+
+---
+
+* Right
+* Lower Right
+* Right
+* Upper Right
+* Right
+* Lower Right
+* Upper Right
+
+---
+
+* Lower Left
+* Left
+* Upper Right
+
+---
+
+* Right
+* Upper Right
+* Left
+* Left
+
+After:
+
+* *Dragon Bone:* Left of Norn Peaks
+
+### [The Field Trip](/walkthrough/events/the-field-trip/)
+
+* Enter the Bone Fortress
+* Talk to center NPC
+* Go right, then leave, then right again
+* Student in blue along at the top has the Faerie Scales
+* Male Flowerling in the Lower Right has the Starsparkles
+* Purple Flowerling near the Middle Right side has the Silver Spotted Mushrooms
+
+![Field Trip Students](/assets/img/walkthrough/field-trip.jpg){.mx-auto}
+
+### [The Ghost Of Nemesis](/walkthrough/events/the-ghost-of-nemesis/)
+
+* Enter The Bone Fortress (Make sure you have a pet AND Larc in your party)
+* Go right, answer *"Stay"*, beat boss, enter skull
+* Search the Stool
+
+---
+
+* Down (hope for Braveblade)
+* Left
+* Search the Skull
+* Left
+* Search the Knight
+* Right (pick up pet)
+
+---
+
+* Left
+* Lower Right
+* Lower Left (hope for Braveblade again)
+* Right
+* Search the Left Stool
+* Go inside the elevator
+* Go to the 3rd Floor 
+* Answer *"I know"*, (battle Sierra)
+
+---
+
+* Pick up Key
+* Go to 2nd Floor
+
+---
+
+* Left
+* Search the Knight
+* Left (pick up Larc)
+
+---
+
+* Go to 1st Floor
+* Search Lower Left Stool
+* Go to 3rd Floor
+* Left
+
+---
+
+* Beat Boss
+* Right
+
+After:
+
+* *Green Cane:* Above The Bone Fortress
+
+### [The Dragon Princess](/walkthrough/events/the-dragon-princess/)
+
+* Enter the White Forest (make sure you have Larc in your party)
+
+---
+
+* Lower Left
+* Lower Left
+* Down
+* Left
+* Left
+* Lower Left
+* Lower Right
+* Right
+* Answer *"Stay"*
+
+### [The Crimson Dragon](/walkthrough/events/the-crimson-dragon/)
+
+* Enter the Underworld
+* Upper Left
+* Upper Right
+* Right
+* First Doorway
+* Up
+* Upper Right
+* Lower Left
+* Head Right to Second Doorway
+* Upper Right
+* Upper Right
+* Right, First Doorway
+* Up through Faces
+* Upper Right
+* Far Left
+* Left, 3rd Door
+* Up through Faces
+* Touch Shadoles
+* Up through Faces, Answer *"Let's Go!"*
+
+---
+
+* Up (Bridge)
+* Up
+* Up
+* Left
+* Upper Left
+* Up first set of Stairs
+* Up through Door
+* Fall through Floor
+* Far Lower Left
+* Down
+* Upper Right
+
+---
+
+* After fight, Lower Right
+* Upper Left
+* Up
+* Far Lower Right
+* Fall through Floor
+
+---
+
+* After fight, Right
+* Lower Right
+* Up Stairs
+* Lower Left
+* Down
+* Upper Left
+* Left
+* Down
+* Down
+* Touch Blue Orb
+
+---
+
+* After fight, Upper Right
+* Up
+* Up
+* Up through Door
+* Up
+
+After:
+
+* *Torch of Coral:* Right of Home
+* *Sand Rose:* Below Madora Beach
+
+### [Summer Lovin'](/walkthrough/events/summer-lovin/)
+
+* Enter Madora Beach (try to dodge as many crabs as possible to save time)
+* Right
+* Right
+* Right into Cave
+* Lower Right
+* Upper Right
+* Upper Right
+* Upper Left
+* Left into Cave
+* Upper Left
+* Lower Right
+
+After:
+
+* *Rusty Anchor:* Above Madora Beach
+* *Tome of Magic:* Right of Polpota Harbor
+* *Flame:* Right of Geo
+* *Moon's Mirror* Below Gato
+
+*To trigger next event, try...*
+
+1. Home
+2. Exit to world map
+3. Home
+4. Enter House
+5. Exit House and head to Workshops
+
+### [The Cage Of Dreams](/walkthrough/events/the-cage-of-dreams/)
+
+* Go to Workshops
+* Exit Workshops
+* Answer *"No"*
+* Go to next Area
+* Go to Workshops, talk to shield thingie
+
+After:
+
+* *Sword of Mana:* Right of Madora Beach
+
+### [Legend Of Mana](/walkthrough/events/the-legend-of-mana/)
+
+The end ;)

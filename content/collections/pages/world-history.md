@@ -4,7 +4,8 @@ blueprint: pages
 title: 'World History'
 parent: 9437c7a7-700b-4c96-9115-b7c31bb363ee
 updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
-updated_at: 1643211178
+updated_at: 1643667063
 subtext: '& Info'
+thumbnail: img/encyclopedias/en-info.png
+template: world-history/index
 ---
-World History...

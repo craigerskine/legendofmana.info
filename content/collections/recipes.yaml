@@ -1,5 +1,5 @@
 title: Recipes
-template: default
+template: recipes/index
 layout: layout
 revisions: false
 sort_dir: asc

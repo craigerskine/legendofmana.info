@@ -1,0 +1,19 @@
+<li class="lg:w-4/5 relative{{ if count % 2 == 0 }} ml-auto{{ /if }}">
+  <div class="p-5 border(t white opacity-25) bg-pri-300 relative z-30 rounded-lg shadow-lg">
+    <div class="flex items-center">
+      <h2 class="mb-5 pb-5 text(black opacity-90) font-bold md:(text-2xl)">
+        <span class="align-middle inline-flex items-center uppercase tracking-tight">
+          {{ if image }}
+            <b class="mr-3 w-50 h-50 bg-black flex overflow-hidden rounded group-hover:(animate-wiggle) group-focus:(animate-wiggle)">
+              <img src="{{ image }}" alt="{{ title }}" class="m-auto">
+            </b>
+          {{ /if }}
+          <span class="inline-flex flex-col">{{ title }} {{ if subtext !== "" }}<small class="opacity-80 text-xs">{{ subtext }}</small>{{ /if }}</span>
+        </span>
+      </h2>
+      <b class="ml-4 mb-5 h-1 bg-pri-500 bg-opacity-25 flex-1"></b>
+    </div>
+    <div class="pl-4 lg:pl-6 border-l-4 border-pri-500 border-opacity-25">{{ slot }}</div>
+  </div>
+  <div class="bg(pri-300 opacity-50) absolute inset-0 z-10 rounded-lg shadow-md transform{{ if count % 2 == 0 }} rotate-2{{ else }} -rotate-3{{ /if }}"></div>
+</li>

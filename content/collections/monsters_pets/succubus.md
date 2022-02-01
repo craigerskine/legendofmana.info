@@ -4,10 +4,10 @@ blueprint: monsters_pets
 title: Succubus
 monster_type: demi-human
 monster_locations:
-  - 'Bejeweled City'
-  - 'Mindas Ruins'
-  - 'Tower of Leires'
-  - Underworld
+  - 1d688ea1-febb-43a7-879a-1626dafb29a7
+  - 6b3b7cac-0422-4e4c-8be2-acd6482c1adb
+  - 1b81296f-e448-4faa-9423-879638b59d06
+  - d6d66be8-d4c3-4842-ac87-ad79aa5385dd
 egg_locations: 'Fieg Snowfields'
 syncro_effect: 'HP Drain'
 required_mana: 'Shade 3'

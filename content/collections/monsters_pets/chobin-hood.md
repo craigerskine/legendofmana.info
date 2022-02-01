@@ -4,9 +4,9 @@ blueprint: monsters_pets
 title: 'Chobin Hood'
 monster_type: demi-human
 monster_locations:
-  - 'Bejeweled City'
-  - 'Lake Kilma'
-  - 'Luon Highway'
+  - 1d688ea1-febb-43a7-879a-1626dafb29a7
+  - d788eaf2-761b-4e4a-b17f-035e9670b950
+  - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
 egg_locations: Jungle
 syncro_effect: 'ATTK: Indirect'
 required_mana: 'Dryad 3'

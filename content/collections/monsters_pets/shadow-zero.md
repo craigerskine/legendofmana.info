@@ -4,13 +4,13 @@ blueprint: monsters_pets
 title: 'Shadow Zero'
 monster_type: morph
 monster_locations:
-  - 'Bejeweled City'
-  - 'Gato Grottoes'
-  - Junkyard
-  - Underworld
+  - 1d688ea1-febb-43a7-879a-1626dafb29a7
+  - 8be3dc98-1680-4a9b-9b2f-08868bb276bb
+  - 1704c29d-b3e9-49d9-8952-e297718e9846
+  - d6d66be8-d4c3-4842-ac87-ad79aa5385dd
 egg_locations:
-  - 'Gato Grottoes'
-  - 'Madora Beach'
+  - 8be3dc98-1680-4a9b-9b2f-08868bb276bb
+  - a4de82f6-9775-4e04-bf49-6b264336ff92
 syncro_effect: 'DEF: Darkness'
 sell_price: '50'
 slug: shadow-zero

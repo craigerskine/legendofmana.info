@@ -4,11 +4,11 @@ blueprint: monsters_pets
 title: Sahagin
 monster_type: demi-human
 monster_locations:
-  - 'Fieg Snowfields'
-  - Lucemia
-  - 'Madora Beach'
-  - 'Mekiv Caverns'
-  - 'SS Buccaneer'
+  - c834ae7c-df9f-49b5-9259-b9d8ee50d684
+  - ed397928-b478-4ce6-b35e-93731aca1436
+  - a4de82f6-9775-4e04-bf49-6b264336ff92
+  - 45401104-03f6-4dcd-8543-373ed020605d
+  - bccbf8d9-dbb0-402b-8a2f-e258af32d745
 egg_locations: 'Duma Desert'
 syncro_effect: 'ATTK: Piercing'
 required_mana: 'Dryad 3'
