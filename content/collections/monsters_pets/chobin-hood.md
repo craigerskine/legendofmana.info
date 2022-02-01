@@ -7,7 +7,8 @@ monster_locations:
   - 1d688ea1-febb-43a7-879a-1626dafb29a7
   - d788eaf2-761b-4e4a-b17f-035e9670b950
   - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
-egg_locations: Jungle
+egg_locations:
+  - c9bb2a06-79b3-4a19-a148-0180abb7ebde
 syncro_effect: 'ATTK: Indirect'
 required_mana: 'Dryad 3'
 sell_price: '10'

@@ -7,7 +7,8 @@ monster_locations:
   - 1d688ea1-febb-43a7-879a-1626dafb29a7
   - 1b81296f-e448-4faa-9423-879638b59d06
   - d6d66be8-d4c3-4842-ac87-ad79aa5385dd
-egg_locations: Jungle
+egg_locations:
+  - c9bb2a06-79b3-4a19-a148-0180abb7ebde
 syncro_effect: Darkness
 sell_price: '600'
 slug: dark-stalker

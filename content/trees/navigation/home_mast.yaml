@@ -18,6 +18,12 @@ tree:
     data:
       image: cta-produce.png
   -
+    id: 18f20410-0d04-425d-8cdf-04312c5eacd7
+    title: 'Monsters / Pets'
+    url: /encyclopedias/monsters-pets/
+    data:
+      image: cta-monsters-pets.png
+  -
     id: cc28fa69-281d-4be1-91c0-3baec4211265
     title: 'Maps / Artifacts'
     url: /walkthrough/maps/
@@ -29,12 +35,6 @@ tree:
     url: /encyclopedias/abilities-techniques/
     data:
       image: cta-abilties-techs.png
-  -
-    id: 18f20410-0d04-425d-8cdf-04312c5eacd7
-    title: 'Monsters / Pets'
-    url: /encyclopedias/monsters-pets/
-    data:
-      image: cta-monsters-pets.png
   -
     id: b55b72f1-2ca2-4f07-ac55-c9ccefc83917
     title: 'Tempering Recipes'
