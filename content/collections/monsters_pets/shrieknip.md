@@ -17,7 +17,7 @@ monster_drops:
   2: 'Small Seed'
   3: 'Long Seed'
   4: 'Big Seed'
-  5: 'Ghost's Howl'
+  5: 'Ghost''s Howl'
   6: 'Spiny Seed'
   7: 'Flat Seed'
   8: 'Flat Seed'
