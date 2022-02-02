@@ -6,8 +6,8 @@
     <title>
       {{ if ! is_homepage }}
         {{ meta_title ?? title }} - 
-        {{ if segment_2 == 'monsters-pets' }}Monsters & Pets - {{ /if }}
-        {{ if segment_2 == 'produce' }}Produce - {{ /if }}
+        {{ if parent:slug == 'monsters-pets' }}Monsters & Pets - {{ /if }}
+        {{ if parent:slug == 'produce' }}Produce - {{ /if }}
       {{ /if }}
       {{ site:name ?? 'Legend of Mana Fan Site' }}
     </title>
