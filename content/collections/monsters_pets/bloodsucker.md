@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Confusion'
 sell_price: '70'
 slug: bloodsucker
+monster_drops:
+  1: 'Exp'
+  2: 'Round Seed'
+  3: 'Bird Meat'
+  4: 'Vampire Fang'
+  5: 'Blackened Bat'
+  6: 'Blackened Bat'
+  7: 'Blackened Bat'
+  8: 'Blackened Bat'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '3'
+  Mgc: '4'
+  HP: '2'
+  Spr: '3'
+  Chm: '7'
+  Lck: '5'
 ---
