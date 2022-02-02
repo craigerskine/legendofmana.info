@@ -20,8 +20,8 @@ monster_drops:
   4: 'Baobab Wood'
   5: 'Doomhammer'
   6: 'Doomhammer'
-  7: 'Judge's Gavel'
-  8: 'Thor's Hammer'
+  7: 'Judge''s Gavel'
+  8: 'Thor''s Hammer'
 pet_stats:
   Pow: '3'
   Skl: '4'
