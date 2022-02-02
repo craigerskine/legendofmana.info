@@ -10,10 +10,10 @@ egg_locations:
   - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
   - 696e2839-b3f7-481a-ab2a-4d8431ba6260
 syncro_effect: 'DEF: Confusion'
-sell_price: '70'
+sell_price: 70
 slug: bloodsucker
 monster_drops:
-  1: 'Exp'
+  1: Exp
   2: 'Round Seed'
   3: 'Bird Meat'
   4: 'Vampire Fang'
@@ -30,4 +30,6 @@ pet_stats:
   Spr: '3'
   Chm: '7'
   Lck: '5'
+updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
+updated_at: 1643812803
 ---
