@@ -42,6 +42,7 @@ return [
         public_path('assets/home') => '/',
         public_path('assets/img') => 'assets/img',
         public_path('assets/js') => 'assets/js',
+        public_path('assets/files') => 'assets/files',
     ],
 
     'symlinks' => [
