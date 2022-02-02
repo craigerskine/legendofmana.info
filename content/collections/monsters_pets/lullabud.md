@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Plants'
 sell_price: '30'
 slug: lullabud
+monster_drops:
+  1: 'Exp'
+  2: 'Big Seed'
+  3: 'Small Seed'
+  4: 'Long Seed'
+  5: 'Poison Powder'
+  6: 'Spiny Seed'
+  7: 'Flat Seed'
+  8: 'Flat Seed'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '3'
+  Mgc: '3'
+  HP: '4'
+  Spr: '3'
+  Chm: '7'
+  Lck: '5'
 ---

@@ -10,4 +10,22 @@ egg_locations: N/A
 syncro_effect: N/A
 sell_price: N/A
 slug: machine-golem
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Exp + Lucre'
+  4: 'Exp + Lucre'
+  5: 'Exp + Lucre'
+  6: 'Exp + Lucre'
+  7: 'Exp + Lucre'
+  8: 'Exp + Lucre'
+pet_stats:
+  Pow: '-'
+  Skl: '-'
+  Def: '-'
+  Mgc: '-'
+  HP: '-'
+  Spr: '-'
+  Chm: '-'
+  Lck: '-'
 ---

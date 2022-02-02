@@ -10,4 +10,22 @@ egg_locations: 'Fieg Snowfields'
 syncro_effect: 'DEF: Breath'
 sell_price: '500'
 slug: kid-dragon
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Dragon Steak'
+  4: 'Dragon Blood'
+  5: 'Dragon''s Breath'
+  6: 'Sharp Claw'
+  7: 'JadeBand'
+  8: 'DragonsRobe'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '4'
+  Mgc: '7'
+  HP: '8'
+  Spr: '7'
+  Chm: '7'
+  Lck: '5'
 ---

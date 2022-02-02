@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'ATTK: Beasts'
 sell_price: '80'
 slug: wooding
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Oak Wood'
+  3: 'Holly Wood'
+  4: 'Baobab Wood'
+  5: 'Ebony Wood'
+  6: 'Mistletoe'
+  7: 'Toneriko Wood'
+  8: 'Dior Wood'
+pet_stats:
+  Pow: '7'
+  Skl: '4'
+  Def: '4'
+  Mgc: '2'
+  HP: '8'
+  Spr: '2'
+  Chm: '2'
+  Lck: '5'
 ---

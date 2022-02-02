@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'ATTK: Aerials'
 sell_price: '100'
 slug: denden
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Morph Meat'
+  4: 'Shell'
+  5: 'Shell'
+  6: 'Shell'
+  7: 'Shell'
+  8: 'Shell'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '8'
+  Mgc: '3'
+  HP: '4'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

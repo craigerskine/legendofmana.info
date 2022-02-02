@@ -11,4 +11,22 @@ egg_locations: 'Fieg Snowfields'
 syncro_effect: 'ATTK: Demonics'
 sell_price: '5000'
 slug: land-dragon
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Dragon Steak'
+  4: 'Dragon Breath'
+  5: 'Dragon Blood'
+  6: 'Dragon Skin'
+  7: 'Dragon''s Mail'
+  8: 'Dragon Scale'
+pet_stats:
+  Pow: '10'
+  Skl: '8'
+  Def: '10'
+  Mgc: '10'
+  HP: '10'
+  Spr: '10'
+  Chm: '10'
+  Lck: '5'
 ---

@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Staring'
 sell_price: '300'
 slug: beholder
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Odd Meat'
+  3: 'Silly Eye'
+  4: 'Dangerous Eye'
+  5: 'Angry Eye'
+  6: 'Blank Eye'
+  7: 'Creepy Eye'
+  8: 'Wicked Eye'
+pet_stats:
+  Pow: '2'
+  Skl: '3'
+  Def: '4'
+  Mgc: '8'
+  HP: '4'
+  Spr: '4'
+  Chm: '10'
+  Lck: '5'
 ---

@@ -14,4 +14,22 @@ egg_locations:
 syncro_effect: 'Defense Plus'
 sell_price: '250'
 slug: chess-knight
+monster_drops:
+  1: 'Lucre'
+  2: 'Exp + Lucre'
+  3: 'Exp + Lucre'
+  4: 'Healing Claw'
+  5: 'Ivory'
+  6: 'Giant''s Horn'
+  7: 'Giant''s Horn'
+  8: 'Adamantite'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '3'
+  Mgc: '7'
+  HP: '3'
+  Spr: '7'
+  Chm: '7'
+  Lck: '5'
 ---

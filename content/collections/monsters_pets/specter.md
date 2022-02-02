@@ -11,4 +11,22 @@ egg_locations: 'Bone Fortress'
 syncro_effect: 'DEF: Freeze'
 sell_price: '300'
 slug: specter
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Round Seed'
+  3: 'Rotten Meat'
+  4: 'Dragon Necklace'
+  5: 'Grave Dirt'
+  6: 'Zombie Claw'
+  7: 'Vestment'
+  8: 'Black Robe'
+pet_stats:
+  Pow: '2'
+  Skl: '3'
+  Def: '3'
+  Mgc: '10'
+  HP: '4'
+  Spr: '4'
+  Chm: '7'
+  Lck: '5'
 ---

@@ -14,4 +14,22 @@ egg_locations:
 syncro_effect: 'DEF: Darkness'
 sell_price: '50'
 slug: shadow-zero
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Chocolate'
+  3: 'Morph Meat'
+  4: 'Jacobini Aerolite'
+  5: 'Halley Aerolite'
+  6: 'Ankh Aerolite'
+  7: 'Vinek Aerolite'
+  8: 'Tuttle Aerolite'
+pet_stats:
+  Pow: '3'
+  Skl: '7'
+  Def: '2'
+  Mgc: '3'
+  HP: '3'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

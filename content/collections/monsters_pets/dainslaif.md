@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Staring'
 sell_price: '300'
 slug: dainslaif
+monster_drops:
+  1: 'Lucre'
+  2: 'Exp + Lucre'
+  3: 'Throatslitter'
+  4: 'Braveblade'
+  5: 'Orihalcon'
+  6: 'Deathstroke'
+  7: 'Crimson Glare'
+  8: 'Muramasa Blade'
+pet_stats:
+  Pow: '7'
+  Skl: '8'
+  Def: '3'
+  Mgc: '4'
+  HP: '7'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

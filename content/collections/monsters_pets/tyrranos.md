@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'ATTK: Arthropods'
 sell_price: '1000'
 slug: tyrranos
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Lizard Meat'
+  4: 'Gator Skin'
+  5: 'Sharp Claw'
+  6: 'Snake Scales'
+  7: 'Snake Scales'
+  8: 'Fossile'
+pet_stats:
+  Pow: '8'
+  Skl: '3'
+  Def: '7'
+  Mgc: '3'
+  HP: '10'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

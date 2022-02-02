@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: Invincible
 sell_price: '350'
 slug: springball
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Odd Meat'
+  3: 'Juggernaut'
+  4: 'Odd Meat'
+  5: 'Gigas Flail'
+  6: 'Odd Meat'
+  7: 'Odd Meat'
+  8: 'Divine Flail'
+pet_stats:
+  Pow: '3'
+  Skl: '8'
+  Def: '3'
+  Mgc: '3'
+  HP: '7'
+  Spr: '4'
+  Chm: '7'
+  Lck: '5'
 ---

@@ -10,4 +10,22 @@ egg_locations: 'Bone Fortress'
 syncro_effect: 'ATTK: Poison'
 sell_price: '5'
 slug: zombine
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Rotten Meat'
+  4: 'Grave Dirt'
+  5: 'Zombie Claw'
+  6: 'Poison Fang'
+  7: 'Poison Fang'
+  8: 'Poison Fang'
+pet_stats:
+  Pow: '7'
+  Skl: '3'
+  Def: '3'
+  Mgc: '3'
+  HP: '8'
+  Spr: '2'
+  Chm: '2'
+  Lck: '5'
 ---

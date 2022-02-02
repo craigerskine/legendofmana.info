@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'Power Plus'
 sell_price: '80'
 slug: moldy-goo
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Morph Meat'
+  4: 'Rust'
+  5: 'Moss'
+  6: 'Levantine'
+  7: 'Levantine'
+  8: 'Excalibur'
+pet_stats:
+  Pow: '10'
+  Skl: '2'
+  Def: '3'
+  Mgc: '3'
+  HP: '10'
+  Spr: '7'
+  Chm: '2'
+  Lck: '5'
 ---

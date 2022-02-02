@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: Sleep
 sell_price: '40'
 slug: mushboom
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Poison Powder'
+  4: 'Sleepy Powder'
+  5: 'Paralysis Powder'
+  6: 'Cielmerloin'
+  7: 'Cielmerloin'
+  8: 'Cielmerloin'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '3'
+  Mgc: '3'
+  HP: '7'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

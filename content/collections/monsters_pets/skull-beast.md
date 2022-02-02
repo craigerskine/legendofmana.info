@@ -10,4 +10,22 @@ egg_locations: 'Bone Fortress'
 syncro_effect: 'DEF: Undeads'
 sell_price: '10'
 slug: skull-beast
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Animal Bone'
+  4: 'Grave Dirt'
+  5: 'Zombie Claw'
+  6: 'Giant''s Horn'
+  7: 'Giant''s Horn'
+  8: 'Giant''s Horn'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '3'
+  Mgc: '3'
+  HP: '3'
+  Spr: '2'
+  Chm: '2'
+  Lck: '5'
 ---

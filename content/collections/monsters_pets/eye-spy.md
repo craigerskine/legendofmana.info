@@ -9,4 +9,22 @@ egg_locations:
 syncro_effect: 'DEF: Confusion'
 sell_price: '5'
 slug: eye-spy
+monster_drops:
+  1: 'Exp'
+  2: 'Odd Meat'
+  3: 'Little Eye'
+  4: 'Sleepy Eye'
+  5: 'Silly Eye'
+  6: 'Dangerous Eye'
+  7: 'Angry Eye'
+  8: 'Blank Eye'
+pet_stats:
+  Pow: '2'
+  Skl: '3'
+  Def: '2'
+  Mgc: '7'
+  HP: '7'
+  Spr: '4'
+  Chm: '7'
+  Lck: '5'
 ---

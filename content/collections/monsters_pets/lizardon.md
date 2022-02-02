@@ -10,4 +10,22 @@ egg_locations:
 syncro_effect: 'Pak''n Choco'
 sell_price: '80'
 slug: lizardon
+monster_drops:
+  1: 'Exp'
+  2: 'Round Seed'
+  3: 'Lizard Meat'
+  4: 'Blank Eye'
+  5: 'Blank Eye'
+  6: 'Blank Eye'
+  7: 'Blank Eye'
+  8: 'Blank Eye'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '3'
+  Mgc: '3'
+  HP: '4'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

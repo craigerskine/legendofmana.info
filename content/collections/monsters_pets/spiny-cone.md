@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Oddities'
 sell_price: '100'
 slug: spiny-cone
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Odd Meat'
+  3: 'Odd Meat'
+  4: 'Wind Cap'
+  5: 'Wind Cap'
+  6: 'Wind Cap'
+  7: 'Wind Cap'
+  8: 'Wind Cap'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '7'
+  Mgc: '3'
+  HP: '3'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

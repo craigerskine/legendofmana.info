@@ -14,4 +14,22 @@ egg_locations:
 syncro_effect: Poison
 sell_price: '100'
 slug: rattler-boa
+monster_drops:
+  1: 'Exp'
+  2: 'Chocolate'
+  3: 'Lizard Meat'
+  4: 'Lizard Scales'
+  5: 'Lizard Scales'
+  6: 'Lizard Scales'
+  7: 'Lizard Scales'
+  8: 'Lizard Scales'
+pet_stats:
+  Pow: '4'
+  Skl: '7'
+  Def: '4'
+  Mgc: '3'
+  HP: '7'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

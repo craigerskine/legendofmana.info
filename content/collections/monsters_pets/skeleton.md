@@ -11,4 +11,22 @@ egg_locations: 'Bone Fortress'
 syncro_effect: Regeneration
 sell_price: '20'
 slug: skeleton
+monster_drops:
+  1: 'Exp'
+  2: 'Exp'
+  3: 'Animal Bone'
+  4: 'Wishbone'
+  5: 'Grave Dirt'
+  6: 'Zombie Claw'
+  7: 'Skullhead'
+  8: 'Skeleton Mail'
+pet_stats:
+  Pow: '7'
+  Skl: '7'
+  Def: '4'
+  Mgc: '3'
+  HP: '7'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

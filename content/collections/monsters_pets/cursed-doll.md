@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Poltergeists'
 sell_price: '100'
 slug: cursed-doll
+monster_drops:
+  1: 'Lucre'
+  2: 'Round Seed'
+  3: 'Holly Wood'
+  4: 'Baobab Wood'
+  5: 'Doomhammer'
+  6: 'Doomhammer'
+  7: 'Judge's Gavel'
+  8: 'Thor's Hammer'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '3'
+  Mgc: '4'
+  HP: '4'
+  Spr: '3'
+  Chm: '4'
+  Lck: '5'
 ---

@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Morphs'
 sell_price: '60'
 slug: tezla
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Morph Meat'
+  4: 'Electric Essence'
+  5: 'Electric Essence'
+  6: 'Electric Essence'
+  7: 'Electric Essence'
+  8: 'Electric Essence'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '3'
+  Mgc: '7'
+  HP: '3'
+  Spr: '4'
+  Chm: '4'
+  Lck: '5'
 ---

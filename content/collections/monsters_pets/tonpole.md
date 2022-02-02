@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Reptiles'
 sell_price: '20'
 slug: tonpole
+monster_drops:
+  1: 'Exp'
+  2: 'Round Seed'
+  3: 'Lizard Meat'
+  4: 'Blank Eye'
+  5: 'Blank Eye'
+  6: 'Blank Eye'
+  7: 'Blank Eye'
+  8: 'Blank Eye'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '3'
+  Mgc: '3'
+  HP: '3'
+  Spr: '3'
+  Chm: '4'
+  Lck: '5'
 ---

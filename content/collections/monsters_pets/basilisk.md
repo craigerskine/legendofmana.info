@@ -15,4 +15,22 @@ sell_price: 600
 slug: basilisk
 updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
 updated_at: 1643058565
+monster_drops:
+  1: 'Exp'
+  2: 'Exp'
+  3: 'Lizard Meat'
+  4: 'Lizard Scales'
+  5: 'Lizard Scales'
+  6: 'Lizard Scales'
+  7: 'Lizard Scales'
+  8: 'Lizard Scales'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '4'
+  Mgc: '7'
+  HP: '7'
+  Spr: '3'
+  Chm: '8'
+  Lck: '5'
 ---

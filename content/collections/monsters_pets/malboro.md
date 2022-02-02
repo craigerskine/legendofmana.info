@@ -14,4 +14,22 @@ egg_locations:
 syncro_effect: Paralysis
 sell_price: '60'
 slug: malboro
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Oblong Seed'
+  3: 'Big Seed'
+  4: 'Small Seed'
+  5: 'Silly Eye'
+  6: 'Flat Seed'
+  7: 'Flat Seed'
+  8: 'Flat Seed'
+pet_stats:
+  Pow: '4'
+  Skl: '3'
+  Def: '4'
+  Mgc: '3'
+  HP: '8'
+  Spr: '3'
+  Chm: '8'
+  Lck: '5'
 ---

@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Sound Waves'
 sell_price: '50'
 slug: shrieknip
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Small Seed'
+  3: 'Long Seed'
+  4: 'Big Seed'
+  5: 'Ghost's Howl'
+  6: 'Spiny Seed'
+  7: 'Flat Seed'
+  8: 'Flat Seed'
+pet_stats:
+  Pow: '2'
+  Skl: '2'
+  Def: '3'
+  Mgc: '7'
+  HP: '4'
+  Spr: '3'
+  Chm: '7'
+  Lck: '5'
 ---

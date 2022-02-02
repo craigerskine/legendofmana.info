@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'ATTK: Dragons'
 sell_price: '150'
 slug: poto
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Odd Meat'
+  3: 'Blank Eye'
+  4: 'Silly Eye'
+  5: 'Aroma Oil'
+  6: 'Aroma Oil'
+  7: 'Aroma Oil'
+  8: 'Aroma Oil'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '3'
+  Mgc: '7'
+  HP: '3'
+  Spr: '7'
+  Chm: '4'
+  Lck: '5'
 ---

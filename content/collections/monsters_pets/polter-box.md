@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'Rare Item'
 sell_price: '1000'
 slug: polter-box
+monster_drops:
+  1: 'Lucre'
+  2: 'Exp + Lucre'
+  3: 'Sunlight Crystal'
+  4: 'Moon Crystal'
+  5: 'Glow Crystal'
+  6: 'Chaos Crystal'
+  7: 'Goddess Mail'
+  8: 'Goddess Mail'
+pet_stats:
+  Pow: '10'
+  Skl: '2'
+  Def: '3'
+  Mgc: '3'
+  HP: '10'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

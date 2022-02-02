@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Paralysis'
 sell_price: '10'
 slug: slime
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Round Seed'
+  3: 'Morph Meat'
+  4: 'Acid'
+  5: 'Acid'
+  6: 'Acid'
+  7: 'Acid'
+  8: 'Acid'
+pet_stats:
+  Pow: '3'
+  Skl: '2'
+  Def: '10'
+  Mgc: '3'
+  HP: '8'
+  Spr: '2'
+  Chm: '2'
+  Lck: '5'
 ---
