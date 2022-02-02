@@ -11,4 +11,22 @@ egg_locations:
 syncro_effect: 'DEF: Flame Burst'
 sell_price: '350'
 slug: fierce-face
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Demon Meat'
+  4: 'Pegasus Helm'
+  5: 'Bloody Mask'
+  6: 'Milane Crown'
+  7: 'Jester''s Cap'
+  8: 'Hero''s Crown'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '3'
+  Mgc: '7'
+  HP: '4'
+  Spr: '4'
+  Chm: '7'
+  Lck: '5'
 ---

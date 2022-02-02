@@ -12,4 +12,22 @@ syncro_effect: 'ATTK: Slashing'
 required_mana: 'Shade 3, Dryad 3'
 sell_price: '10'
 slug: goblin
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Black Elk'
+  4: 'Earth Splitter'
+  5: 'Silver Crane'
+  6: 'Snow Deer'
+  7: 'Langeax'
+  8: 'Sweet Revenge'
+pet_stats:
+  Pow: '10'
+  Skl: '7'
+  Def: '8'
+  Mgc: '4'
+  HP: '10'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

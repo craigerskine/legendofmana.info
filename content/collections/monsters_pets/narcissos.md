@@ -12,4 +12,22 @@ syncro_effect: 'ATTK: Striking'
 required_mana: 'Gnome 3'
 sell_price: '10'
 slug: narcissos
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Spiral Claw'
+  4: 'Gigas Gloves'
+  5: 'Skuldesect'
+  6: 'Holy Glove'
+  7: 'Holy Glove'
+  8: 'Hard-sell Glove'
+pet_stats:
+  Pow: '10'
+  Skl: '8'
+  Def: '7'
+  Mgc: '3'
+  HP: '10'
+  Spr: '7'
+  Chm: '3'
+  Lck: '5'
 ---

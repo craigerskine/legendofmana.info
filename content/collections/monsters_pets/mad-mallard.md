@@ -13,4 +13,22 @@ syncro_effect: 'Defense Plus'
 required_mana: 'Wisp 3'
 sell_price: '10'
 slug: mad-mallard
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Soldier''s Helm'
+  4: 'Destiny Dice'
+  5: 'Ninja''s Charm'
+  6: 'Captain''s Helm'
+  7: 'Captain''s Helm'
+  8: 'General''s Helm'
+pet_stats:
+  Pow: '7'
+  Skl: '8'
+  Def: '10'
+  Mgc: '3'
+  HP: '10'
+  Spr: '7'
+  Chm: '3'
+  Lck: '5'
 ---

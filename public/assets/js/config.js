@@ -71,6 +71,9 @@
         },
       },
     },
+    plugins: {
+      'scroll-smooth': { 'scroll-behavior': 'smooth' },
+    },
   })
   twind.tw(() => ({
     '@global': {

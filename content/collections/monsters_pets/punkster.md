@@ -11,4 +11,22 @@ egg_locations:
 syncro_effect: 'DEF: Demonics'
 sell_price: '400'
 slug: punkster
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Demon Meat'
+  4: 'Demon Meat'
+  5: 'Orihalcon'
+  6: 'Orihalcon'
+  7: 'Orihalcon'
+  8: 'Orihalcon'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '4'
+  Mgc: '7'
+  HP: '7'
+  Spr: '8'
+  Chm: '7'
+  Lck: '5'
 ---

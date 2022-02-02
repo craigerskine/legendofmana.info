@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'ATTK: Plants'
 sell_price: '150'
 slug: sand-scorpion
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Bug Meat'
+  4: 'Poison Powder'
+  5: 'Stinger'
+  6: 'Scissors'
+  7: 'Shell'
+  8: 'Heros Armor'
+pet_stats:
+  Pow: '8'
+  Skl: '7'
+  Def: '8'
+  Mgc: '3'
+  HP: '8'
+  Spr: '4'
+  Chm: '4'
+  Lck: '5'
 ---

@@ -10,4 +10,22 @@ egg_locations:
 syncro_effect: 'ATTK: Morphs'
 sell_price: '80'
 slug: big-baby
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Fish Meat'
+  4: 'Acid'
+  5: 'Acid'
+  6: 'Acid'
+  7: 'Acid'
+  8: 'Acid'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '7'
+  Mgc: '8'
+  HP: '8'
+  Spr: '7'
+  Chm: '8'
+  Lck: '5'
 ---

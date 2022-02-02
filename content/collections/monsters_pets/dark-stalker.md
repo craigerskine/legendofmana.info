@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: Darkness
 sell_price: '600'
 slug: dark-stalker
+monster_drops:
+  1: 'Exp'
+  2: 'Exp'
+  3: 'Demon Meat'
+  4: 'Levantine'
+  5: 'Dragonsbane'
+  6: 'Durandal'
+  7: 'Doombringer'
+  8: 'Ragnarok'
+pet_stats:
+  Pow: '8'
+  Skl: '7'
+  Def: '7'
+  Mgc: '3'
+  HP: '7'
+  Spr: '8'
+  Chm: '4'
+  Lck: '5'
 ---

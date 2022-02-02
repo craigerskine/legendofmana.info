@@ -13,4 +13,22 @@ syncro_effect: 'HP Drain'
 required_mana: 'Shade 3'
 sell_price: '10'
 slug: succubus
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Moonrock Tiara'
+  4: 'Vitium Ribbon'
+  5: 'Spirit Ribbon'
+  6: 'Ancient Tiara'
+  7: 'Ancient Tiara'
+  8: 'Brisingamen'
+pet_stats:
+  Pow: '3'
+  Skl: '7'
+  Def: '3'
+  Mgc: '10'
+  HP: '7'
+  Spr: '8'
+  Chm: '10'
+  Lck: '5'
 ---

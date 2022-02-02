@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: Freeze
 sell_price: '40'
 slug: seadragon
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Fish Meat'
+  4: 'Fish Scales'
+  5: 'Coral'
+  6: 'Coral'
+  7: 'Coral'
+  8: 'Coral'
+pet_stats:
+  Pow: '4'
+  Skl: '7'
+  Def: '4'
+  Mgc: '4'
+  HP: '7'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

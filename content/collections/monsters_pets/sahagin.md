@@ -14,4 +14,22 @@ syncro_effect: 'ATTK: Piercing'
 required_mana: 'Dryad 3'
 sell_price: '10'
 slug: sahagin
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Bronze Spear'
+  4: 'True Spear'
+  5: 'Stargazer'
+  6: 'Fiery Stabber'
+  7: 'Giant''s Spear'
+  8: 'Devil''s Spear'
+pet_stats:
+  Pow: '7'
+  Skl: '7'
+  Def: '7'
+  Mgc: '3'
+  HP: '10'
+  Spr: '7'
+  Chm: '7'
+  Lck: '5'
 ---

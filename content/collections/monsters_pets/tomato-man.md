@@ -12,4 +12,22 @@ syncro_effect: Flameburst
 required_mana: 'Salamander 3'
 sell_price: '10'
 slug: tomato-man
+monster_drops:
+  1: 'Chocolate'
+  2: 'Ancient Robe'
+  3: 'Rosary'
+  4: 'Black Robe'
+  5: 'Gambantein'
+  6: 'Cernunnos Rod'
+  7: 'Caduceus'
+  8: 'Magic Beads'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '3'
+  Mgc: '10'
+  HP: '10'
+  Spr: '8'
+  Chm: '7'
+  Lck: '5'
 ---

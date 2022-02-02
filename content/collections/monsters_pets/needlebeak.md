@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Aerials'
 sell_price: '50'
 slug: needlebeak
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Bird Meat'
+  4: 'Needle'
+  5: 'Needle'
+  6: 'Needle'
+  7: 'Needle'
+  8: 'Needle'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '2'
+  Mgc: '3'
+  HP: '2'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

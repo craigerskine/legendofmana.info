@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'Skill Plus'
 sell_price: '80'
 slug: howler
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Animal Bone'
+  4: 'Sharp Claw'
+  5: 'Poison Fang'
+  6: 'Demon-Wolf'
+  7: 'Poison Fang'
+  8: 'Poison Fang'
+pet_stats:
+  Pow: '8'
+  Skl: '7'
+  Def: '3'
+  Mgc: '3'
+  HP: '7'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

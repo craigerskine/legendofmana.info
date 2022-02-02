@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'HP Plus'
 sell_price: '20'
 slug: seajack
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp'
+  3: 'Fish Meat'
+  4: 'Fish Meat'
+  5: 'Coral'
+  6: 'Coral'
+  7: 'Coral'
+  8: 'Coral'
+pet_stats:
+  Pow: '7'
+  Skl: '7'
+  Def: '3'
+  Mgc: '3'
+  HP: '8'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

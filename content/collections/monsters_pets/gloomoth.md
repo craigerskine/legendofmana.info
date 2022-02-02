@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: Confusion
 sell_price: '200'
 slug: gloomoth
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Bug Meat'
+  4: 'Sleepy Eye'
+  5: 'Moth Wing'
+  6: 'Paralysis Powder'
+  7: 'Sleep Powder'
+  8: 'Sleep Powder'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '4'
+  Mgc: '7'
+  HP: '7'
+  Spr: '4'
+  Chm: '7'
+  Lck: '5'
 ---

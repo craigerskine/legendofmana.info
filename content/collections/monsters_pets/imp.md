@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'Bonus XP'
 sell_price: '300'
 slug: imp
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Round Seed'
+  3: 'Demon Meat'
+  4: 'True Spear'
+  5: 'True Spear'
+  6: 'True Spear'
+  7: 'True Spear'
+  8: 'Devil''s Fork'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '3'
+  Mgc: '4'
+  HP: '3'
+  Spr: '4'
+  Chm: '4'
+  Lck: '5'
 ---

@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Sleep'
 sell_price: '15'
 slug: pincher-crab
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Fish Meat'
+  4: 'Scissors'
+  5: 'Shell'
+  6: 'Coral'
+  7: 'Coral'
+  8: 'Full Metal'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '4'
+  Mgc: '3'
+  HP: '4'
+  Spr: '2'
+  Chm: '2'
+  Lck: '5'
 ---

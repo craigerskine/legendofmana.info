@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'ATTK: Aquatics'
 sell_price: '500'
 slug: garuda
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp'
+  3: 'Bird Meat'
+  4: 'Raven Feather'
+  5: 'Angle Feather'
+  6: 'Angle Feather'
+  7: 'Ruby Band'
+  8: 'Phoenix Robe'
+pet_stats:
+  Pow: '8'
+  Skl: '8'
+  Def: '7'
+  Mgc: '4'
+  HP: '10'
+  Spr: '4'
+  Chm: '4'
+  Lck: '5'
 ---

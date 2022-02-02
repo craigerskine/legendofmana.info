@@ -13,4 +13,22 @@ syncro_effect: 'ATTK: Indirect'
 required_mana: 'Dryad 3'
 sell_price: '10'
 slug: chobin-hood
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Elder Bow'
+  4: 'Elder Bow'
+  5: 'Archenon'
+  6: 'Sidewinder'
+  7: 'Waveruck'
+  8: 'Sacred Bow'
+pet_stats:
+  Pow: '8'
+  Skl: '10'
+  Def: '7'
+  Mgc: '4'
+  HP: '10'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

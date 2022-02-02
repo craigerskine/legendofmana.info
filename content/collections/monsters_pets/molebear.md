@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Darkness'
 sell_price: '60'
 slug: molebear
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Animal Meat'
+  4: 'Animal Bone'
+  5: 'Animal Hide'
+  6: 'Sharp Claw'
+  7: 'Vizel Gold'
+  8: 'Gigas Gloves'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '2'
+  Mgc: '3'
+  HP: '3'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

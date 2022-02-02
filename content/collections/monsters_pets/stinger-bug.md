@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: 'DEF: Poison'
 sell_price: '100'
 slug: stinger-bug
+monster_drops:
+  1: 'Exp'
+  2: 'Exp + Lucre'
+  3: 'Bug Meat'
+  4: 'Clear Feather'
+  5: 'Clear Feather'
+  6: 'Clear Feather'
+  7: 'Clear Feather'
+  8: 'Clear Feather'
+pet_stats:
+  Pow: '3'
+  Skl: '4'
+  Def: '2'
+  Mgc: '3'
+  HP: '2'
+  Spr: '4'
+  Chm: '3'
+  Lck: '5'
 ---

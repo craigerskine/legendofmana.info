@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'DEF: Petrification'
 sell_price: '30'
 slug: cockatrice
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Exp + Lucre'
+  3: 'Bird Meat'
+  4: 'Flaming Quill'
+  5: 'Flaming Quill'
+  6: 'Flaming Quill'
+  7: 'Flaming Quill'
+  8: 'Flaming Quill'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '3'
+  Mgc: '4'
+  HP: '7'
+  Spr: '7'
+  Chm: '7'
+  Lck: '5'
 ---

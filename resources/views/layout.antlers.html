@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-[#0A0D0A]" hidden>
+<html lang="en" class="bg-[#0A0D0A] motion-safe:scroll-smooth" hidden>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -18,6 +18,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/6d6156d427.js" crossorigin="anonymous"></script>
     <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
+    <style>
+      /*
+        this needs to be removed when upgrading to twind v1+
+        apparently twind does not support motion-safe:
+      */
+      @media (prefers-reduced-motion: no-preference){
+        html { scroll-behavior: smooth; }
+      }
+    </style>
   </head>
   <body id="sect-" class="font-serif text-pri-900">
 

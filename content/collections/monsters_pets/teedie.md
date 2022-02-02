@@ -12,4 +12,22 @@ egg_locations:
 syncro_effect: Paralysis
 sell_price: '70'
 slug: teedie
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Round Seed'
+  3: 'Animal Hide'
+  4: 'Sleepy Eye'
+  5: 'Angel Feather'
+  6: 'Little Eye'
+  7: 'Obsidian'
+  8: 'Pedan Stone'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '3'
+  Mgc: '4'
+  HP: '4'
+  Spr: '3'
+  Chm: '3'
+  Lck: '5'
 ---

@@ -14,4 +14,22 @@ egg_locations:
 syncro_effect: 'Status Recovery'
 sell_price: '300'
 slug: chocobo
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Chocolate'
+  3: 'Bird Meat'
+  4: 'Flaming Quill'
+  5: 'Flaming Quill'
+  6: 'Flaming Quill'
+  7: 'Flaming Quill'
+  8: 'Flaming Quill'
+pet_stats:
+  Pow: '4'
+  Skl: '4'
+  Def: '3'
+  Mgc: '3'
+  HP: '8'
+  Spr: '4'
+  Chm: '4'
+  Lck: '5'
 ---

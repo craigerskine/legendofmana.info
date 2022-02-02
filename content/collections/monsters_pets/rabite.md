@@ -13,4 +13,22 @@ egg_locations:
 syncro_effect: 'HP Recovery'
 sell_price: '50'
 slug: rabite
+monster_drops:
+  1: 'Exp + Lucre'
+  2: 'Round Seed'
+  3: 'Animal Meat'
+  4: 'Animal Hide'
+  5: 'Animal Bone'
+  6: 'Little Eye'
+  7: 'Hairball'
+  8: 'Rabite Ear'
+pet_stats:
+  Pow: '3'
+  Skl: '3'
+  Def: '3'
+  Mgc: '3'
+  HP: '3'
+  Spr: '3'
+  Chm: '3'
+  Lck: '8'
 ---
