@@ -3,6 +3,9 @@ id: 6c4a0e96-a2ca-45ce-919f-d65f92ff4ecf
 blueprint: events
 title: 'Huntin'' Du''Cate'
 slug: huntin-ducate
+missable: false
+updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
+updated_at: 1643986446
 ---
 Place the Medallion AF in the space directly above the *Mekiv Caverns* to create the *Jungle*. Enter the *Jungle*.
 
@@ -10,7 +13,8 @@ Talk to the dude(Sotherbee) in the first area. Go Right and return immediately t
 
 Go back to the entrance and follow these instructions:
 
-p(mb-5 p-2 bg-red-500 text-white font-bold uppercase rounded). Note: These instructions need an overhaul!
+{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
+Note: These instructions need an overhaul!
 
 * Right
 * Right
