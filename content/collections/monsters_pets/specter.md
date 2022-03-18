@@ -7,7 +7,8 @@ monster_locations:
   - 8be3dc98-1680-4a9b-9b2f-08868bb276bb
   - bccbf8d9-dbb0-402b-8a2f-e258af32d745
   - f9cc14be-8c08-458d-bb4b-24a8f19eeb11
-egg_locations: 'Bone Fortress'
+egg_locations:
+  - 378bb20b-ad1f-44bf-9b34-8d28a3c2ce3b
 syncro_effect: 'DEF: Freeze'
 sell_price: '300'
 slug: specter

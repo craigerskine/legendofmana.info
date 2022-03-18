@@ -6,7 +6,8 @@ monster_type: dragon
 monster_locations:
   - 378bb20b-ad1f-44bf-9b34-8d28a3c2ce3b
   - d6d66be8-d4c3-4842-ac87-ad79aa5385dd
-egg_locations: 'Fieg Snowfields'
+egg_locations:
+  - c834ae7c-df9f-49b5-9259-b9d8ee50d684
 syncro_effect: 'DEF: Breath'
 sell_price: '500'
 slug: kid-dragon

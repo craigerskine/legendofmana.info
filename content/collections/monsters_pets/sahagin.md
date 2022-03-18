@@ -9,7 +9,8 @@ monster_locations:
   - a4de82f6-9775-4e04-bf49-6b264336ff92
   - 45401104-03f6-4dcd-8543-373ed020605d
   - bccbf8d9-dbb0-402b-8a2f-e258af32d745
-egg_locations: 'Duma Desert'
+egg_locations:
+  - 820411e2-0ba1-4237-8d3a-94d83e1c3479
 syncro_effect: 'ATTK: Piercing'
 required_mana: 'Dryad 3'
 sell_price: '10'

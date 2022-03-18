@@ -8,7 +8,8 @@ monster_locations:
   - 6b3b7cac-0422-4e4c-8be2-acd6482c1adb
   - 1b81296f-e448-4faa-9423-879638b59d06
   - d6d66be8-d4c3-4842-ac87-ad79aa5385dd
-egg_locations: 'Fieg Snowfields'
+egg_locations:
+  - c834ae7c-df9f-49b5-9259-b9d8ee50d684
 syncro_effect: 'HP Drain'
 required_mana: 'Shade 3'
 sell_price: '10'

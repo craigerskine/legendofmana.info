@@ -7,7 +7,8 @@ monster_locations:
   - 8be3dc98-1680-4a9b-9b2f-08868bb276bb
   - ed397928-b478-4ce6-b35e-93731aca1436
   - 45401104-03f6-4dcd-8543-373ed020605d
-egg_locations: 'Bone Fortress'
+egg_locations:
+  - 378bb20b-ad1f-44bf-9b34-8d28a3c2ce3b
 syncro_effect: Regeneration
 sell_price: '20'
 slug: skeleton

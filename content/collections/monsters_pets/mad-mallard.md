@@ -8,7 +8,8 @@ monster_locations:
   - 1704c29d-b3e9-49d9-8952-e297718e9846
   - 95f0b58f-93ec-4d1b-a6e6-f0b087728f28
   - 1b81296f-e448-4faa-9423-879638b59d06
-egg_locations: 'Lake Kilma'
+egg_locations:
+  - d788eaf2-761b-4e4a-b17f-035e9670b950
 syncro_effect: 'Defense Plus'
 required_mana: 'Wisp 3'
 sell_price: '10'

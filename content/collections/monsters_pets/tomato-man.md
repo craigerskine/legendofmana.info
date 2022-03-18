@@ -7,7 +7,8 @@ monster_locations:
   - 378bb20b-ad1f-44bf-9b34-8d28a3c2ce3b
   - c9bb2a06-79b3-4a19-a148-0180abb7ebde
   - ded1c1d8-364b-444f-bd94-4d1a254ce3dc
-egg_locations: 'Norn Peaks'
+egg_locations:
+  - 696e2839-b3f7-481a-ab2a-4d8431ba6260
 syncro_effect: Flameburst
 required_mana: 'Salamander 3'
 sell_price: '10'

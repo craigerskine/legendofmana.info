@@ -6,9 +6,10 @@ monster_type: poltergeist
 monster_locations:
   - 1d688ea1-febb-43a7-879a-1626dafb29a7
   - d788eaf2-761b-4e4a-b17f-035e9670b950
-egg_locations: N/A
+egg_locations:
+  - e2105cab-d731-4763-9db4-f1903311327a
 syncro_effect: N/A
-sell_price: N/A
+sell_price: 0
 slug: machine-golem
 monster_drops:
   1: 'Exp + Lucre'
@@ -28,4 +29,6 @@ pet_stats:
   Spr: '-'
   Chm: '-'
   Lck: '-'
+updated_by: 3e822a9c-52dd-4d90-9d46-ed81145c96ff
+updated_at: 1647634048
 ---

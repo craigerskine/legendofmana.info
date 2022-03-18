@@ -6,7 +6,8 @@ monster_type: undead
 monster_locations:
   - c834ae7c-df9f-49b5-9259-b9d8ee50d684
   - c9bb2a06-79b3-4a19-a148-0180abb7ebde
-egg_locations: 'Bone Fortress'
+egg_locations:
+  - 378bb20b-ad1f-44bf-9b34-8d28a3c2ce3b
 syncro_effect: 'ATTK: Poison'
 sell_price: '5'
 slug: zombine

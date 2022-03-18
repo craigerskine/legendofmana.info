@@ -7,7 +7,8 @@ monster_locations:
   - 45401104-03f6-4dcd-8543-373ed020605d
   - 95f0b58f-93ec-4d1b-a6e6-f0b087728f28
   - ded1c1d8-364b-444f-bd94-4d1a254ce3dc
-egg_locations: 'Fieg Snowfields'
+egg_locations:
+  - c834ae7c-df9f-49b5-9259-b9d8ee50d684
 syncro_effect: 'ATTK: Demonics'
 sell_price: '5000'
 slug: land-dragon

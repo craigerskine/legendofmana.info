@@ -3,7 +3,8 @@ id: 0365a03e-f9be-4406-b96b-cab0073bf0db
 blueprint: monsters_pets
 title: Lizardon
 monster_type: reptile
-monster_locations: Junkyard
+monster_locations:
+  - 1704c29d-b3e9-49d9-8952-e297718e9846
 egg_locations:
   - b1544f0c-d368-4ba5-a8dc-3dce6cc47de4
   - 45401104-03f6-4dcd-8543-373ed020605d
