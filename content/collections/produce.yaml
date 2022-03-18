@@ -4,7 +4,6 @@ layout: layout
 taxonomies:
   - color
 revisions: false
-route: '/encyclopedias/produce/{parent_uri}/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

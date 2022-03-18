@@ -10,10 +10,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
-        "rias/statamic-data-import": "^1.1",
-        "statamic/cms": "3.2.33",
-        "statamic/ssg": "^0.9.0",
-        "youfront/statamic-export": "^1.0"
+        "statamic/cms": "3.3.*",
+        "statamic/ssg": "^1.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
