@@ -9,8 +9,11 @@
 #}}
 
 <li>
-  <a href="{{ link }}" class="pb-4 border(b pri-500 opacity-50) font-bold block hover:(border(pri-900 opacity-100)) focus:(border(pri-900 opacity-100)) transition{{ if lightbox }} lb{{ /if }}">
+  <a href="{{ link }}" class="group pb-4 font-bold block relative transition{{ if lightbox }} lb{{ /if }}">
     {{ slot }}
     {{ if subtext }}<b class="text-xs font-normal uppercase block opacity-75">{{ subtext }}</b>{{ /if }}
+    <b class="h-px bg(pri-500 opacity-50) flex justify-center absolute inset-x-0 bottom-0">
+      <b class="w-0 transition-all group-hover:(w-full bg(pri-900)) group-focus:(w-full bg(pri-900))"></b>
+    </b>
   </a>
 </li>
