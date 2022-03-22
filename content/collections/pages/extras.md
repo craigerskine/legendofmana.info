@@ -2,8 +2,8 @@
 id: b9c68eea-3d57-4cac-a216-4dff7ccda800
 blueprint: pages
 title: Extras
-updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
-updated_at: 1643666506
+updated_by: 3e822a9c-52dd-4d90-9d46-ed81145c96ff
+updated_at: 1647971205
 subtext: Misc
 ---
 ## Goodies
@@ -11,7 +11,7 @@ subtext: Misc
 {{ collection:extras sort="order" }}
   <div class="pb-8 lg:(flex space-x-12)">
     <div class="flex-1">
-  {{ partial:_partials/heading tag="h2" :subtext="subtext" :link="link" img="/assets/img/encyclopedias/en-tome.png" border="yes" }}{{ title }}{{ /partial:_partials/heading }}
+  {{ partial:_partials/heading tag="h2" :subtext="subtext" link="" img="/assets/img/encyclopedias/en-tome.png" border="yes" }}{{ title }}{{ /partial:_partials/heading }}
     </div>
     <div class="flex-none">
       <a href="{{ link }}" class="group block relative hover:animate-waggle focus:animate-waggle" download>
