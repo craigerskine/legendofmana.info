@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f8e155564fa2e7c3acc7793c97db4d9",
+    "content-hash": "cea356f2133d0e7265e832a7ec59fb12",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1562,16 +1562,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "2.1.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "089edd38f5b8abba6cb01567c2a8aaa47cec4c72"
+                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/089edd38f5b8abba6cb01567c2a8aaa47cec4c72",
-                "reference": "089edd38f5b8abba6cb01567c2a8aaa47cec4c72",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c94a94f120803a18554c1805ef2e539f8285f9a2",
+                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2",
                 "shasum": ""
             },
             "require": {
@@ -1595,7 +1595,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -1657,7 +1657,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.1.0"
+                "source": "https://github.com/guzzle/psr7/tree/2.2.1"
             },
             "funding": [
                 {
@@ -1673,7 +1673,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-10-06T17:43:30+00:00"
+            "time": "2022-03-20T21:55:58+00:00"
         },
         {
             "name": "intervention/image",
@@ -4440,16 +4440,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "e17b499e30219dd1582f1c3c8b3140e6dd531dff"
+                "reference": "52a9f4322169570875e8004641e1a835e3100fce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/e17b499e30219dd1582f1c3c8b3140e6dd531dff",
-                "reference": "e17b499e30219dd1582f1c3c8b3140e6dd531dff",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/52a9f4322169570875e8004641e1a835e3100fce",
+                "reference": "52a9f4322169570875e8004641e1a835e3100fce",
                 "shasum": ""
             },
             "require": {
@@ -4459,7 +4459,7 @@
                 "facade/ignition-contracts": "^1.0",
                 "guzzlehttp/guzzle": "^6.3 || ^7.0",
                 "james-heinrich/getid3": "^1.9.21",
-                "laravel/framework": "^8.24.0 || ^9.0",
+                "laravel/framework": "^8.48.0 || ^9.0",
                 "laravel/helpers": "^1.1",
                 "league/commonmark": "^1.5 || ^2.2",
                 "league/csv": "^9.0",
@@ -4527,7 +4527,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.1"
+                "source": "https://github.com/statamic/cms/tree/v3.3.2"
             },
             "funding": [
                 {
@@ -4535,7 +4535,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-16T17:18:33+00:00"
+            "time": "2022-03-18T20:24:07+00:00"
         },
         {
             "name": "statamic/ssg",

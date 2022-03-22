@@ -12,21 +12,25 @@
   <ul class="prod-stats m-0 pt-4 pb-16 pl-1 grid(& flow-row cols-8) gap-x-1 md:(ml-14)">
     {{ if stats_plus || stats_minus }}
       {{ stats_plus }}
-        <li class="pb-1 min-h-[42px] rounded overflow-hidden bg(pri-900 opacity-10)">
-          <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)">{{ label }}</small>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" class="mx-auto">
-            <title>Skl Up</title>
-            <path fill="currentColor" fill-rule="evenodd" d="M10,3 L17,10 L12,10 L12,14.9940809 C12,16.1019194 11.1122704,17 10,17 L10,17 C8.8954305,17 8,16.1134452 8,14.9940809 L8,10 L3,10 L10,3 Z"></path>
-          </svg>
+        <li class="pb-1 min-h-[42px] -skew-x-12 bg(pri-900 opacity-10)">
+          <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)"><b class="block skew-x-12">{{ label }}</b></small>
+          <div class="skew-x-12">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" class="mx-auto">
+              <title>Skl Up</title>
+              <path fill="currentColor" fill-rule="evenodd" d="M10,3 L17,10 L12,10 L12,14.9940809 C12,16.1019194 11.1122704,17 10,17 L10,17 C8.8954305,17 8,16.1134452 8,14.9940809 L8,10 L3,10 L10,3 Z"></path>
+            </svg>
+          </div>
         </li>
       {{ /stats_plus }}
       {{ stats_minus }}
-        <li class="pb-1 min-h-[42px] rounded overflow-hidden bg(pri-900 opacity-10)">
-          <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)">{{ label }}</small>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" class="mx-auto">
-            <title>Sch Down</title>
-            <path fill="currentColor" d="M10,15.5857864 L14.5857864,11 L11,11 L11,5.00591905 C11,4.44643685 10.5560644,4 10,4 C9.44350195,4 9,4.44304908 9,5.00591905 L9,11 L5.41421356,11 L10,15.5857864 Z M10,17 L3,10 L8,10 L8,5.00591905 C8,3.88655484 8.8954305,3 10,3 C11.1122704,3 12,3.89808055 12,5.00591905 L12,10 L17,10 L10,17 Z"></path>
-          </svg>
+        <li class="pb-1 min-h-[42px] -skew-x-12 bg(pri-900 opacity-10)">
+          <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)"><b class="block skew-x-12">{{ label }}</b></small>
+          <div class="skew-x-12">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" class="mx-auto">
+              <title>Sch Down</title>
+              <path fill="currentColor" d="M10,15.5857864 L14.5857864,11 L11,11 L11,5.00591905 C11,4.44643685 10.5560644,4 10,4 C9.44350195,4 9,4.44304908 9,5.00591905 L9,11 L5.41421356,11 L10,15.5857864 Z M10,17 L3,10 L8,10 L8,5.00591905 C8,3.88655484 8.8954305,3 10,3 C11.1122704,3 12,3.89808055 12,5.00591905 L12,10 L17,10 L10,17 Z"></path>
+            </svg>
+          </div>
         </li>
       {{ /stats_minus }}
     {{ else }}
