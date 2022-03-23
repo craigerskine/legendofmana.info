@@ -218,7 +218,7 @@
     <div id="map-world-start" class="modal">
       <img src="/assets/img/walkthrough/maps/world-start.jpg" alt="Walkthrough Start" />
     </div>
-    {{ collection:maps sort="order" }}
+    {{ collection:maps sort="order" slug:doesnt_match="_na|orchard" }}
       <div id="map-{{ slug }}" class="modal">
         <img src="/assets/img/walkthrough/maps/{{ slug }}.png" alt="{title}" />
       </div>
