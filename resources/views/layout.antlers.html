@@ -152,22 +152,24 @@
       </main>
       <footer class="pt-10 pb-6 text(pri-500 xs) md:(text-sm)">
         <div class="container mx-auto px-4">
-          <div class="row -mx-4 flex">
-            <div class="col px-4 w-1/2 md:w-3/4">
-              <div class="row md:(-mx-4 flex)">
-                <div class="col md:px-4 md:w-1/3">
+          <div class="-mx-4 md:flex">
+            <div class="mx-auto px-4 w-1/2 md:(w-3/4)">
+              <div class="md:(-mx-4 flex)">
+                <div class="md:px-4 md:w-1/3">
                   <ul class="m-0 mb-4 space-y-2">
                     <li class="font-bold uppercase">Game</li>
-                    {{ partial:_partials/nav_footer link="/" }} Home {{ /partial:_partials/nav_footer }}
-                    {{ partial:_partials/nav_footer link="https://www.play-asia.com/search/LOMR?tagid=145091" }} Buy Game {{ /partial:_partials/nav_footer }}
-                    {{ partial:_partials/nav_footer link="https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091" }} Buy OST {{ /partial:_partials/nav_footer }}
+                    <li>{{ partial:_partials/nav_footer link="/" }} Home {{ /partial:_partials/nav_footer }}</li>
+                    <li>{{ partial:_partials/nav_footer link="https://www.play-asia.com/search/LOMR?tagid=145091" }} Buy Game {{ /partial:_partials/nav_footer }}</>
+                    <li>{{ partial:_partials/nav_footer link="https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091" }} Buy OST {{ /partial:_partials/nav_footer }}</li>
                   </ul>
                   <ul class="m-0 mb-4 space-y-2">
                     <li class="font-bold uppercase">Walkthrough</li>
                     {{ nav from="walkthrough" }}
-                      {{ partial:_partials/nav_footer :link="url" }}
-                        {{ meta_title ?? title }}
-                      {{ /partial:_partials/nav_footer }}
+                      <li>
+                        {{ partial:_partials/nav_footer :link="url" }}
+                          {{ meta_title ?? title }}
+                        {{ /partial:_partials/nav_footer }}
+                      </li>
                     {{ /nav }}
                   </ul>
                 </div>
@@ -175,33 +177,39 @@
                   <ul class="m-0 mb-4 space-y-2">
                     <li class="font-bold uppercase">Encyclopedias</li>
                     {{ nav from="encyclopedias" }}
-                      {{ partial:_partials/nav_footer :link="url" }}
-                        {{ meta_title ?? title }}
-                      {{ /partial:_partials/nav_footer }}
+                      <li>
+                        {{ partial:_partials/nav_footer :link="url" }}
+                          {{ meta_title ?? title }}
+                        {{ /partial:_partials/nav_footer }}
+                      </li>
                     {{ /nav }}
                   </ul>
                 </div>
                 <div class="col md:px-4 md:w-1/3">
                   <ul class="m-0 mb-4 space-y-2">
                     <li class="font-bold uppercase">Extras</li>
-                    {{ partial:_partials/nav_footer link="/extras/" }} Wallpaper {{ /partial:_partials/nav_footer }}
-                    {{ partial:_partials/nav_footer link="/extras/" }} Game Manual {{ /partial:_partials/nav_footer }}
-                    {{ partial:_partials/nav_footer link="/extras/" }} Save File {{ /partial:_partials/nav_footer }}
+                    <li>{{ partial:_partials/nav_footer link="/extras/" }} Wallpaper {{ /partial:_partials/nav_footer }}</li>
+                    <li>{{ partial:_partials/nav_footer link="/extras/" }} Game Manual {{ /partial:_partials/nav_footer }}</li>
+                    <li>{{ partial:_partials/nav_footer link="/extras/" }} Save File {{ /partial:_partials/nav_footer }}</li>
                   </ul>
                   <ul class="m-0 mb-4 space-y-2"></ul>
                 </div>
               </div>
             </div>
-            <div class="col px-4 w-1/2 text(xs right) leading-relaxed space-y-8 md:(w-1/4)">
-              <p class="foot-copy">Legend of Mana game media and intellectual property &copy; Square Enix.</p>
+            <div class="foot-info mx-auto px-4 max-w-md text(xs center) leading-relaxed space-y-8 md:(mx-0 w-1/4 max-w-full text-right)">
+              <p class="foot-copy mt-6 pt-6 border(t pri-500 opacity-50) md:(mt-0 pt-0 border-0)">Legend of Mana game media and intellectual property &copy; Square Enix.</p>
               <p class="foot-credit">
-                This site was lovingly designed &amp; hand-coded by
-                <a href="http://craigerskine.com/" class="group text-pri-400 inline-block relative hover:(text-pri-100) focus:(text-pri-100)">
+                This site was lovingly designed and hand-coded by
+                {{ partial:_partials/nav_footer
+                  link="http://craigerskine.com/" 
+                  inline="yes" 
+                }}
                   {{ site:author }}
-                  <b class="h-px opacity-50 flex justify-center absolute inset-x-0 bottom-0">
-                    <b class="w-0 bg-current transition-all group-hover:(w-full) group-focus:(w-full)"></b>
-                  </b>
-                </a>
+                {{ /partial:_partials/nav_footer }}
+                using 
+                {{ partial:_partials/nav_footer link="https://twind.dev/" inline="yes" }} Twind {{ /partial:_partials/nav_footer }}
+                and an 
+                {{ partial:_partials/nav_footer link="https://jamstack.org/generators/" inline="yes" }} SSG {{ /partial:_partials/nav_footer }}
               </p>
               <div>
                 <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
