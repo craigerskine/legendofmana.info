@@ -3,8 +3,8 @@ id: bafaa18e-22c5-4ed0-b44c-02e871793477
 blueprint: recipes
 title: '+20 Stats'
 subtext: 'Non-Wood, Non-Aerolite'
-updated_by: ea6393ed-5c2e-4abf-b78d-80b9488e0102
-updated_at: 1643812765
+updated_by: 3e822a9c-52dd-4d90-9d46-ed81145c96ff
+updated_at: 1648483980
 bard:
   -
     type: paragraph
@@ -20,7 +20,7 @@ bard:
     content:
       -
         type: text
-        text: 'You can use this recipe to make a Ring and temper in an '
+        text: '* You can use this recipe to make a Ring and temper in an '
       -
         type: text
         marks:
@@ -64,7 +64,7 @@ bard:
           - '3x Sulfur'
           - 'Round Seed'
           - Needle/Needlettuce
-          - 'Springana or Ear of Wheat (see above)'
+          - 'Springana or Ear of Wheat*'
           - 'Spiny Seed'
           - 'Poison Fang'
           - 'Spiny Seed'
