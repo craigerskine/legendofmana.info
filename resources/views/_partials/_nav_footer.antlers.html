@@ -7,8 +7,11 @@
 #}}
 
 <li>
-  <a href="{{ link }}" class="font-normal text-pri-400 inline-flex items-center transition hover:(text-pri-100 underline) focus:(text-pri-100 underline)">
+  <a href="{{ link }}" class="group font-normal text-pri-400 inline-flex items-center relative transition hover:(text-pri-100) focus:(text-pri-100)">
     <img src="/assets/img/li.png" alt="Swirl" class="mr-2" />
     {{ slot }}
+    <b class="h-px opacity-50 flex justify-center absolute inset-x-0 bottom-0">
+      <b class="w-0 bg-current transition-all group-hover:(w-full) group-focus:(w-full)"></b>
+    </b>
   </a>
 </li>

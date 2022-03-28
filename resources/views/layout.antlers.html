@@ -192,19 +192,29 @@
                 </div>
               </div>
             </div>
-            <div class="col px-4 w-1/2 md:w-1/4 text-xs text-right">
-              <p class="foot-copy mb-5">&copy;{{ now format="Y" }} all rights reserved.<br />media copyright Square Enix.</p>
-              <p class="foot-credit mb-5">Lovingly crafted by <a href="http://craigerskine.com/" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 inline-block hover:underline focus:underline">{{ site:author }}</a></p>
-              <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
-              <ul class="foot-donate m-0 inline-flex space-x-4">
-                {{ site:donate }}
-                  <li>
-                    <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 transition">
-                      <i class="fab fa-fw fa-2x fa-{{ icon }}" title="Donate via {{ title }}"></i>
-                    </a>
-                  </li>
-                {{ /site:donate }}
-              </ul>
+            <div class="col px-4 w-1/2 text(xs right) leading-relaxed space-y-8 md:(w-1/4)">
+              <p class="foot-copy">Legend of Mana game media and intellectual property &copy; Square Enix.</p>
+              <p class="foot-credit">
+                This site was lovingly designed &amp; hand-coded by
+                <a href="http://craigerskine.com/" class="group text-pri-400 inline-block relative hover:(text-pri-100) focus:(text-pri-100)">
+                  {{ site:author }}
+                  <b class="h-px opacity-50 flex justify-center absolute inset-x-0 bottom-0">
+                    <b class="w-0 bg-current transition-all group-hover:(w-full) group-focus:(w-full)"></b>
+                  </b>
+                </a>
+              </p>
+              <div>
+                <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
+                <ul class="foot-donate m-0 inline-flex space-x-4">
+                  {{ site:donate }}
+                    <li>
+                      <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 transition">
+                        <i class="fab fa-fw fa-2x fa-{{ icon }}" title="Donate via {{ title }}"></i>
+                      </a>
+                    </li>
+                  {{ /site:donate }}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
