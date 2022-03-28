@@ -4,10 +4,9 @@
 /* TEAM */
   Master: Craig Erskine
   Site: http://craigerskine.com
-  Twitter: craigerskine
   Location: USA
 
 /* SITE */
-  Standards: HTML5, CSS3, XML, XSLT
-  Components: jQuery
-  Software: Sketch, Fireworks, Sublime Text, Symphony
+  Standards: HTML5, CSS3, Js
+  Components: Twind, Tailwind, Antlers
+  Software: Sketch, Figma, Fireworks, VS Code, Statamic

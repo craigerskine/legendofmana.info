@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cea356f2133d0e7265e832a7ec59fb12",
+    "content-hash": "ef53af14bc8934446d39cb48767578ea",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4440,16 +4440,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.2",
+            "version": "v3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "52a9f4322169570875e8004641e1a835e3100fce"
+                "reference": "571412efa5a8ca08c156290644e1a815578d188f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/52a9f4322169570875e8004641e1a835e3100fce",
-                "reference": "52a9f4322169570875e8004641e1a835e3100fce",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/571412efa5a8ca08c156290644e1a815578d188f",
+                "reference": "571412efa5a8ca08c156290644e1a815578d188f",
                 "shasum": ""
             },
             "require": {
@@ -4527,7 +4527,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.2"
+                "source": "https://github.com/statamic/cms/tree/v3.3.3"
             },
             "funding": [
                 {
@@ -4535,7 +4535,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-18T20:24:07+00:00"
+            "time": "2022-03-24T18:52:48+00:00"
         },
         {
             "name": "statamic/ssg",
@@ -10455,5 +10455,5 @@
         "php": "^7.3 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }
