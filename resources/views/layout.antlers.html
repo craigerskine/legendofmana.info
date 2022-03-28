@@ -72,14 +72,14 @@
             </div>
           {{ else }}
             <div class="container mx-auto pt-4 px-0 pb-32 lg:(pt-16 px-4)">
-              <h1 class="m-0 pt-4 px-2 text-lg flex items-center justify-center sm:(text-3xl) lg:(pt-0 justify-start)">
+              <h1 class="m-0 pt-4 px-2 text-lg flex items-center justify-center relative z-50 sm:(text-3xl) lg:(pt-0 justify-start)">
                 <img alt="{{ title | substr:0:1 }}" class="mr-1" src="/assets/img/ltr/{{ if meta_title }}{{ meta_title | substr:0:1 | lower }}{{ else }}{{ title | substr:0:1 | lower }}{{ /if }}.png" />
                 <i class="sr-only">{{ if meta_title }}{{ meta_title | substr:0:1 }}{{ else }}{{ title | substr:0:1 }}{{ /if }}</i>
                 <b class="relative">
                   {{ if meta_title }}{{ meta_title | substr:1 }}{{ else }}{{ title | substr:1 }}{{ /if }}
                   {{ if parent:slug == 'monsters-pets' }} Monsters & Pets{{ /if }}
                   {{ if parent:slug == 'produce' }} Produce{{ /if }}
-                  {{ if story_arc }}<small class="py-px px-3 ring-1 ring-inset ring-current text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }}{{ title }}{{ /story_arc }}</small>{{ /if }}
+                  {{ if story_arc }}<small class="py-px px-3 ring(1 inset current) bg(white opacity-50) text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }}{{ title }}{{ /story_arc }}</small>{{ /if }}
                 </b>
               </h1>
             </div>
@@ -103,45 +103,47 @@
               {{ template_content }}
             </article>
             <aside class="col flex md:(px-4 w-4/12)">
-              <div class="border(t l-0 black opacity-10) pt-8 pl-0 text-sm flex-1 space-y-10 md:(pt-0 pl-8 border(t-0 l))">
-                <section>
-                  {{ partial:_partials/heading
-                    tag="h3" 
-                    subtext="Guide" 
-                    link="/walkthrough" 
-                    img="/assets/img/encyclopedias/en-events.png" 
-                    border="yes" 
-                  }}
-                    Walkthrough
-                  {{ /partial:_partials/heading }}
-                  <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
-                    {{ nav from="walkthrough" }}
-                      {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
-                        {{ title }}
-                      {{ /partial:_partials/link_aside }}
-                    {{ /nav }}
-                  </ul>
-                </section>
-                <section>
-                  {{ partial:_partials/heading
-                    tag="h3" 
-                    subtext="Info" 
-                    link="/encyclopedias" 
-                    img="/assets/img/encyclopedias/en-info.png" 
-                    border="yes" 
-                  }}
-                    Encyclopedias
-                  {{ /partial:_partials/heading }}
-                  <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
-                    {{ nav from="encyclopedias" }}
-                      {{ if count <= 6 }}
-                      {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
-                        {{ title }}
-                      {{ /partial:_partials/link_aside }}
-                      {{ /if }}
-                    {{ /nav }}
-                  </ul>
-                </section>
+              <div class="border(t l-0 black opacity-10) pt-8 pl-0 text-sm flex-1 relative md:(pt-0 pl-8 border(t-0 l))">
+                <div class="space-y-10 sticky top-4">
+                  <section>
+                    {{ partial:_partials/heading
+                      tag="h3" 
+                      subtext="Guide" 
+                      link="/walkthrough" 
+                      img="/assets/img/encyclopedias/en-events.png" 
+                      border="yes" 
+                    }}
+                      Walkthrough
+                    {{ /partial:_partials/heading }}
+                    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                      {{ nav from="walkthrough" }}
+                        {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
+                          {{ title }}
+                        {{ /partial:_partials/link_aside }}
+                      {{ /nav }}
+                    </ul>
+                  </section>
+                  <section>
+                    {{ partial:_partials/heading
+                      tag="h3" 
+                      subtext="Info" 
+                      link="/encyclopedias" 
+                      img="/assets/img/encyclopedias/en-info.png" 
+                      border="yes" 
+                    }}
+                      Encyclopedias
+                    {{ /partial:_partials/heading }}
+                    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                      {{ nav from="encyclopedias" }}
+                        {{ if count <= 6 }}
+                        {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
+                          {{ title }}
+                        {{ /partial:_partials/link_aside }}
+                        {{ /if }}
+                      {{ /nav }}
+                    </ul>
+                  </section>
+                </div>
               </div>
             </aside>
           </section>
