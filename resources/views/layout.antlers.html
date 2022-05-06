@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>
       {{ if ! is_homepage }}
-        {{ meta_title ?? title }} - 
+        {{ meta_title ?? title ?? '404' }} - 
         {{ if parent:slug == 'monsters-pets' }}Monsters & Pets - {{ /if }}
         {{ if parent:slug == 'produce' }}Produce - {{ /if }}
       {{ /if }}
@@ -102,50 +102,52 @@
             <article class="prose col w-full flex-1 md:(px-4)">
               {{ template_content }}
             </article>
-            <aside class="col flex md:(px-4 w-4/12)">
-              <div class="border(t l-0 black opacity-10) pt-8 pl-0 text-sm flex-1 relative md:(pt-0 pl-8 border(t-0 l))">
-                <div class="space-y-10 sticky top-4">
-                  <section>
-                    {{ partial:_partials/heading
-                      tag="h3" 
-                      subtext="Guide" 
-                      link="/walkthrough" 
-                      img="/assets/img/encyclopedias/en-events.png" 
-                      border="yes" 
-                    }}
-                      Walkthrough
-                    {{ /partial:_partials/heading }}
-                    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
-                      {{ nav from="walkthrough" }}
-                        {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
-                          {{ title }}
-                        {{ /partial:_partials/link_aside }}
-                      {{ /nav }}
-                    </ul>
-                  </section>
-                  <section>
-                    {{ partial:_partials/heading
-                      tag="h3" 
-                      subtext="Info" 
-                      link="/encyclopedias" 
-                      img="/assets/img/encyclopedias/en-info.png" 
-                      border="yes" 
-                    }}
-                      Encyclopedias
-                    {{ /partial:_partials/heading }}
-                    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
-                      {{ nav from="encyclopedias" }}
-                        {{ if count <= 6 }}
-                        {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
-                          {{ title }}
-                        {{ /partial:_partials/link_aside }}
-                        {{ /if }}
-                      {{ /nav }}
-                    </ul>
-                  </section>
+            {{ if response_code != '404' }}
+              <aside class="col flex md:(px-4 w-1/3)">
+                <div class="border(t l-0 black opacity-10) pt-8 pl-0 text-sm flex-1 relative md:(pt-0 pl-8 border(t-0 l))">
+                  <div class="space-y-10 sticky top-4">
+                    <section>
+                      {{ partial:_partials/heading
+                        tag="h3" 
+                        subtext="Guide" 
+                        link="/walkthrough" 
+                        img="/assets/img/encyclopedias/en-events.png" 
+                        border="yes" 
+                      }}
+                        Walkthrough
+                      {{ /partial:_partials/heading }}
+                      <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                        {{ nav from="walkthrough" }}
+                          {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
+                            {{ title }}
+                          {{ /partial:_partials/link_aside }}
+                        {{ /nav }}
+                      </ul>
+                    </section>
+                    <section>
+                      {{ partial:_partials/heading
+                        tag="h3" 
+                        subtext="Info" 
+                        link="/encyclopedias" 
+                        img="/assets/img/encyclopedias/en-info.png" 
+                        border="yes" 
+                      }}
+                        Encyclopedias
+                      {{ /partial:_partials/heading }}
+                      <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                        {{ nav from="encyclopedias" }}
+                          {{ if count <= 6 }}
+                          {{ partial:_partials/link_aside link="{ url }" subtext="{ subtext }" }}
+                            {{ title }}
+                          {{ /partial:_partials/link_aside }}
+                          {{ /if }}
+                        {{ /nav }}
+                      </ul>
+                    </section>
+                  </div>
                 </div>
-              </div>
-            </aside>
+              </aside>
+            {{ /if }}
           </section>
         </div>
         <div class="h-[32px] bg(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/assets/img/border-bottom.png');"/>
