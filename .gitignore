@@ -1,4 +1,4 @@
-/_archive
+/_data
 /_design
 /node_modules
 /public/hot
@@ -15,7 +15,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 .DS_Store
-*.sublime-project
-*.sublime-workspace
 *.vscode
 *.code-workspace
