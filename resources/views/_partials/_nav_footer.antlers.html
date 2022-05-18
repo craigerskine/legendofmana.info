@@ -7,10 +7,10 @@
   {{ /partial:_partials/nav_footer }}
 #}}
 
-<a href="{{ link }}" class="group font-normal text-pri-400 inline-flex items-center relative motion-safe:transition hover:(text-pri-100) focus:(text-pri-100)">
+<a href="{{ link }}" class="group font-normal text-pri-400 inline-flex items-center relative motion-safe:transition hover:(text-pri-100)">
   {{ if inline }}{{ else }}<img src="/assets/img/li.png" alt="Swirl" class="mr-2" />{{ /if }}
   {{ slot }}
   <b class="h-px opacity-50 flex justify-center absolute inset-x-0 bottom-0">
-    <b class="w-0 bg-current motion-safe:transition-all group-hover:(w-full) group-focus:(w-full)"></b>
+    <b class="w-0 bg-current motion-safe:transition-all group-hover:(w-full)"></b>
   </b>
 </a>

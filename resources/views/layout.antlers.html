@@ -35,7 +35,7 @@
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex(& col) items-center lg:(py-4 flex-row space-x-8)">
             <li class="pt-2 flex-1 lg:(pt-0 flex-none)">
-              <a href="/" class="inline-block hover:(motion-safe:animate-waggle) focus:(motion-safe:animate-waggle)">
+              <a href="/" class="inline-block hover:(motion-safe:animate-waggle)">
                 <img src="/assets/img/logo.png" alt="Legend of Mana: Fan Site" />
               </a>
             </li>
@@ -43,7 +43,7 @@
               <ul class="mx-auto py-5 text-pri-700 text-xs flex items-center space-x-5 lg:(m-0 py-0 text-base space-x-8)">
                 {{ nav include_home="false" }}
                   <li class="leading-tight">
-                    <a href="{{ url }}" class="group text-pri-700 font-bold flex(& col) hover:(text-pri-900) focus:(text-pri-900) lg:(font-normal items-end) relative{{ is_current || is_parent ?= ' active' }}">
+                    <a href="{{ url }}" class="group text-pri-700 font-bold flex(& col) hover:(text-pri-900) lg:(font-normal items-end) relative{{ is_current || is_parent ?= ' active' }}">
                       {{ title }}
                       <small class="text-xs normal-case font-normal order-first lg:(tracking-widest)">{{ subtext }}</small>
                       <b class="w-full flex absolute -bottom-1 inset-x-0 motion-safe:transition-all"><b class="m-auto py-px group-hover:w-full bg-pri-700 opacity-50 motion-safe:transition-all {{ is_current || is_parent ? 'w-full' : 'w-0' }}"></b></b>
@@ -60,9 +60,9 @@
               <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
                 {{ nav:home_mast }}
                 <li{{ if first }} class="row-span-2"{{ /if }}>
-                  <a href="{{ url }}" class="group block relative hover:motion-safe:animate-waggle focus:motion-safe:animate-waggle{{ if first }} lb{{ /if }}">
+                  <a href="{{ url }}" class="group block relative hover:(shadow-xl motion-safe:animate-waggle){{ if first }} lb{{ /if }}">
                     <figure>
-                      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] rounded shadow-md ring-1 ring-black ring-opacity-75" />
+                      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] ring(1 black opacity-75) rounded shadow-md motion-safe:transition group-hover:(ring(4 opacity-50))" />
                       <figcaption class="py-px px-3 bg-pri-900 text(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ title }}</figcaption>
                     </figure>
                   </a>
@@ -218,7 +218,7 @@
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {{ site:donate }}
                     <li>
-                      <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 motion-safe:transition">
+                      <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 motion-safe:transition">
                         <i class="fab fa-fw fa-2x fa-{{ icon }}" title="Donate via {{ title }}"></i>
                       </a>
                     </li>
