@@ -35,7 +35,7 @@
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex(& col) items-center lg:(py-4 flex-row space-x-8)">
             <li class="pt-2 flex-1 lg:(pt-0 flex-none)">
-              <a href="/" class="inline-block hover:(animate-waggle) focus:(animate-waggle)">
+              <a href="/" class="inline-block hover:(motion-safe:animate-waggle) focus:(motion-safe:animate-waggle)">
                 <img src="/assets/img/logo.png" alt="Legend of Mana: Fan Site" />
               </a>
             </li>
@@ -46,7 +46,7 @@
                     <a href="{{ url }}" class="group text-pri-700 font-bold flex(& col) hover:(text-pri-900) focus:(text-pri-900) lg:(font-normal items-end) relative{{ is_current || is_parent ?= ' active' }}">
                       {{ title }}
                       <small class="text-xs normal-case font-normal order-first lg:(tracking-widest)">{{ subtext }}</small>
-                      <b class="w-full flex absolute -bottom-1 inset-x-0 transition-all"><b class="m-auto py-px group-hover:w-full bg-pri-700 opacity-50 transition-all {{ is_current || is_parent ? 'w-full' : 'w-0' }}"></b></b>
+                      <b class="w-full flex absolute -bottom-1 inset-x-0 motion-safe:transition-all"><b class="m-auto py-px group-hover:w-full bg-pri-700 opacity-50 motion-safe:transition-all {{ is_current || is_parent ? 'w-full' : 'w-0' }}"></b></b>
                     </a>
                   </li>
                 {{ /nav }}
@@ -60,7 +60,7 @@
               <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
                 {{ nav:home_mast }}
                 <li{{ if first }} class="row-span-2"{{ /if }}>
-                  <a href="{{ url }}" class="group block relative hover:animate-waggle focus:animate-waggle{{ if first }} lb{{ /if }}">
+                  <a href="{{ url }}" class="group block relative hover:motion-safe:animate-waggle focus:motion-safe:animate-waggle{{ if first }} lb{{ /if }}">
                     <figure>
                       <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] rounded shadow-md ring-1 ring-black ring-opacity-75" />
                       <figcaption class="py-px px-3 bg-pri-900 text(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ title }}</figcaption>
@@ -87,12 +87,12 @@
           <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100"><div class="mountains h-32 bg(repeat-x top) opacity-25" style="background-image: url('/assets/img/mountains.png')"></div></div>
           <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40"><div class="tree-line h-32 bg(no-repeat bottom) flex" style="background-image: url('/assets/img/tree-line-center.png');"></div></div>
           <div class="scene absolute bottom-0 inset-x-0 z-40" data-modifier="30"><div class="mist h-32" style="background-image: linear-gradient(180deg, rgba(255,255,255,0) 50%, #FFF 100%);"></div></div>
-          <div class="tree hidden absolute right-4 z-20 animate-float top-0 lg:(block)"><img src="/assets/img/tree.png" alt="Mana Tree"{{ if ! is_homepage }} class="w-48"{{ /if }} /></div>
+          <div class="tree hidden absolute right-4 z-20 motion-safe:animate-float top-0 lg:(block)"><img src="/assets/img/tree.png" alt="Mana Tree"{{ if ! is_homepage }} class="w-48"{{ /if }} /></div>
         </section>
-        <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] animate-slide" data-modifier="400" style="background-image: url('/assets/img/clouds.png');" aria-hidden="true"></div>
+        <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] motion-safe:animate-slide" data-modifier="400" style="background-image: url('/assets/img/clouds.png');" aria-hidden="true"></div>
         <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
-          <img class="animate-wiggle group-hover:animate-none" />
-          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 group-hover:opacity-75 absolute left-2 group-hover:left-6 top-1/2 rounded shadow-lg transform -translate-y-1/2 transition-all duration-200"><small class="block opacity-50">Today is</small><span></span> Day</b>
+          <img class="motion-safe:animate-wiggle group-hover:motion-safe:animate-none" />
+          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 group-hover:opacity-75 absolute left-2 group-hover:left-6 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:transition-all"><small class="block opacity-50">Today is</small><span></span> Day</b>
         </p>
       </header>
       <main class="py-8 pb-16 bg-pri-400 relative z-20">
@@ -218,7 +218,7 @@
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {{ site:donate }}
                     <li>
-                      <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 transition">
+                      <a href="{{ link }}" class="text-pri-400 hover:text-pri-100 focus:text-pri-100 motion-safe:transition">
                         <i class="fab fa-fw fa-2x fa-{{ icon }}" title="Donate via {{ title }}"></i>
                       </a>
                     </li>

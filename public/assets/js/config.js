@@ -77,7 +77,7 @@
   })
   twind.tw(() => ({
     '@global': {
-      'a:not([class]),a[class="lb"]': { '@apply': 'text-black font-bold transition', },
+      'a:not([class]),a[class="lb"]': { '@apply': 'text-black font-bold motion-safe:transition', },
       'a:not([class]):hover,a:not([class]):focus,a[class="lb"]:hover,a[class="lb"]:focus': { '@apply': 'text-opacity-90 underline', },
       'p:not([class]),ul:not([class]),ol:not([class]),table:not([class])': { '@apply': 'mb-5 border-current', },
       'ul:not([class]) ul:not([class]),ul:not([class]) ol:not([class]),ol:not([class]) ol:not([class]),ol:not([class]) ul:not([class])': { '@apply': 'mb-0', },
@@ -106,10 +106,10 @@
       '.prose h3 a,.prose h2 a': { '@apply': 'text-current', },
       '.prose h3 a:hover,.prose h3 a:focus,.prose h2 a:hover,.prose h2 a:focus': { '@apply': 'text-current text-opacity-50 no-underline', },
       '.prose code': { '@apply': 'px-1 py-px bg-pri-800 text(yellow-200 xs) inline-block rounded-sm', },
-      '.btn': { '@apply': 'px-3 py-2 bg(pri-200 opacity-25) font-normal inline-flex items-center uppercase rounded ring(1 pri-900 opacity-50) transition', },
+      '.btn': { '@apply': 'px-3 py-2 bg(pri-200 opacity-25) font-normal inline-flex items-center uppercase rounded ring(1 pri-900 opacity-50) motion-safe:transition', },
       '.btn:hover,.btn:focus': { '@apply': 'bg-opacity-50 ring-opacity-100 shadow-lg', },
       '.lb': { '@apply': 'inline-block relative', },
-      '.lb .img-th + .img-note': { '@apply': 'p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded transition', },
+      '.lb .img-th + .img-note': { '@apply': 'p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded motion-safe:transition', },
       '.lb:hover .img-th + .img-note,.lb:focus .img-th + .img-note': { '@apply': 'opacity-100', },
       '.modal': { '@apply': 'p-0 max-w-md text-left align-middle hidden relative z-[2]', },
       '.modal a.close-modal': {'@apply': 'w-10 h-10 block bg(contain norepeat center) absolute -top-5 -right-5', 'font-size': '0px', 'text-indent': '-9999px', 'background-image': 'url(\'/assets/img/modal-close.svg\')', },

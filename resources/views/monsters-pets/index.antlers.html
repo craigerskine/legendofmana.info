@@ -18,13 +18,13 @@
               :id="(index === 0 ? 'monster-' : 'pet-') +'{{ slug }}-tab'"
               role="tab"
               @click="activeTab = index"
-              class="tab-control mx-3 py-1 font-black text-lg uppercase transition focus:(outline-none)"
+              class="tab-control mx-3 py-1 font-black text-lg uppercase motion-safe:transition focus:(outline-none)"
               :class="[activeTab === index ? 'text-current' : 'text-pri-700 hover:text-pri-900 focus:text-pri-900']"
               :aria-controls="(index === 0 ? 'monster-' : 'pet-') +'{{ slug }}-panel'"
               :aria-selected="activeTab === index ? 'true' : 'false'"
               x-text="tab"
             ></button>
-            <b class="h-[3px] absolute bottom-0 inset-x-3 -skew-x-12 transition" :class="[activeTab === index ? 'bg-current opacity-50' : 'opacity-0']"></b>
+            <b class="h-[3px] absolute bottom-0 inset-x-3 -skew-x-12 motion-safe:transition" :class="[activeTab === index ? 'bg-current opacity-50' : 'opacity-0']"></b>
           </li>
         </template>
         <li class="h-4 bg-current flex-1 opacity-20 -skew-x-12"></li>

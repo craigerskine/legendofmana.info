@@ -10,4 +10,4 @@ meta_title: 'Tempering Recipes'
 template: recipes/index
 thumbnail: img/encyclopedias/recipes.png
 ---
-<p class="mb-16 bg(pri-600 opacity-25) flex overflow-hidden rounded"><b class="p-5 bg(pri-600 opacity-50) flex items-center"><i class="fal fa-fw fa-comment-alt-exclamation fa-flip-horizontal fa-2x text-pri-200 animate-pulse"></i></b><span class="p-5 flex-1 self-center"><a href="https://forge.grendel.fr/">Mana Forge</a><small class="block"><i>The</i> best place to build and test your own recipes.</small></span></p>
+<p class="mb-16 bg(pri-600 opacity-25) flex overflow-hidden rounded"><b class="p-5 bg(pri-600 opacity-50) flex items-center"><i class="fal fa-fw fa-comment-alt-exclamation fa-flip-horizontal fa-2x text-pri-200 motion-safe:animate-pulse"></i></b><span class="p-5 flex-1 self-center"><a href="https://forge.grendel.fr/">Mana Forge</a><small class="block"><i>The</i> best place to build and test your own recipes.</small></span></p>

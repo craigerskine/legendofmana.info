@@ -29,10 +29,10 @@
   {{ /if}}
   {{ if border }} border(b black opacity-10) {{ /if }}
 ">
-  {{ if link }}<a href="{{ link }}" class="group text-black text-opacity-90 hover:text-opacity-50 focus:text-opacity-50 transition">{{ /if }}
+  {{ if link }}<a href="{{ link }}" class="group text-black text-opacity-90 hover:text-opacity-50 focus:text-opacity-50 motion-safe:transition">{{ /if }}
     <span class="align-middle inline-flex items-center uppercase tracking-tight">
       {{ if img }}
-      <b class="mr-3 w-50 h-50 bg-black flex overflow-hidden rounded group-hover:animate-wiggle group-focus:animate-wiggle">
+      <b class="mr-3 w-50 h-50 bg-black flex overflow-hidden rounded group-hover:motion-safe:animate-wiggle group-focus:motion-safe:animate-wiggle">
         <img src="{{ img }}" alt="{{ slot }} {{ subtext }}" class="m-auto">
       </b>
       {{ /if }}

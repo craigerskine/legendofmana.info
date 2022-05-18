@@ -2,7 +2,7 @@
 {{ content }}
 {{ if order !== 68 }}
   <blockquote class="mt-16 mb-5 px-5 py-2 space-x-4 bg(white opacity-10) flex items-center relative rounded shadow-lg md:(py-5)">
-    <img src="/assets/img/walkthrough/cactus.png" alt="Cactus" class="animate-wiggle">
+    <img src="/assets/img/walkthrough/cactus.png" alt="Cactus" class="motion-safe:animate-wiggle">
     <p class="m-0 flex-1">
       <strong>Upon Completion:</strong>
       <small class="block">
@@ -15,7 +15,7 @@
   </blockquote>
   <p class="pt-5">
     {{ collection:events order:is="{ order | add:1 }" }}
-    <a href="{{ url }}" class="block font-bold capitalize text-right transition hover:text-black focus:text-black">
+    <a href="{{ url }}" class="block font-bold capitalize text-right motion-safe:transition hover:text-black focus:text-black">
       <b class="text-xs font-normal uppercase block opacity-90">Next:</b>
       {{ title }}
     </a>
