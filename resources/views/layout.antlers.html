@@ -60,9 +60,9 @@
               <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
                 {{ nav:home_mast }}
                 <li{{ if first }} class="row-span-2"{{ /if }}>
-                  <a href="{{ url }}" class="group block relative hover:(shadow-xl motion-safe:animate-waggle){{ if first }} lb{{ /if }}">
+                  <a href="{{ url }}" class="group block relative hover:(shadow-xl motion-safe:animate-waggle) focus:(outline-none){{ if first }} lb{{ /if }}">
                     <figure>
-                      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] ring(1 black opacity-75) rounded shadow-md motion-safe:transition group-hover:(ring(4 opacity-50))" />
+                      <img src="/assets/img/{{ image }}" alt="{{ title }}" class="relative z-[-1] ring(1 pri-900) rounded shadow-md motion-safe:transition group-hover:(ring-4) group-focus:(ring-4)" />
                       <figcaption class="py-px px-3 bg-pri-900 text(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ title }}</figcaption>
                     </figure>
                   </a>
