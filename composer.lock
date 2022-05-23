@@ -4,27 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "55e05b43919195a19fa45d05fe5ace7b",
+    "content-hash": "62e4ceb9c5414478d462d304d8661112",
     "packages": [
         {
             "name": "ajthinking/archetype",
-            "version": "v1.1.1",
+            "version": "v1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ajthinking/archetype.git",
-                "reference": "b0c014b827d497ac09573476b7b7475687b57d72"
+                "reference": "02e6d44d7376da2b401348802e00254207130034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ajthinking/archetype/zipball/b0c014b827d497ac09573476b7b7475687b57d72",
-                "reference": "b0c014b827d497ac09573476b7b7475687b57d72",
+                "url": "https://api.github.com/repos/ajthinking/archetype/zipball/02e6d44d7376da2b401348802e00254207130034",
+                "reference": "02e6d44d7376da2b401348802e00254207130034",
                 "shasum": ""
             },
             "require": {
                 "nikic/php-parser": "^4.11"
             },
             "require-dev": {
-                "ircmaxell/php-ast-visualizer": "dev-master",
                 "laravel/laravel": "^6.0 || ^7.0 || ^8.0 || ^9.0",
                 "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
                 "pestphp/pest": "^1.21",
@@ -66,9 +65,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ajthinking/archetype/issues",
-                "source": "https://github.com/ajthinking/archetype/tree/v1.1.1"
+                "source": "https://github.com/ajthinking/archetype/tree/v1.1.2"
             },
-            "time": "2022-05-06T19:10:01+00:00"
+            "time": "2022-05-21T15:38:12+00:00"
         },
         {
             "name": "asm89/stack-cors",
@@ -590,16 +589,16 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.5.6",
+            "version": "1.5.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/spdx-licenses.git",
-                "reference": "a30d487169d799745ca7280bc90fdfa693536901"
+                "reference": "c848241796da2abf65837d51dce1fae55a960149"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/a30d487169d799745ca7280bc90fdfa693536901",
-                "reference": "a30d487169d799745ca7280bc90fdfa693536901",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/c848241796da2abf65837d51dce1fae55a960149",
+                "reference": "c848241796da2abf65837d51dce1fae55a960149",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +649,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/spdx-licenses/issues",
-                "source": "https://github.com/composer/spdx-licenses/tree/1.5.6"
+                "source": "https://github.com/composer/spdx-licenses/tree/1.5.7"
             },
             "funding": [
                 {
@@ -666,7 +665,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-18T10:14:14+00:00"
+            "time": "2022-05-23T07:37:50+00:00"
         },
         {
             "name": "composer/xdebug-handler",
@@ -1684,16 +1683,16 @@
         },
         {
             "name": "intervention/image",
-            "version": "2.7.1",
+            "version": "2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/image.git",
-                "reference": "744ebba495319501b873a4e48787759c72e3fb8c"
+                "reference": "04be355f8d6734c826045d02a1079ad658322dad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/744ebba495319501b873a4e48787759c72e3fb8c",
-                "reference": "744ebba495319501b873a4e48787759c72e3fb8c",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/04be355f8d6734c826045d02a1079ad658322dad",
+                "reference": "04be355f8d6734c826045d02a1079ad658322dad",
                 "shasum": ""
             },
             "require": {
@@ -1736,8 +1735,8 @@
             "authors": [
                 {
                     "name": "Oliver Vogel",
-                    "email": "oliver@olivervogel.com",
-                    "homepage": "http://olivervogel.com/"
+                    "email": "oliver@intervention.io",
+                    "homepage": "https://intervention.io/"
                 }
             ],
             "description": "Image handling and manipulation library with support for Laravel integration",
@@ -1752,11 +1751,11 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/2.7.1"
+                "source": "https://github.com/Intervention/image/tree/2.7.2"
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/interventionphp",
+                    "url": "https://paypal.me/interventionio",
                     "type": "custom"
                 },
                 {
@@ -1764,7 +1763,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-16T16:49:26+00:00"
+            "time": "2022-05-21T17:30:32+00:00"
         },
         {
             "name": "james-heinrich/getid3",
@@ -2319,16 +2318,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "32a49eb2b38fe5e5c417ab748a45d0beaab97955"
+                "reference": "cb36fee279f7fca01d5d9399ddd1b37e48e2eca1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/32a49eb2b38fe5e5c417ab748a45d0beaab97955",
-                "reference": "32a49eb2b38fe5e5c417ab748a45d0beaab97955",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/cb36fee279f7fca01d5d9399ddd1b37e48e2eca1",
+                "reference": "cb36fee279f7fca01d5d9399ddd1b37e48e2eca1",
                 "shasum": ""
             },
             "require": {
@@ -2421,7 +2420,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-07T22:37:05+00:00"
+            "time": "2022-05-14T15:37:39+00:00"
         },
         {
             "name": "league/config",
@@ -4455,16 +4454,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.11",
+            "version": "v3.3.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "f06cf8350365577f0d2db0732a55fd487e47217c"
+                "reference": "d0c57332e716be3070c328ddc494286ffe1ccdfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/f06cf8350365577f0d2db0732a55fd487e47217c",
-                "reference": "f06cf8350365577f0d2db0732a55fd487e47217c",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/d0c57332e716be3070c328ddc494286ffe1ccdfa",
+                "reference": "d0c57332e716be3070c328ddc494286ffe1ccdfa",
                 "shasum": ""
             },
             "require": {
@@ -4542,7 +4541,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.11"
+                "source": "https://github.com/statamic/cms/tree/v3.3.12"
             },
             "funding": [
                 {
@@ -4550,7 +4549,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-10T21:53:18+00:00"
+            "time": "2022-05-18T22:34:02+00:00"
         },
         {
             "name": "statamic/ssg",
