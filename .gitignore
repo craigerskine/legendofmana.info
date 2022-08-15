@@ -1,3 +1,5 @@
+package-lock.json
+composer-lock.json
 /_data
 /_design
 /node_modules
