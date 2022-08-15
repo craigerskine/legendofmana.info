@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba5ca863fe0cff7e73b9480e65671c6c",
+    "content-hash": "55b0e72efbab408750228a8a619bbbd9",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4459,16 +4459,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.3.27",
+            "version": "v3.3.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "626f876d91c0feac9f8af6994c689b45f5128aa6"
+                "reference": "49fe67824803f73d657e6dcc4d2f662bad1a50ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/626f876d91c0feac9f8af6994c689b45f5128aa6",
-                "reference": "626f876d91c0feac9f8af6994c689b45f5128aa6",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/49fe67824803f73d657e6dcc4d2f662bad1a50ca",
+                "reference": "49fe67824803f73d657e6dcc4d2f662bad1a50ca",
                 "shasum": ""
             },
             "require": {
@@ -4546,7 +4546,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.3.27"
+                "source": "https://github.com/statamic/cms/tree/v3.3.28"
             },
             "funding": [
                 {
@@ -4554,7 +4554,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-09T20:29:26+00:00"
+            "time": "2022-08-11T20:54:50+00:00"
         },
         {
             "name": "statamic/ssg",
@@ -10479,5 +10479,5 @@
         "php": "^7.3 || ^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }

@@ -10,19 +10,19 @@
       extend: {
         colors: {
           gray: twindColors.gray,
-          'pri': {
-            '50': '#F8F9F8', 
-            '100': '#F2F4F1', 
-            '200': '#DDE3DD', 
-            '300': '#C9D3C9', 
-            '400': '#A1B1A0', 
-            '500': '#789077', 
-            '600': '#6C826B', 
-            '700': '#5A6C59', 
-            '800': '#485647', 
-            '900': '#151A15',
+          pri: {
+            '50': '#F8FAF7', 
+            '100': '#F2F5F0', 
+            '200': '#DEE7D8', 
+            '300': '#C9D8C1', 
+            '400': '#A1BA93', 
+            '500': '#799D64', 
+            '600': '#6D8D5A', 
+            '700': '#5B764B', 
+            '800': '#495E3C', 
+            '900': '#3B4D31',
           },
-          'sec': {
+          sec: {
             '50': '#FEFEFF',
             '100': '#FCFEFE',
             '200': '#F8FCFD',
@@ -99,7 +99,7 @@
       'table:not([class]) th': { '@apply': 'text(xs pri-900) uppercase', },
       '.aspect-wide': { '@apply': 'mb-5 pb-[56.25%] h-0 block overflow-hidden relative', },
       '.aspect-wide > iframe,.aspect-wide > embed,.aspect-wide > object,.aspect-wide > video': { '@apply': 'm-0 border-0 w-full h-full absolute inset-0', },
-      '.prose h3:not([class]),.prose h2:not([class])': { '@apply': 'font-bold leading-normal text-pri-900 uppercase flex items-center', },
+      '.prose h3:not([class]),.prose h2:not([class])': { '@apply': 'font-bold leading-normal text-gray-800 uppercase flex items-center', },
       '.prose h3:not(:first-child)': { '@apply': 'mt-16', },
       '.prose h3:not([class]):before,.prose h3:not([class]):after,.prose h2:not([class]):before,.prose h2:not([class]):after': { '@apply': 'mr-3 w-4 h-4 bg-current opacity-20 transform -skew-x-12', 'content': '""', },
       '.prose h3:after,.prose h2:after': { '@apply': 'mr-0 ml-3 w-auto flex-1', },
