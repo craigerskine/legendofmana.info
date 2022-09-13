@@ -11,7 +11,7 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "statamic/cms": "3.3.35",
-        "statamic/ssg": "^1.2",
+        "statamic/ssg": "^1.2.0",
         "steadfastcollective/statamic-csv-exporter": "^1.0"
     },
     "require-dev": {
@@ -62,7 +62,7 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
-        "__post-create-project-cmd__": [
+        "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
     }
