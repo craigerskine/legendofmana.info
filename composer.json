@@ -62,7 +62,7 @@
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
-        "post-create-project-cmd": [
+        "__post-create-project-cmd__": [
             "@php artisan key:generate --ansi"
         ]
     }
