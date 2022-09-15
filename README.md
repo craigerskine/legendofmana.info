@@ -1,7 +1,6 @@
 ## legendofmana.info
 
-- Statamic version rewrite (from Symphony CMS)
-- SSG ==> static pages
+- 11ty
 - Deploys via Netlify
 
 ---

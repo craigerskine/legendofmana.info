@@ -1,9 +1,0 @@
-{{ content }}
-
-<ul class="ml-0 space-y-10 flex flex-col">
-  {{ collection:characters sort="order" }}
-    {{ partial:_partials/card :title="title" subtext="NPC" :image="image" }}
-      {{ content }}
-    {{ /partial:_partials/card }}
-  {{ /collection:characters }}
-</ul>
