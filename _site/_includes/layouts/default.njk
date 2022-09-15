@@ -195,6 +195,7 @@
                   <li><a href="{{ item.url }}" class="text-pri-400 motion-safe:(transition) hover:(text-pri-100)"><i class="fa-brands fa-fw fa-2x fa-{{ item.ico }}" title="Donate via {{ item.title }}"></i></a></li>
                   {%- endfor %}
                 </ul>
+                <p class="foot-updated pt-6 text-xs opacity-75">Site updated: <time datetime="{{ build.time.raw }}">{{ build.time.formatted }}</time></p>
               </div>
             </div>
           </div>
