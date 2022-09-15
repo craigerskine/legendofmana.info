@@ -1,0 +1,23 @@
+{%- macro x(label='',sub='',img=false,index='') %}
+<li class="pt-0 pb-16 pl-4 border(l black opacity-10) flex(& col) relative
+  md:(p-0 border-0 flex-row)
+">
+  <figure class="md:(flex(& none col))">
+    {%- if img %}
+    <img src="{{ img }}?v={% version %}" alt="{{ label }}" class="rounded md:(flex-none)" />
+    {%- else %}
+    <b class="w-[48px] h-[48px] text(xl pri-300) bg-pri-900 flex(& none) items-center justify-center rounded-full">{{ index.index }}</b>
+    {%- endif %}
+    <figcaption class="md:(w-full flex(& 1) justify-center)">
+      <span class="sr-only">{{ label }}</span>
+      {% if index.last %}{% else %}<b class="md:(w-px h-full text-black bg-current opacity-10)" aria-hidden="true"></b>{% endif %}
+    </figcaption>
+  </figure>
+  <div class="md:(w-52 order-first)">
+    <h3 class="py-4 text(lg gray-900) leading-6 font-bold md:(py-0 pr-6 truncate)" title="{{ label }}">{{ label }}</h3>
+    <b class="md:(w-full h-px text-black bg-current block opacity-10)" aria-hidden="true"></b>
+    {% if sub !== '' %}<small class="text-xs block md:(pt-px pr-6 uppercase opacity-70)">{{ sub }}</small>{% endif %}
+  </div>
+  <div class="md:(pb-16 pl-6 w-full flex-1)">{{ caller() }}</div>
+</li>
+{%- endmacro %}

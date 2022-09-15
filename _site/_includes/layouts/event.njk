@@ -1,0 +1,40 @@
+---
+layout: 'layouts/default.njk'
+---
+
+{% set previousPost = collections.events | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.events | getNextCollectionItem(page) %}
+
+<h2>Instructions</h2>
+{{ content | safe }}
+{%- if nextPost %}
+<blockquote class="mt-16 mb-5 px-5 py-2 space-x-4 bg(white opacity-10) flex items-center relative rounded shadow-lg md:(py-5)">
+  <img src="/_assets/img/walkthrough/cactus.png?v={% version %}" alt="Cactus" class="motion-safe:(animate-wiggle)">
+  <p class="m-0 flex-1">
+    <strong>Upon Completion:</strong>
+    <small class="block">
+      {% if missable %}<b class="py-1 px-3 bg-yellow-600 text-white text-[12px] block absolute -top-3 -left-3 rounded-full"><i class="fal fa-fw fa-comment-alt-exclamation mr-1 opacity-50" title="Warning"></i> This event is miss-able in the cactus diaries!</b>{% endif %}
+      Return home, talk to Lil' Cactus, go downstairs (watch him write the Event on the leaf), and go back upstairs to save your game before continuing.
+    </small>
+  </p>
+</blockquote>
+{%- endif %}
+
+<ul class="pt-5 md:(grid(& cols-2))">
+  <li class="py-4 ">
+    {%- if previousPost %}
+    <a href="{{ previousPost.url }}" class="inline-block font-bold capitalize motion-safe:(transition) hover:(text-black)">
+      <b class="text-xs font-normal uppercase block opacity-90">Previous:</b>
+      {{ previousPost.data.title }}
+    </a>
+    {%- endif %}
+  </li>
+  <li class="py-4 md:(text-right)">
+    {%- if nextPost %}
+    <a href="{{ nextPost.url }}" class="inline-block font-bold capitalize motion-safe:(transition) hover:(text-black)">
+      <b class="text-xs font-normal uppercase block opacity-90">Next:</b>
+      {{ nextPost.data.title }}
+    </a>
+    {%- endif %}
+  </li>
+</ul>

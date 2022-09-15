@@ -1,0 +1,26 @@
+---
+layout: 'layouts/default.njk'
+title: Encyclopedias
+eleventyNavigation:
+  key: Encyclopedias
+  title: Game System
+  order: 2
+---
+
+{%- import 'components/heading.njk' as heading %}
+
+{% renderTemplate "md" %}
+## Game Systems
+{% endrenderTemplate %}
+
+<ul class="mt-16 gap-x-4 md:(grid(& cols-2))">
+  {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
+  <li class="pb-8">
+    {%- if loop.last === false %}
+    {%- call heading.x(tag='h2',sub=item.sub,url=item.url,img=item.img) %}
+    {{ item.title }}
+    {%- endcall %}
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ul>

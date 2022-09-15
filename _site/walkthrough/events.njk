@@ -1,0 +1,20 @@
+---
+layout: 'layouts/default.njk'
+title: 'Events'
+eleventyNavigation:
+  key: 'Events'
+  sub: 'Guide'
+  img: '/_assets/img/walkthrough/events.png'
+  parent: Walkthrough
+  order: 2
+---
+
+{%- import 'components/list-ol.njk' as list %}
+
+<h2>Event Order</h2>
+
+<ul class="ml-0 mb-10 text-xs grid(& flow-row cols-1) gap-y-10 gap-x-5 md:(mb-0 text-base grid-cols-2)">
+  {%- for item in collections.events %}
+  {{ list.x(title=item.data.title,sub=item.data.story_arc,badge=loop.index,url='/walkthrough/events/'+item.data.page.fileSlug) }}
+  {%- endfor %}
+</ul>

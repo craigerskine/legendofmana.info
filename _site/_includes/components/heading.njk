@@ -1,0 +1,34 @@
+{%- macro x(tag='div',sub='',url='',img='',border=true) %}
+<{{ tag }} class="mb-5 pb-5 text-black text-opacity-90 font-bold
+  {%- if tag == 'h1' %}
+    md:text-3xl
+  {%- elseif tag == 'h2' %}
+    md:text-2xl
+  {%- elseif tag == 'h3' %}
+    md:text-xl
+  {%- elseif tag == 'h4' %}
+    md:text-lg
+  {%- elseif tag == 'h5' %}
+    text-base
+  {%- elseif tag == 'h6' %}
+    text-sm
+  {%- else %}
+    md:text-xl
+  {%- endif %}
+  {%- if border %} border(b black opacity-10){%- endif %}
+">
+  {% if url !== '' %}<a href="{{ url }}" class="group text-black text-opacity-90 hover:(text-opacity-50) motion-safe:transition">{% endif %}
+    <span class="align-middle inline-flex items-center uppercase tracking-tight">
+      {%- if img !== '' %}
+      <b class="mr-3 w-50 h-50 bg-gray-900 flex overflow-hidden rounded group-hover:(motion-safe:animate-wiggle)">
+        <img src="{{ img }}?v={% version %}" alt="{{ sub }}" class="m-auto">
+      </b>
+      {%- endif %}
+      <span class="inline-flex flex-col">
+        {{ caller() }}
+        {% if sub !== '' %}<small class="opacity-80 text-xs">{{ sub }}</small>{% endif %}
+      </span>
+    </span>
+  {% if url !== '' %}</a>{% endif %}
+</{{ tag }}>
+{%- endmacro %}

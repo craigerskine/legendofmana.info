@@ -1,0 +1,20 @@
+---
+layout: 'layouts/default.njk'
+title: 'Characters'
+eleventyNavigation:
+  key: 'Characters'
+  sub: '& Info'
+  img: '/_assets/img/encyclopedias/npc/niccolo.png'
+  parent: Encyclopedias
+  order: 4
+---
+
+{%- import 'components/timeline.njk' as timeline %}
+
+<ul class="list-none">
+  {%- for item in collections.characters %}
+  {%- call timeline.x(label=item.data.title,sub='NPC',img=item.data.img,index=loop) %}
+  {{ item.templateContent | safe }}
+  {%- endcall %}
+  {%- endfor %}
+</ul>

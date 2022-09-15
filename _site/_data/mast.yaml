@@ -1,0 +1,22 @@
+---
+- title: The Mana Story
+  url: '#mana-story'
+  img: '/_assets/img/cta-mana-story.png'
+- title: Event Walkthrough
+  url: '/walkthrough/events/'
+  img: '/_assets/img/cta-event-walkthrough.png'
+- title: Produce
+  url: '/encyclopedias/produce/'
+  img: '/_assets/img/cta-produce.png'
+- title: 'Monsters / Pets'
+  url: '/encyclopedias/monsters-pets/'
+  img: '/_assets/img/cta-monsters-pets.png'
+- title: 'Maps / Artifacts'
+  url: '/walkthrough/maps/'
+  img: '/_assets/img/cta-maps-af.png'
+- title: 'Abilities / ST Techs'
+  url: '/encyclopedias/abilities-techniques/'
+  img: '/_assets/img/cta-abilities-techs.png'
+- title: Tempering Recipes
+  url: '/encyclopedias/recipes/'
+  img: '/_assets/img/cta-tempering-recipes.png'

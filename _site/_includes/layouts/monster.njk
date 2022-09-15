@@ -1,0 +1,58 @@
+---
+layout: 'layouts/default.njk'
+eleventyComputed:
+  title: '{{ title }} - Monster'
+---
+
+{%- import 'components/heading.njk' as heading %}
+
+{% renderTemplate "md" %}
+{% endrenderTemplate %}
+
+
+{%- for m, items in collections.monsters_pets | groupby('data.type') %}
+  {%- if m === page.fileSlug %}
+  {%- for item in items %}
+  <section class="beastiary pb-8" id="monster-{{ item.data.page.fileSlug }}">
+    {%- call heading.x(tag='h2',sub=title.replace(' - Monster', ''),img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png') %}
+      {{ item.data.title }}
+    {%- endcall %}
+    <div class="md:(grid(& cols-2) gap-6)">
+      <div>
+        <h2>Monster</h2>
+        <small class="font-bold block">Locations</small>
+        <ul>
+          {%- for loc in item.data.monster_locations %}
+          <li>{{ loc }}</li>
+          {%- endfor %}
+        </ul>
+        <small class="font-bold block">Battle drops</small>
+        <ol>
+          {%- for drop in item.data.monster_drops %}
+          <li>{{ drop }}</li>
+          {%- endfor %}
+        </ol>
+      </div>
+      <div>
+        <h2>Pet</h2>
+        <small class="font-bold block">Egg</small>
+        <ul>
+          {%- for loc in item.data.egg_locations %}
+          <li>{{ loc }}</li>
+          {%- endfor %}
+        </ul>
+        <p><small class="font-bold block">Sync</small> {{ item.data.syncro_effect }}</p>
+        <p><small class="font-bold block">Sell</small> {{ item.data.sell_price }} $L</p>
+        <small class="font-bold block">Stats</small>
+        <ul>
+          {%- for key, value in item.data.pet_stats %}
+          <li>{{ key }}: {{ value }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+
+  </section>
+  {%- endfor %}
+  {%- endif %}
+{% endfor %}

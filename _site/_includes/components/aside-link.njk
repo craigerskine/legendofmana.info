@@ -1,0 +1,11 @@
+{%- macro x(label,sub='',url='#') %}
+<li>
+  <a href="{{ url }}" class="group pb-4 font-bold block relative motion-safe:(transition)">
+    {{ label }}
+    {% if sub !== '' %}<b class="text-xs font-normal uppercase block opacity-75">{{ sub }}</b>{% endif %}
+    <b class="h-px bg(black opacity-10) flex justify-center absolute inset-x-0 bottom-0">
+      <b class="w-0 motion-safe:(transition-all) group-hover:(w-full bg(pri-900))"></b>
+    </b>
+  </a>
+</li>
+{%- endmacro %}

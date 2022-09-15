@@ -1,0 +1,33 @@
+---
+meta:
+  title: 'Legend of Mana Info'
+  description: 'Legend of Mana walkthrough, guide, recipes, encyclopedias. Fan Site by Craig Erskine.'
+  author: 'Craig Erskine'
+  author_url: https://craigerskine.com/
+game:
+  - title: 'Buy Retro Game'
+    url: 'https://amzn.com/dp/B00004SWM0?tag=qrayg-20'
+  - title: 'Buy HD Game'
+    url: 'https://www.play-asia.com/search/legend+of+mana+remastered?tagid=145091'
+  - title: 'Buy OST'
+    url: 'https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091'
+donate:
+  - title: Paypal
+    ico: paypal
+    url: 'https://paypal.me/qrayg'
+    type: sponsor
+    enabled: true
+  - title: Patreon
+    ico: patreon
+    url: 'https://patreon.com/qrayg/'
+    type: sponsor
+    enabled: true
+  - title: Github
+    ico: github
+    url: 'https://github.com/sponsors/craigerskine'
+    type: sponsor
+    enabled: true
+analytics: |-
+  // google analytics
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-6318307-4', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')

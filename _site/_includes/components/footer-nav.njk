@@ -1,0 +1,11 @@
+{%- macro x(label,url='#',inline=false) %}
+<li>
+  <a href="{{ url }}" class="group font-normal text-pri-400 inline-flex items-center relative motion-safe:(transition) hover:(text-pri-100)">
+    {% if inline %}{% else %}<img src="/_assets/img/li.png" alt="Swirl" class="mr-2" />{% endif %}
+    {{ label }}
+    <b class="h-px opacity-50 flex absolute inset-x-0 bottom-0">
+      <b class="w-0 bg-current motion-safe:(transition-all) group-hover:(w-full)"></b>
+    </b>
+  </a>
+</li>
+{%- endmacro %}

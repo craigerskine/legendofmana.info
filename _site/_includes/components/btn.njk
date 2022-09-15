@@ -1,0 +1,6 @@
+{%- macro x(sub='',url='') %}
+<a href="{{ url }}" class="btn block relative">
+  <b class="px-3 bg-pri-900 text(white xs) absolute -top-2 -left-1 rounded-full">{{ sub }}</b>
+  {{ caller() }}
+</a>
+{%- endmacro %}

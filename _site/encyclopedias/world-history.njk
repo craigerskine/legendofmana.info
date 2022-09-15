@@ -1,0 +1,18 @@
+---
+layout: 'layouts/default.njk'
+title: 'World History'
+eleventyNavigation:
+  key: 'World History'
+  parent: Encyclopedias
+  order: 7
+---
+
+{%- import 'components/timeline.njk' as timeline %}
+
+<ul class="list-none">
+  {%- for item in collections.world_history %}
+  {%- call timeline.x(label=item.data.title,sub='History',index=loop) %}
+  {{ item.templateContent | safe }}
+  {%- endcall %}
+  {%- endfor %}
+</ul>

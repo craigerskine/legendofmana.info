@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en" class="bg-[#0A0D0A] antialiased motion-safe:(scroll-smooth)" x-data hidden>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{%- if title -%}{{ title +' - ' }}{%- endif -%} {{ site.meta.title }}</title>
+    <meta name="description" content="{{ site.meta.description }}" />
+    <meta name="author" content="{{ site.meta.author + ' - '+ site.meta.author_url }}" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <meta property="og:title" content="{{ site.meta.title }}" />
+    <meta property="og:description" content="{{ site.meta.description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://legendofmana.info{{ page.url }}" />
+    <meta property="og:image" content="https://legendofmana.info/apple-touch-icon.png" />
+
+    {%- import 'components/heading.njk' as heading %}
+    {%- import 'components/aside-link.njk' as asideLink %}
+    {%- import 'components/footer-nav.njk' as footerNav %}
+    {%- import 'components/footer-link.njk' as footerLink %}
+
+  </head>
+
+  <body class="font-serif text-gray-800">
+
+    <div class="page min-h-screen flex(& col)">
+      <header class="w-full bg-sec-500 flex-none relative z-10 overflow-hidden">
+        <nav class="nav relative z-20">
+          <ul class="container mx-auto mb-0 px-4 uppercase flex(& col) items-center lg:(py-4 flex-row space-x-8)">
+            <li class="pt-2 flex-1 lg:(pt-0 flex-none)">
+              <a href="/" class="inline-block hover:motion-safe:animate-waggle">
+                <img src="/_assets/img/logo.png?v={% version %}" alt="Legend of Mana: Fan Site" />
+              </a>
+            </li>
+            <li class="w-full flex lg:(w-auto flex-1 justify-end)">
+              <ul class="mx-auto py-5 text(pri-700 xs) flex items-center space-x-5 lg:(m-0 py-0 text-base space-x-8)">
+                {%- for item in collections.all | eleventyNavigation %}
+                <li class="leading-tight">
+                  <a href="{{ item.url }}" class="group text-pri-700 font-bold flex flex-col hover:(text-pri-900) lg:(font-normal items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
+                    {%- if item.url == page.url or item.url in page.url %} aria-current="page"{%- endif -%}
+                  >
+                    {{ item.key }}
+                    <small class="text-xs normal-case font-normal order-first lg:(tracking-widest)">{{ item.title }}</small>
+                    <b class="w-full flex absolute -bottom-1 inset-x-0">
+                      <b class="m-auto py-px bg-pri-700 opacity-50 motion-safe:(transition-all) group-hover:(w-full){% if item.url == page.url or item.url in page.url %} w-full{% else %} w-0{% endif %}"></b>
+                    </b>
+                  </a>
+                </li>
+                {%- endfor %}
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section class="mast relative z-50">
+          <div class="container mx-auto pt-4 px-0 lg:(pt-16 px-4){% if page.url === '/' %} pb-48 text-center lg:(text-left){% else %} pb-32{% endif %}">
+            {%- if page.url !== '/' %}
+            {%- if title !== '404' %}
+            <h1 class="m-0 pt-4 px-2 text-lg flex items-center justify-center relative z-50 sm:(text-3xl) lg:(pt-0 justify-start)">
+              <img src="/_assets/img/ltr/{{ title.substring(0, 1) | lower }}.png?v={% version %}" alt="The letter {{ title.substring(0, 1) }}" class="mr-1" aria-hidden="true" />
+              <i class="sr-only">{{ title.substring(0, 1) }}</i>
+              <b class="relative">
+                {{ title.slice(1) }}
+                {% if story_arc %}<small class="py-px px-3 ring(1 inset current) bg(white opacity-50) text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }} Arc</small>{% endif %}
+              </b>
+            </h1>
+            {%- endif %}
+            {%- else %}
+            <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
+              {%- for item in mast %}
+              <li{% if loop.first %} class="row-span-2"{% endif %}>
+                <a href="{{ item.url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none){% if loop.first %} lb{% endif %}">
+                  <figure>
+                    <img src="{{ item.img }}?v={% version %}" alt="{{ item.title }}" class="relative z-[-1] ring(1 pri-900) rounded shadow-md motion-safe:(transition) group-hover:(ring-4) group-focus:(ring-4)" />
+                    <figcaption class="py-px px-3 bg-pri-900 text(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ item.title }}</figcaption>
+                  </figure>
+                </a>
+              </li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+          </div>
+          <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100"><div class="mountains h-32 bg(repeat-x top) opacity-25" style="background-image: url('/_assets/img/mountains.png?v={% version %}')"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40"><div class="tree-line h-32 bg(no-repeat bottom) flex" style="background-image: url('/_assets/img/tree-line-center.png?v={% version %}');"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-40" data-modifier="30"><div class="mist h-32" style="background-image: linear-gradient(180deg, rgba(255,255,255,0) 50%, #FFF 100%);"></div></div>
+          <div class="tree hidden absolute right-4 z-20 motion-safe:animate-float top-0 lg:(block)">
+            <img src="/_assets/img/tree.png?v={% version %}" alt="Mana Tree"{% if page.url !== '/'%} class="w-48"{% endif %} />
+          </div>
+        </section>
+        <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('/_assets/img/clouds.png'); --translateY:0px;" aria-hidden="true"></div>
+        <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
+          <img class="motion-safe:(animate-wiggle) group-hover:(motion-safe:(animate-none))" />
+          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 absolute left-2 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:(transition-all) group-hover:(left-6 opacity-75)"><small class="block opacity-50">Today is</small><span></span> Day</b>
+        </p>
+      </header>
+      <main class="py-8 pb-16 w-full bg-pri-400 relative z-20">
+        <b class="-mt-4 w-full h-8 bg(top repeat-x) absolute top-1 inset-x-0" style="background-image: url('/_assets/img/grass.png')"></b>
+        <div class="container mx-auto p-4">
+          <section class="row md:(-mx-4 flex)">
+            <article class="prose col w-full flex-1 md:(px-4)">
+              {{ content | safe }}
+            </article>
+            {%- if title !== '404' %}
+            <aside class="col flex md:(px-4 w-1/3)">
+              <div class="border(t l-0 black opacity-10) pt-8 pl-0 text-sm flex-1 relative md:(pt-0 pl-8 border(t-0 l))">
+                <div class="space-y-10 sticky top-4">
+                  <section>
+                    {%- call heading.x(tag='h3',sub='Guide',url='/walkthrough/',img='/_assets/img/encyclopedias/en-events.png') %}
+                    Walkthrough
+                    {%- endcall %}
+                    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                      {%- for item in collections.all | eleventyNavigation('Walkthrough') %}
+                      {{ asideLink.x(item.title,sub=item.sub,url=item.url) }}
+                      {%- endfor %}
+                    </ul>
+                  </section>
+                  <section>
+                    {%- call heading.x(tag='h3',sub='Info',url='/encyclopedias/',img='/_assets/img/encyclopedias/en-info.png') %}
+                    Encyclopedias
+                    {%- endcall %}
+                    <ul class="ml-0 grid grid-flow-row grid-cols-2 gap-4">
+                      {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
+                      {%- if loop.last === false %}
+                      {{ asideLink.x(item.title,sub=item.sub,url=item.url) }}
+                      {%- endif %}
+                      {%- endfor %}
+                    </ul>
+                  </section>
+                </div>
+              </div>
+            </aside>
+            {%- endif %}
+          </section>
+        </div>
+        <div class="h-[32px] bg(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/_assets/img/border-bottom.png?v={% version %}');"/>
+      </main>
+      <footer class="pt-10 pb-6 w-full text(pri-500 xs) md:(text-sm)">
+        <div class="container mx-auto px-4">
+          <div class="-mx-4 md:(flex)">
+            <div class="mx-auto px-4 w-1/2 md:(w-3/4)">
+              <div class="md:(-mx-4 flex)">
+                <nav class="md:(px-4 w-1/3)">
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Game</li>
+                    {%- for item in site.game %}
+                    {{ footerNav.x(item.title,url=item.url) }}
+                    {%- endfor %}
+                  </ul>
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Walkthrough</li>
+                    {%- for item in collections.all | eleventyNavigation('Walkthrough') %}
+                    {{ footerNav.x(item.key,url=item.url) }}
+                    {%- endfor %}
+                  </ul>
+                </nav>
+                <nav class="md:(px-4 w-1/3)">
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Encyclopedias</li>
+                    {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
+                    {{ footerNav.x(item.key,url=item.url) }}
+                    {%- endfor %}
+                  </ul>
+                </nav>
+                <nav class="md:(px-4 w-1/3)">
+                  <ul class="m-0 mb-4 space-y-2">
+                    <li class="font-bold uppercase">Extras</li>
+                    {%- for item in collections.all | eleventyNavigation('Extras') %}
+                    {{ footerNav.x(item.key,url='/extras/') }}
+                    {%- endfor %}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="foot-info mx-auto px-4 max-w-md text-xs text-center leading-relaxed space-y-8 md:(mx-0 w-1/4 max-w-full text-right)">
+              <p class="foot-copy mt-6 pt-6 border-t border-pri-500 border-opacity-50 md:mt-0 md:pt-0 md:border-0">Legend of Mana game media and intellectual property &copy; Square Enix.</p>
+              <p class="foot-credit">
+                This site was lovingly designed and hand-coded by
+                  {{ footerLink.x('Craig Erskine',url='https://craigerskine.com') }}
+                using 
+                  {{ footerLink.x('Twind',url='https://twind.dev') }}
+                and
+                  {{ footerLink.x('11ty',url='https://11ty.dev') }}
+              </p>
+              <div>
+                <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
+                <ul class="foot-donate m-0 inline-flex space-x-4">
+                  {%- for item in site.donate %}
+                  <li><a href="{{ item.url }}" class="text-pri-400 motion-safe:(transition) hover:(text-pri-100)"><i class="fa-brands fa-fw fa-2x fa-{{ item.ico }}" title="Donate via {{ item.title }}"></i></a></li>
+                  {%- endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('/_assets/img/chalk.png?v={% version %}');"></div>
+
+    <div id="mana-story" class="modal">
+      <img src="/_assets/img/mana-story.jpg?v={% version %}" alt="The Many Story" />
+    </div>
+    <div id="map-speedrun" class="modal">
+      <img src="/_assets/img/walkthrough/speed-run/map.jpg?v={% version %}" alt="Speed Run Start" />
+    </div>
+    <div id="map-world-start" class="modal">
+      <img src="/_assets/img/walkthrough/maps/world-start.jpg?v={% version %}" alt="Walkthrough Start" />
+    </div>
+    {%- for item in collections.maps %}
+    {%- if item.data.title !== 'Orchard' %}
+    <div id="map-{{ item.data.page.fileSlug }}" class="modal">
+      <img src="/_assets/img/walkthrough/maps/{{ item.data.page.fileSlug }}.png?v={% version %}" alt="Map of {{ item.data.title }}" />
+    </div>
+    {%- endif %}
+    {%- endfor %}
+
+    <script src="/_assets/js/main.js?v={% version %}"></script>
+    <script src="/_assets/js/config.js?v={% version %}"></script>
+    <script src="https://kit.fontawesome.com/6d6156d427.js" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>

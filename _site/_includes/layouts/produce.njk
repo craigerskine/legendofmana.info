@@ -1,0 +1,46 @@
+---
+layout: 'layouts/default.njk'
+eleventyComputed:
+  title: '{{ title }} - Produce'
+---
+
+{%- import 'components/heading.njk' as heading %}
+
+{% renderTemplate "md" %}
+The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take affect immediately after your pet levels up. {.mb-10}
+{% endrenderTemplate %}
+
+
+{%- for c, items in collections.produce | groupby('data.color') %}
+  {%- if c === page.fileSlug %}
+  {%- for item in items %}
+  <section class="produce" id="produce-{{ item.data.page.fileSlug }}">
+    {%- call heading.x(tag='h2',sub=title.replace(' - Produce', '') +' - '+ seed +' seed',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png') %}
+      {{ item.data.title }}
+    {%- endcall %}
+    <ul class="prod-stats m-0 -mt-5 pt-4 pb-16 pl-1 grid(& cols-8) gap-x-1 md:(ml-14)">
+      {%- for stat in item.data.stats_plus %}
+      <li class="pb-1 min-h-[42px] -skew-x-12 bg-pri-900 bg-opacity-10">
+        <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)"><b class="block skew-x-12">{{ stat }}</b></small>
+        <div class="text-center skew-x-12">
+          <i class="fa-solid fa-fw fa-up" title="{{ stat }} up"></i>
+        </div>
+      </li>
+      {%- endfor %}
+      {%- for stat in item.data.stats_minus %}
+      <li class="pb-1 min-h-[42px] -skew-x-12 bg-pri-900 bg-opacity-10">
+        <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)"><b class="block skew-x-12">{{ stat }}</b></small>
+        <div class="text-center skew-x-12">
+          <i class="fa-regular fa-fw fa-down" title="{{ stat }} down"></i>
+        </div>
+      </li>
+      {%- endfor %}
+      {%- if item.data.stats_plus.length or item.data.stats_minus.length %}
+      {%- else %}
+      <li class="uppercase">NONE</li>
+      {%- endif %}
+    </ul>
+  </section>
+  {%- endfor %}
+  {%- endif %}
+{% endfor %}

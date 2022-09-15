@@ -1,0 +1,20 @@
+{
+  "name": "legendofmana.info",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [
+    "11ty"
+  ],
+  "author": "craigerskine",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "js-yaml": "^4.1.0",
+    "markdown-it-attrs": "^4.1.4"
+  }
+}

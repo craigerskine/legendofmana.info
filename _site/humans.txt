@@ -1,0 +1,12 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Master: Craig Erskine
+  Site: https://craigerskine.com
+  Location: USA
+
+/* SITE */
+  Standards: HTML5, CSS3, Js
+  Components: Twind, Tailwind, Nunjucks
+  Software: Sketch, Figma, Fireworks, VS Code, 11ty
