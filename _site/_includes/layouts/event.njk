@@ -13,7 +13,7 @@ layout: 'layouts/default.njk'
   <p class="m-0 flex-1">
     <strong>Upon Completion:</strong>
     <small class="block">
-      {% if missable %}<b class="py-1 px-3 bg-yellow-600 text-white text-[12px] block absolute -top-3 -left-3 rounded-full"><i class="fal fa-fw fa-comment-alt-exclamation mr-1 opacity-50" title="Warning"></i> This event is miss-able in the cactus diaries!</b>{% endif %}
+      {%- if missable %}<b class="py-1 px-3 bg-yellow-600 text-white text-[12px] block absolute -top-3 -left-3 rounded-full"><i class="fal fa-fw fa-comment-alt-exclamation mr-1 opacity-50" title="Warning"></i> This event is miss-able in the cactus diaries!</b>{%- endif %}
       Return home, talk to Lil' Cactus, go downstairs (watch him write the Event on the leaf), and go back upstairs to save your game before continuing.
     </small>
   </p>

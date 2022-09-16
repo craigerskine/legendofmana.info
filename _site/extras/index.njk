@@ -9,7 +9,7 @@ eleventyNavigation:
 
 {%- import 'components/heading.njk' as heading %}
 
-{% macro download(label='',file='',img='') %}
+{%- macro download(label='',file='',img='') %}
 <a href="{{ file }}" class="group block relative hover:(motion-safe:animate-waggle)" download>
   <figure>
     <img src="{{ img }}?v={% version %}" alt="{{ label }} Image" class="relative z-[-1] rounded shadow-md ring(1 black opacity-75)">
@@ -18,7 +18,7 @@ eleventyNavigation:
     </figcaption>
   </figure>
 </a>
-{% endmacro %}
+{%- endmacro %}
 
 <h2>Goodies</h2>
 

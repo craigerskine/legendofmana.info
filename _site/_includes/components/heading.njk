@@ -17,7 +17,7 @@
   {%- endif %}
   {%- if border %} border(b black opacity-10){%- endif %}
 ">
-  {% if url !== '' %}<a href="{{ url }}" class="group text-black text-opacity-90 hover:(text-opacity-50) motion-safe:transition">{% endif %}
+  {%- if url !== '' %}<a href="{{ url }}" class="group text-black text-opacity-90 hover:(text-opacity-50) motion-safe:transition">{%- endif %}
     <span class="align-middle inline-flex items-center uppercase tracking-tight">
       {%- if img !== '' %}
       <b class="mr-3 w-50 h-50 bg-gray-900 flex overflow-hidden rounded group-hover:(motion-safe:animate-wiggle)">
@@ -26,9 +26,9 @@
       {%- endif %}
       <span class="inline-flex flex-col">
         {{ caller() }}
-        {% if sub !== '' %}<small class="opacity-80 text-xs">{{ sub }}</small>{% endif %}
+        {%- if sub !== '' %}<small class="opacity-80 text-xs">{{ sub }}</small>{%- endif %}
       </span>
     </span>
-  {% if url !== '' %}</a>{% endif %}
+  {%- if url !== '' %}</a>{%- endif %}
 </{{ tag }}>
 {%- endmacro %}

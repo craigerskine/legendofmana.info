@@ -45,5 +45,5 @@ eleventyNavigation:
     </ul>
   </div>
 </section>
-{% if loop.last %}{% else %}<hr class="mb-16 invisible" />{% endif %}
+{%- if loop.last %}{% else %}<hr class="mb-16 invisible" />{%- endif %}
 {%- endfor %}

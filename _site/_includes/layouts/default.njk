@@ -14,13 +14,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v={% version %}" />
 
-    <meta property="og:title" content="{{ site.meta.title }}" />
+    <meta property="og:title" content="{% if title %}{{ title +' - '+ site.meta.title }}{% else %}{{ site.meta.title }}{% endif %}" />
     <meta property="og:description" content="{{ site.meta.description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://legendofmana.info{{ page.url }}" />
-    <meta property="og:image" content="https://legendofmana.info/apple-touch-icon.png" />
+    <meta property="og:image" content="https://legendofmana.info/_assets/img/lom-hd.jpg?v={% version %}" />
 
     {%- import 'components/heading.njk' as heading %}
     {%- import 'components/aside-link.njk' as asideLink %}
@@ -68,7 +68,7 @@
               <i class="sr-only">{{ title.substring(0, 1) }}</i>
               <b class="relative">
                 {{ title.slice(1) }}
-                {% if story_arc %}<small class="py-px px-3 ring(1 inset current) bg(white opacity-50) text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }} Arc</small>{% endif %}
+                {%- if story_arc %}<small class="py-px px-3 ring(1 inset current) bg(white opacity-50) text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }} Arc</small>{%- endif %}
               </b>
             </h1>
             {%- endif %}

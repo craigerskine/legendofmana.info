@@ -12,7 +12,7 @@ eleventyNavigation:
 
 {%- import 'components/heading.njk' as heading %}
 
-{% macro ability(label='',alt=false,reqs=false) %}
+{%- macro ability(label='',alt=false,reqs=false) %}
 <li class="mb-1 py-1 px-2 flex items-center">
   <strong class="flex-none">{{ label }}</strong>
   {%- if alt %}
@@ -27,7 +27,7 @@ eleventyNavigation:
   </small>
   {%- endif %}
 </li>
-{% endmacro %}
+{%- endmacro %}
 
 <h2>Game Systems</h2>
 
