@@ -10,7 +10,7 @@ Enter *Lumina*. Go to the Shopping District and enter the item shop. Talk to Nic
 
 Enter the *Mindas Ruins* and follow these instructions:
 
-p(mb-5 p-2 bg-red-500 text-white font-bold uppercase rounded). Note: These instructions need an overhaul!
+Note: These instructions need an overhaul!{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
 
 * Up
 * Upper Left
