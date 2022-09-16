@@ -59,7 +59,7 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
         {%- for mat in item.data.materials %}
         <li class="mb-1 py-1 px-2 flex items-center rounded{% if loop.index % 2 === 0 %} bg(pri-800 opacity-10){% endif %}">
           <strong>{{ mat.material }}</strong>
-          <span class="ml-auto text-right">{{ mat.cost }} <sup class="italic opacity-90">$L</sup></span>
+          <span class="ml-auto text-right">{{ mat.cost }} <sup class="italic text(xs black opacity-50)">$L</sup></span>
         </li>
         {%- endfor %}
       </ul>

@@ -3,7 +3,8 @@ title: 'Hoppin'' Tick'
 type: arthropod
 tags:
   - monsters_pets
-monster_locations: 'Ulkan Mines'
+monster_locations:
+  - 'Ulkan Mines'
 egg_locations:
   - 'Duma Desert'
   - 'Norn Peaks'
