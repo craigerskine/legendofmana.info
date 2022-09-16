@@ -40,7 +40,7 @@ If you are following the included [Walkthrough](/walkthrough/events/), you shoul
     <ul class="ml-0 grid(& flow-row cols-2) gap-y-6 gap-x-4">
       {%- for item in collections.maps %}
       {%- if loop.index <= 26 %}
-      {{ list.x(title=item.data.title,sub=item.data.artifact,badge=loop.index,url='#map-'+item.data.page.fileSlug,lb=true) }}
+      {{ list.x(label=item.data.title,sub=item.data.artifact,badge=loop.index,url='#map-'+item.data.page.fileSlug,lb=true) }}
       {%- endif %}
       {%- endfor %}
     </ul>
