@@ -1,6 +1,10 @@
-## legendofmana.info
+## [legendofmana.info](https://legendofmana.info)
 
-### Uses
+### Live sites
+- https://legendofmana.info
+- https://legendofmana-info.netlify.app/ (in case the domain expires)
+
+### Tech used
 - [Twind](https://twind.dev/)
 - [11ty](https://11ty.dev/)
 
