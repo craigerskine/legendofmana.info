@@ -12,6 +12,8 @@ Enter the *Mindas Ruins* and follow these instructions:
 
 Note: These instructions need an overhaul!{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
 
+![Mindas Ruins](/_assets/img/walkthrough/maps/mindas-ruins.png){.mx-auto .w-full .max-w-[300px]}
+
 * Up
 * Upper Left
 * Left
