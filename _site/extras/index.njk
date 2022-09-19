@@ -10,7 +10,7 @@ eleventyNavigation:
 {%- import 'components/heading.njk' as heading %}
 
 {%- macro download(label='',file='',img='') %}
-<a href="{{ file }}" class="group w-[220px] block relative hover:(motion-safe:animate-waggle)" download>
+<a href="{{ file }}" class="group inline-flex relative hover:(motion-safe:animate-waggle)" download>
   <figure>
     <img src="{{ img }}?v={% version %}" alt="{{ label }} Image" class="relative z-[-1] rounded shadow-md ring(1 black opacity-75)">
     <figcaption class="p-4 w-16 bg-pri-900 text(white 3xl) flex items-center justify-center absolute z-10 left-0 inset-y-0 motion-safe:(transition-all) group-hover:(w-full bg-opacity-50)">
