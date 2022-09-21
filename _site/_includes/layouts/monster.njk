@@ -14,7 +14,7 @@ eleventyComputed:
   {%- if m === page.fileSlug %}
   {%- for item in items %}
   <section class="beastiary mb-12 pb-8" id="monster-{{ item.data.page.fileSlug }}">
-    {%- call heading.x(tag='h2',sub=title.replace(' - Monster', ''),img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png') %}
+    {%- call heading.x(tag='h2',sub=title.replace(' - Monster', ''),img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
     {%- endcall %}
     <div class="md:(grid(& cols-2) gap-6)">
@@ -56,8 +56,8 @@ eleventyComputed:
         </ul>
       </div>
     </div>
-
   </section>
+  {%- if loop.last%}{% else %}<hr class="mb-12" />{% endif %}
   {%- endfor %}
   {%- endif %}
 {% endfor %}

@@ -15,7 +15,7 @@ The following data charts represent pet statistic adjustments based on the produ
   {%- if c === page.fileSlug %}
   {%- for item in items %}
   <section class="produce" id="produce-{{ item.data.page.fileSlug }}">
-    {%- call heading.x(tag='h2',sub=title.replace(' - Produce', '') +' - '+ seed +' seed',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png') %}
+    {%- call heading.x(tag='h2',sub=title.replace(' - Produce', '') +' - '+ seed +' seed',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
     {%- endcall %}
     <ul class="prod-stats m-0 -mt-5 pt-4 pb-16 pl-1 grid(& cols-8) gap-x-1 md:(ml-14)">
@@ -40,6 +40,7 @@ The following data charts represent pet statistic adjustments based on the produ
       <li class="uppercase">NONE</li>
       {%- endif %}
     </ul>
+    {%- if loop.last%}{% else %}<hr class="mb-12" />{% endif %}
   </section>
   {%- endfor %}
   {%- endif %}
