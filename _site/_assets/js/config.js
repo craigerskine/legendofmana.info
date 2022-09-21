@@ -111,7 +111,7 @@
       '.lb': { '@apply': 'inline-block relative', },
       '.lb .img-th + .img-note': { '@apply': 'p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded motion-safe:transition', },
       '.lb:hover .img-th + .img-note,.lb:focus .img-th + .img-note': { '@apply': 'opacity-100', },
-      '.modal': { '@apply': 'p-0 max-w-md text-left align-middle hidden relative z-[2]', },
+      '.modal': { '@apply': 'p-0 text-left align-middle hidden relative z-[2]', },
       '.modal a.close-modal': {'@apply': 'w-10 h-10 block bg(contain norepeat center) absolute -top-5 -right-5', 'font-size': '0px', 'text-indent': '-9999px', 'background-image': 'url(\'/_assets/img/modal-close.svg\')', },
       '.modal img': { '@apply': 'w-auto h-auto max-w-full max-h-[90vh]', },
       '.blocker': { '@apply': 'p-5 w-full h-full bg(black opacity-75) text-center overflow-auto z-[9999] flex items-center justify-center fixed inset-0', },
