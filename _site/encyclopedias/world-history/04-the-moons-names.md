@@ -2,7 +2,7 @@
 title: 'The Moon''s Names'
 tags:
   - world_history
-date: 0000-00-00
+date: 0004-00-00
 permalink: false
 ---
 Tryne, merciful god of water.
