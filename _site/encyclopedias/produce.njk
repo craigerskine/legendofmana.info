@@ -20,8 +20,8 @@ eleventyNavigation:
       {{ color.data.title | replace(' - Produce', '') }}
     {%- endcall %}
     <ul class="m-0 -mt-2 ml-14 pb-4 pl-1">
-      {%- for c, items in collections.produce | groupby('data.color') %}
-        {%- if c === color.data.page.fileSlug %}
+      {%- for category, items in collections.produce | groupby('data.color') %}
+        {%- if category === color.data.page.fileSlug %}
         {%- for item in items %}
         <li>
           <a href="/encyclopedias/produce/{{ item.data.color.toLowerCase() }}/#produce-{{ item.data.page.fileSlug }}" class="font-normal inline-flex items-center hover:(underline)">

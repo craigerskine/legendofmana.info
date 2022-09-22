@@ -10,8 +10,8 @@ eleventyComputed:
 {% endrenderTemplate %}
 
 
-{%- for m, items in collections.monsters_pets | groupby('data.type') %}
-  {%- if m === page.fileSlug %}
+{%- for category, items in collections.monsters_pets | groupby('data.type') %}
+  {%- if category === page.fileSlug %}
   {%- for item in items %}
   <section class="beastiary mb-12 pb-8" id="monster-{{ item.data.page.fileSlug }}">
     {%- call heading.x(tag='h2',sub=title.replace(' - Monster', ''),img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png',border=false) %}
@@ -38,7 +38,7 @@ eleventyComputed:
       </div>
       <div class="pet">
         <h2>Pet</h2>
-        <strong class="mb-1 font-bold block">{% if page.fileSlug === 'demi-human' %}Pet Location{% else%}Egg Locations{% endif %}</strong>
+        <strong class="mb-1 font-bold block">{% if page.fileSlug === 'demi-human' %}Pet Location{% else %}Egg Locations{% endif %}</strong>
         <ul>
           {%- for loc in item.data.egg_locations %}
           <li class="text-sm">{{ loc }}</li>
