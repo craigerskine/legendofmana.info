@@ -23,7 +23,7 @@ layout: 'layouts/default.njk'
 <ul class="pt-5 md:(grid(& cols-2))">
   <li class="py-4 ">
     {%- if previousPost %}
-    <a href="{{ previousPost.url }}" class="px-3 py-2 ring(1 black opacity-10) inline-block font-bold capitalize rounded motion-safe:(transition) hover:(text-black ring(2 opacity-100))">
+    <a href="{{ previousPost.url }}" class="px-3 py-2 bg(pri-500 opacity-30) ring(1 black opacity-10) inline-block font-bold capitalize rounded motion-safe:(transition) hover:(text-black ring(2 opacity-100))">
       <b class="text-xs font-normal uppercase block opacity-90">Previous:</b>
       {{ previousPost.data.title }}
     </a>
@@ -31,7 +31,7 @@ layout: 'layouts/default.njk'
   </li>
   <li class="py-4 md:(text-right)">
     {%- if nextPost %}
-    <a href="{{ nextPost.url }}" class="px-3 py-2 ring(1 black opacity-10) inline-block font-bold capitalize rounded motion-safe:(transition) hover:(text-black ring(2 opacity-100))">
+    <a href="{{ nextPost.url }}" class="px-3 py-2 bg(pri-500 opacity-30) ring(1 black opacity-10) inline-block font-bold capitalize rounded motion-safe:(transition) hover:(text-black ring(2 opacity-100))">
       <b class="text-xs font-normal uppercase block opacity-90">Next:</b>
       {{ nextPost.data.title }}
     </a>
