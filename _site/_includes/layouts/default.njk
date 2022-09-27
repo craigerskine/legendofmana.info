@@ -87,21 +87,21 @@
             </ul>
             {%- endif %}
           </div>
-          <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100"><div class="mountains h-32 bg(repeat-x top) opacity-25" style="background-image: url('/_assets/img/mountains.png?v={% version %}')"></div></div>
-          <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40"><div class="tree-line h-32 bg(no-repeat bottom) flex" style="background-image: url('/_assets/img/tree-line-center.png?v={% version %}');"></div></div>
-          <div class="scene absolute bottom-0 inset-x-0 z-40" data-modifier="30"><div class="mist h-32" style="background-image: linear-gradient(180deg, rgba(255,255,255,0) 50%, #FFF 100%);"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100" aria-hidden="true"><div class="mountains h-32 bg(repeat-x top) opacity-25" style="background-image: url('/_assets/img/mountains.png?v={% version %}')"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40" aria-hidden="true"><div class="tree-line h-32 bg(no-repeat bottom) flex" style="background-image: url('/_assets/img/tree-line-center.png?v={% version %}');"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-40" data-modifier="30" aria-hidden="true"><div class="mist h-32 bg-gradient-to-t from-white via-transparent"></div></div>
           <div class="tree hidden absolute right-4 z-20 motion-safe:animate-float top-0 lg:(block)">
             <img src="/_assets/img/tree.png?v={% version %}" alt="Mana Tree"{% if page.url !== '/'%} class="w-48"{% endif %} />
           </div>
         </section>
-        <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('/_assets/img/clouds.png'); --translateY:0px;" aria-hidden="true"></div>
+        <div class="clouds scene h-32 bg(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('/_assets/img/clouds.png?v={% version %}'); --translateY:0px;" aria-hidden="true"></div>
         <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
           <img class="motion-safe:(animate-wiggle) group-hover:(motion-safe:(animate-none))" />
           <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 absolute left-2 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:(transition-all) group-hover:(left-6 opacity-75)"><small class="block opacity-50">Today is</small><span></span> Day</b>
         </p>
       </header>
-      <main class="py-8 pb-16 w-full bg-pri-400 relative z-20">
-        <b class="-mt-4 w-full h-8 bg(top repeat-x) absolute top-1 inset-x-0" style="background-image: url('/_assets/img/grass.png')"></b>
+      <main class="py-8 pb-16 w-full bg(pri-400 fixed) relative z-20" style="background-image: url('/_assets/img/paper.png?v={% version %}')">
+        <b class="-mt-4 w-full h-8 bg(top repeat-x) absolute top-1 inset-x-0" style="background-image: url('/_assets/img/grass.png?v={% version %}')" aria-hidden="true"></b>
         <div class="container mx-auto p-4">
           <section class="row md:(-mx-4 flex)">
             <article class="prose col w-full flex-1 md:(px-4)">
@@ -139,7 +139,7 @@
             {%- endif %}
           </section>
         </div>
-        <div class="h-[32px] bg(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/_assets/img/border-bottom.png?v={% version %}');"/>
+        <div class="h-[32px] bg(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/_assets/img/border-bottom.png?v={% version %}');" aria-hidden="true"></div>
       </main>
       <footer class="pt-10 pb-6 w-full text(pri-500 xs) md:(text-sm)">
         <div class="container mx-auto px-4">
