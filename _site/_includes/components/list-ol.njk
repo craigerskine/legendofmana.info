@@ -1,7 +1,7 @@
 {%- macro x(label='',sub='',badge='',url='',tag=false,lb=false) %}
 <li>
   <a href="{{ url }}"{% if label === 'Orchard' %} @click.prevent{% endif %} class="inline-flex items-center group{% if lb and label !== 'Orchard' %} lb{% endif %}">
-    <b class="mr-3 w-8 h-8 text-lg bg-pri-200 bg-opacity-25 font-normal inline-flex items-center justify-center uppercase ring(1 pri-900 opacity-50) rounded-full group-hover:(bg-opacity-50 ring-opacity-100 shadow-lg) motion-safe:(transition duration-200)">{{ badge }}</b>
+    <b class="mr-3 border(t transparent) w-8 h-8 text-lg bg(pri-300 opacity-30) font-normal inline-flex items-center justify-center uppercase ring(1 pri-900 opacity-50) rounded-full motion-safe:(transition duration-200) group-hover:(border(white opacity-30) bg(white opacity-10) ring-opacity-0 shadow-lg)">{{ badge }}</b>
     <div>
       <strong>{{ label }}</strong>
       <small class="font-normal block opacity-90">
