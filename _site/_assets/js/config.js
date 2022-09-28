@@ -106,8 +106,6 @@
       '.prose h3 a,.prose h2 a': { '@apply': 'text-current', },
       '.prose h3 a:hover,.prose h3 a:focus,.prose h2 a:hover,.prose h2 a:focus': { '@apply': 'text-current text-opacity-50 no-underline', },
       '.prose code': { '@apply': 'px-1 py-px bg-pri-800 text(yellow-200 xs) inline-block rounded-sm', },
-      '.btn': { '@apply': 'px-3 py-2 border(t transparent) bg(pri-500 opacity-25) font-normal inline-flex items-center uppercase rounded ring(1 pri-500 opacity-90) motion-safe:transition', },
-      '.btn:hover,.btn:focus': { '@apply': 'border-white border-opacity-30 bg-white bg-opacity-10 ring-opacity-0 shadow-lg', },
       '.lb': { '@apply': 'inline-block relative', },
       '.lb .img-th + .img-note': { '@apply': 'p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded motion-safe:transition', },
       '.lb:hover .img-th + .img-note,.lb:focus .img-th + .img-note': { '@apply': 'opacity-100', },
