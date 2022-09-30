@@ -17,8 +17,6 @@ eleventyNavigation:
 Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton? Check out the following tables to see which items are located at what Level Shop. There is also a list of the seeds and jewels available at the Bone Fortress and Bejeweled City.
 {% endrenderTemplate %}
 
-{{ alert.x('Before you start freaking out...',sub='The following information is ONLY valid if you follow the map placement and event order from the walkthrough on this site!') }}
-
 <ul class="m-0 mb-12 grid(& cols-2) gap-4 md:(grid-cols-4)">
   {%- for item in collections.shops %}
   <li>
@@ -35,11 +33,10 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
   {%- endfor %}
 </ul>
 
-{% renderTemplate "md" %}
----{.mb-12 .invisible}
-## Shop Levels
-**Note:** These items may not always appear. Your shop levels and their inventory will depend on how/when you placed your Artifacts on the world map. If you are following the guide on this site you should find these ingredients at these shops:
-{% endrenderTemplate %}
+<hr class="mb-12 invisible" />
+<h2>Shop Levels</h2>
+
+{{ alert.x('Before you start freaking out...',sub='The following information is ONLY valid if you follow the map placement and event order from the walkthrough on this site!') }}
 
 <ul class="m-0">
   {%- for item in collections.shops_lvl %}
@@ -59,7 +56,7 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
         {%- for mat in item.data.materials %}
         <li class="mb-1 py-1 px-2 flex items-center rounded{% if loop.index % 2 === 0 %} bg(pri-800 opacity-10){% endif %}">
           <strong>{{ mat.material }}</strong>
-          <span class="ml-auto text-right">{{ mat.cost }} <sup class="italic text(xs black opacity-50)">$L</sup></span>
+          <span class="ml-auto text-right">{{ mat.cost }} <sup class="italic text(xs black opacity-50)" title="lucre">$L</sup></span>
         </li>
         {%- endfor %}
       </ul>
