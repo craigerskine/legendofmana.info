@@ -29,11 +29,11 @@ eleventyNavigation:
 </li>
 {%- endmacro %}
 
-<h2>Game Systems</h2>
+<h2>Abilities</h2>
 
-<div class="mb-12 grid-flow-row grid-cols-2 gap-x-4 lg:(grid)">
+<div class="mb-24 lg:(grid(& cols-2) gap-x-4)">
   <div>
-    <h3 class="mb-2 px-2 bg(pri-500 opacity-30) font-bold flex items-center rounded shadow-inner">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <h3 class="mb-2 px-2 bg(pri-500 opacity-30) text-base font-bold flex items-center rounded shadow-inner">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
     <ul class="m-0">
       {%- for item in collections.abilities %}
       {%- if loop.index <= 13 %}
@@ -43,7 +43,7 @@ eleventyNavigation:
     </ul>
   </div>
   <div>
-    <h3 class="mb-2 px-2 bg(pri-500 opacity-30) font-bold hidden items-center rounded shadow-inner lg:(flex)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <h3 class="mb-2 px-2 bg(pri-500 opacity-30) text-base font-bold hidden items-center rounded shadow-inner lg:(flex)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
     <ul class="m-0">
       {%- for item in collections.abilities %}
       {%- if loop.index > 13 %}
@@ -54,14 +54,14 @@ eleventyNavigation:
   </div>
 </div>
 
-<hr class="mb-12">
+<h2>ST Techniques</h2>
 
 <ul class="m-0">
   {%- for item in collections.techs %}
   <li id="technique-{{ item.data.page.fileSlug }}">
     <div class="mb-12 lg:(flex)">
       <div class="lg:(w-1/3)">
-        {%- call heading.x(tag='h3',sub='ST Technique',img='/_assets/img/encyclopedias/en-armory.png') %}
+        {%- call heading.x(tag='h3',sub='ST Technique',img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
           {{ item.data.title }}
         {%- endcall %}
       </div>
