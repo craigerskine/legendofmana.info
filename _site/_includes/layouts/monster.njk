@@ -7,7 +7,7 @@ eleventyComputed:
 {%- import 'components/heading.njk' as heading %}
 
 {%- macro sectionTitle() %}
-<strong class="mb-1 text(sm pri-900) font-bold uppercase block">{{ caller() }}</strong>
+<p class="mb-1 text(sm gray-900) font-bold uppercase">{{ caller() }}</p>
 {%- endmacro %}
 
 {%- for category, items in collections.monsters_pets | groupby('data.type') %}
@@ -19,7 +19,7 @@ eleventyComputed:
     {%- endcall %}
     <div class="md:(grid(& cols-2) gap-6)">
       <div class="monster mb-6 md:(mb-0)">
-        <h2>Monster</h2>
+        <h3>Monster</h3>
         {%- call sectionTitle() %}Locations{%- endcall %}
         <ul>
           {%- for loc in item.data.monster_locations %}
@@ -37,9 +37,9 @@ eleventyComputed:
         </ol>
       </div>
       <div class="pet">
-        <h2>Pet</h2>
+        <h3>Pet</h3>
         {%- call sectionTitle() %}
-        {% if page.fileSlug === 'demi-human' %}Pet Location{% else %}Egg Locations{% endif %}
+        {%- if page.fileSlug === 'demi-human' %}Location{% else %}Egg Locations{%- endif %}
         {%- endcall %}
         <ul>
           {%- for loc in item.data.egg_locations %}
@@ -48,12 +48,12 @@ eleventyComputed:
         </ul>
         <ul class="grid(& cols-2)">
           <li>{%- call sectionTitle() %}Sync{%- endcall %} <span class="text-sm">{{ item.data.syncro_effect }}</span></p>
-          <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text(xs black opacity-50)">$L</sup></span></p>
+          <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text(xs black opacity-50)" title="lucre">$L</sup></span></p>
         </ul>
         {%- call sectionTitle() %}Initial Stats{%- endcall %}
         <ul class="text-sm grid(& cols-4)">
           {%- for key, value in item.data.pet_stats %}
-          <li class="py-1.5 border(t black opacity-10)"><strong class="text-xs uppercase block">{{ key }}</strong> {{ value }}</li>
+          <li class="py-1.5 border(b black opacity-10)"><strong class="text-xs uppercase block">{{ key }}</strong> {{ value }}</li>
           {%- endfor %}
         </ul>
       </div>
