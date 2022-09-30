@@ -6,9 +6,9 @@ eleventyComputed:
 
 {%- import 'components/heading.njk' as heading %}
 
-{% renderTemplate "md" %}
-{% endrenderTemplate %}
-
+{%- macro sectionTitle() %}
+<strong class="mb-1 text(sm pri-900) font-bold uppercase block">{{ caller() }}</strong>
+{%- endmacro %}
 
 {%- for category, items in collections.monsters_pets | groupby('data.type') %}
   {%- if category === page.fileSlug %}
@@ -20,13 +20,13 @@ eleventyComputed:
     <div class="md:(grid(& cols-2) gap-6)">
       <div class="monster mb-6 md:(mb-0)">
         <h2>Monster</h2>
-        <strong class="mb-1 font-bold block">Locations</strong>
+        {%- call sectionTitle() %}Locations{%- endcall %}
         <ul>
           {%- for loc in item.data.monster_locations %}
           <li class="text-sm">{{ loc }}</li>
           {%- endfor %}
         </ul>
-        <strong class="mb-1 font-bold block">Battle Drops</strong>
+        {%- call sectionTitle() %}Battle Drops{%- endcall %}
         <ol class="text-sm grid(& flow-col rows-4) gap-1.5">
           {%- for drop in item.data.monster_drops %}
           <li class="flex items-center gap-1.5">
@@ -38,17 +38,19 @@ eleventyComputed:
       </div>
       <div class="pet">
         <h2>Pet</h2>
-        <strong class="mb-1 font-bold block">{% if page.fileSlug === 'demi-human' %}Pet Location{% else %}Egg Locations{% endif %}</strong>
+        {%- call sectionTitle() %}
+        {% if page.fileSlug === 'demi-human' %}Pet Location{% else %}Egg Locations{% endif %}
+        {%- endcall %}
         <ul>
           {%- for loc in item.data.egg_locations %}
           <li class="text-sm">{{ loc }}</li>
           {%- endfor %}
         </ul>
         <ul class="grid(& cols-2)">
-          <li><strong class="mb-1 font-bold block">Sync</strong> <span class="text-sm">{{ item.data.syncro_effect }}</span></p>
-          <li><strong class="mb-1 font-bold block">Sell</strong> <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text(xs black opacity-50)">$L</sup></span></p>
+          <li>{%- call sectionTitle() %}Sync{%- endcall %} <span class="text-sm">{{ item.data.syncro_effect }}</span></p>
+          <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text(xs black opacity-50)">$L</sup></span></p>
         </ul>
-        <strong class="mb-1 font-bold block">Initial Stats</strong>
+        {%- call sectionTitle() %}Initial Stats{%- endcall %}
         <ul class="text-sm grid(& cols-4)">
           {%- for key, value in item.data.pet_stats %}
           <li class="py-1.5 border(t black opacity-10)"><strong class="text-xs uppercase block">{{ key }}</strong> {{ value }}</li>
