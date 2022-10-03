@@ -3,7 +3,7 @@ layout: 'layouts/default.njk'
 ---
 
 {%- macro eventNav(label='',sub='',url='') %}
-<a href="{{ url }}" class="px-3 py-2 border(b white opacity-30) bg(pri-500 opacity-30) inline-block font-bold capitalize rounded shadow-inner motion-safe:(transition) hover:(border(b-0 t) bg(white opacity-10) shadow-lg)">
+<a href="{{ url }}" class="px-3 py-2 border(b white opacity-30) bg(pri-500 opacity-25) inline-block font-bold capitalize rounded shadow-inner motion-safe:(transition) hover:(border(b-0 t) bg(white opacity-10) ring(1 pri-500) shadow-lg)">
   <b class="text-xs font-normal uppercase block opacity-90">{{ sub }}:</b>
   {{ label }}
 </a>
