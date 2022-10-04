@@ -5,48 +5,107 @@ eleventyComputed:
 ---
 
 {%- import 'components/heading.njk' as heading %}
+{%- import 'components/btn.njk' as btn %}
+
+{%- macro dd(label='',data='') %}
+<dd class="py-1 pl-2 flex items-center">
+  <p class="flex-none">{{ label }}</p>
+  <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
+  <div class="flex-none">{{ data }}</div>
+</dd>
+{%- endmacro %}
+
+{%- macro dt(label='') %}
+<dt class="mb-2 py-1 px-2 bg(pri-500 opacity-30) text-xs font-bold uppercase rounded shadow-inner">
+  {{ label }}
+</dt>
+{%- endmacro %}
 
 {% renderTemplate "md" %}
 The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take affect immediately after your pet levels up. {.mb-10}
 {% endrenderTemplate %}
+<div class="pb-12" x-data="{ legend: false }">
+  <div class="text-right">
+    <p class="inline-flex justify-center text-sm leading-none">
+      {%- call btn.x(tag='button',click='legend = !legend') %}
+        <b :class="['opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><i class="fa-regular fa-fw fa-angle-right"></i></b>
+        <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
+      {%- endcall %}
+    </p>
+  </div>
+  <div x-show="legend" x-collapse>
+    <div class="p-4">
+
+{% renderTemplate "md" %}
+### Stats
+
+* **Charm** - Effectiveness of status attacks.
+* **Defense** - Physical defense and 'armor'.
+* **HP** - Physical HP and poison defense.
+* **Luck** - Boosts rare items, eggs, and spirits.
+* **Magic** - Defense against raw magical attacks.
+* **Power** - Strength for power attacks.
+* **Skill** - Finesse and technical attacks.
+* **Spirit** - Defense against status magics.
+
+### Personality
+
+* **Aggressive** - Concentrate on one opponent.
+* **Arrogant** - Rushes head first into battle.
+* **Calm** - Attacks strategically instead of blindly.
+* **Friendly** - Help you in attacking an opponent.
+* **Indecisive** - Difficulty deciding which enemy to attack.
+* **Lazy** - Does almost nothing in battle.
+* **Lonely** - Cling to you in battle.
+* **Scheming** - Stay back in battle and attack from a distance.
+
+---
+{% endrenderTemplate %}
+
+    </div>
+  </div>
+</div>
 
 {%- for category, items in collections.produce | groupby('data.color') %}
   {%- if category === page.fileSlug %}
   {%- for item in items %}
-  <section class="produce" id="produce-{{ item.data.page.fileSlug }}">
-    {%- call heading.x(tag='h2',sub=title.replace(' - Produce', '') +' - '+ seed +' seed',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
+  <section class="produce md:(grid(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
+    <div>
+      {%- call heading.x(tag='h2',sub=title.replace(' - Produce', '') +' - '+ seed +' seed',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
-    {%- endcall %}
-    {%- if item.data.stats_plus.length %}
-    <ul class="prod-stats m-0 -mt-5 pt-4 pb-2 pl-1 grid(& cols-8) gap-x-1 md:(ml-14)">
-      {%- for stat in item.data.stats_plus %}
-      <li class="pb-1 min-h-[42px] -skew-x-12 bg-pri-900 bg-opacity-10">
-        <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)"><b class="block skew-x-12">{{ stat }}</b></small>
-        <div class="text-center skew-x-12">
-          <i class="fa-solid fa-fw fa-up" title="{{ stat }} up"></i>
-        </div>
-      </li>
-      {%- endfor %}
-    </ul>
-    {%- endif %}
-    {%- if item.data.stats_minus.length %}
-    <ul class="prod-stats m-0 -mt-5 pt-4 pb-2 pl-1 grid(& cols-8) gap-x-1 md:(ml-14)">
-      {%- for stat in item.data.stats_minus %}
-      <li class="pb-1 min-h-[42px] -skew-x-12 bg-pri-900 bg-opacity-10">
-        <small class="px-1 py-px text(white [10px]) uppercase block bg-pri-800 md:(px-2 text-xs)"><b class="block skew-x-12">{{ stat }}</b></small>
-        <div class="text-center skew-x-12">
-          <i class="fa-regular fa-fw fa-down" title="{{ stat }} down"></i>
-        </div>
-      </li>
-      {%- endfor %}
-    </ul>
-    {%- endif %}
-      {%- if item.data.stats_plus.length or item.data.stats_minus.length %}
+      {%- endcall %}
+    </div>
+    <div>
+      {%- if item.data.stats %}
+      <dl class="prod-stats mb-6">
+        {{ dt(label='Stats') }}
+        {%- for key, value in item.data.stats %}
+        {%- if value !== '' %}
+        {{ dd(label=key,data=value) }}
+        {%- endif %}
+        {%- endfor %}
+      </dl>
       {%- else %}
-      <p class="uppercase">NONE</p>
+      <p>Nothing to see here :(</p>
       {%- endif %}
-    </ul>
-    {%- if loop.last %}{% else %}<hr class="my-12" />{%- endif %}
+      {%- if item.data.resist %}
+      <dl class="prod-resist mb-6">
+        {{ dt(label='Resist') }}
+        {%- for key, value in item.data.resist %}
+        {{ dd(label=key,data=value) }}
+        {%- endfor %}
+      </dl>
+      {%- endif %}
+      {%- if item.data.personality %}
+      <dl class="prod-personality mb-6">
+        {{ dt(label='Personality') }}
+        {%- for key, value in item.data.personality %}
+        {{ dd(label=key,data=value) }}
+        {%- endfor %}
+      </dl>
+      {%- endif %}
+    </div>
+    {%- if loop.last %}{% else %}<hr class="my-12 md:(col-span-2)" />{%- endif %}
   </section>
   {%- endfor %}
   {%- endif %}

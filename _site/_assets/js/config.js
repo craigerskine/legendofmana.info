@@ -73,6 +73,7 @@
     },
     plugins: {
       'scroll-smooth': { 'scroll-behavior': 'smooth' },
+      'btn': { '@apply': 'group px-3 py-2 border(t transparent) w-full bg(pri-500 opacity-25) font-normal inline-flex items-center uppercase relative rounded ring(1 pri-500 opacity-90) shadow motion-safe:(transition) hover:(border(white opacity-30) bg(white opacity-10) ring-opacity-100 shadow-lg)' },
     },
   })
   twind.tw(() => ({

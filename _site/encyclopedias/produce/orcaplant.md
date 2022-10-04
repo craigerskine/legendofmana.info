@@ -3,12 +3,18 @@ title: Orcaplant
 tags:
   - produce
 color: purple
-stats_plus:
-  - skl
-  - mgc
-  - sch
-stats_minus:
-  - frd
+stats:
+  Charm: ''
+  Defense: ''
+  HP: ''
+  Luck: ''
+  Magic: '+1'
+  Power: ''
+  Skill: '+1'
+  Spirit: ''
+personality:
+  Friendly: '-1'
+  Scheming: '+1'
 date: 0000-00-00
 permalink: false
 ---

@@ -3,13 +3,18 @@ title: Conchurnip
 tags:
   - produce
 color: white
-stats_plus:
-  - pwr
-  - def
-  - agg
-  - arr
-stats_minus:
-  - mgc
+stats:
+  Charm: ''
+  Defense: '+1'
+  HP: '-1'
+  Luck: ''
+  Magic: ''
+  Power: '+1'
+  Skill: ''
+  Spirit: ''
+personality:
+  Aggressive: '+1'
+  Arrogant: '+1'
 date: 0000-00-00
 permalink: false
 ---

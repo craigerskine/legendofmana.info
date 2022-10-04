@@ -3,10 +3,17 @@ title: Springanana
 tags:
   - produce
 color: yellow
-stats_plus:
-  - hp
-stats_minus:
-  - ind
+stats:
+  Charm: ''
+  Defense: ''
+  HP: '+1'
+  Luck: ''
+  Magic: ''
+  Power: ''
+  Skill: ''
+  Spirit: ''
+personality:
+  Indecisive: '-1'
 date: 0000-00-00
 permalink: false
 ---

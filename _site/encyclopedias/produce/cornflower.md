@@ -3,12 +3,17 @@ title: Cornflower
 tags:
   - produce
 color: yellow
-stats_plus:
-  - mgc
-  - spr
-  - agg
-stats_minus:
-  - clm
+stats:
+  Charm: '+1'
+  Defense: ''
+  HP: ''
+  Luck: ''
+  Magic: '+1'
+  Power: ''
+  Skill: ''
+  Spirit: ''
+personality:
+  Aggressive: '+1'
 date: 0000-00-00
 permalink: false
 ---
