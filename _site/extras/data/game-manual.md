@@ -1,5 +1,5 @@
 ---
-title: 'Game Manual'
+title: 'Manual'
 sub: 'PlayStation - PDF'
 img: /_assets/img/extras/card-manual.png
 file: /_assets/files/lom-manual.pdf

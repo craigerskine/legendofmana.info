@@ -1,5 +1,5 @@
 ---
-title: 'Save File'
+title: 'Save'
 sub: 'PSX Memory Card'
 img: /_assets/img/extras/card-save.png
 file: /_assets/files/save-legend-of-mana-usa.zip

@@ -20,19 +20,14 @@ eleventyNavigation:
 </a>
 {%- endmacro %}
 
-<h2>Goodies</h2>
-
-<ul class="mb-0">
+<ul class="grid(& cols-1) gap-5 md:(grid-cols-3)">
   {%- for item in collections.extras %}
-  <li class="pb-8 lg:(flex space-x-12)">
-    <div class="flex-1">
-      {%- call heading.x(tag='h3',sub=item.data.sub,img='/_assets/img/encyclopedias/en-tome.png') %}
-        {{ item.data.title }}
-      {%- endcall %}
-    </div>
-    <div class="flex-none">
-      {{ download(label=item.data.title,file=item.data.file,img=item.data.img) }}
-    </div>
+  <li>
+    <h2>
+      <span class="text-lg">{{ item.data.title }}</span>
+    </h2>
+    <p class="-mt-5 mb-5 pl-7 text-xs">{{ item.data.sub }}</p>
+    {{ download(label=item.data.title,file=item.data.file,img=item.data.img) }}
   </li>
   {%- endfor %}
 </ul>
