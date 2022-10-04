@@ -4,16 +4,12 @@ tags:
   - produce
 color: purple
 stats:
-  Charm: ''
-  Defense: ''
   HP: '+1'
-  Luck: ''
-  Magic: ''
-  Power: ''
-  Skill: ''
-  Spirit: ''
 personality:
   Friendly: '+1'
+seeds:
+  'Round + Crooked': '18.75'
+  'Long + Long': '10.55'
 date: 0000-00-00
 permalink: false
 ---

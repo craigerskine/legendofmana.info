@@ -5,15 +5,12 @@ tags:
 color: blue
 stats:
   Charm: '+1'
-  Defense: ''
-  HP: ''
-  Luck: ''
-  Magic: ''
-  Power: ''
-  Skill: ''
-  Spirit: ''
 personality:
   Lazy: '-1'
+seeds:
+  'Round + Round': '56.25'
+  'Round + Big/Long': '28.13'
+  'Big + Big': '14.06'
 date: 0000-00-00
 permalink: false
 ---

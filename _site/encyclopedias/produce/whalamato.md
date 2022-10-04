@@ -7,13 +7,13 @@ stats:
   Charm: '+1'
   Defense: '-1'
   HP: '+1'
-  Luck: ''
   Magic: '+1'
-  Power: ''
-  Skill: ''
-  Spirit: ''
 personality:
   Aggressive: '-1'
+seeds:
+  'Crooked + Spiny': '25'
+  'Crooked + Flat': '21.88'
+  'Crooked + Crooked': '6.25'
 date: 0000-00-00
 permalink: false
 ---

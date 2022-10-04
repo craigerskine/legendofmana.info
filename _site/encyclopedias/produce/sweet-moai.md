@@ -4,16 +4,15 @@ tags:
   - produce
 color: purple
 stats:
-  Charm: ''
   Defense: '+1'
-  HP: ''
-  Luck: ''
   Magic: '+1'
-  Power: ''
   Skill: '-1'
-  Spirit: ''
 personality:
   Lazy: '+1'
+seeds:
+  'Long + Spiny': '15.63'
+  'Long + Flat': '5.47'
+  'Long + Long': '3.52'
 date: 0000-00-00
 permalink: false
 ---

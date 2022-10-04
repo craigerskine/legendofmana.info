@@ -8,15 +8,15 @@ eleventyComputed:
 {%- import 'components/btn.njk' as btn %}
 
 {%- macro dd(label='',data='') %}
-<dd class="py-1 pl-2 flex items-center">
+<dd class="py-1 pl-2 text-sm flex items-center">
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
-  <div class="flex-none">{{ data }}</div>
+  <i class="text-base not-italic flex-none">{{ data }}</i>
 </dd>
 {%- endmacro %}
 
 {%- macro dt(label='') %}
-<dt class="mb-2 py-1 px-2 bg(pri-500 opacity-30) text-xs font-bold uppercase rounded shadow-inner">
+<dt class="py-1 px-2 bg(pri-700) text(xs pri-200) font-bold uppercase rounded shadow-inner">
   {{ label }}
 </dt>
 {%- endmacro %}
@@ -71,26 +71,22 @@ The following data charts represent pet statistic adjustments based on the produ
   {%- for item in items %}
   <section class="produce md:(grid(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
     <div>
-      {%- call heading.x(tag='h2',sub=title.replace(' - Produce', '') +' - '+ seed +' seed',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
+      {%- call heading.x(tag='h2',sub=title.replace(' - Produce', ''),img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
       {%- endcall %}
     </div>
     <div>
       {%- if item.data.stats %}
       <dl class="prod-stats mb-6">
-        {{ dt(label='Stats') }}
+        {{ dt(label='Pet Stats') }}
         {%- for key, value in item.data.stats %}
-        {%- if value !== '' %}
         {{ dd(label=key,data=value) }}
-        {%- endif %}
         {%- endfor %}
       </dl>
-      {%- else %}
-      <p>Nothing to see here :(</p>
       {%- endif %}
       {%- if item.data.resist %}
       <dl class="prod-resist mb-6">
-        {{ dt(label='Resist') }}
+        {{ dt(label='Pet Resist') }}
         {%- for key, value in item.data.resist %}
         {{ dd(label=key,data=value) }}
         {%- endfor %}
@@ -98,9 +94,17 @@ The following data charts represent pet statistic adjustments based on the produ
       {%- endif %}
       {%- if item.data.personality %}
       <dl class="prod-personality mb-6">
-        {{ dt(label='Personality') }}
+        {{ dt(label='Pet Personality') }}
         {%- for key, value in item.data.personality %}
         {{ dd(label=key,data=value) }}
+        {%- endfor %}
+      </dl>
+      {%- endif %}
+      {%- if item.data.seeds %}
+      <dl class="prod-seeds mb-6">
+        {{ dt(label='How to grow') }}
+        {%- for key, value in item.data.seeds %}
+        {{ dd(label=key,data=value+'%') }}
         {%- endfor %}
       </dl>
       {%- endif %}

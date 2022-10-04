@@ -5,15 +5,15 @@ tags:
 color: yellow
 stats:
   Charm: '+1'
-  Defense: ''
   HP: '-1'
-  Luck: ''
   Magic: '+1'
-  Power: ''
   Skill: '+1'
-  Spirit: ''
 personality:
   Scheming: '-1'
+seeds:
+  'Oblong + Spiny': '25'
+  'Oblong + Flat': '21.88'
+  'Oblong + Oblong': '6.25'
 date: 0000-00-00
 permalink: false
 ---

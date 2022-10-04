@@ -4,16 +4,12 @@ tags:
   - produce
 color: yellow
 stats:
-  Charm: ''
-  Defense: ''
   HP: '+1'
-  Luck: ''
-  Magic: ''
-  Power: ''
-  Skill: ''
-  Spirit: ''
 personality:
   Indecisive: '-1'
+seeds:
+  'Oblong + Oblong': '18.75'
+  'Oblong + Flat/Small': '9.38'
 date: 0000-00-00
 permalink: false
 ---

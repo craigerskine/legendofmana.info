@@ -4,17 +4,14 @@ tags:
   - produce
 color: white
 stats:
-  Charm: ''
-  Defense: ''
   HP: '+2'
-  Luck: ''
-  Magic: ''
   Power: '+1'
-  Skill: ''
-  Spirit: ''
 personality:
   Aggressive: '+2'
   Arrogant: '+2'
+seeds:
+  'Flat + Flat': '4.69'
+  'Flat + Spiny': '3.13'
 date: 0000-00-00
 permalink: false
 ---
