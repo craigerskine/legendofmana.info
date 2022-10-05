@@ -22,8 +22,9 @@ eleventyComputed:
 {%- endmacro %}
 
 {% renderTemplate "md" %}
-The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take affect immediately after your pet levels up. {.mb-10}
+The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take effect immediately after your pet levels up. {.mb-10}
 {% endrenderTemplate %}
+
 <div class="pb-12" x-data="{ legend: false }">
 
     <p class="text(sm) leading-none">
@@ -36,26 +37,32 @@ The following data charts represent pet statistic adjustments based on the produ
     </p>
 
     <div x-show="legend" x-collapse>
-      <div class="py-4 text-sm grid(& cols-1) gap-4 md:(grid-cols-2)">
+      <div class="py-4 text-xs grid(& cols-1) gap-4 md:(grid-cols-2)">
         <div>
           <h3>Stats</h3>
-          <dl class="">
+          <ul class="-mt-2">
             {%- for item in legend.pets.stats %}
-            <dt>
-              <strong>{{ item.title }}</strong>
-            </dt>
-            <dd class="mb-2 pb-2 border(b black opacity-10)">{{ item.desc }}</dd>
+            <li class="mb-2 pb-2 border(b black opacity-10) flex items-center">
+              <img src="/_assets/img/li.png" alt="Swirl" class="mr-4 flex-none transform rotate-180" />
+              <p class="w-full flex-1">
+                <strong class="block">{{ item.title }}</strong>
+                {{ item.desc }}
+              </p>
+            </li>
             {%- endfor %}
           </ul>
         </div>
         <div>
           <h3>Personality</h3>
-          <dl class="">
+          <ul class="-mt-2">
             {%- for item in legend.pets.personality %}
-            <dt>
-              <strong>{{ item.title }}</strong>
-            </dt>
-            <dd class="mb-2 pb-2 border(b black opacity-10)">{{ item.desc }}</dd>
+            <li class="mb-2 pb-2 border(b black opacity-10) flex items-center">
+              <img src="/_assets/img/li.png" alt="Swirl" class="mr-4 flex-none transform rotate-180" />
+              <p class="w-full flex-1">
+                <strong class="block">{{ item.title }}</strong>
+                {{ item.desc }}
+              </p>
+            </li>
             {%- endfor %}
           </ul>
         </div>
