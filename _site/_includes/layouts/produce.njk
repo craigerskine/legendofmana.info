@@ -16,7 +16,7 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- macro dt(label='') %}
-<dt class="py-1 px-2 bg(pri-700) text(xs pri-200) font-bold uppercase rounded shadow-inner">
+<dt class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(xs gray-900) font-bold uppercase rounded-sm shadow-inner">
   {{ label }}
 </dt>
 {%- endmacro %}
@@ -25,46 +25,43 @@ eleventyComputed:
 The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take affect immediately after your pet levels up. {.mb-10}
 {% endrenderTemplate %}
 <div class="pb-12" x-data="{ legend: false }">
-  <div class="text-right">
-    <p class="inline-flex justify-center text-sm leading-none">
+
+    <p class="text(sm) leading-none">
       {%- call btn.x(tag='button',click='legend = !legend') %}
-        <b :class="['opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><i class="fa-regular fa-fw fa-angle-right"></i></b>
-        <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
+        <span class="w-full flex items-center justify-center">
+          <b :class="['opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><i class="fa-regular fa-fw fa-angle-right"></i></b>
+          <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
+        </span>
       {%- endcall %}
     </p>
-  </div>
-  <div x-show="legend" x-collapse>
-    <div class="p-4">
 
-{% renderTemplate "md" %}
-### Stats
-
-* **Charm** - Effectiveness of status attacks.
-* **Defense** - Physical defense and 'armor'.
-* **HP** - Physical HP and poison defense.
-* **Luck** - Boosts rare items, eggs, and spirits.
-* **Magic** - Defense against raw magical attacks.
-* **Power** - Strength for power attacks.
-* **Skill** - Finesse and technical attacks.
-* **Spirit** - Defense against status magics.
-
-### Personality
-
-* **Aggressive** - Concentrate on one opponent.
-* **Arrogant** - Rushes head first into battle.
-* **Calm** - Attacks strategically instead of blindly.
-* **Friendly** - Help you in attacking an opponent.
-* **Indecisive** - Difficulty deciding which enemy to attack.
-* **Lazy** - Does almost nothing in battle.
-* **Lonely** - Cling to you in battle.
-* **Scheming** - Stay back in battle and attack from a distance.
-
----
-{% endrenderTemplate %}
-
+    <div x-show="legend" x-collapse>
+      <div class="py-4 text-sm grid(& cols-1) gap-4 md:(grid-cols-2)">
+        <div>
+          <h3>Stats</h3>
+          <dl class="">
+            {%- for item in legend.pets.stats %}
+            <dt>
+              <strong>{{ item.title }}</strong>
+            </dt>
+            <dd class="mb-2 pb-2 border(b black opacity-10)">{{ item.desc }}</dd>
+            {%- endfor %}
+          </ul>
+        </div>
+        <div>
+          <h3>Personality</h3>
+          <dl class="">
+            {%- for item in legend.pets.personality %}
+            <dt>
+              <strong>{{ item.title }}</strong>
+            </dt>
+            <dd class="mb-2 pb-2 border(b black opacity-10)">{{ item.desc }}</dd>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
 {%- for category, items in collections.produce | groupby('data.color') %}
   {%- if category === page.fileSlug %}
@@ -102,7 +99,7 @@ The following data charts represent pet statistic adjustments based on the produ
       {%- endif %}
       {%- if item.data.seeds %}
       <dl class="prod-seeds mb-6">
-        {{ dt(label='How to grow') }}
+        {{ dt(label='Seed formula') }}
         {%- for key, value in item.data.seeds %}
         {{ dd(label=key,data=value+'%') }}
         {%- endfor %}
