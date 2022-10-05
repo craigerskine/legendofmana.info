@@ -7,8 +7,18 @@ eleventyComputed:
 {%- import 'components/heading.njk' as heading %}
 {%- import 'components/btn.njk' as btn %}
 
+{%- macro legnd(label='',desc='') %}
+<li class="mb-2 pb-2 border(b black opacity-10) text-sm leading-tight flex items-center">
+  <img src="/_assets/img/li.png" alt="Swirl" class="mr-4 flex-none transform rotate-180" />
+  <p class="w-full flex-1">
+    <strong class="block">{{ label }}</strong>
+    <small>{{ desc }}</small>
+  </p>
+</li>
+{%- endmacro %}
+
 {%- macro dd(label='',data='') %}
-<dd class="py-1 pl-2 text-sm flex items-center">
+<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-700 underline{%- endif %}">
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <i class="text-base not-italic flex-none">{{ data }}</i>
@@ -16,7 +26,7 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- macro dt(label='') %}
-<dt class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(xs gray-900) font-bold uppercase rounded-sm shadow-inner">
+<dt class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(xs gray-900) leading-relaxed font-bold uppercase rounded-sm shadow-inner">
   {{ label }}
 </dt>
 {%- endmacro %}
@@ -37,32 +47,20 @@ The following data charts represent pet statistic adjustments based on the produ
     </p>
 
     <div x-show="legend" x-collapse>
-      <div class="py-4 text-xs grid(& cols-1) gap-4 md:(grid-cols-2)">
+      <div class="py-4 grid(& cols-1) gap-4 md:(grid-cols-2)">
         <div>
-          <h3>Stats</h3>
-          <ul class="-mt-2">
+          <h3 class="heading text-base">Stats</h3>
+          <ul class="mt-2">
             {%- for item in legend.pets.stats %}
-            <li class="mb-2 pb-2 border(b black opacity-10) flex items-center">
-              <img src="/_assets/img/li.png" alt="Swirl" class="mr-4 flex-none transform rotate-180" />
-              <p class="w-full flex-1">
-                <strong class="block">{{ item.title }}</strong>
-                {{ item.desc }}
-              </p>
-            </li>
+            {{ legnd(label=item.title,desc=item.desc) }}
             {%- endfor %}
           </ul>
         </div>
         <div>
-          <h3>Personality</h3>
-          <ul class="-mt-2">
+          <h3 class="heading text-base">Personality</h3>
+          <ul class="mt-2">
             {%- for item in legend.pets.personality %}
-            <li class="mb-2 pb-2 border(b black opacity-10) flex items-center">
-              <img src="/_assets/img/li.png" alt="Swirl" class="mr-4 flex-none transform rotate-180" />
-              <p class="w-full flex-1">
-                <strong class="block">{{ item.title }}</strong>
-                {{ item.desc }}
-              </p>
-            </li>
+            {{ legnd(label=item.title,desc=item.desc) }}
             {%- endfor %}
           </ul>
         </div>
@@ -98,7 +96,7 @@ The following data charts represent pet statistic adjustments based on the produ
       {%- endif %}
       {%- if item.data.personality %}
       <dl class="prod-personality mb-6">
-        {{ dt(label='Pet Personality') }}
+        {{ dt(label='Pet Personalities') }}
         {%- for key, value in item.data.personality %}
         {{ dd(label=key,data=value) }}
         {%- endfor %}
