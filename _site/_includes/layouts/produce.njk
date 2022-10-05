@@ -99,7 +99,7 @@ The following data charts represent pet statistic adjustments based on the produ
       {%- endif %}
       {%- if item.data.seeds %}
       <dl class="prod-seeds mb-6">
-        {{ dt(label='Seed formula') }}
+        {{ dt(label='Seed Formulas') }}
         {%- for key, value in item.data.seeds %}
         {{ dd(label=key,data=value+'%') }}
         {%- endfor %}
