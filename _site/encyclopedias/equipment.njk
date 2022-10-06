@@ -1,0 +1,57 @@
+---
+layout: 'layouts/default.njk'
+title: Equipment
+eleventyNavigation:
+  key: Equipment
+  title: Equipment
+  sub: 'Weapons / Armor'
+  img: '/_assets/img/encyclopedias/equipment.png'
+  parent: Encyclopedias
+  order: 4
+---
+
+{%- import 'components/heading.njk' as heading %}
+
+<h2>Weapons</h2>
+
+<ul class="my-16 md:(grid(& cols-2) gap-x-4)">
+  {%- for item in collections.weapons %}
+  <li class="pb-8">
+    {%- call heading.x(tag='h2',sub='Weapon',url='/encyclopedias/equipment/'+ item.data.page.fileSlug +'/',img='/_assets/img/encyclopedias/weapons/'+ item.data.page.fileSlug +'.png') %}
+      {{ item.data.title | replace(' - Equipment', '') }}
+    {%- endcall %}
+    <ul class="m-0 -mt-2 ml-14 pb-4 pl-1">
+      {%- for weapon in item.data.items %}
+      <li>
+        <a href="/encyclopedias/equipment/{{ item.data.page.fileSlug }}/#weapon-{{ weapon.title | slugify }}" class="font-normal inline-flex items-center hover:(underline)">
+          <img src="/_assets/img/li.png" alt="Swirl" class="mr-2" aria-hidden="true" />
+          {{ weapon.title }}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </li>
+  {%- endfor %}
+</ul>
+
+<h2>Armor</h2>
+
+<ul class="mt-16 md:(grid(& cols-2) gap-x-4)">
+  {%- for item in collections.armor %}
+  <li class="pb-8">
+    {%- call heading.x(tag='h2',sub='Armor',url='/encyclopedias/equipment/'+ item.data.page.fileSlug +'/',img='/_assets/img/encyclopedias/armor/'+ item.data.page.fileSlug +'.png') %}
+      {{ item.data.title | replace(' - Equipment', '') }}
+    {%- endcall %}
+    <ul class="m-0 -mt-2 ml-14 pb-4 pl-1">
+      {%- for armor in item.data.items %}
+      <li>
+        <a href="/encyclopedias/equipment/{{ item.data.page.fileSlug }}/#armor-{{ armor.title | slugify }}" class="font-normal inline-flex items-center hover:(underline)">
+          <img src="/_assets/img/li.png" alt="Swirl" class="mr-2" aria-hidden="true" />
+          {{ armor.title }}
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </li>
+  {%- endfor %}
+</ul>

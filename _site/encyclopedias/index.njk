@@ -16,11 +16,9 @@ eleventyNavigation:
 <ul class="mt-16 gap-x-4 md:(grid(& cols-2))">
   {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
   <li class="pb-8">
-    {%- if loop.last === false %}
     {%- call heading.x(tag='h2',sub=item.sub,url=item.url,img=item.img) %}
     {{ item.title }}
     {%- endcall %}
-    {%- endif %}
   </li>
   {%- endfor %}
 </ul>

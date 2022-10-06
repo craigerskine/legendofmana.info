@@ -1,5 +1,5 @@
 ---
-title: Sword
+title: '1H Sword'
 tags:
   - techs
 techniques:

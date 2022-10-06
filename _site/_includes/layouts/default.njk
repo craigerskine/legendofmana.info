@@ -127,9 +127,7 @@
                     {%- endcall %}
                     <ul class="ml-0 grid(& cols-2) gap-4">
                       {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
-                      {%- if loop.last === false %}
                       {{ asideLink.x(item.title,sub=item.sub,url=item.url) }}
-                      {%- endif %}
                       {%- endfor %}
                     </ul>
                   </section>

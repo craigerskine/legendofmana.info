@@ -1,0 +1,33 @@
+---
+layout: 'layouts/equipment.njk'
+title: Bow
+tags:
+  - weapons
+items:
+  - title: Archenon
+    base: BaobabWood
+    power: 13
+    acquire: Chobin Hood
+  - title: ElderBow 1
+    base: OakWood
+    power: 6
+    acquire: Chobin Hood
+  - title: ElderBow 2
+    base: HollyWood
+    power: 10
+    acquire: Chobin Hood
+  - title: SacredBow
+    base: DiorWood
+    power: 33
+    acquire: Chobin Hood
+  - title: Sidewinder
+    base: EbonyWood
+    power: 16
+    acquire: Chobin Hood
+  - title: Waveruck
+    base: MapleWood
+    power: 23
+    acquire: Chobin Hood
+date: 0000-00-00
+permalink: 'encyclopedias/equipment/bow/'
+---

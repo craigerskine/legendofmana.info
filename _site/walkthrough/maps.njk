@@ -37,7 +37,7 @@ If you are following the included [Walkthrough](/walkthrough/events/), you shoul
 
 <div class="md:flex md:space-x-6">
   <div class="mb-8 w-full flex-1">
-    <ul class="ml-0 grid(& flow-row cols-2) gap-y-6 gap-x-4">
+    <ul class="ml-0 grid(& cols-1) gap-y-6 gap-x-4 sm:(grid-cols-2)">
       {%- for item in collections.maps %}
       {%- if loop.index <= 26 %}
       {{ list.x(label=item.data.title,sub=item.data.artifact,badge=loop.index,url='#map-'+item.data.page.fileSlug,lb=true) }}
@@ -87,7 +87,7 @@ If you are following the included [Walkthrough](/walkthrough/events/), you shoul
         <img src="/_assets/img/walkthrough/maps/world-zoom.jpg" alt="map" class="w-full h-full" />
       </li>
     </ul>
-    <ul class="ml-0">
+    <ul class="mb-8">
       {{ list.x(title='The Flames',sub='Underworld',badge='14*',url='#map-the-flames',lb=true) }}
     </ul>
   </div>

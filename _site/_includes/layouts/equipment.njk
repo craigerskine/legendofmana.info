@@ -1,0 +1,32 @@
+---
+layout: 'layouts/default.njk'
+eleventyComputed:
+  title: '{{ title }} - Equipment'
+---
+
+{%- import 'components/heading.njk' as heading %}
+
+{%- macro list(label='',info='') %}
+<li class="mb-4 pb-4 border(b black opacity-10)">
+  <strong class="text-xs uppercase">{{ label }}</strong>
+  <p class="m-0">{{ info }}</p>
+</li>
+{%- endmacro %}
+
+{%- for item in items %}
+<section class="equipment md:(grid(& cols-2) gap-8)" id="{{ tags }}-{{ item.title | slugify }}">
+  <div>
+    {%- call heading.x(tag='h2',sub=tags,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',border=false) %}
+    {{ item.title }}
+    {%- endcall %}
+  </div>
+  <div>
+    <ul class="equip-stats">
+      {{ list(label='Base:',info=item.base) }}
+      {{ list(label='Strength:',info=item.power) }}
+      {{ list(label='Acquired by:',info=item.acquire) }}
+    </ul>
+  </div>
+  {%- if loop.last %}{% else %}<hr class="my-12 invisible" />{%- endif %}
+</section>
+{%- endfor %}

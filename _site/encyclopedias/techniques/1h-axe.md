@@ -1,5 +1,5 @@
 ---
-title: Axe
+title: '1H Axe'
 tags:
   - techs
 techniques:

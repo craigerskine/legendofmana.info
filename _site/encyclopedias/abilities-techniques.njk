@@ -61,7 +61,7 @@ eleventyNavigation:
   <li id="technique-{{ item.data.page.fileSlug }}">
     <div class="mb-12 lg:(flex)">
       <div class="lg:(w-1/3)">
-        {%- call heading.x(tag='h3',sub='ST Technique',img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
+        {%- call heading.x(tag='h3',sub='ST Technique',img='/_assets/img/encyclopedias/weapons/'+ item.data.page.fileSlug +'.png',border=false) %}
           {{ item.data.title }}
         {%- endcall %}
       </div>

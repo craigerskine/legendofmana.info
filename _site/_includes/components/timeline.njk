@@ -4,7 +4,7 @@
 ">
   <figure class="md:(flex(& none col))">
     {%- if img %}
-    <img src="{{ img }}?v={% version %}" alt="{{ label }}" class="rounded md:(flex-none)" />
+    <figure class="w-[48px] h-[48px] bg(pri-900 opacity-30) flex items-center justify-center rounded shadow-inner overflow-hidden md:(flex-none)"><img src="{{ img }}?v={% version %}" alt="{{ label }}" /></figure>
     {%- else %}
     <b class="w-[48px] h-[48px] text(xl pri-300) bg-pri-900 flex(& none) items-center justify-center rounded-full">{{ index.index }}</b>
     {%- endif %}

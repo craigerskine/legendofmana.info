@@ -1,5 +1,5 @@
 ---
-title: Gloves
+title: Glove
 tags:
   - techs
 techniques:
