@@ -116,8 +116,8 @@
       '.blocker:before': { 'content': '""', '@apply': 'mr-[-0.05em] h-full align-middle inline-block', },
       '.blocker.behind': { '@apply': 'bg-transparent', },
       '.scene': { 'transform': 'translateY(var(--translateY))', 'will-change': 'transform', },
-      '.tree-line:before,.tree-line:after': { 'margin': '0 12rem 0 0', 'background': 'url(\'/_assets/img/tree-line.png\') repeat-x bottom', 'content': '""', 'flex': '1 1 0%', 'position': 'relative', 'z-index': '-1', },
-      '.tree-line:after': { 'margin': '0 0 0 12rem', },
+      //'.tree-line:before,.tree-line:after': { 'margin': '0 12rem 0 0', 'background': 'url(\'/_assets/img/tree-line.png\') repeat-x bottom', 'content': '""', 'flex': '1 1 0%', 'position': 'relative', 'z-index': '-1', },
+      //'.tree-line:after': { 'margin': '0 0 0 12rem', },
     }
   }))
   twindObserve.observe(document.documentElement);
