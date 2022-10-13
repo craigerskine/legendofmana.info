@@ -7,7 +7,7 @@ eleventyComputed:
 {%- import 'components/heading.njk' as heading %}
 
 {%- macro list(info='') %}
-<li class="mb-1 py-1 px-2 flex">
+<li class="mb-1 py-1 flex">
   <strong class="flex-none">{{ caller() }}</strong>
   <b class="mt-2.5 mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <p class="w-full max-w-[50%]">
@@ -17,7 +17,7 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- for item in items %}
-<section class="equipment md:(grid(& cols-2) gap-8)" id="{{ tags | join }}-{{ item.title | slugify }}">
+<section class="equipment md:(grid(& cols-2) gap-4)" id="{{ tags | join }}-{{ item.title | slugify }}">
   <div>
     {%- call heading.x(tag='h2',sub=tags,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',border=false) %}
     {{ item.title }}
@@ -27,7 +27,7 @@ eleventyComputed:
     <ul class="equip-stats text-sm">
       {%- call list(info=item.base) %}Material:{%- endcall %}
       {%- call list(info=item.power) %}{%- if (tags | join) == 'weapons' %}Strength:{%- else %}Defense:{%- endif %}{%- endcall %}
-      {%- call list(info=item.aquire) %}Aquire:{%- endcall %}
+      {%- call list(info=item.acquire) %}Aquire:{%- endcall %}
     </ul>
   </div>
   {%- if loop.last %}{% else %}<hr class="my-12 invisible" />{%- endif %}
