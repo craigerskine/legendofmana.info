@@ -30,6 +30,6 @@ eleventyComputed:
       {%- call list(info=item.acquire) %}Aquire:{%- endcall %}
     </ul>
   </div>
-  {%- if loop.last %}{% else %}<hr class="my-12 invisible" />{%- endif %}
+  {%- if loop.last %}{% else %}<hr class="mt-8 mb-12 col-span-2" />{%- endif %}
 </section>
 {%- endfor %}
