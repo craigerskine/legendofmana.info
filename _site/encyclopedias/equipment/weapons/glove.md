@@ -4,15 +4,15 @@ title: Glove
 tags:
   - weapons
 items:
-  - title: GigasGlove
+  - title: Gigas Glove
     base: CentaurHide
     power: 18
     acquire: 'Narcissos, Molebear'
-  - title: HolyGlove
+  - title: Holy Glove
     base: DragonSkin
     power: 32
     acquire: Narcissos
-  - title: SalesmanGlove
+  - title: Salesman Glove
     base: AltenaAlloy
     power: 43
     acquire: Narcissos
@@ -20,7 +20,7 @@ items:
     base: CursedBone
     power: 30
     acquire: 'Narcissos, Ape Mummy'
-  - title: SpiralClaw
+  - title: Spiral Claw
     base: TortiseShell
     power: 19
     acquire: 'Narcissos, Ape Mummy'

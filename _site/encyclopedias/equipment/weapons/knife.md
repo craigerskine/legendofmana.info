@@ -4,7 +4,7 @@ title: Knife
 tags:
   - weapons
 items:
-  - title: CrimsonGlare
+  - title: Crimson Glare
     base: BiellaRock
     power: 58
     acquire: Dainslaif

@@ -4,11 +4,11 @@ title: Flail
 tags:
   - weapons
 items:
-  - title: DivineFlail
+  - title: Divine Flail
     base: 'Gaeus''sTears'
     power: 44
     acquire: Springball
-  - title: GigasFlail
+  - title: Gigas Flail
     base: MaiaLead
     power: 22
     acquire: Springball

@@ -8,7 +8,7 @@ items:
     base: EbonyWood
     power: 12
     acquire: Tomato Man
-  - title: CernunnosRod
+  - title: Cernunnos Rod
     base: DiorWood
     power: 25
     acquire: Tomato Man

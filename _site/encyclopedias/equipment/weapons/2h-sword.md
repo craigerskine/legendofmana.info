@@ -20,7 +20,7 @@ items:
     base: AltenaAlloy
     power: 62
     acquire: 'Defeat Doombringer II with a "SaGa Frontier 2" saved game on your Memory Card'
-  - title: MurasamaBlade
+  - title: Murasama Blade
     base: AltenaAlloy
     power: 62
     acquire: Dainslaif

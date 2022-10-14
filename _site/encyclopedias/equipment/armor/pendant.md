@@ -8,19 +8,19 @@ items:
     base: VizelGold
     power: 15
     acquire: Succubus
-  - title: DestinyDice
+  - title: Destiny Dice
     base: Ivory
     power: 8
     acquire: Mad Mallard
-  - title: DragonBone
+  - title: Dragon Bone
     base: CursedBone
     power: 12
     acquire: Specter
-  - title: MagicBeads
+  - title: Magic Beads
     base: LorimarIron
     power: 22
     acquire: Tomato Man
-  - title: NinjasCharm
+  - title: Ninjas Charm
     base: ToppleCotton
     power: 6
     acquire: Mad Mallard
@@ -28,7 +28,7 @@ items:
     base: AnimalBone
     power: 4
     acquire: Skeleton
-  - title: WolfSpirit
+  - title: Wolf Spirit
     base: LorantSilver
     power: 9
     acquire: Howler

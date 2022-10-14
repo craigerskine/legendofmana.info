@@ -16,7 +16,7 @@ items:
     base: HollyWood
     power: 10
     acquire: Chobin Hood
-  - title: SacredBow
+  - title: Sacred Bow
     base: DiorWood
     power: 33
     acquire: Chobin Hood

@@ -4,7 +4,7 @@ title: Mantle
 tags:
   - armor
 items:
-  - title: RabiteEar
+  - title: Rabite Ear
     base: AnimalHide
     power: 6
     acquire: Rabite

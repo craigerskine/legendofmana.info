@@ -1,13 +1,13 @@
 {%- macro x(label,sub='',url='',ico='fa-light fa-comment-alt-exclamation') %}
-<p class="mb-16 bg(pri-800 opacity-10) flex overflow-hidden rounded">
-  <b class="py-3 px-5 bg(pri-800 opacity-25) flex items-center">
-    <i class="{{ ico }} fa-fw fa-2x text-pri-200 motion-safe:(animate-wiggle)" title="{{ label }}"></i>
-  </b>
-  <span class="py-3 px-5 flex-1 self-center">
-    {%- if url !== '' %}<a href="{{ url }}">{%- endif %}
-      <strong>{{ label }}</strong>
-    {%- if url !== '' %}</a>{%- endif %}
-    <small class="text-sm block">{{ sub }}</small>
-  </span>
-</p>
+  <p class="mb-16 bg(pri-800 opacity-10) flex overflow-hidden rounded">
+    <b class="py-3 px-5 bg(pri-800 opacity-25) flex items-center">
+      <i class="{{ ico }} fa-fw fa-2x text-pri-200 motion-safe:(animate-wiggle)" title="{{ label }}"></i>
+    </b>
+    <span class="py-3 px-5 flex-1 self-center">
+      {%- if url !== '' %}<a href="{{ url }}">{%- endif %}
+        <strong>{{ label }}</strong>
+      {%- if url !== '' %}</a>{%- endif %}
+      <small class="text-sm block">{{ sub }}</small>
+    </span>
+  </p>
 {%- endmacro %}

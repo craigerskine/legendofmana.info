@@ -8,15 +8,15 @@ items:
     base: 'Sultan''sSilk'
     power: 7
     acquire: Tomato Man
-  - title: BlackRobe
+  - title: Black Robe
     base: AltenaFelt
     power: 18
     acquire: 'Tomato Man, Specter'
-  - title: DragonsRobe
+  - title: Dragons Robe
     base: DragonSkin
     power: 26
     acquire: Kid Dragon
-  - title: PheonixRobe
+  - title: Pheonix Robe
     base: DragonSkin
     power: 26
     acquire: Garuda

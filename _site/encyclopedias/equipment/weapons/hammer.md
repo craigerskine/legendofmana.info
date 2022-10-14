@@ -8,15 +8,15 @@ items:
     base: EbonyWood
     power: 19
     acquire: Cursed Doll
-  - title: JudgesGavel
+  - title: Judges Gavel
     base: LorimarIron
     power: 56
     acquire: Cursed Doll
-  - title: PeaceMaker
+  - title: Peace Maker
     base: CursedBone
     power: 38
     acquire: Cursed Doll
-  - title: ThorsHammer
+  - title: Thors Hammer
     base: PedanStone
     power: 44
     acquire: Cursed Doll

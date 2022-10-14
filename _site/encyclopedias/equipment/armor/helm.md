@@ -4,11 +4,11 @@ title: Helm
 tags:
   - armor
 items:
-  - title: BloodyMask
+  - title: Bloody Mask
     base: Fossil
     power: 18
     acquire: Fierce Face
-  - title: 'Captain''sHelm'
+  - title: 'Captain''s Helm'
     base: Adamantite
     power: 29
     acquire: Mad Mallard
@@ -16,23 +16,23 @@ items:
     base: DragonSkin
     power: 20
     acquire: Land Dragon
-  - title: 'General''sHelm'
+  - title: 'General''s Helm'
     base: DragonScales
     power: 28
     acquire: Mad Mallard
-  - title: IronPot
+  - title: Iron Pot
     base: GranzSteel
     power: 5
     acquire: 'Niccolo''s Business Unusual: Part 1 event'
-  - title: PegasusHelm
+  - title: Pegasus Helm
     base: CentaurHide
     power: 5
     acquire: Fierce Face
-  - title: SkullHead
+  - title: Skull Head
     base: CursedBone
     power: 13
     acquire: Skeleton
-  - title: 'Soldier''sHelm'
+  - title: 'Soldier''s Helm'
     base: AnimalHide
     power: 2
     acquire: Mad Mallard

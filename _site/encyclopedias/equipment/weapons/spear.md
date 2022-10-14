@@ -4,15 +4,15 @@ title: Spear
 tags:
   - weapons
 items:
-  - title: DevilsFork
+  - title: Devils Fork
     base: AltenaAlloy
     power: 56
     acquire: 'Sagahin, Imp'
-  - title: FieryStabber
+  - title: Fiery Stabber
     base: MapleWood
     power: 31
     acquire: Sahagin
-  - title: GiantsSpear
+  - title: Giants Spear
     base: FossilWood
     power: 36
     acquire: Sagahin

@@ -4,19 +4,19 @@ title: Hauberk
 tags:
   - armor
 items:
-  - title: DragonsMail
+  - title: Dragons Mail
     base: DragonScales
     power: 53
     acquire: Land Dragon
-  - title: GoddessMail
+  - title: Goddess Mail
     base: WendelSilver
     power: 19
     acquire: Polter Box
-  - title: HerosArmor
+  - title: Heros Armor
     base: VizelGold
     power: 27
     acquire: Sand Scorpion
-  - title: SkeletonMail
+  - title: Skeleton Mail
     base: AnimalBone
     power: 7
     acquire: Skeleton

@@ -4,11 +4,11 @@ title: Ring
 tags:
   - armor
 items:
-  - title: CielmerRing
+  - title: Cielmer Ring
     base: LapisLazuli
     power: 8
     acquire: Mushboom
-  - title: DragonsRing
+  - title: Dragons Ring
     base: DragonScales
     power: 40
     acquire: Sky Dragon
@@ -16,15 +16,15 @@ items:
     base: VizelGold
     power: 10
     acquire: The Nordic Snowfield event
-  - title: FastestWheel
+  - title: Fastest Wheel
     base: OakWood
     power: 3
     acquire: 'Visit Polpota Harbor after completing "Catchin'' Lilipeas" with a "Chocobo Racing" saved game on your Memory Card'
-  - title: ForbiddenRing
+  - title: Forbidden Ring
     base: OakWood
     power: 3
     acquire: Wisdom of Gaeus event
-  - title: ReviveRing
+  - title: Revive Ring
     base: OakWood
     power: 3
     acquire: Pee-Wee Birdie event

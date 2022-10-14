@@ -12,7 +12,7 @@ items:
     base: Ivory
     power: 30
     acquire: Goblin
-  - title: SweetRevenge
+  - title: Sweet Revenge
     base: NemesisRock
     power: 59
     acquire: Goblin

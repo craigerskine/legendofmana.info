@@ -20,7 +20,7 @@ items:
     base: AltenaAlloy
     power: 50
     acquire: Dark Stalker
-  - title: SwordOfFate
+  - title: Sword of Fate
     base: IshePlatinum
     power: 40
     acquire: 'Choose Pearl as your companion during "Teardrop Crystal," then speak with Elazul'

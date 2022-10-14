@@ -1,17 +1,17 @@
 {%- macro x(label='',sub='',badge='',url='',star=false,tag=false,lb=false) %}
-<li>
-  <a href="{{ url }}"{% if label === 'Orchard' %} @click.prevent{% endif %} class="inline-flex items-center group{% if lb and label !== 'Orchard' %} lb{% endif %}">
-    <b class="mr-3 border(t transparent) w-8 h-8 bg(pri-900) text(pri-300 lg) font-normal inline-flex uppercase ring(1 pri-500 opacity-90) rounded-full shadow motion-safe:(transition duration-200) group-hover:(border(white opacity-30) bg(white opacity-10) text-pri-900 ring-opacity-100 shadow-lg)"><span class="m-auto pb-px">{{ badge }}{% if star %}<sup class="-ml-px text-sm opacity-70">*</sup>{% endif %} </span></b>
-    <p class="m-0">
-      <strong>{{ label }}</strong>
-      <small class="font-normal block opacity-90">
-        {%- if sub %}
-        {% if tag %}<i class="fa-solid fa-fw fa-hashtag opacity-50" title="{{ sub }} story arc"></i>{% endif %} {{ sub }}
-        {%- else %}
-        <i class="inline-block opacity-25" aria-hidden="true">~~~</i>
-        {%- endif %}
-      </small>
-    </p>
-  </a>
-</li>
+  <li>
+    <a href="{{ url }}"{% if label === 'Orchard' %} @click.prevent{% endif %} class="inline-flex items-center group{% if lb and label !== 'Orchard' %} lb{% endif %}">
+      <b class="mr-3 border(t transparent) w-8 h-8 bg(pri-900) text(pri-300 lg) font-normal inline-flex uppercase ring(1 pri-500 opacity-90) rounded-full shadow motion-safe:(transition duration-200) group-hover:(border(white opacity-30) bg(white opacity-10) text-pri-900 ring-opacity-100 shadow-lg)"><span class="m-auto pb-px">{{ badge }}{% if star %}<sup class="-ml-px text-sm opacity-70">*</sup>{% endif %} </span></b>
+      <p class="m-0">
+        <strong>{{ label }}</strong>
+        <small class="font-normal block opacity-90">
+          {%- if sub %}
+          {% if tag %}<i class="fa-solid fa-fw fa-hashtag opacity-50" title="{{ sub }} story arc"></i>{% endif %} {{ sub }}
+          {%- else %}
+          <i class="inline-block opacity-25" aria-hidden="true">~~~</i>
+          {%- endif %}
+        </small>
+      </p>
+    </a>
+  </li>
 {%- endmacro %}
