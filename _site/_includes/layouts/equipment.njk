@@ -18,14 +18,14 @@ eleventyComputed:
 {%- endmacro %}
 
 
-<ul class="list-none">
 {%- for item in items %}
+  <ul class="list-none" id="{{ tags | join }}-{{ item.title | slugify }}">
   {%- call timeline.x(label=item.title,sub=tags,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
-  <ul class="equip-stats text-sm">
-    {%- call list(info=item.base) %}Material:{%- endcall %}
-    {%- call list(info=item.power) %}{%- if (tags | join) == 'weapons' %}Strength:{%- else %}Defense:{%- endif %}{%- endcall %}
-    {%- call list(info=item.acquire) %}Aquire:{%- endcall %}
-  </ul>
+    <ul class="equip-stats text-sm">
+      {%- call list(info=item.base) %}Material:{%- endcall %}
+      {%- call list(info=item.power) %}{%- if (tags | join) == 'weapons' %}Strength:{%- else %}Defense:{%- endif %}{%- endcall %}
+      {%- call list(info=item.acquire) %}Aquire:{%- endcall %}
+    </ul>
   {%- endcall %}
+  </ul>
 {%- endfor %}
-</ul>
