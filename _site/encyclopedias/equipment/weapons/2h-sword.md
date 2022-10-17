@@ -7,23 +7,32 @@ items:
   - title: Braveblade
     base: AnkhRock
     power: 37
-    acquire: Dainslaif
+    acquire:
+      monster:
+        - Dainslaif
   - title: Doombringer
     base: AshWood
     power: 31
-    acquire: Dark Stalker
+    acquire:
+      monster:
+        - Dark Stalker
   - title: Excalibur
     base: AltenaAlloy
     power: 62
-    acquire: Moldy Goo
+    acquire:
+      monster:
+        - Moldy Goo
   - title: Heishishorin
     base: AltenaAlloy
     power: 62
-    acquire: 'Defeat Doombringer II with a "SaGa Frontier 2" saved game on your Memory Card'
+    acquire:
+      info: 'Defeat Doombringer II with a "SaGa Frontier 2" saved game on your Memory Card'
   - title: Murasama Blade
     base: AltenaAlloy
     power: 62
-    acquire: Dainslaif
+    acquire:
+      monster:
+        - Dainslaif
 date: 0000-00-00
 permalink: 'encyclopedias/equipment/2h-sword/'
 ---

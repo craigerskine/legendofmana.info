@@ -7,15 +7,21 @@ items:
   - title: Black Elk
     base: Obsidian
     power: 26
-    acquire: Goblin
+    acquire:
+      monster:
+        - Goblin
   - title: Silver Crane
     base: WendelSilver
     power: 30
-    acquire: Goblin
+    acquire:
+      monster:
+        - Goblin
   - title: Snow Deer
     base: IshePlatinum
     power: 40
-    acquire: Goblin
+    acquire:
+      monster:
+        - Goblin
 date: 0000-00-00
 permalink: 'encyclopedias/equipment/1h-axe/'
 ---

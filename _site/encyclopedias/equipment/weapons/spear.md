@@ -7,23 +7,35 @@ items:
   - title: Devils Fork
     base: AltenaAlloy
     power: 56
-    acquire: 'Sagahin, Imp'
+    acquire:
+      monster:
+        - Sagahin
+        - Imp
   - title: Fiery Stabber
     base: MapleWood
     power: 31
-    acquire: Sahagin
+    acquire:
+      monster:
+        - Sahagin
   - title: Giants Spear
     base: FossilWood
     power: 36
-    acquire: Sagahin
+    acquire:
+      monster:
+        - Sahagin
   - title: Stargazer
     base: VinekRock
     power: 42
-    acquire: Sagahin
+    acquire:
+      monster:
+        - Sahagin
   - title: True Spear
     base: Coral
     power: 17
-    acquire: 'Sahagin, Imp'
+    acquire:
+      monster:
+        - Sahagin
+        - Imp
 date: 0000-00-00
 permalink: 'encyclopedias/equipment/spear/'
 ---

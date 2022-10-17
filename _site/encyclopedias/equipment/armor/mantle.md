@@ -7,7 +7,9 @@ items:
   - title: Rabite Ear
     base: AnimalHide
     power: 6
-    acquire: Rabite
+    acquire:
+      monster:
+        - Rabite
 date: 0000-00-00
 permalink: 'encyclopedias/equipment/mantle/'
 ---

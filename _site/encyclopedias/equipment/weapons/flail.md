@@ -7,15 +7,21 @@ items:
   - title: Divine Flail
     base: 'Gaeus''sTears'
     power: 44
-    acquire: Springball
+    acquire:
+      monster:
+        - Springball
   - title: Gigas Flail
     base: MaiaLead
     power: 22
-    acquire: Springball
+    acquire:
+      monster:
+        - Springball
   - title: Juggernaut
     base: Ivory
     power: 20
-    acquire: Springball
+    acquire:
+      monster:
+        - Springball
 date: 0000-00-00
 permalink: 'encyclopedias/equipment/flail/'
 ---
