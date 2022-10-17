@@ -36,6 +36,7 @@ eleventyComputed:
           {%- endfor %}
         </ol>
       </div>
+      {%- if item.data.page.fileSlug !== 'machine-golem' %}
       <div class="pet">
         <h3>Pet</h3>
         {%- call sectionTitle() %}
@@ -57,6 +58,7 @@ eleventyComputed:
           {%- endfor %}
         </ul>
       </div>
+      {%- endif %}
     </div>
   </section>
   {%- if loop.last%}{% else %}<hr class="mb-12" />{% endif %}
