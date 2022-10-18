@@ -12,7 +12,7 @@ eleventyNavigation:
 date: 0003-00-00
 permalink: false
 ---
-### Save File Details
+### Details
 
 * 2 save slots: New Game+ as well a save right before the final event.
 * Custom-forged 1H Sword (101 power).
@@ -21,7 +21,7 @@ permalink: false
 * All level ups had the 1H sword equipped so you can continue the levels using a [max-stats guide](/walkthrough/starting-instructions/#start-stats) if you choose.
 * Character name: __Chumpy__, so you can say "Yes" to the Onion Knight ;)
 
-### Save File Instructions
+### Save File Installation
 
 * [__OpenEmu__](http://openemu.org/)
 Start the game at least once so OpenEmu can create a blank memory card. Quit the game and quit OpenEmu. Rename the downloaded *Legend of Mana (USA).mcr* to the name located at `~/Library` `/Application Support` `/OpenEmu` `/Mednafen` `/Battery Saves` `/Legend of Mana....0.mcr` and replace that file with the newly renamed file.
