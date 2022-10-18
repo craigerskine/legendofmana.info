@@ -17,7 +17,7 @@ eleventyComputed:
         {% set last = loop.last %}
         {%- for m in collections.monsters_pets %}
         {%- if m.data.title === item %}
-        <a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}">{{ item }}</a>{%- if last %}{%- else %}, {%- endif %}
+        <span class="block"><a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}">{{ item }}</a>{%- if last %}{%- else %}, {%- endif %}</span>
         {%- endif %}
         {%- endfor %}
       {%- endfor %}
