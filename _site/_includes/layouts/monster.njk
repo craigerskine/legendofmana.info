@@ -21,9 +21,9 @@ eleventyComputed:
       <div class="monster mb-6 md:(mb-0)">
         <h3>Monster</h3>
         {%- call sectionTitle() %}Locations{%- endcall %}
-        <ul>
+        <ul class="mb-5">
           {%- for loc in item.data.monster_locations %}
-          <li class="text-sm">{{ loc }}</li>
+          <li class="text-sm flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-2 flex-none opacity-50"></i> {{ loc }}</li>
           {%- endfor %}
         </ul>
         {%- call sectionTitle() %}Battle Drops{%- endcall %}
@@ -42,9 +42,9 @@ eleventyComputed:
         {%- call sectionTitle() %}
         {%- if page.fileSlug === 'demi-human' %}Location{% else %}Egg Locations{%- endif %}
         {%- endcall %}
-        <ul>
+        <ul class="mb-5">
           {%- for loc in item.data.egg_locations %}
-          <li class="text-sm">{{ loc }}</li>
+          <li class="text-sm flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-2 flex-none opacity-50"></i> {{ loc }}</li>
           {%- endfor %}
         </ul>
         <ul class="grid(& cols-2)">
