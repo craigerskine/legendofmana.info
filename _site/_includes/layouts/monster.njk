@@ -23,7 +23,7 @@ eleventyComputed:
         {%- call sectionTitle() %}Locations{%- endcall %}
         <ul class="mb-5">
           {%- for loc in item.data.monster_locations %}
-          <li class="text-sm flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-2 flex-none opacity-50"></i> {{ loc }}</li>
+          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mr-1 flex-none opacity-50"></i> <span class="font-normal">{{ loc }}</span></a></li>
           {%- endfor %}
         </ul>
         {%- call sectionTitle() %}Battle Drops{%- endcall %}
@@ -44,7 +44,7 @@ eleventyComputed:
         {%- endcall %}
         <ul class="mb-5">
           {%- for loc in item.data.egg_locations %}
-          <li class="text-sm flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-2 flex-none opacity-50"></i> {{ loc }}</li>
+          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mr-1 flex-none opacity-50"></i> <span class="font-normal">{{ loc }}</span></a></li>
           {%- endfor %}
         </ul>
         <ul class="grid(& cols-2)">
