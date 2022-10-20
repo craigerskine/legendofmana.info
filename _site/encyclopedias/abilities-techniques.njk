@@ -33,7 +33,7 @@ eleventyNavigation:
 
 <div class="mb-24 lg:(grid(& cols-2) gap-x-4)">
   <div>
-    <h3 class="mb-2 px-2 bg(pri-500 opacity-30) text-base font-bold flex items-center rounded shadow-inner">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <h3 class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(sm gray-900) leading-relaxed font-bold flex items-center uppercase rounded-sm shadow-inner">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
     <ul class="m-0">
       {%- for item in collections.abilities %}
       {%- if loop.index <= 13 %}
@@ -43,7 +43,7 @@ eleventyNavigation:
     </ul>
   </div>
   <div>
-    <h3 class="mb-2 px-2 bg(pri-500 opacity-30) text-base font-bold hidden items-center rounded shadow-inner lg:(flex)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <h3 class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(sm gray-900) leading-relaxed font-bold hidden uppercase rounded-sm shadow-inner lg:(flex items-center)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
     <ul class="m-0">
       {%- for item in collections.abilities %}
       {%- if loop.index > 13 %}

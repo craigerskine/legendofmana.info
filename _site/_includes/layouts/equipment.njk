@@ -17,12 +17,12 @@ eleventyComputed:
         {% set last = loop.last %}
         {%- for m in collections.monsters_pets %}
         {%- if m.data.title === item %}
-        <span class="flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-1 opacity-50 flex-none"></i> <a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}">{{ item }}</a></span>
+        <span class="flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-1 opacity-50 flex-none"></i> <a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}"><span class="font-normal">{{ item }}</span></a></span>
         {%- endif %}
         {%- endfor %}
       {%- endfor %}
       {%- elseif info.event %}
-      <span class="flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-1 opacity-50 flex-none"></i> <a href="/walkthrough/events/{{ info.event | replace("'", "") | slugify }}/">{{ info.event }}</a></span>
+      <span class="flex"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mt-[3px] mr-1 opacity-50 flex-none"></i> <a href="/walkthrough/events/{{ info.event | replace("'", "") | slugify }}/"><span class="font-normal">{{ info.event }}</span></a></span>
       {%- elseif info.info %}
       {{ info.info }}
       {%- else %}
