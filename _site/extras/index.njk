@@ -22,7 +22,7 @@ eleventyNavigation:
   </div>
 {%- endmacro %}
 
-<ul class="grid(& cols-1) gap-5 md:(grid-cols-2)">
+<ul class="mb-6 grid(& cols-1) gap-5 md:(grid-cols-2)">
   {%- for item in collections.extras %}
   <li{%- if item.data.title === 'Save' %} class="md:(col-span-2)"{%- endif %}>
     <h2>
