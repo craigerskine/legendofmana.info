@@ -1,5 +1,5 @@
 {%- macro x(label,url='#',inline=false) %}
-  <li>
+  <li class="py-2">
     <a href="{{ url }}" class="group font-normal text-pri-400 inline-flex items-center relative motion-safe:(transition) hover:(text-pri-100)">
       {%- if inline %}{% else %}<img src="/_assets/img/li.png" alt="Swirl" class="mr-2" />{%- endif %}
       {{ label }}

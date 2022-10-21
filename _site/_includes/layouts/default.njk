@@ -145,30 +145,28 @@
             <div class="mx-auto px-4 flex md:(w-3/4 block)">
               <div class="mx-auto md:(-mx-4 flex)">
                 <nav class="md:(px-4 w-1/3)">
-                  <ul class="m-0 mb-4 space-y-2">
-                    <li class="font-bold uppercase">Game</li>
+                  <ul class="list-none">
+                    <li class="py-2 font-bold uppercase">Game</li>
                     {%- for item in site.game %}
                     {{ footerNav.x(item.title,url=item.url) }}
                     {%- endfor %}
-                  </ul>
-                  <ul class="m-0 mb-4 space-y-2">
-                    <li class="font-bold uppercase">Walkthrough</li>
+                    <li class="py-2 font-bold uppercase">Walkthrough</li>
                     {%- for item in collections.all | eleventyNavigation('Walkthrough') %}
                     {{ footerNav.x(item.key,url=item.url) }}
                     {%- endfor %}
                   </ul>
                 </nav>
                 <nav class="md:(px-4 w-1/3)">
-                  <ul class="m-0 mb-4 space-y-2">
-                    <li class="font-bold uppercase">Encyclopedias</li>
+                  <ul class="list-none">
+                    <li class="py-2 font-bold uppercase">Encyclopedias</li>
                     {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
                     {{ footerNav.x(item.key,url=item.url) }}
                     {%- endfor %}
                   </ul>
                 </nav>
                 <nav class="md:(px-4 w-1/3)">
-                  <ul class="m-0 mb-4 space-y-2">
-                    <li class="font-bold uppercase">Extras</li>
+                  <ul class="list-none">
+                    <li class="py-2 font-bold uppercase">Extras</li>
                     {%- for item in collections.all | eleventyNavigation('Extras') %}
                     {{ footerNav.x(item.key,url='/extras/') }}
                     {%- endfor %}
