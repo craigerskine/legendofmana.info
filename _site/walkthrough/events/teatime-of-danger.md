@@ -14,38 +14,41 @@ Note: These instructions may need an overhaul!{.mb-5 .p-2 .bg-red-500 .text-whit
 Talk to Duelle and follow these directions:
 
 * Up
+* Upper Left
+* Lower Right
 * Left
+* Lower Left
 * Left
-* Left
+
+Talk to the flowerlings so they line up like a less-than symbol `<`.
+
+* Leave to the right
+* Right
+* Upper Left
+* Lower Left
 * Upper Left
 
-Talk to the upper right flowerling to make it move to the upper left. Then talk to the lower left flowerling to make it move to the lower right. Then leave and follow these directions:
+Talk to the flowerlings so they line up like a less-than symbol `<`.
 
-* Down
+* Leave to the right
+* Lower Left
 * Left
-* Down
-* Left
-* Talk to this flowerling and leave
-* Down
+
+Talk to the NPC.
+
 * Right
-
-Talk to the upper left flowerling and move it to the upper right position. Leave the area and follow these directions:
-
-* Left
 * Right
-* Up
-* Right
-* Up
+* Upper Left
 
-Talk to this flowerling so that more gate keys fall. Talk to the one on the lower right so he moves to the lower left. Leave and follow these directions:
+Talk to the flowerlings so they line up diagonally like a forward slash symbol `/`.
 
-* Down
-* Left
-* Right
+* Left to the right
+* Lower Right
 
-Talk to this flowerling and she will open a staircase
+Talk to the flower girl and enter the dungeon.
 
-* Go down the stairs
 * Left
 * Left
 * Left
+
+Fight the boss.
