@@ -7,7 +7,7 @@ date: 0009-00-00
 ---
 Place the Ancient Tablet AF to the space directly to the Right of your Home to create the *Mindas Ruins*. Enter the *Mindas Ruins*.
 
-Note: These instructions may need an overhaul!{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
+Note: These instructions have been overhauled! Please let me know if they are not accurate.{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
 
 ![Mindas Ruins](/_assets/img/walkthrough/maps/mindas-ruins.png){.mx-auto .w-full .max-w-[300px]}
 
@@ -22,7 +22,7 @@ Talk to Duelle and follow these directions:
 
 Talk to the flowerlings so they line up like a less-than symbol `<`.
 
-* Leave to the right
+* Leave to the Right
 * Right
 * Upper Left
 * Lower Left
@@ -30,7 +30,7 @@ Talk to the flowerlings so they line up like a less-than symbol `<`.
 
 Talk to the flowerlings so they line up like a less-than symbol `<`.
 
-* Leave to the right
+* Leave to the Right
 * Lower Left
 * Left
 
@@ -42,7 +42,7 @@ Talk to the NPC.
 
 Talk to the flowerlings so they line up diagonally like a forward slash symbol `/`.
 
-* Left to the right
+* Leave to the Right
 * Lower Right
 
 Talk to the flower girl and enter the dungeon.
