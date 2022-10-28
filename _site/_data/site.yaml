@@ -11,6 +11,16 @@ game:
     url: 'https://www.play-asia.com/search/legend+of+mana+remastered?tagid=145091'
   - title: 'Buy OST'
     url: 'https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091'
+tech:
+  - title: Twind
+    sub: 'CSS by'
+    url: 'https://twind.dev/'
+  - title: 11ty
+    sub: 'SSG by'
+    url: 'https://11ty.dev/'
+  - title: Netlify
+    sub: 'Hosted by'
+    url: 'https://netlify.com/'
 donate:
   - title: Paypal
     ico: paypal
