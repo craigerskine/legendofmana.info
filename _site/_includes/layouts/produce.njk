@@ -21,7 +21,7 @@ eleventyComputed:
 <dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-700 underline{%- endif %}">
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
-  <i class="text-base not-italic flex-none">{{ data }}</i>
+  <i class="text-base not-italic flex-none"><i class="fa-solid fa-fw fa-caret-{%- if data.substring(0, 1) === '-' %}down{% else %}up{%- endif %}"></i> {{ data.slice(0) }}</i>
 </dd>
 {%- endmacro %}
 

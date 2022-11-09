@@ -1,8 +1,11 @@
 module.exports = () => {
   const now = new Date();
   const timeZone = 'CST';
-  const buildTime = new Intl.DateTimeFormat('en-US', {
+  const buildDate = new Intl.DateTimeFormat('en-US', {
     dateStyle: 'short',
+    timeZone,
+  }).format(now);
+  const buildTime = new Intl.DateTimeFormat('en-US', {
     timeStyle: 'short',
     timeZone,
   }).format(now);
@@ -10,7 +13,7 @@ module.exports = () => {
   return {
     time: {
       raw: now.toISOString(),
-      formatted: `${buildTime}`,
+      formatted: `${buildDate} @${buildTime}`,
     },
   };
 };
