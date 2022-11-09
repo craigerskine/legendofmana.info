@@ -17,11 +17,14 @@ eleventyComputed:
 </li>
 {%- endmacro %}
 
-{%- macro dd(label='',data='') %}
-<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-700 underline{%- endif %}">
+{%- macro dd(label='',data='',arrow=false) %}
+<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-700{%- endif %}">
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
-  <i class="text-base not-italic flex-none"><i class="fa-solid fa-fw fa-caret-{%- if data.substring(0, 1) === '-' %}down{% else %}up{%- endif %}"></i> {{ data.slice(0) }}</i>
+  <i class="text-base not-italic flex-none" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
+    {%- if arrow %}<i class="mr-px fa-solid fa-fw fa-{%- if data.substring(0, 1) === '-' %}square-down{% else %}circle-up{%- endif %}"></i>{%- endif %}
+    {%- if arrow %}{{ data.slice(1) }}{%- else %}{{ data }}{%- endif %}
+  </i>
 </dd>
 {%- endmacro %}
 
@@ -82,7 +85,7 @@ The following data charts represent pet statistic adjustments based on the produ
       <dl class="prod-stats mb-6">
         {{ dt(label='Pet Stats') }}
         {%- for key, value in item.data.stats %}
-        {{ dd(label=key,data=value) }}
+        {{ dd(label=key,data=value,arrow=true) }}
         {%- endfor %}
       </dl>
       {%- endif %}
@@ -90,7 +93,7 @@ The following data charts represent pet statistic adjustments based on the produ
       <dl class="prod-resist mb-6">
         {{ dt(label='Pet Resist') }}
         {%- for key, value in item.data.resist %}
-        {{ dd(label=key,data=value) }}
+        {{ dd(label=key,data=value,arrow=true) }}
         {%- endfor %}
       </dl>
       {%- endif %}
@@ -98,7 +101,7 @@ The following data charts represent pet statistic adjustments based on the produ
       <dl class="prod-personality mb-6">
         {{ dt(label='Pet Personalities') }}
         {%- for key, value in item.data.personality %}
-        {{ dd(label=key,data=value) }}
+        {{ dd(label=key,data=value,arrow=true) }}
         {%- endfor %}
       </dl>
       {%- endif %}
