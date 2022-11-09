@@ -23,13 +23,13 @@ eleventyComputed:
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <i class="text-base not-italic flex-none" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
     {%- if arrow %}<i class="mr-px fa-solid fa-fw fa-{%- if data.substring(0, 1) === '-' %}square-down{% else %}circle-up{%- endif %}"></i>{%- endif %}
-    {%- if arrow %}{{ data.slice(1) }}{%- else %}{{ data }}{%- endif %}
+    {%- if arrow %}{{ data.slice(1) | safe }}{%- else %}{{ data | safe }}{%- endif %}
   </i>
 </dd>
 {%- endmacro %}
 
 {%- macro dt(label='') %}
-<dt class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(xs gray-900) leading-relaxed font-bold uppercase rounded-sm shadow-inner">
+<dt class="py-1 px-2 text(xs black) leading-relaxed tracking-wider font-bold uppercase">
   {{ label }}
 </dt>
 {%- endmacro %}
@@ -109,7 +109,7 @@ The following data charts represent pet statistic adjustments based on the produ
       <dl class="prod-seeds mb-6">
         {{ dt(label='Seed Formulas') }}
         {%- for key, value in item.data.seeds %}
-        {{ dd(label=key,data=value+'%') }}
+        {{ dd(label=key,data=value+'<sup class="ml-px opacity-70">%</sup>') }}
         {%- endfor %}
       </dl>
       {%- endif %}
