@@ -31,7 +31,7 @@
 
   <body class="font-serif text-gray-800">
 
-    <div class="page min-h-screen flex(& col)" x-trap.noscroll.inert="modal">
+    <div class="page min-h-screen flex(& col)">
       <header class="w-full bg-sec-500 flex-none relative z-10 overflow-hidden">
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex(& col) items-center lg:(py-4 flex-row space-x-8)">
@@ -218,8 +218,8 @@
 
     <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('/_assets/img/chalk.png');"></div>
 
-    <div x-show="modal" x-trap="modal" class="modal bg(gray-900 opacity-80) flex justify-center items-center fixed inset-0 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
-      <div class="relative shadow-lg" @keyup.escape="modal = false" @click.outside="modal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
+    <div x-show="modal" x-trap.noscroll.inert="modal" class="modal bg(gray-900 opacity-80) flex justify-center items-center fixed inset-0 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
+      <div class="relative shadow-lg" @click.outside="modal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
         <button type="button" @click="modal = false" class="w-6 h-6 bg-black text-white font-black flex items-center justify-center absolute right-0 top-0 shadow ring(inset 2 white)"><i class="fa-regular fa-fw fa-times" title="Close"></i></button>
         <img x-show="modal" :src="'/_assets/img/'+ modal_img" :alt="modal_imgalt" class="w-auto h-auto max-w-full max-h-[90vh]" />
       </div>
