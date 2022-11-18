@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-[#0A0D0A] antialiased motion-safe:(scroll-smooth)" x-data hidden>
+<html lang="en" class="bg-[#0A0D0A] antialiased motion-safe:(scroll-smooth)" x-data="{ modal: false, modal_img: 'x.gif', modal_imgalt: 'Alt', }" @modal.window="modal_img = $event.detail.img; modal_imgalt = $event.detail.imgalt;" hidden>
 
   <head>
     <meta charset="utf-8" />
@@ -31,7 +31,7 @@
 
   <body class="font-serif text-gray-800">
 
-    <div class="page min-h-screen flex(& col)">
+    <div class="page min-h-screen flex(& col)" x-trap.noscroll.inert="modal">
       <header class="w-full bg-sec-500 flex-none relative z-10 overflow-hidden">
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex(& col) items-center lg:(py-4 flex-row space-x-8)">
@@ -76,7 +76,7 @@
             <ul class="mx-auto mb-0 px-4 inline-grid grid(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
               {%- for item in mast %}
               <li{% if loop.first %} class="row-span-2"{% endif %}>
-                <a href="{{ item.url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none){% if loop.first %} lb{% endif %}">
+                <a href="{{ item.url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none)"{% if loop.first %} @click.prevent="modal = !modal; $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
                   <figure>
                     <img src="{{ item.img }}" alt="{{ item.title }}" class="relative z-[-1] ring(1 pri-900) rounded shadow-md motion-safe:(transition) group-hover:(ring-4) group-focus:(ring-4)" />
                     <figcaption class="py-px px-3 bg-pri-900 text(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ item.title }}</figcaption>
@@ -218,22 +218,12 @@
 
     <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('/_assets/img/chalk.png');"></div>
 
-    <div id="mana-story" class="modal">
-      <img src="/_assets/img/mana-story.jpg" alt="The Many Story" />
+    <div x-show="modal" x-trap="modal" class="modal fixed inset-0 flex justify-center items-center bg-black bg-opacity-75 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
+      <div class="shadow-lg relative" @click.outside="modal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
+        <button type="button" @click="modal = false" class="w-8 h-8 bg-black text(white xl) font-black flex items-center justify-center absolute -right-4 -top-4 rounded-full shadow-lg ring(2 white) transform transition focus:(scale-125)"><span>&times;</span></button>
+        <img x-show="modal" :src="'/_assets/img/'+ modal_img" :alt="modal_imgalt" class="w-auto h-auto max-w-full max-h-[90vh]" />
+      </div>
     </div>
-    <div id="map-speedrun" class="modal">
-      <img src="/_assets/img/walkthrough/speed-run/map.jpg" alt="Speed Run Start" />
-    </div>
-    <div id="map-world-start" class="modal">
-      <img src="/_assets/img/walkthrough/maps/world-start.jpg" alt="Walkthrough Start" />
-    </div>
-    {%- for item in collections.maps %}
-    {%- if item.data.title !== 'Orchard' %}
-    <div id="map-{{ item.data.page.fileSlug }}" class="modal">
-      <img src="/_assets/img/walkthrough/maps/{{ item.data.page.fileSlug }}.png" alt="Map of {{ item.data.title }}" />
-    </div>
-    {%- endif %}
-    {%- endfor %}
 
     <script src="/_assets/js/main.js"></script>
     <script src="/_assets/js/config.js"></script>

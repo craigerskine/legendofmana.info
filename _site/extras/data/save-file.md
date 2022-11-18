@@ -16,7 +16,7 @@ permalink: false
 * Custom-forged 1H Sword (101 power).
 * Polterbox pet (for item farming).
 * All the Workshops unlocked (their respective quests recorded in the cactus diary).
-* All level ups had the 1H sword equipped so you can continue the levels using a [max-stats guide](/walkthrough/starting-instructions/#start-stats) if you choose.
+* All level ups had the 1H sword equipped so you can continue the levels using a [max-stats guide](/walkthrough/get-started/#start-stats) if you choose.
 * Character name is _Chumpy_, so you can say "Yes" to the Onion Knight ;)
 
 ### [OpenEmu](http://openemu.org/){.text-base .normal-case}
