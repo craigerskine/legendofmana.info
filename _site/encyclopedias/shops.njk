@@ -12,6 +12,17 @@ eleventyNavigation:
 {%- import 'components/heading.njk' as heading %}
 {%- import 'components/alert.njk' as alert %}
 
+{%- macro mats(label='',data='') %}
+<li class="py-1 flex items-center">
+  <p class="flex-none">{{ label }}</p>
+  <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
+  <i class="not-italic flex-none">
+    {{ data }}
+    <sup class="italic text(xs black opacity-50)" title="Lucre">$L</sup>
+  </i>
+</li>
+{%- endmacro %}
+
 {% renderTemplate "md" %}
 ## Shop Item Types
 Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton? Check out the following tables to see which items are located at what Level Shop. There is also a list of the seeds and jewels available at the Bone Fortress and Bejeweled City.
@@ -49,15 +60,12 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
       </div>
       <ul class="m-0 flex-1 lg:(ml-2)">
         <li>
-          <h6 class="mb-2 px-2 border(b black opacity-10) font-bold hidden items-center lg:(flex)">
+          <h6 class="mb-2 text(black sm) font-bold flex items-center">
             Material <small class="ml-auto text-xs uppercase opacity-90">Price</small>
           </h6>
         </li>
         {%- for mat in item.data.materials %}
-        <li class="mb-1 py-1 px-2 flex items-center rounded{% if loop.index % 2 === 0 %} bg(pri-800 opacity-10){% endif %}">
-          <strong>{{ mat.material }}</strong>
-          <span class="ml-auto text-right">{{ mat.cost }} <sup class="italic text(xs black opacity-50)" title="lucre">$L</sup></span>
-        </li>
+        {{ mats(label=mat.material,data=mat.cost) }}
         {%- endfor %}
       </ul>
     </div>
