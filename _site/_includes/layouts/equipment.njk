@@ -9,7 +9,7 @@ eleventyComputed:
 
 {%- macro list(info='') %}
   <li class="mb-1 py-1 flex">
-    <strong class="flex-none">{{ caller() }}</strong>
+    <strong class="text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex-none">{{ caller() }}</strong>
     <b class="mt-2.5 mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
     <p class="w-full max-w-[50%]">
       {%- if info.monster %}
