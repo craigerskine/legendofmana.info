@@ -1,0 +1,14 @@
+{
+  "name": "Legend of Mana Info",
+  "short_name": "LoM Info",
+  "theme_color": "#98B589",
+  "background_color": "#98B589",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "57x57",
+      "type": "image/png"
+    }
+  ]
+}

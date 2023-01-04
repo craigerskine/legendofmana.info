@@ -14,7 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
 
     <meta property="og:title" content="{% if title %}{{ title +' - '+ site.meta.title }}{% else %}{{ site.meta.title }}{% endif %}" />
     <meta property="og:description" content="{{ site.meta.description }}" />
@@ -44,7 +45,7 @@
               <ul class="mx-auto py-5 text(pri-700 xs) flex items-center space-x-5 lg:(m-0 py-0 text-base space-x-8)">
                 {%- for item in collections.all | eleventyNavigation %}
                 <li class="leading-tight">
-                  <a href="{{ item.url }}" class="group text-pri-700 font-bold flex flex-col hover:(text-pri-900) lg:(font-normal items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
+                  <a href="{{ item.url }}" class="group text-pri-900 font-bold flex flex-col hover:(text-pri-900) lg:(font-normal items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
                     {%- if item.url == page.url or item.url in page.url %} aria-current="page"{%- endif -%}
                   >
                     {{ item.key }}
@@ -208,7 +209,7 @@
                   <li><a href="{{ item.url }}" class="text-pri-400 motion-safe:(transition) hover:(text-pri-100)"><i class="fa-brands fa-fw fa-2x fa-{{ item.ico }}" title="Donate via {{ item.title }}"></i></a></li>
                   {%- endfor %}
                 </ul>
-                <p class="foot-updated pt-6 text-xs opacity-75">Updated on <time datetime="{{ build.time.raw }}">{{ build.time.formatted }}</time></p>
+                <p class="foot-updated pt-6 text-xs">Updated on <time datetime="{{ build.time.raw }}">{{ build.time.formatted }}</time></p>
               </div>
             </div>
           </div>

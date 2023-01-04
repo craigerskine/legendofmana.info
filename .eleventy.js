@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('_site/*.ico');
   eleventyConfig.addPassthroughCopy('_site/*.png');
   eleventyConfig.addPassthroughCopy('_site/*.txt');
+  eleventyConfig.addPassthroughCopy('_site/site.webmanifest');
   
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
