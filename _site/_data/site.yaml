@@ -18,6 +18,9 @@ tech:
   - title: 11ty
     sub: 'SSG by'
     url: 'https://11ty.dev/'
+  - title: GitHub
+    sub: 'Source on'
+    url: 'https://github.com/craigerskine/legendofmana.info'
   - title: Netlify
     sub: 'Hosted by'
     url: 'https://netlify.com/'
