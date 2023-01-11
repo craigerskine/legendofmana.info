@@ -186,8 +186,8 @@
                 <ul class="foot-host m-0 inline-flex space-x-4">
                   {%- for item in site.tech %}
                   <li>
-                    <a href="{{ item.url }}" class="text-pri-400 flex motion-safe:(transition) hover:(text-pri-100)">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" role="img" class="h-[24px] fill-current">
+                    <a href="{{ item.url }}" class="w-[30px] h-[24px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" role="img" class="w-[24px] fill-current">
                         <title>{{ item.sub }} {{ item.title }}</title>
                         {%- if item.title === 'Twind' %}
                         <path fill-rule="evenodd" d="m9.99980405 19.9279682c4.43502505 0 6.71905035 1.833495 8.55545165 3.6365408l1.0791781 1.0807132c1.0350472 1.0285747 2.0343883 1.9101243 3.3655858 2.2413806 2.6665099.6623165 4.999902-.3315502 7.0001764-2.982384-1.333255 5.3016676-4.6667843 7.9517176-9.9998041 7.9517176-4.4357263 0-6.719198-1.8328676-8.5554749-3.6357813l-1.0791564-1.0809462c-1.03505792-1.029089-2.03448476-1.9105529-3.36636805-2.2411233-2.6657261-.6623166-4.99911822.3315501-6.99939255 2.9823839 1.33325495-5.3016675 4.66678424-7.9525013 9.99980405-7.9525013zm10.00058785-11.9279682c4.435025 0 6.7184229 1.8322401 8.5546921 3.6361446l1.0791554 1.0811079c1.0350579 1.0285639 2.0344848 1.9100279 3.3663681 2.2405983 2.6665099.6631003 4.999902-.3307664 6.9993925-2.9816001-1.333255 5.3008837-4.6667842 7.9517175-9.999804 7.9517175-4.6959089 0-6.9803164-2.0548412-8.8752226-3.9532524l-.3125579-.3145743c-1.2031431-1.2149002-2.2910666-2.3122294-3.8124351-2.6900241-2.6665099-.6623166-4.999902.3315501-7.00017635 2.9823839 1.33403875-5.3016675 4.66678425-7.9525013 10.00058785-7.9525013z" />
@@ -208,7 +208,11 @@
                 <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {%- for item in site.donate %}
-                  <li><a href="{{ item.url }}" class="text-pri-400 motion-safe:(transition) hover:(text-pri-100)"><i class="fa-brands fa-fw fa-2x fa-{{ item.ico }}" title="Donate via {{ item.title }}"></i></a></li>
+                  <li>
+                    <a href="{{ item.url }}" class="text-pri-400 motion-safe:(transition) hover:(text-pri-100)">
+                      <i class="fa-brands fa-fw fa-2x fa-{{ item.ico }}" title="Donate via {{ item.title }}"></i>
+                    </a>
+                  </li>
                   {%- endfor %}
                 </ul>
                 <p class="foot-updated pt-6 text-xs">Updated on <time datetime="{{ build.time.raw }}">{{ build.time.formatted }}</time></p>
