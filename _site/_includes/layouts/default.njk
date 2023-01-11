@@ -175,7 +175,7 @@
                 </nav>
               </div>
             </div>
-            <div class="foot-info mx-auto px-4 max-w-md text-xs text-center leading-relaxed space-y-8 md:(mx-0 w-1/4 max-w-full text-right)">
+            <div class="foot-info mx-auto px-4 max-w-md text-xs text-center leading-relaxed space-y-7 md:(mx-0 w-1/4 max-w-full text-right)">
               <p class="foot-copy mt-6 pt-6 border-t border-pri-500 border-opacity-50 md:mt-0 md:pt-0 md:border-0">Legend of Mana game media and intellectual property &copy; Square Enix.</p>
               <p class="foot-credit">
                 This site was lovingly designed and hand-coded by
@@ -186,7 +186,7 @@
                 <ul class="foot-host m-0 inline-flex space-x-4">
                   {%- for item in site.tech %}
                   <li>
-                    <a href="{{ item.url }}" class="w-[30px] h-[24px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
+                    <a href="{{ item.url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
                       <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" role="img" class="w-[24px] fill-current">
                         <title>{{ item.sub }} {{ item.title }}</title>
                         {%- if item.title === 'Twind' %}
@@ -209,8 +209,15 @@
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {%- for item in site.donate %}
                   <li>
-                    <a href="{{ item.url }}" class="text-pri-400 motion-safe:(transition) hover:(text-pri-100)">
+                    <a href="{{ item.url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
+                      {%- if item.title !== 'Open Collective' %}
                       <i class="fa-brands fa-fw fa-2x fa-{{ item.ico }}" title="Donate via {{ item.title }}"></i>
+                      {%- else %}
+                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 40 40" role="img" class="w-[24px] fill-current">
+                        <title>{{ item.title }}</title>
+                        <path d="m36 9c5.2287206 6.9070738 5.2287206 16.0929262 0 23l-5-5c2.2045544-4.1252197 2.2045544-8.8747803 0-13zm-5-5-5 5c-4.0345679-2.44563804-8.8111111-2.37438785-13 0-3.54197531 2.2531241-5.90740741 6.4606349-6 11 .09259259 4.5481584 2.45802469 8.7531692 6 11 4.1888889 2.3756811 8.9654321 2.4456813 13 0l5 5c-6.0382716 4.67945-13.9012346 5.1669512-20 2-6.91604938-3.7330666-11-10.5630842-11-18 0-7.4393725 4.08395062-14.26189014 11-18 6.0987654-3.16940795 13.9617284-2.67440668 20 2zm5 5c5.2287206 6.9070738 5.2287206 16.0929262 0 23l-5-5c2.2045544-4.1252197 2.2045544-8.8747803 0-13z" />
+                      </svg>
+                      {%- endif %}
                     </a>
                   </li>
                   {%- endfor %}

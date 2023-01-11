@@ -35,6 +35,11 @@ donate:
     url: 'https://patreon.com/qrayg/'
     type: sponsor
     enabled: true
+  - title: Open Collective
+    ico: ''
+    url: 'https://opencollective.com/legendofmanainfo'
+    type: sponsor
+    enabled: true
   - title: Github
     ico: github
     url: 'https://github.com/sponsors/craigerskine'
