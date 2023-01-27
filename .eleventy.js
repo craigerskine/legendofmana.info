@@ -24,9 +24,17 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
 
+  // shortcodes
   eleventyConfig.addShortcode('bust', () => `${new Date().getFullYear()}${new Date().getMonth()}${new Date().getDate()}${new Date().getHours()}`);
-  eleventyConfig.addShortcode('version', () => `${String(Date.now())}`);
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
+  eleventyConfig.addShortcode('renderblock', function(name) {
+    return (this.page.setblock || {})[name] || '';
+  });
+  eleventyConfig.addPairedShortcode('setblock', function(content, name) {
+    if (!this.page.setblock) this.page.setblock = {};
+    this.page.setblock[name] = content;
+    return '';
+  });
   
   // | randomLimit(6, page.url)
   eleventyConfig.addFilter('randomLimit', (arr, limit, currPage) => {
