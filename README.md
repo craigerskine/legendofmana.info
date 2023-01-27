@@ -1,4 +1,4 @@
-## [legendofmana.info](https://legendofmana.info)
+## [legendofmana.info](https://legendofmana.info) [![Netlify Status](https://api.netlify.com/api/v1/badges/adad5c62-bc49-4a54-9e64-dfa703207f65/deploy-status)](https://app.netlify.com/sites/legendofmana-info/deploys)
 
 ### Live sites
 - https://legendofmana.info
@@ -31,7 +31,3 @@ All data, markup, components, layouts, scripts, files, and images are in the `_s
 Keep in mind that there are no CSS files anywhere to be found. This is intentional since I used [Twind](https://twind.dev/) (which auto generate CSS on the client-side during browsing). Everything is styled using [Tailwind CSS](https://tailwindcss.com/) v2 syntax and kept organized via [Twind](https://twind.dev/) grouping/one-offs.
 
 Enjoy!
-
----
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/adad5c62-bc49-4a54-9e64-dfa703207f65/deploy-status)](https://app.netlify.com/sites/legendofmana-info/deploys)
