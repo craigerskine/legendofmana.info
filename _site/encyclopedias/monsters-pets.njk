@@ -14,7 +14,7 @@ eleventyNavigation:
 
 {%- set eggs = collections.egg -%}
 
-<ul class="ml-0 md:(grid(& cols-2) gap-x-4)">
+<ul class="ml-0 md:(grid-(& cols-2) gap-x-4)">
   {% for egg in eggs %}
   <li class="pb-8">
     {%- call heading.x(tag='h2',sub='Monster & Pet',url='/encyclopedias/monsters-pets/'+ egg.data.page.fileSlug +'/',img=egg.data.img) %}

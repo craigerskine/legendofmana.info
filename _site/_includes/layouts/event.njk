@@ -3,7 +3,7 @@ layout: 'layouts/default.njk'
 ---
 
 {%- macro eventNav(label='',sub='',url='') %}
-<a href="{{ url }}" class="px-3 py-2 border(b white opacity-30) bg(pri-500 opacity-25) inline-block font-bold capitalize rounded shadow-inner motion-safe:(transition) hover:(border(b-0 t) bg(white opacity-10) ring(1 pri-500) shadow-lg)">
+<a href="{{ url }}" class="px-3 py-2 border-(b white/30) bg-pri-500/25 inline-block font-bold capitalize rounded shadow-inner motion-safe:(transition) hover:(border-(b-0 t) bg-white/10 ring-(1 pri-500) shadow-lg)">
   <b class="text-xs font-normal uppercase block opacity-90">{{ sub }}:</b>
   {{ label }}
 </a>
@@ -15,7 +15,7 @@ layout: 'layouts/default.njk'
 <h2>Instructions</h2>
 {{ content | safe }}
 {%- if nextPost %}
-<blockquote class="mt-16 mb-5 px-5 py-2 space-x-4 bg(white opacity-10) flex items-center relative rounded shadow-lg md:(py-5)">
+<blockquote class="mt-16 mb-5 px-5 py-2 space-x-4 bg-white/10 flex items-center relative rounded shadow-lg md:(py-5)">
   <img src="/_assets/img/walkthrough/cactus.png" alt="Cactus" class="motion-safe:(animate-wiggle)">
   <p class="m-0 flex-1">
     <strong>Upon Completion:</strong>
@@ -27,7 +27,7 @@ layout: 'layouts/default.njk'
 </blockquote>
 {%- endif %}
 
-<ul class="pt-5 md:(grid(& cols-2))">
+<ul class="pt-5 md:(grid-(& cols-2))">
   <li class="py-4 ">
     {%- if previousPost %}
     {{ eventNav(label=previousPost.data.title,sub='Previous',url=previousPost.url) }}

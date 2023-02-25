@@ -13,7 +13,7 @@ eleventyNavigation:
 
 {%- set colors = collections.color -%}
 
-<ul class="ml-0 md:(grid(& cols-2) gap-x-4)">
+<ul class="ml-0 md:(grid-(& cols-2) gap-x-4)">
   {% for color in colors %}
   <li class="pb-8">
     {%- call heading.x(tag='h2',sub=color.data.seed +' seed',url='/encyclopedias/produce/'+ color.data.page.fileSlug +'/',img=color.data.img) %}

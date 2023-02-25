@@ -8,7 +8,7 @@ eleventyComputed:
 {%- import 'components/btn.njk' as btn %}
 
 {%- macro legnd(label='',desc='') %}
-<li class="mb-2 pb-2 border(b black opacity-10) text-sm leading-tight flex items-center">
+<li class="mb-2 pb-2 border-(b black/10) text-sm leading-tight flex items-center">
   <img src="/_assets/img/li.png" alt="Swirl" class="mr-4 flex-none transform rotate-180" />
   <p class="w-full flex-1">
     <strong class="block">{{ label }}</strong>
@@ -29,7 +29,7 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- macro dt(label='') %}
-<dt class="py-1 px-2 text(xs black) leading-relaxed tracking-wider font-bold uppercase">
+<dt class="py-1 px-2 text-(xs black) leading-relaxed tracking-wider font-bold uppercase">
   {{ label }}
 </dt>
 {%- endmacro %}
@@ -40,7 +40,7 @@ The following data charts represent pet statistic adjustments based on the produ
 
 <div class="pb-12" x-data="{ legend: false }">
 
-    <p class="text(sm) leading-none">
+    <p class="text-sm leading-none">
       {%- call btn.x(tag='button',click='legend = !legend') %}
         <span class="w-full flex items-center justify-center">
           <b :class="['opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><i class="fa-regular fa-fw fa-angle-right"></i></b>
@@ -50,7 +50,7 @@ The following data charts represent pet statistic adjustments based on the produ
     </p>
 
     <div x-show="legend" x-collapse>
-      <div class="py-4 grid(& cols-1) gap-4 md:(grid-cols-2)">
+      <div class="py-4 grid-(& cols-1) gap-4 md:(grid-cols-2)">
         <div>
           <h3 class="heading text-base">Stats</h3>
           <ul class="mt-2">
@@ -74,7 +74,7 @@ The following data charts represent pet statistic adjustments based on the produ
 {%- for category, items in collections.produce | groupby('data.color') %}
   {%- if category === page.fileSlug %}
   {%- for item in items %}
-  <section class="produce md:(grid(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
+  <section class="produce md:(grid-(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
     <div>
       {%- call heading.x(tag='h2',sub=title.replace(' - Produce', ''),img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}

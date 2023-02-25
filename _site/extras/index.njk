@@ -13,8 +13,8 @@ eleventyNavigation:
   <div class="text-center">
     <a href="{{ file }}" class="group inline-flex relative hover:(motion-safe:animate-waggle)" download>
       <figure>
-        <img src="{{ img }}" alt="{{ label }} Image" class="relative z-[-1] rounded shadow-md ring(1 black opacity-75)">
-        <figcaption class="p-4 w-16 bg-pri-900 text(white 3xl) flex items-center justify-center absolute z-10 left-0 inset-y-0 motion-safe:(transition-all) group-hover:(w-full bg-opacity-50)">
+        <img src="{{ img }}" alt="{{ label }} Image" class="relative z-[-1] rounded shadow-md ring-(1 black/75)">
+        <figcaption class="p-4 w-16 bg-pri-900 text-(white 3xl) flex items-center justify-center absolute z-10 left-0 inset-y-0 motion-safe:(transition-all) group-hover:(w-full bg-opacity-50)">
           <i class="fal fa-arrow-to-bottom text-yellow-400" title="Download {{ label }}"> </i>
         </figcaption>
       </figure>
@@ -22,7 +22,7 @@ eleventyNavigation:
   </div>
 {%- endmacro %}
 
-<ul class="mb-6 grid(& cols-1) gap-5 md:(grid-cols-2)">
+<ul class="mb-6 grid-(& cols-1) gap-5 md:(grid-cols-2)">
   {%- for item in collections.extras %}
   <li{%- if item.data.title === 'Save' %} class="md:(col-span-2)"{%- endif %}>
     <h2>

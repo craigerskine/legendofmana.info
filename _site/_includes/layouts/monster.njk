@@ -7,7 +7,7 @@ eleventyComputed:
 {%- import 'components/heading.njk' as heading %}
 
 {%- macro sectionTitle() %}
-<p class="mb-1 text(sm gray-900) font-bold uppercase">{{ caller() }}</p>
+<p class="mb-1 text-(sm gray-900) font-bold uppercase">{{ caller() }}</p>
 {%- endmacro %}
 
 {%- for category, items in collections.monsters_pets | groupby('data.type') %}
@@ -17,7 +17,7 @@ eleventyComputed:
     {%- call heading.x(tag='h2',sub=title.replace(' - Monster', ''),img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
     {%- endcall %}
-    <div class="md:(grid(& cols-2) gap-6)">
+    <div class="md:(grid-(& cols-2) gap-6)">
       <div class="monster mb-6 md:(mb-0)">
         <h3>Monster</h3>
         {%- call sectionTitle() %}Locations{%- endcall %}
@@ -27,10 +27,10 @@ eleventyComputed:
           {%- endfor %}
         </ul>
         {%- call sectionTitle() %}Battle Drops{%- endcall %}
-        <ol class="text-sm grid(& flow-col rows-4) gap-1.5">
+        <ol class="text-sm grid-(& flow-col rows-4) gap-1.5">
           {%- for drop in item.data.monster_drops %}
           <li class="flex items-center gap-1.5">
-            <small class="w-4 h-4 text-xs flex items-center justify-center opacity-60 ring(1 current) rounded-full" aria-hidden="true">{{ loop.index }}</small>
+            <small class="w-4 h-4 text-xs flex items-center justify-center opacity-60 ring-(1 current) rounded-full" aria-hidden="true">{{ loop.index }}</small>
             {{ drop }}
           </li>
           {%- endfor %}
@@ -47,12 +47,12 @@ eleventyComputed:
           <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><i class="fa-light fa-level-up fa-fw fa-rotate-90 mr-1 flex-none opacity-50"></i> <span class="font-normal">{{ loc }}</span></a></li>
           {%- endfor %}
         </ul>
-        <ul class="grid(& cols-2)">
+        <ul class="grid-(& cols-2)">
           <li>{%- call sectionTitle() %}Sync{%- endcall %} <span class="text-sm">{{ item.data.syncro_effect }}</span></p>
-          <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text(xs black opacity-50)" title="Lucre">$L</sup></span></p>
+          <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text-(xs black/50)" title="Lucre">$L</sup></span></p>
         </ul>
         {%- call sectionTitle() %}Initial Stats{%- endcall %}
-        <ul class="text-sm grid(& cols-4)">
+        <ul class="text-sm grid-(& cols-4)">
           {%- for key, value in item.data.pet_stats %}
           {%- set statFull %}
             {%- if key === 'Pow' -%}Power
@@ -65,7 +65,7 @@ eleventyComputed:
             {%- elseif key === 'Lck' -%}Luck
             {%- endif -%}
           {%- endset %}
-          <li class="py-1.5 border(b black opacity-10)"><strong class="text-xs uppercase block" title="{{ statFull }}">{{ key }}</strong> {{ value }}</li>
+          <li class="py-1.5 border-(b black/10)"><strong class="text-xs uppercase block" title="{{ statFull }}">{{ key }}</strong> {{ value }}</li>
           {%- endfor %}
         </ul>
       </div>

@@ -1,6 +1,6 @@
 {%- macro x(tag='a',url='',sub='',click='') %}
   <{%- if tag === 'a' %}{{ tag }} href="{{ url }}"{%- elseif tag === 'button' %}{{ tag }} type="button"{%- else %}{{ tag }}{%- endif %}{%- if click !== '' %} @click.prevent="{{ click }}" {%- endif %}class="btn">
-    {%- if sub !== '' %}<b class="px-3 bg-pri-900 text(white xs) absolute -top-2 -left-1 rounded-full">{{ sub }}</b>{%- endif %}
+    {%- if sub !== '' %}<b class="px-3 bg-pri-900 text-(white xs) absolute -top-2 -left-1 rounded-full">{{ sub }}</b>{%- endif %}
     {{ caller() }}
   </{{ tag }}>
 {%- endmacro %}

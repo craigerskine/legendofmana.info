@@ -31,9 +31,9 @@ eleventyNavigation:
 
 <h2>Abilities</h2>
 
-<div class="mb-24 lg:(grid(& cols-2) gap-x-4)">
+<div class="mb-24 lg:(grid-(& cols-2) gap-x-4)">
   <div>
-    <h3 class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(sm gray-900) leading-relaxed font-bold flex items-center uppercase rounded-sm shadow-inner">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <h3 class="m-0 py-1 px-2 border-(b white/30) bg-pri-500/25 text-(sm gray-900) leading-relaxed font-bold flex items-center uppercase rounded-sm shadow-inner">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
     <ul class="m-0">
       {%- for item in collections.abilities %}
       {%- if loop.index <= 13 %}
@@ -43,7 +43,7 @@ eleventyNavigation:
     </ul>
   </div>
   <div>
-    <h3 class="py-1 px-2 border(b white opacity-30) bg(pri-500 opacity-25) text(sm gray-900) leading-relaxed font-bold hidden uppercase rounded-sm shadow-inner lg:(flex items-center)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <h3 class="m-0 py-1 px-2 border-(b white/30) bg-pri-500/25 text-(sm gray-900) leading-relaxed font-bold hidden uppercase rounded-sm shadow-inner lg:(flex items-center)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
     <ul class="m-0">
       {%- for item in collections.abilities %}
       {%- if loop.index > 13 %}
@@ -67,12 +67,12 @@ eleventyNavigation:
       </div>
       <ul class="m-0 flex-1 lg:(ml-2)">
         <li>
-          <h6 class="mb-2 py-1 px-2 border(b black opacity-10) font-bold text-xs uppercase hidden items-center lg:(flex)">
-            Technique <b class="mx-2 h-4 border(l black opacity-10)" aria-hidden="true"></b> Cost <small class="ml-auto text-xs">Requirement</small>
+          <h6 class="mb-2 py-1 px-2 border-(b black/10) font-bold text-xs uppercase hidden items-center lg:(flex)">
+            Technique <b class="mx-2 h-4 border-(l black/10)" aria-hidden="true"></b> Cost <small class="ml-auto text-xs">Requirement</small>
           </h6>
         </li>
         {%- for tech in item.data.techniques %}
-        <li class="mb-1 py-1 px-2 flex(& col) sm:(flex-row items-center justify-start) rounded{% if loop.index % 2 === 0 %} bg(pri-800 opacity-10){% endif %}">
+        <li class="mb-1 py-1 px-2 flex-(& col) sm:(flex-row items-center justify-start) rounded{% if loop.index % 2 === 0 %} bg-pri-800/10{% endif %}">
           <strong>{{ tech.title }}</strong>
           <small class="mx-1.5 text-xs" title="Cost">{{ tech.cost }}</small>
           <small class="sm:(ml-auto text-right)">

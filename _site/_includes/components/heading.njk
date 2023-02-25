@@ -15,12 +15,12 @@
     {%- else %}
       md:text-xl
     {%- endif %}
-    {%- if border %} border(b black opacity-10){%- endif %}
+    {%- if border %} border-(b black/10){%- endif %}
   ">
-    {%- if url !== '' %}<a href="{{ url }}" class="group text-black text-opacity-90 hover:(text-opacity-50) motion-safe:transition">{%- endif %}
+    {%- if url !== '' %}<a href="{{ url }}" class="group text-black/90 motion-safe:(transition) hover:(text-opacity-50)">{%- endif %}
       <span class="align-middle inline-flex items-center uppercase tracking-tight">
         {%- if img !== '' %}
-        <b class="mr-3 w-50 h-50 bg(pri-900 opacity-30) flex overflow-hidden rounded shadow-inner group-hover:(motion-safe:animate-wiggle)">
+        <b class="mr-3 w-50 h-50 bg-pri-900/30 flex overflow-hidden rounded shadow-inner group-hover:(motion-safe:animate-wiggle)">
           <img src="{{ img }}" alt="{{ sub }}" class="m-auto">
         </b>
         {%- endif %}

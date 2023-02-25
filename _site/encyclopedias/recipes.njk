@@ -16,7 +16,7 @@ eleventyNavigation:
 {{ alert.x('Mana Forge',sub='The best place to build and test your own recipes.',url='https://forge.grendel.fr/') }}
 
 {%- for item in collections.recipes %}
-<section class="pb-12 lg:(grid(& flow-row cols-2) gap-x-4)">
+<section class="pb-12 lg:(grid-(& flow-row cols-2) gap-x-4)">
   <div>
     {%- call heading.x(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
       {{ item.data.title }}
@@ -40,7 +40,7 @@ eleventyNavigation:
     <h3>Ingredient <small class="ml-2 text-xs opacity-90">Order</small></h3>
     <ul>
       {%- for ing in item.data.ingredient %}
-      <li class="mb-1 py-1 px-2 rounded{% if loop.index % 2 === 0 %} bg(pri-800 opacity-10){% endif %}">{{ ing }}</li>
+      <li class="mb-1 py-1 px-2 rounded{% if loop.index % 2 === 0 %} bg-pri-800/10{% endif %}">{{ ing }}</li>
       {%- endfor %}
     </ul>
   </div>
