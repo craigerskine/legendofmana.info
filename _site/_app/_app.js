@@ -45,7 +45,7 @@ install({
         },
       }),
       fontFamily: ({ theme }) => ({
-        serif: 'Noto Serif,'+ theme('fontFamily.sans'),
+        serif: 'Noto Serif,'+ theme('fontFamily.serif'),
       }),
       spacing: {
         '50': '50px',

@@ -7,9 +7,13 @@ const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy('_site/_assets/img');
-  eleventyConfig.addPassthroughCopy('_site/_assets/files');
-  eleventyConfig.addPassthroughCopy({'_site/_assets/_root': './'});
+  eleventyConfig.setDataFileBaseName('_data');
+
+  eleventyConfig.addPassthroughCopy({
+    '_site/_assets/files': '_assets/files',
+    '_site/_assets/img': '_assets/img',
+    '_site/_assets/_root': './',
+  });
   
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
