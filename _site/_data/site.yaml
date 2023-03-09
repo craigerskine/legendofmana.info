@@ -14,7 +14,7 @@ game:
 tech:
   - title: Twind
     sub: 'CSS by'
-    url: 'https://twind.dev/'
+    url: 'https://twind.style/'
   - title: 11ty
     sub: 'SSG by'
     url: 'https://11ty.dev/'
