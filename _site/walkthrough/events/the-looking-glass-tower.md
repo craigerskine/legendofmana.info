@@ -10,7 +10,7 @@ Place the Moon's Mirror AF in the space directly above *Gato Grottoes* to create
 
 When you first enter the area you will see Pearl. Talk to her take her into the tower with you. The first thing you must do is take Pearl up to the 11th Floor. You will find 2 rooms with teleportation crystals in them that will help you on your way. Look at the map of the *Tower of Leires* to help you get to the top or follow these directions:
 
-![Tower of Lieres](/_assets/img/walkthrough/maps/tower-of-leires.png)
+![Tower of Lieres](/_assets/img/walkthrough/maps/tower-of-leires.png){.mx-auto}
 
 * Right
 * Left

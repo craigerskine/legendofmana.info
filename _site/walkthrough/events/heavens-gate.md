@@ -16,4 +16,4 @@ Head to area 30 on the map of *Lucemia* to get to Irwin.
 
 Defeat Irwin to end the final Event with Escad and company.
 
-![Lucemia](/_assets/img/walkthrough/maps/lucemia.png)
+![Lucemia](/_assets/img/walkthrough/maps/lucemia.png){.mx-auto}

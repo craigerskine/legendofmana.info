@@ -9,4 +9,4 @@ Place the Frozen Heart AF to the space directly below the *Bone Fortress* to cre
 
 Head to area 13 on the map. Next, listen to the conversion and talk to Mephianse at the campfire. Finally, proceed to area 18 to fight the boss.
 
-![Fieg Snowfields](/_assets/img/walkthrough/maps/fieg-snowfields.png)
+![Fieg Snowfields](/_assets/img/walkthrough/maps/fieg-snowfields.png){.mx-auto}
