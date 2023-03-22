@@ -1,7 +1,7 @@
-{%- macro x(label,sub='',url='',ico='fa-light fa-comment-alt-exclamation') %}
+{%- macro x(label,sub='',url='',ico='fa6-solid:comment-dots') %}
   <p class="mb-16 bg-pri-800/10 flex overflow-hidden rounded">
     <b class="py-3 px-5 bg-pri-800/25 flex items-center">
-      <i class="{{ ico }} fa-fw fa-2x text-pri-200 motion-safe:(animate-wiggle)" title="{{ label }}"></i>
+      <iconify-icon icon="{{ ico }}" inline="false" class="text-(pri-200 3xl) motion-safe:(animate-wiggle)" title="{{ label }}"></iconify-icon>
     </b>
     <span class="py-3 px-5 flex-1 self-center">
       {%- if url !== '' %}<a href="{{ url }}">{%- endif %}

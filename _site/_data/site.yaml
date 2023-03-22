@@ -15,33 +15,37 @@ tech:
   - title: Twind
     sub: 'CSS by'
     url: 'https://twind.style/'
+    ico: simple-icons:tailwindcss
   - title: 11ty
     sub: 'SSG by'
     url: 'https://11ty.dev/'
+    ico: simple-icons:eleventy
   - title: GitHub
     sub: 'Source on'
     url: 'https://github.com/craigerskine/legendofmana.info'
+    ico: mdi:source-repository
   - title: Netlify
     sub: 'Hosted by'
     url: 'https://netlify.com/'
+    ico: bxl:netlify
 donate:
   - title: Paypal
-    ico: paypal
+    ico: fa6-brands:paypal
     url: 'https://paypal.me/qrayg'
     type: sponsor
     enabled: true
   - title: Patreon
-    ico: patreon
+    ico: fa6-brands:patreon
     url: 'https://patreon.com/qrayg/'
     type: sponsor
     enabled: true
   - title: Open Collective
-    ico: ''
+    ico: simple-icons:opencollective
     url: 'https://opencollective.com/legendofmanainfo'
     type: sponsor
     enabled: true
   - title: Github
-    ico: github
+    ico: fa6-brands:github
     url: 'https://github.com/sponsors/craigerskine'
     type: sponsor
     enabled: true

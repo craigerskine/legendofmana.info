@@ -6,7 +6,7 @@
         <strong>{{ label }}</strong>
         <small class="font-normal block opacity-90">
           {%- if sub %}
-          {% if tag %}<i class="fa-solid fa-fw fa-hashtag opacity-50" title="{{ sub }} story arc"></i>{% endif %} {{ sub }}
+          {% if tag %}<iconify-icon icon="fa6-solid:hashtag" inline="false" class="opacity-50" title="{{ sub }} story arc"></iconify-icon>{% endif %} {{ sub }}
           {%- else %}
           <i class="inline-block opacity-25" aria-hidden="true">~~~</i>
           {%- endif %}

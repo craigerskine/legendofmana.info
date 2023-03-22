@@ -3,9 +3,10 @@ layout: 'layouts/default.njk'
 ---
 
 {%- macro eventNav(label='',sub='',url='') %}
-<a href="{{ url }}" class="px-3 py-2 border-(b white/30) bg-pri-500/25 inline-block font-bold capitalize rounded shadow-inner motion-safe:(transition) hover:(border-(b-0 t) bg-white/10 ring-(1 pri-500) shadow-lg)">
-  <b class="text-xs font-normal uppercase block opacity-90">{{ sub }}:</b>
+<a href="{{ url }}" class="group block relative">
+  <b class="mb-1 pb-1 border-(b black/10) text-xs font-normal uppercase block opacity-90 motion-safe:(transition) group-hover:(border-opacity-0)">{{ sub }}:</b>
   {{ label }}
+  <b class="h-px bg-current absolute -bottom-1 inset-x-0 opacity-0 transform scale-0 motion-safe:(transition) group-hover:(opacity-50 scale-100)" aria-hidden="true"></b>
 </a>
 {%- endmacro %}
 
@@ -20,20 +21,20 @@ layout: 'layouts/default.njk'
   <p class="m-0 flex-1">
     <strong>Upon Completion:</strong>
     <small class="block">
-      {%- if missable %}<b class="py-1 px-3 bg-yellow-600 text-white text-[12px] block absolute -top-3 -left-3 rounded-full"><i class="fal fa-fw fa-comment-alt-exclamation mr-1 opacity-50" title="Warning"></i> This event is miss-able in the cactus diaries!</b>{%- endif %}
+      {%- if missable %}<b class="py-1 px-3 bg-yellow-600 text-white text-[12px] block absolute -top-3 -left-3 rounded-full"><iconify-icon icon="fa6-solid:comment-dots" inline="false" class="mr-1 opacity-50" title="Warning"></iconify-icon> This event is miss-able in the cactus diaries!</b>{%- endif %}
       Return home, talk to Lil' Cactus, go downstairs (watch him write the Event on the leaf), and go back upstairs to save your game before continuing.
     </small>
   </p>
 </blockquote>
 {%- endif %}
 
-<ul class="pt-5 md:(grid-(& cols-2))">
-  <li class="py-4 ">
+<ul class="pt-5 md:(flex justify-between)">
+  <li class="py-4">
     {%- if previousPost %}
     {{ eventNav(label=previousPost.data.title,sub='Previous',url=previousPost.url) }}
     {%- endif %}
   </li>
-  <li class="py-4 md:(text-right)">
+  <li class="py-4 md:(text-end)">
     {%- if nextPost %}
     {{ eventNav(label=nextPost.data.title,sub='Next',url=nextPost.url) }}
     {%- endif %}

@@ -1,6 +1,9 @@
 // instant page
 import 'instant.page';
 
+// icons
+import 'iconify-icon';
+
 // twind
 import { install, injectGlobal } from '@twind/core';
 import presetAutoprefix from '@twind/preset-autoprefix';

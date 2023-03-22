@@ -22,7 +22,7 @@ eleventyComputed:
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <i class="text-base not-italic flex-none" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
-    {%- if arrow %}<i class="mr-px fa-solid fa-fw fa-{%- if data.substring(0, 1) === '-' %}square-down{% else %}circle-up{%- endif %}"></i>{%- endif %}
+    {%- if arrow %}<iconify-icon icon="fa6-solid:{%- if data.substring(0, 1) === '-' %}square-caret-down{% else %}circle-up{%- endif %}" inline="false" width="1em" height="1em" class="mr-1"></iconify-icon>{%- endif %}
     {%- if arrow %}{{ data.slice(1) | safe }}{%- else %}{{ data | safe }}{%- endif %}
   </i>
 </dd>
@@ -43,7 +43,7 @@ The following data charts represent pet statistic adjustments based on the produ
     <p class="text-sm leading-none">
       {%- call btn.x(tag='button',click='legend = !legend') %}
         <span class="w-full flex items-center justify-center">
-          <b :class="['opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><i class="fa-regular fa-fw fa-angle-right"></i></b>
+          <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="fa6-solid:angle-right" inline="false"></iconify-icon></b>
           <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
         </span>
       {%- endcall %}
