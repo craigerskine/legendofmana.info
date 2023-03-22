@@ -31,11 +31,11 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
 <ul class="m-0 mb-12 grid-(& cols-2) gap-4 md:(grid-cols-4)">
   {%- for item in collections.shops %}
   <li>
-    <p class="mb-1 py-px font-bold">{{ item.data.title }}</p>
+    <p class="mb-1 pb-px border-(b black/10) font-bold">{{ item.data.title }}</p>
     <ul class="m-0 text-sm space-y-1">
       {%- for sub in item.data.shop_types %}
       <li>
-        <iconify-icon icon="fa6-regular:circle" inline="false" class="text-xs opacity-50"></iconify-icon>
+        <iconify-icon icon="mdi:widgets-outline" width="1em" height="1em" inline="false" class="opacity-30"></iconify-icon>
         {{ sub }}
       </li>
       {%- endfor %}
@@ -60,7 +60,7 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
       </div>
       <ul class="m-0 flex-1 lg:(ml-2)">
         <li>
-          <h6 class="py-1 text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex items-center">
+          <h6 class="m-0 py-1 text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex items-center">
             <span>Material</span>
             <span class="ml-auto">Price</span>
           </h6>
