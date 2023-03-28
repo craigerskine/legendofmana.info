@@ -23,11 +23,11 @@ tech:
   - title: GitHub
     sub: 'Source on'
     url: 'https://github.com/craigerskine/legendofmana.info'
-    ico: mdi:source-repository
+    ico: simple-icons:git
   - title: Netlify
     sub: 'Hosted by'
     url: 'https://netlify.com/'
-    ico: bxl:netlify
+    ico: simple-icons:netlify
 donate:
   - title: Paypal
     ico: fa6-brands:paypal
