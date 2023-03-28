@@ -14,6 +14,8 @@ module.exports = function(eleventyConfig) {
     '_site/_assets/img': '_assets/img',
     '_site/_assets/_root': './',
   });
+
+  eleventyConfig.addWatchTarget('./_site/_app/_app.js');
   
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
