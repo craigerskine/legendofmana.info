@@ -11,6 +11,8 @@ eleventyNavigation:
   order: 3
 date: 0003-00-00
 ---
+### Save Info
+
 * 2 save slots: New Game+ as well a save right before the final event.
 * Custom-forged 1H Sword (101 power).
 * Polterbox pet (for item farming).
