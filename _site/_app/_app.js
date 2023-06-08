@@ -22,30 +22,8 @@ install({
     extend: {
       colors: ({ theme }) => ({
         gray: theme('colors.neutral'),
-        pri: {
-          '50': '#F8FAF7', 
-          '100': '#F2F5F0', 
-          '200': '#DEE7D8', 
-          '300': '#C9D8C1', 
-          '400': '#98B589', 
-          '500': '#799D64', 
-          '600': '#6D8D5A', 
-          '700': '#5B764B', 
-          '800': '#495E3C', 
-          '900': '#3B4D31',
-        },
-        sec: {
-          '50': '#FEFEFF',
-          '100': '#FCFEFE',
-          '200': '#F8FCFD',
-          '300': '#F4FAFB',
-          '400': '#ECF7F9',
-          '500': '#E4F3F6',
-          '600': '#CDDBDD',
-          '700': '#ABB6B9',
-          '800': '#899294',
-          '900': '#707779',
-        },
+        pri: theme('colors.emerald'),
+        sec: theme('colors.sky'),
       }),
       fontFamily: ({ theme }) => ({
         serif: 'Noto Serif,'+ theme('fontFamily.serif'),
@@ -86,7 +64,7 @@ install({
     },
   },
   rules: [
-    [ 'btn', 'group px-3 py-2 border-(t transparent) w-full bg-pri-500/25 font-normal inline-flex items-center uppercase relative rounded ring-(1 pri-500/90) shadow motion-safe:(transition) hover:(border-white/30 bg-white/10 ring-opacity-100 shadow-lg)', ],
+    ['btn', 'group px-3 py-2 border-(t transparent) w-full bg-pri-500/25 font-normal inline-flex items-center uppercase relative rounded ring-(1 pri-500/90) shadow motion-safe:(transition) hover:(border-white/30 bg-white/10 ring-opacity-100 shadow-lg)',],
   ],
 });
 

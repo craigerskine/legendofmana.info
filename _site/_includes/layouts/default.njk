@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet" />
 
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
@@ -33,7 +33,7 @@
   <body class="font-serif text-gray-800 !block" style="display: none;" data-instant-intensity="mousedown">
 
     <div class="page min-h-screen flex-(& col)">
-      <header class="w-full bg-sec-500 flex-none relative z-10 overflow-hidden">
+      <header class="w-full bg-sec-100 flex-none relative z-10 overflow-hidden">
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex-(& col) items-center lg:(py-4 flex-row space-x-8)">
             <li class="pt-2 flex-1 lg:(pt-0 flex-none)">
@@ -95,7 +95,7 @@
             <img src="/_assets/img/tree.png" alt="Mana Tree"{% if page.url !== '/'%} class="w-48"{% endif %} />
           </div>
         </section>
-        <div class="clouds scene h-32 bg-(repeat-x bottom white) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('/_assets/img/clouds.png'); --translateY:0px;" aria-hidden="true"></div>
+        <div class="clouds scene h-32 bg-(repeat-x bottom) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('/_assets/img/clouds.png'); --translateY:0px;" aria-hidden="true"></div>
         <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
           <img class="motion-safe:(animate-wiggle) group-hover:(motion-safe:(animate-none))" />
           <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 absolute left-2 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:(transition-all) group-hover:(left-6 opacity-75)"><small class="block opacity-50">Today is</small><span></span> Day</b>
