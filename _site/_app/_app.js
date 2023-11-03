@@ -26,7 +26,7 @@ install({
         sec: theme('colors.sky'),
       }),
       fontFamily: ({ theme }) => ({
-        serif: 'Noto Serif,'+ theme('fontFamily.serif'),
+        serif: ['Noto Serif', ...theme('fontFamily.serif')],
       }),
       spacing: {
         '50': '50px',
