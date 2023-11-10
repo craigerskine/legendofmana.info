@@ -147,11 +147,11 @@
               <div class="mx-auto md:(-mx-4 flex)">
                 <nav class="md:(px-4 w-1/3)">
                   <ul class="list-none">
-                    <li class="py-2 font-bold uppercase">Game</li>
+                    <li class="py-2 text-white font-bold uppercase">Game</li>
                     {%- for item in site.game %}
                     {{ footerNav.x(item.title,url=item.url) }}
                     {%- endfor %}
-                    <li class="py-2 font-bold uppercase">Walkthrough</li>
+                    <li class="py-2 text-white font-bold uppercase">Walkthrough</li>
                     {%- for item in collections.all | eleventyNavigation('Walkthrough') %}
                     {{ footerNav.x(item.key,url=item.url) }}
                     {%- endfor %}
@@ -159,7 +159,7 @@
                 </nav>
                 <nav class="md:(px-4 w-1/3)">
                   <ul class="list-none">
-                    <li class="py-2 font-bold uppercase">Encyclopedias</li>
+                    <li class="py-2 text-white font-bold uppercase">Encyclopedias</li>
                     {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
                     {{ footerNav.x(item.key,url=item.url) }}
                     {%- endfor %}
@@ -167,7 +167,7 @@
                 </nav>
                 <nav class="md:(px-4 w-1/3)">
                   <ul class="list-none">
-                    <li class="py-2 font-bold uppercase">Extras</li>
+                    <li class="py-2 text-white font-bold uppercase">Extras</li>
                     {%- for item in collections.all | eleventyNavigation('Extras') %}
                     {{ footerNav.x(item.key,url='/extras/') }}
                     {%- endfor %}
@@ -182,7 +182,7 @@
                   {{ footerLink.x('Craig Erskine',url='https://craigerskine.com') }}
               </p>
               <div>
-                <h4 class="foot-host-label mb-2 text-sm text-current font-bold uppercase">Tech</h4>
+                <h4 class="foot-host-label mb-2 text-(white sm) font-bold uppercase">Tech</h4>
                 <ul class="foot-host m-0 inline-flex space-x-4">
                   {%- for item in site.tech %}
                   <li>
@@ -194,7 +194,7 @@
                 </ul>
               </div>
               <div>
-                <h4 class="foot-donate-label mb-2 text-sm text-current font-bold uppercase">Donate / Support</h4>
+                <h4 class="foot-donate-label mb-2 text-(white sm) font-bold uppercase">Donate / Support</h4>
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {%- for item in site.donate %}
                   <li>
