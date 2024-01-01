@@ -64,6 +64,7 @@ install({
     },
   },
   rules: [
+    ['text-wrap-(unset|wrap|nowrap|balance)', 'textWrap'],
     ['btn', 'group px-3 py-2 border-(t transparent) w-full bg-pri-500/25 font-normal inline-flex items-center uppercase relative rounded ring-(1 pri-500/90) shadow motion-safe:(transition) hover:(border-white/30 bg-white/10 ring-opacity-100 shadow-lg)',],
   ],
 });
