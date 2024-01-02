@@ -25,6 +25,8 @@
     "iconify-icon": "^1.0.8",
     "instant.page": "^5.2.0",
     "js-yaml": "^4.1.0",
-    "markdown-it-attrs": "^4.1.6"
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-bracketed-spans": "^1.0.1",
+    "markdown-it-footnote": "^4.0.0"
   }
 }

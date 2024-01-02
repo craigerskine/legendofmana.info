@@ -1,9 +1,11 @@
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const esbuild = require("esbuild");
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
-const yaml = require("js-yaml");
+const { EleventyRenderPlugin } = require('@11ty/eleventy');
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
+const esbuild = require('esbuild');
+const mdIt = require('markdown-it');
+const mdAttrs = require('markdown-it-attrs');
+const mdSpans = require('markdown-it-bracketed-spans');
+const mdFoot = require('markdown-it-footnote');
+const yaml = require('js-yaml');
 
 module.exports = function(eleventyConfig) {
 
@@ -27,7 +29,7 @@ module.exports = function(eleventyConfig) {
   //{% renderTemplate "md" %}
   //# Blah{.text-center}
   //{% endrenderTemplate %}
-  let markdownLibrary = markdownIt().use(markdownItAttrs);
+  let markdownLibrary = mdIt().use(mdSpans).use(mdFoot).use(mdAttrs);
   eleventyConfig.setLibrary('md', markdownLibrary);
 
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
