@@ -5,6 +5,7 @@ const mdIt = require('markdown-it');
 const mdAttrs = require('markdown-it-attrs');
 const mdSpans = require('markdown-it-bracketed-spans');
 const mdFoot = require('markdown-it-footnote');
+const recentChanges = require('eleventy-plugin-recent-changes');
 const yaml = require('js-yaml');
 
 module.exports = function(eleventyConfig) {
@@ -25,6 +26,10 @@ module.exports = function(eleventyConfig) {
   
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(recentChanges, {
+    commits: 10, // max
+    //filter: 'news', // includes
+  });
   
   //{% renderTemplate "md" %}
   //# Blah{.text-center}
@@ -49,6 +54,13 @@ module.exports = function(eleventyConfig) {
   // md {{ some.content | md | safe }}
   eleventyConfig.addFilter('md', function(content) {
     return markdownLibrary.render(content);
+  });
+
+  // date
+  eleventyConfig.addFilter('dateOnly', function (dateVal, locale = 'en-us') {
+    var theDate = new Date(dateVal);
+    const options = {month: '2-digit', day: '2-digit', year: 'numeric', timeZone: 'UTC'};
+    return theDate.toLocaleDateString(locale, options);
   });
   
   // | randomLimit(6, page.url)

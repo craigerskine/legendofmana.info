@@ -1,0 +1,27 @@
+---
+layout: layouts/default.njk
+title: Change Log
+---
+
+<section>
+  <ol class="mx-auto w-full max-w-2xl">
+    {%- for commit in collections.recentChanges %}
+    <li class="flex">
+      <hgroup class="pb-10 text-end flex-none lg:(w-full flex-auto)">
+        <h2 class="mb-1 text-sm leading-6 font-black"><time>{{ commit.authorDate | dateOnly }}</time></h2>
+        <p class="text-xs opacity-70">#{{ commit.abbrevHash }}</p>
+      </hgroup>
+      <div class="px-3 flex-(& col shrink-0) items-center lg:(px-10)">
+        <a href="https://github.com/craigerskine/legendofmana.info/commit/{{ commit.hash }}" class="w-6 h-6 border-(1 gray-500/20) bg-gray-500/10 text-xs flex-(& shrink-0) items-center justify-center rounded-full motion-safe:(transition) hover:(scale-105) lg:(w-8 h-8 text-base)">#</a>
+        {%- if not loop.last %}  
+        <i class="w-px bg-current flex-1 opacity-20"></i>
+        {%- endif %}
+      </div>
+      <article class="pb-10 w-full">
+        <p class="mb-1 leading-6">{{ commit.subject }}</p>
+        <p class="text-xs opacity-70">{{ commit.authorName }}</p>
+      </article>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
