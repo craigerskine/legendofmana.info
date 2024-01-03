@@ -5,21 +5,9 @@ layout: 'layouts/default.njk'
 {%- import 'components/heading.njk' as heading %}
 {%- import 'components/btn.njk' as btn %}
 
-{#
-  {%- call heading.x(tag='h1',sub='to Legend of Mana Info',img='/_assets/img/encyclopedias/en-info.png') %}
-  Welcome
-  {%- endcall %}
-  
-  <div class="pb-8 md:(text-xl leading-normal)">
-    {% renderTemplate "md" %}
-    __Legend of Mana Info__ strives to be the ultimate resource for all things related to the deep world of Legend of Mana. Contained within these pages is all of the knowledge I've attained throughout the many years I've played this satisfying RPG. Enjoy!
-    {% endrenderTemplate %}
-  </div>
-#}
-
-<h1 class="mb-12 text-(wrap-balance center) font-normal leading-normal tracking-tight">
-  <i class="text-black font-black uppercase block">Legend of Mana Info</i> the ultimate resource for all things related to this game's deep world. Enjoy!
-</h1>
+{%- call heading.x(tag='h1',sub=site.meta.lead,img='/_assets/img/encyclopedias/en-info.png') %}
+{{ site.meta.title }}
+{%- endcall %}
 
 <div class="md:(grid-(& cols-2) gap-6)">
 
