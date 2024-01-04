@@ -7,6 +7,7 @@ tags:
   - extras
 eleventyNavigation:
   key: 'Game Manual'
+  hash: /extras/#manual
   parent: Extras
   order: 2
 date: 0002-00-00

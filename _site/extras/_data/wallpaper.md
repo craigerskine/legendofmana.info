@@ -7,6 +7,7 @@ tags:
   - extras
 eleventyNavigation:
   key: 'Wallpaper'
+  hash: /extras/#wall
   parent: Extras
   order: 1
 date: 0001-00-00

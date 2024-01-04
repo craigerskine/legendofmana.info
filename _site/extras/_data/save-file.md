@@ -7,6 +7,7 @@ tags:
   - extras
 eleventyNavigation:
   key: 'Save File'
+  hash: /extras/#save
   parent: Extras
   order: 3
 date: 0003-00-00

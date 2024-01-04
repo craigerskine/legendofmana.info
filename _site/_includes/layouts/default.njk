@@ -83,6 +83,7 @@
                     <div class="py-px px-3 bg-pri-900 text-(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ item.title }}</div>
                   </div>
                 </a>
+                {%- if loop.first -%}<div id="mana-story" aria-hidden="true"></div>{%- endif -%}
               </li>
               {%- endfor %}
             </ul>
@@ -188,7 +189,7 @@
                   <ul class="list-none">
                     <li class="py-2 text-white font-bold uppercase">Extras</li>
                     {%- for item in collections.all | eleventyNavigation('Extras') %}
-                    {{ footerNav.x(item.key,url='/extras/') }}
+                    {{ footerNav.x(item.key,url=item.hash) }}
                     {%- endfor %}
                   </ul>
                 </nav>
@@ -206,7 +207,8 @@
                   {%- for item in site.tech %}
                   <li>
                     <a href="{{ item.url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
-                      <iconify-icon icon="{{ item.ico }}" width="1em" height="1em" inline="false" class="text-2xl" title="Donate via {{ item.title }}"></iconify-icon>
+                      <iconify-icon icon="{{ item.ico }}" width="1em" height="1em" inline="false" class="text-2xl" title="{{ item.title }}"></iconify-icon>
+                      <span class="sr-only">{{ item.title }}</span>
                     </a>
                   </li>
                   {%- endfor %}
@@ -219,6 +221,7 @@
                   <li>
                     <a href="{{ item.url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
                       <iconify-icon icon="{{ item.ico }}" width="1em" height="1em" inline="false" class="text-2xl" title="Donate via {{ item.title }}"></iconify-icon>
+                      <span class="sr-only">Donate via {{ item.title }}</span>
                     </a>
                   </li>
                   {%- endfor %}
@@ -235,7 +238,7 @@
 
     <div x-show="modal" x-trap.noscroll.inert="modal" class="modal p-4 bg-gray-900/80 flex justify-center items-center fixed inset-0 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
       <div class="relative shadow-lg" @click.outside="modal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
-        <button type="button" @click="modal = false" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute -right-4 -top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="fa6-solid:xmark" width="1em" height="1em" inline="false" title="Close"></iconify-icon></button>
+        <button type="button" @click="modal = false" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute -right-4 -top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="fa6-solid:xmark" width="1em" height="1em" inline="false" title="Close"></iconify-icon> <span class="sr-only">Close</span></button>
         <div>
           <img x-show="modal" :src="'/_assets/img/'+ modal_img" :alt="modal_imgalt +' div'" class="w-auto h-auto max-w-full max-h-[90vh]" />
           <div class="sr-only" x-text="modal_imgalt"></div>
