@@ -14,7 +14,7 @@ eleventyComputed:
   {%- if category === page.fileSlug %}
   {%- for item in items %}
   <section class="beastiary mb-12 pb-8" id="monster-{{ item.data.page.fileSlug }}">
-    {%- call heading.x(tag='h2',sub=title.replace(' - Monster', ''),img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png',border=false) %}
+    {%- call heading.x(tag='h2',sub=item.data.title +' sprite icon',img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
     {%- endcall %}
     <div class="md:(grid-(& cols-2) gap-6)">
@@ -23,7 +23,7 @@ eleventyComputed:
         {%- call sectionTitle() %}Locations{%- endcall %}
         <ul class="mb-5">
           {%- for loc in item.data.monster_locations %}
-          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30"></iconify-icon> <span class="font-normal">{{ loc }}</span></a></li>
+          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30"></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
           {%- endfor %}
         </ul>
         {%- call sectionTitle() %}Battle Drops{%- endcall %}
@@ -44,7 +44,7 @@ eleventyComputed:
         {%- endcall %}
         <ul class="mb-5">
           {%- for loc in item.data.egg_locations %}
-          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30"></iconify-icon> <span class="font-normal">{{ loc }}</span></a></li>
+          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30"></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
           {%- endfor %}
         </ul>
         <ul class="grid-(& cols-2)">

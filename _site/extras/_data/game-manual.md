@@ -2,7 +2,7 @@
 title: 'Manual'
 sub: 'PlayStation - PDF'
 img: /_assets/img/extras/card-manual.png
-file: /_assets/files/lom-manual.pdf
+file: /_assets/files/lom-manual.zip
 tags:
   - extras
 eleventyNavigation:

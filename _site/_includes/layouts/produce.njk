@@ -18,7 +18,7 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- macro dd(label='',data='',arrow=false) %}
-<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-700{%- endif %}">
+<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-900{%- endif %}">
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <i class="text-base not-italic flex-none" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
@@ -52,7 +52,7 @@ The following data charts represent pet statistic adjustments based on the produ
     <div x-show="legend" x-collapse>
       <div class="py-4 grid-(& cols-1) gap-4 md:(grid-cols-2)">
         <div>
-          <h3 class="heading text-base">Stats</h3>
+          <h2 class="heading text-base">Stats</h2>
           <ul class="mt-2">
             {%- for item in legend.pets.stats %}
             {{ legnd(label=item.title,desc=item.desc) }}
@@ -60,7 +60,7 @@ The following data charts represent pet statistic adjustments based on the produ
           </ul>
         </div>
         <div>
-          <h3 class="heading text-base">Personality</h3>
+          <h2 class="heading text-base">Personality</h2>
           <ul class="mt-2">
             {%- for item in legend.pets.personality %}
             {{ legnd(label=item.title,desc=item.desc) }}
@@ -76,7 +76,7 @@ The following data charts represent pet statistic adjustments based on the produ
   {%- for item in items %}
   <section class="produce md:(grid-(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
     <div>
-      {%- call heading.x(tag='h2',sub=title.replace(' - Produce', ''),img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
+      {%- call heading.x(tag='h2',sub=item.data.title +' sprite icon',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
       {%- endcall %}
     </div>
