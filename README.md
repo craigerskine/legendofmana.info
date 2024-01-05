@@ -28,6 +28,6 @@ $ npm start
 
 All data, markup, components, layouts, scripts, files, and images are in the `_site` folder. The site will deploy locally to a `public` folder. Theoretically you could upload that folder to any web host since it's just static HTML.
 
-Keep in mind that there are no CSS files anywhere to be found. This is intentional since I used [Twind](https://twind.style/) (which auto generates CSS on the client-side during browsing). Everything is styled using [Tailwind CSS](https://tailwindcss.com/) v3+ syntax and kept organized via [Twind](https://twind.style/) grouping/one-offs.
+Keep in mind that there are no CSS files anywhere to be found. This is intentional since I used [Twind](https://twind.style/) (which auto generates CSS on the client-side during browsing). Everything is styled using [Tailwind CSS](https://tailwindcss.com/) v3.0 syntax and kept organized via [Twind](https://twind.style/) grouping/one-offs.
 
 Enjoy!
