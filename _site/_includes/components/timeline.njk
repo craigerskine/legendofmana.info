@@ -14,7 +14,7 @@
     <div class="md:(w-52 order-first)">
       <h3 class="m-0 py-4 text-(lg gray-900) leading-6 font-bold md:(py-0 pr-6 truncate)" title="{{ label }}">{{ label }}</h3>
       <b class="md:(w-full h-px bg-black/10 block)" aria-hidden="true"></b>
-      {%- if sub !== '' %}<small class="text-xs block md:(pt-px pr-6 uppercase opacity-70)">{{ sub }}</small>{%- endif %}
+      {%- if sub !== '' %}<small class="text-xs block -translate-y-4 md:(pt-px pr-6 uppercase opacity-70 translate-y-0)">{{ sub }}</small>{%- endif %}
     </div>
     <div class="md:(pb-16 pl-6 w-full flex-1)">{{ caller() }}</div>
   </li>

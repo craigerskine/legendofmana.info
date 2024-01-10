@@ -13,20 +13,20 @@ eleventyComputed:
     <b class="mt-2.5 mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
     <p class="w-full max-w-[50%]">
       {%- if info.monster %}
-      {%- for item in info.monster %}
-        {% set last = loop.last %}
-        {%- for m in collections.monsters_pets %}
-        {%- if m.data.title === item %}
-        <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none"></iconify-icon> <a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}"><span class="font-normal">{{ item }}</span></a></span>
-        {%- endif %}
+        {%- for item in info.monster %}
+          {% set last = loop.last %}
+          {%- for m in collections.monsters_pets %}
+          {%- if m.data.title === item %}
+          <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none"></iconify-icon> <a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}"><span class="font-normal">{{ item }}</span></a></span>
+          {%- endif %}
+          {%- endfor %}
         {%- endfor %}
-      {%- endfor %}
       {%- elseif info.event %}
-      <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none"></iconify-icon> <a href="/walkthrough/events/{{ info.event | replace("'", "") | slugify }}/"><span class="font-normal">{{ info.event }}</span></a></span>
+        <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none"></iconify-icon> <a href="/walkthrough/events/{{ info.event | replace("'", "") | slugify }}/"><span class="font-normal">{{ info.event }}</span></a></span>
       {%- elseif info.info %}
-      {{ info.info }}
+        {{ info.info }}
       {%- else %}
-      {{ info }}
+        {{ info }}
       {%- endif %}
     </p>
   </li>
@@ -34,8 +34,9 @@ eleventyComputed:
 
 
 {%- for item in items %}
+  {%- set sub %}{{ title | replace(' - Equipment', ' - Weapon') }}{%- endset %}
   <ul class="list-none" id="{{ tags | join }}-{{ item.title | slugify }}">
-  {%- call timeline.x(label=item.title,sub=tags,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
+  {%- call timeline.x(label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
     <ul class="equip-stats text-sm">
       {%- call list(info=item.base) %}Material:{%- endcall %}
       {%- call list(info=item.power) %}{%- if (tags | join) == 'weapons' %}Strength:{%- else %}Defense:{%- endif %}{%- endcall %}
