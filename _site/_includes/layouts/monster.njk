@@ -13,7 +13,7 @@ eleventyComputed:
 {%- for category, items in collections.monsters_pets | groupby('data.type') %}
   {%- if category === page.fileSlug %}
   {%- for item in items %}
-  <section class="beastiary mb-12 pb-8" id="monster-{{ item.data.page.fileSlug }}">
+  <section class="beastiary mb-12 pb-8 scroll-mt-4" id="monster-{{ item.data.page.fileSlug }}">
     {%- call heading.x(tag='h2',sub=item.data.title +' sprite icon',img='/_assets/img/encyclopedias/monsters-pets/'+ item.data.page.fileSlug +'.png',border=false) %}
       {{ item.data.title }}
     {%- endcall %}
