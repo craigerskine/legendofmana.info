@@ -15,10 +15,11 @@ eleventyNavigation:
 <h2>Play Area</h2>
 <p class="float-right ml-4 mb-5">
   <a href="#map-world-start" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/world-start.jpg', imgalt: 'Walkthrough Start' })">
-    <img src="/_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play Area" class="img-th" />
+    <img src="/_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play area selection" class="img-th" />
     <strong class="img-note">Zoom +</strong>
   </a>
 </p>
+<div id="map-world-start" aria-hidden="true"></div>
 {% renderTemplate "md" %}
 There's a ton of configurations that you can use to complete The Legend of Mana and get all of the goodies along the way. For this [Walkthrough](/walkthrough/events/) I have chosen the **'Round the Tree Again** map configuration from the "Map/Artifact Placement Guide, version 2.5" found at [GameFaqs](http://gamefaqs.com/ps/256525-legend-of-mana/faqs/10037).
 
@@ -26,7 +27,7 @@ To place your AF's (Artifacts) efficiently you will need to pick a very specific
 
 ## Artifact Order
 
-If you are following the included [Walkthrough](/walkthrough/events/), you should place your lands in the order listed below. This Land Placement Guide allows you to obtain the following (if you follow the event order exactly as [listed](/walkthrough/events/)):
+If you are following the included [Walkthrough](/walkthrough/events/), you should place your lands in the order listed below. This Land Placement Guide allows you to obtain the following (if you follow the event order exactly as listed):
 
 * Access to all Events
 * Access to all Mineral [Shops](/encyclopedias/shops/)
@@ -47,6 +48,9 @@ If you are following the included [Walkthrough](/walkthrough/events/), you shoul
       {%- endif %}
       {%- endfor %}
     </ul>
+    {%- for item in collections.maps -%}
+      <div id="map-{{ item.data.page.fileSlug }}" aria-hidden="true"></div>
+    {%- endfor -%}
   </div>
   <div class="flex-none">
     <ul class="mx-auto mb-5 w-48 h-48 bg-cover text-black/75 font-bold inline-flex flex-wrap relative">

@@ -60,10 +60,10 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
       </div>
       <ul class="m-0 flex-1 lg:(ml-2)">
         <li>
-          <h6 class="m-0 py-1 text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex items-center">
+          <h3 class="m-0 py-1 text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex items-center">
             <span>Material</span>
             <span class="ml-auto">Price</span>
-          </h6>
+          </h3>
         </li>
         {%- for mat in item.data.materials %}
         {{ mats(label=mat.material,data=mat.cost) }}

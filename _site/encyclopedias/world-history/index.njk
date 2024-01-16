@@ -13,7 +13,7 @@ eleventyNavigation:
 
 <ul class="list-none">
   {%- for item in collections.world_history %}
-  {%- call timeline.x(label=item.data.title,sub='History',index=loop) %}
+  {%- call timeline.x(heading='h2',label=item.data.title,sub='History',index=loop) %}
   {{ item.templateContent | safe }}
   {%- endcall %}
   {%- endfor %}

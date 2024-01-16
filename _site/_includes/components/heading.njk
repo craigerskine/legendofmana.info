@@ -33,7 +33,7 @@
         {%- endif %}
         <span class="inline-flex flex-col">
           {{ caller() }}
-          {%- if sub !== '' %}<small class="opacity-80 text-(xs wrap-balance) tracking-normal">{{ sub }}</small>{%- endif %}
+          {% if sub !== '' %}<small class="opacity-80 text-(xs wrap-balance) tracking-normal">{{ sub }}</small>{% endif %}
         </span>
       </span>
     {%- if url !== '' %}</a>{%- endif %}
