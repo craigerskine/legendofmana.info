@@ -12,7 +12,7 @@ Talk to the dude(Sotherbee) in the first area. Go Right and return immediately t
 
 Go back to the entrance and follow these instructions:
 
-Note: These instructions need an overhaul!{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
+Note: These instructions need an overhaul!{.warning}
 
 * Right
 * Right

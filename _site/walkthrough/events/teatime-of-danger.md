@@ -7,7 +7,7 @@ date: 0009-00-00
 ---
 Place the Ancient Tablet AF to the space directly to the Right of your Home to create the *Mindas Ruins*. Enter the *Mindas Ruins*.
 
-Note: These instructions have been overhauled! Please let me know if they are not accurate.{.mb-5 .p-2 .bg-red-500 .text-white .font-bold .uppercase .rounded}
+Note: These instructions have been overhauled! Please let me know if they are not accurate.{.warning}
 
 ![Mindas Ruins](/_assets/img/walkthrough/maps/mindas-ruins.png){.mx-auto .w-full .max-w-[300px]}
 

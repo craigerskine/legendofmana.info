@@ -106,6 +106,7 @@ injectGlobal`
     .blocker { @apply p-5 w-full h-full bg-black/75 text-center overflow-auto z-[9999] flex items-center justify-center fixed inset-0; }
     .blocker:before { content: ""; @apply mr-[-0.05em] h-full align-middle inline-block; }
     .blocker.behind { @apply bg-transparent; }
+    .warning { @apply mb-5 p-2 bg-yellow-400 text-(gray-900 wrap-balance) font-bold uppercase rounded; }
     .scene { transform: translateY(var(--translateY)); will-change: transform; }
   }
 `
