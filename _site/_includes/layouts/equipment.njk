@@ -35,7 +35,7 @@ eleventyComputed:
 
 {%- for item in items %}
   {%- set sub %}{{ title | replace(' - Equipment', ' - Weapon') }}{%- endset %}
-  <ul class="list-none" id="{{ tags | join }}-{{ item.title | slugify }}">
+  <ul class="scroll-mt-4" id="{{ tags | join }}-{{ item.title | slugify }}">
   {%- call timeline.x(label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
     <ul class="equip-stats text-sm">
       {%- call list(info=item.base) %}Material:{%- endcall %}
