@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/default.njk'
 eleventyComputed:
+  category: '{{ title }}'
   title: '{{ title }} - Produce'
 ---
 
@@ -76,7 +77,7 @@ The following data charts represent pet statistic adjustments based on the produ
   {%- for item in items %}
   <section class="produce scroll-mt-4 md:(grid-(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
     <div>
-      {%- call heading.x(tag='h2',sub=item.data.title +' sprite icon',img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',border=false) %}
+      {%- call heading.x(tag='h2',sub=category,img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
       {{ item.data.title }}
       {%- endcall %}
     </div>
