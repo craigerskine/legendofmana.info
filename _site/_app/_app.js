@@ -100,6 +100,8 @@ injectGlobal`
     .prose h2:after,.prose h3:after,.prose .heading:after { @apply mr-0 ml-3 w-auto flex-1; }
     .prose h2 a,.prose h3 a,.prose .heading a { @apply text-current hover:(text-current text-opacity-50 no-underline) focus:(text-current text-opacity-50 no-underline); }
     .prose code { @apply px-1 py-px bg-pri-800 text-(yellow-200 xs) inline-block rounded-sm; }
+    .prose ul,.prose ol { @apply space-y-2; }
+    .prose ul > li,.prose ol > li { @apply marker:(text-gray-800/50 font-semibold); }
     .lb { @apply inline-block relative; }
     .lb .img-th + .img-note { @apply p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded motion-safe:transitio; }
     .lb:hover .img-th + .img-note,.lb:focus .img-th + .img-note { @apply opacity-100; }

@@ -31,12 +31,12 @@ tech:
     ico: simple-icons:netlify
 donate:
   - title: Paypal
-    ico: fa6-brands:paypal
+    ico: simple-icons:paypal
     url: https://paypal.me/qrayg
     type: sponsor
     enabled: true
   - title: Patreon
-    ico: fa6-brands:patreon
+    ico: simple-icons:patreon
     url: https://patreon.com/qrayg/
     type: sponsor
     enabled: true
@@ -46,7 +46,7 @@ donate:
     type: sponsor
     enabled: true
   - title: Github
-    ico: fa6-brands:github
+    ico: simple-icons:github
     url: https://github.com/sponsors/craigerskine
     type: sponsor
     enabled: true

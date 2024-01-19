@@ -19,11 +19,11 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- macro dd(label='',data='',arrow=false) %}
-<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-900{%- endif %}">
+<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-900{% else %} text-pri-900{%- endif %}">
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <i class="text-base not-italic flex-none" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
-    {%- if arrow %}<iconify-icon icon="fa6-solid:{%- if data.substring(0, 1) === '-' %}square-caret-down{% else %}circle-up{%- endif %}" inline="false" width="1em" height="1em" class="mr-1"></iconify-icon>{%- endif %}
+    {%- if arrow %}<iconify-icon icon="mdi:{%- if data.substring(0, 1) === '-' %}minus{% else %}plus-circle-outline{%- endif %}" inline="false" class="mr-1 text-lg"></iconify-icon>{%- endif %}
     {%- if arrow %}{{ data.slice(1) | safe }}{%- else %}{{ data | safe }}{%- endif %}
   </i>
 </dd>
@@ -35,16 +35,14 @@ eleventyComputed:
 </dt>
 {%- endmacro %}
 
-{% renderTemplate "md" %}
-The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take effect immediately after your pet levels up. {.mb-10}
-{% endrenderTemplate %}
+<p class="mb-10">The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take effect immediately after your pet levels up.</p>
 
 <div class="pb-12" x-data="{ legend: false }">
 
     <p class="text-sm leading-none">
       {%- call btn.x(tag='button',click='legend = !legend') %}
         <span class="w-full flex items-center justify-center">
-          <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="fa6-solid:angle-right" inline="false"></iconify-icon></b>
+          <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="mdi:chevron-right" class="text-lg"></iconify-icon></b>
           <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
         </span>
       {%- endcall %}
