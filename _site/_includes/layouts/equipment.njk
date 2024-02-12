@@ -2,6 +2,7 @@
 layout: 'layouts/default.njk'
 eleventyComputed:
   title: '{{ title }} - Equipment'
+  category: '{{ tags[0] }}'
 ---
 
 {%- import 'components/heading.njk' as heading %}
@@ -34,7 +35,7 @@ eleventyComputed:
 
 
 {%- for item in items %}
-  {%- set sub %}{{ title | replace(' - Equipment', ' - Weapon') }}{%- endset %}
+  {%- set sub %}{{ title | replace(' - Equipment', ' '+ category) }}{%- endset %}
   <ul class="scroll-mt-4" id="{{ tags | join }}-{{ item.title | slugify }}">
   {%- call timeline.x(heading='h2',label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
     <ul class="equip-stats text-sm">
