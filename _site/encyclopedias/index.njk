@@ -13,7 +13,7 @@ eleventyNavigation:
 ## Game Systems
 {% endrenderTemplate %}
 
-<ul class="mt-16 gap-x-4 md:(grid-(& cols-2))">
+<ul class="not-prose mt-16 gap-x-4 md:(grid-(& cols-2))">
   {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
   <li class="pb-8">
     {%- call heading.x(tag='h2',sub=item.sub,url=item.url,img=item.img,alt=item.title) %}

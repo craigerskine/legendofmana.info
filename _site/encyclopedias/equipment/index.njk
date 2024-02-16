@@ -14,7 +14,7 @@ eleventyNavigation:
 
 <h2>Weapons</h2>
 
-<ul class="my-16 md:(grid-(& cols-2) gap-x-4)">
+<ul class="not-prose my-16 md:(grid-(& cols-2) gap-x-4)">
   {%- for item in collections.weapons %}
   <li class="pb-8">
     {%- call heading.x(tag='h2',sub='Weapon',url='/encyclopedias/equipment/'+ item.data.page.fileSlug +'/',img='/_assets/img/encyclopedias/weapons/'+ item.data.page.fileSlug +'.png',alt=item.data.title) %}
@@ -36,7 +36,7 @@ eleventyNavigation:
 
 <h2>Armor</h2>
 
-<ul class="mt-16 md:(grid-(& cols-2) gap-x-4)">
+<ul class="not-prose mt-16 md:(grid-(& cols-2) gap-x-4)">
   {%- for item in collections.armor %}
   <li class="pb-8">
     {%- call heading.x(tag='h2',sub='Armor',url='/encyclopedias/equipment/'+ item.data.page.fileSlug +'/',img='/_assets/img/encyclopedias/armor/'+ item.data.page.fileSlug +'.png',alt=item.data.title) %}
