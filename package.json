@@ -23,7 +23,7 @@
     "basicscroll": "^3.0.4",
     "eleventy-plugin-recent-changes": "^1.0.1",
     "esbuild": "^0.17.19",
-    "iconify-icon": "^1.0.8",
+    "iconify-icon": "^2.0.0",
     "instant.page": "^5.2.0",
     "js-yaml": "^4.1.0",
     "markdown-it-attrs": "^4.1.6",
