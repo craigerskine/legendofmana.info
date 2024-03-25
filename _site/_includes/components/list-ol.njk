@@ -4,7 +4,7 @@
       <b class="mr-3 border-(t transparent) w-8 h-8 bg-pri-900 text-(pri-300 lg) font-normal inline-flex uppercase ring-(1 pri-500/90) rounded-full shadow motion-safe:(transition duration-200) group-hover:(border-white/30 bg-white/10 text-pri-900 ring-opacity-100 shadow-lg)"><span class="m-auto pb-px">{{ badge }}{% if star %}<sup class="-ml-px text-sm opacity-70">*</sup>{% endif %} </span></b>
       <p class="m-0">
         <strong>{{ label }}</strong>
-        <small class="font-normal block opacity-90">
+        <small class="font-normal flex items-center gap-1 opacity-90">
           {%- if sub %}
           {% if tag %}<iconify-icon icon="mdi:pound" class="opacity-50" title="{{ sub }} story arc"></iconify-icon>{% endif %} {{ sub }}
           {%- else %}
