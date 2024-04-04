@@ -28,6 +28,11 @@
     {%- import 'components/footer-nav.njk' as footerNav %}
     {%- import 'components/footer-link.njk' as footerLink %}
 
+    {% set css %}
+      {% include 'css/prism.css' %}
+    {% endset %}
+    <style>{{ css | cssmin | safe }}</style>
+
   </head>
 
   <body class="text-gray-800 font-serif !block" style="display: none;" data-instant-intensity="mousedown">

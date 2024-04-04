@@ -75,7 +75,19 @@ injectGlobal`
   @layer base {
     [x-cloak] { @apply hidden; }
     hr { @apply border-gray-600/25; }
-    .prose { @apply !max-w-none prose-a:(text-gray-900 font-bold) prose-headings:(font-heading) prose-ul:(list-circle) prose-li:([&::marker]:(text-gray-600/70)) prose-hr:(border-gray-600/25) prose-em:(text-gray-900 font-bold) prose-code:(py-0.5 px-px bg-gray-800 text-(gray-200 sm) inline-block leading-none rounded) prose-tr:(border-gray-600/25); }
+    pre > code { @apply !bg-transparent !leading-[21px]; }
+    .prose {
+      @apply
+        !max-w-none
+        prose-a:(text-gray-900 font-bold hover:(text-gray-700 no-underline))
+        prose-headings:(font-heading)
+        prose-ul:(list-circle)
+        prose-li:([&::marker]:(text-gray-600/70))
+        prose-hr:(border-gray-600/25)
+        prose-em:(text-gray-900 font-bold)
+        prose-code:(py-0.5 px-px bg-pri-900 text-(pri-200 sm) inline-block leading-none rounded)
+        prose-tr:(border-gray-600/25);
+    }
     .heading {
       @apply
         text-(gray-800 2xl)
@@ -86,8 +98,7 @@ injectGlobal`
         items-center
         gap-3
         before:(w-4 h-4 bg-current opacity-20 -skew-x-12 content-[''])
-        after:(w-auto h-4 bg-current flex-1 opacity-20 -skew-x-12 content-[''])
-        [&_a]:(text-current hover:(text-(current opacity-50) no-underline));
+        after:(w-auto h-4 bg-current flex-1 opacity-20 -skew-x-12 content-['']);
     }
     .aspect-wide { @apply mb-5 pb-[56.25%] h-0 block overflow-hidden relative; }
     .aspect-wide > iframe,.aspect-wide > embed,.aspect-wide > object,.aspect-wide > video { @apply m-0 border-0 w-full h-full absolute inset-0; }

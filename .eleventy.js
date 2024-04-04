@@ -1,11 +1,13 @@
+const CleanCSS = require('clean-css');
 const { EleventyRenderPlugin } = require('@11ty/eleventy');
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const esbuild = require('esbuild');
-const mdIt = require('markdown-it');
 const mdAttrs = require('markdown-it-attrs');
-const mdSpans = require('markdown-it-bracketed-spans');
 const mdFoot = require('markdown-it-footnote');
+const mdIt = require('markdown-it');
+const mdSpans = require('markdown-it-bracketed-spans');
 const recentChanges = require('eleventy-plugin-recent-changes');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 
 module.exports = function(eleventyConfig) {
@@ -30,6 +32,7 @@ module.exports = function(eleventyConfig) {
     commits: 10, // max
     //filter: 'news', // includes
   });
+  eleventyConfig.addPlugin(syntaxHighlight);
   
   //{% renderTemplate 'md' %}
   //# Blah{.text-center}
@@ -56,6 +59,11 @@ module.exports = function(eleventyConfig) {
   // md {{ some.content | md | safe }}
   eleventyConfig.addFilter('md', function(content) {
     return markdownLibrary.render(content);
+  });
+
+  // cssmin
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // date

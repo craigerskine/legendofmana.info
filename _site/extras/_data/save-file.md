@@ -24,16 +24,24 @@ date: 0003-00-00
 
 ## [OpenEmu](http://openemu.org/) { .heading }
 
-Start the game at least once so OpenEmu can create a blank memory card. Quit the game and quit OpenEmu. Rename the downloaded *Legend of Mana (USA).mcr* to the name located at `~/Library` `/Application Support` `/OpenEmu` `/Mednafen` `/Battery Saves` `/Legend of Mana....0.mcr` and replace that file with the newly renamed file.
+1. Start the game at least once so OpenEmu can create a blank memory card.
+2. Quit the game and quit OpenEmu.
+3. Rename the downloaded `Legend of Mana (USA).mcr` to the same name as the file located here:
+
+```bash
+~/Library/Application Support/OpenEmu/Mednafen/Battery Saves/Legend of Mana (USA).{SOME_UNIQUE_ID}.0.mcr
+```
+
+4. Replace the file in your `~/Library...` with this newly renamed file.
 
 ## [RetroArch](http://retroarch.com/) / [RetroPie](https://retropie.org.uk/) { .heading }
 
-Rename the downloaded `Legend of Mana (USA).mcr` to the same name as your .cue, .bin, .iso, etc. and copy it to the same place (you may have to change the extension to .srm as required by the core being used). Depending on how you have RetroArch set up you may have to copy the file to `~/retroarch/saves/`
+Rename the downloaded `Legend of Mana (USA).mcr` to the same name as your **.cue**, **.bin**, **.iso**, etc. and copy it to the same place (you may have to change the extension to **.srm** as required by the core being used). Depending on how you have RetroArch set up you may have to copy the file to `~/retroarch/saves/`
 
 ## __PSP / PS Vita / PSTV__ { .heading }
 
 This is a tricky one as you need to convert the .mcr to .vmp. The *easiest way* to do that is with [vita-mcr2vmp](https://github.com/dots-tb/vita-mcr2vmp).
-The __hardest way__ is with CFW __and__ a PSP plugin called [CWCheat](http://google.com/search?q=psp+cwcheat).
+The _hardest way_ is with CFW **and** a PSP plugin called [CWCheat](http://google.com/search?q=psp+cwcheat).
 
 1. Rename the `Legend of Mana (USA).mcr` to `SLUS_01013-0.mcr`.
 2. Upload/copy the save file to your memory card at `/seplugins/cwcheat/mc/` (on Vita this is located in `ux0:pspemu`).
