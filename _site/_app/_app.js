@@ -75,7 +75,7 @@ injectGlobal`
   @layer base {
     [x-cloak] { @apply hidden; }
     hr { @apply border-gray-600/25; }
-    .prose { @apply !max-w-none prose-a:(text-gray-900 font-bold) prose-headings:(font-heading) prose-ul:(list-circle) prose-li:([&::marker]:(text-gray-600/50)) prose-hr:(border-gray-600/25) prose-em:(text-gray-900 font-bold) prose-tr:(border-gray-600/25); }
+    .prose { @apply !max-w-none prose-a:(text-gray-900 font-bold) prose-headings:(font-heading) prose-ul:(list-circle) prose-li:([&::marker]:(text-gray-600/70)) prose-hr:(border-gray-600/25) prose-em:(text-gray-900 font-bold) prose-code:(py-0.5 px-px bg-gray-800 text-(gray-200 sm) inline-block leading-none rounded) prose-tr:(border-gray-600/25); }
     .heading {
       @apply
         text-(gray-800 2xl)
