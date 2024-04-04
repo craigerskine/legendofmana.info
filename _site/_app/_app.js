@@ -85,6 +85,7 @@ injectGlobal`
         prose-li:([&::marker]:(text-gray-600/70))
         prose-hr:(border-gray-600/25)
         prose-em:(text-gray-900 font-bold)
+        prose-pre:(max-w-[768px] lg:(max-w-[650px]))
         prose-code:(py-0.5 px-px bg-pri-900 text-(pri-200 sm) inline-block leading-none rounded)
         prose-tr:(border-gray-600/25);
     }
