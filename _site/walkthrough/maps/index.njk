@@ -12,36 +12,40 @@ eleventyNavigation:
 
 {%- import 'components/list-ol.njk' as list %}
 
-<h2>Play Area</h2>
-<p class="float-right ml-4 mb-5">
-  <a href="#map-world-start" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/world-start.jpg', imgalt: 'Walkthrough Start' })">
+<div class="prose">
+{% renderTemplate 'md' %}
+## Play Area { .heading }
+
+<div class="not-prose float-right ml-4">
+  <a href="#map-world-start" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/world-start.jpg', imgalt: 'Walkthrough Start' })">
     <img src="/_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play area selection" class="img-th" />
-    <strong class="img-note">Zoom +</strong>
   </a>
-</p>
+</div>
+
 <div id="map-world-start" aria-hidden="true"></div>
-{% renderTemplate "md" %}
+
 There's a ton of configurations that you can use to complete The Legend of Mana and get all of the goodies along the way. For this [Walkthrough](/walkthrough/events/) I have chosen the **'Round the Tree Again** map configuration from the "Map/Artifact Placement Guide, version 2.5" found at [GameFaqs](http://gamefaqs.com/ps/256525-legend-of-mana/faqs/10037).
 
 To place your AF's (Artifacts) efficiently you will need to pick a very specific location on the play area.
 
-## Artifact Order
+## Artifact Order { .heading }
 
 If you are following the included [Walkthrough](/walkthrough/events/), you should place your lands in the order listed below. This Land Placement Guide allows you to obtain the following (if you follow the event order exactly as listed):
 
-* Access to all Events
-* Access to all Mineral [Shops](/encyclopedias/shops/)
-* Access to all [Demi-Human](/encyclopedias/monsters-pets/demi-human/) Pets
-* Highest level Weapon Shops
-* Full Mana Levels in Orchard
-* [Wimpy Thugling](/walkthrough/events/the-wimpy-thugling/) Event
+- Access to all Events
+- Access to all Mineral [Shops](/encyclopedias/shops/)
+- Access to all [Demi-Human](/encyclopedias/monsters-pets/demi-human/) Pets
+- Highest level Weapon Shops
+- Full Mana Levels in Orchard
+- [Wimpy Thugling](/walkthrough/events/the-wimpy-thugling/) Event
+
+*** { .mb-6 }
 {% endrenderTemplate %}
+</div>
 
-<hr />
-
-<div class="md:flex md:space-x-6">
+<div class="md:(flex space-x-6)">
   <div class="mb-8 w-full flex-1">
-    <ul class="not-prose ml-0 grid-(& cols-1) gap-y-6 gap-x-4 sm:(grid-cols-2)">
+    <ul class="ml-0 grid-(& cols-1) gap-y-6 gap-x-4 sm:(grid-cols-2)">
       {%- for item in collections.maps %}
       {%- if loop.index <= 26 %}
       {{ list.x(label=item.data.title,sub=item.data.artifact,badge=loop.index,url='#map-'+item.data.page.fileSlug,modal_img='walkthrough/maps/'+ item.data.page.fileSlug +'.png',modal_imgalt=item.data.title) }}
@@ -53,7 +57,7 @@ If you are following the included [Walkthrough](/walkthrough/events/), you shoul
     {%- endfor -%}
   </div>
   <div class="flex-none">
-    <ul class="not-prose mx-auto mb-5 w-48 h-48 bg-cover text-black/75 font-bold inline-flex flex-wrap relative">
+    <ul class="mx-auto mb-5 w-48 h-48 bg-cover text-black/75 font-bold inline-flex flex-wrap relative">
       <li class="w-8 h-8 flex items-center justify-center"></li>
       <li class="w-8 h-8 flex items-center justify-center"></li>
       <li class="w-8 h-8 flex items-center justify-center"></li>

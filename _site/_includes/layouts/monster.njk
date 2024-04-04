@@ -20,15 +20,15 @@ eleventyComputed:
     {%- endcall %}
     <div class="md:(grid-(& cols-2) gap-6)">
       <div class="monster mb-6 md:(mb-0)">
-        <h3>Monster</h3>
+        <h2 class="heading mb-2">Monster</h2>
         {%- call sectionTitle() %}Locations{%- endcall %}
-        <ul class="not-prose mb-5">
+        <ul class="mb-5">
           {%- for loc in item.data.monster_locations %}
           <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30"></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
           {%- endfor %}
         </ul>
         {%- call sectionTitle() %}Battle Drops{%- endcall %}
-        <ol class="not-prose text-sm grid-(& flow-col rows-4) gap-1.5">
+        <ol class="text-sm grid-(& flow-col rows-4) gap-1.5">
           {%- for drop in item.data.monster_drops %}
           <li class="flex items-center gap-1.5">
             <small class="w-4 h-4 text-xs flex items-center justify-center opacity-60 ring-(1 current) rounded-full" aria-hidden="true">{{ loop.index }}</small>
@@ -39,21 +39,21 @@ eleventyComputed:
       </div>
       {%- if item.data.page.fileSlug !== 'machine-golem' %}
       <div class="pet">
-        <h3>Pet</h3>
+        <h2 class="heading mb-2">Pet</h2>
         {%- call sectionTitle() %}
         {%- if page.fileSlug === 'demi-human' %}Location{% else %}Egg Locations{%- endif %}
         {%- endcall %}
-        <ul class="not-prose mb-5">
+        <ul class="mb-5">
           {%- for loc in item.data.egg_locations %}
           <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30"></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
           {%- endfor %}
         </ul>
-        <ul class="not-prose grid-(& cols-2)">
+        <ul class="grid-(& cols-2)">
           <li>{%- call sectionTitle() %}Sync{%- endcall %} <span class="text-sm">{{ item.data.syncro_effect }}</span></p>
           <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text-(xs black/50)" title="Lucre">$L</sup></span></p>
         </ul>
         {%- call sectionTitle() %}Initial Stats{%- endcall %}
-        <ul class="not-prose text-sm grid-(& cols-4)">
+        <ul class="text-sm grid-(& cols-4)">
           {%- for key, value in item.data.pet_stats %}
           {%- set statFull %}
             {%- if key === 'Pow' -%}Power

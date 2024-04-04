@@ -12,15 +12,15 @@ eleventyNavigation:
 
 {%- import 'components/heading.njk' as heading %}
 
-{%- macro ability(label='',alt=false,reqs=false) %}
-<li class="mb-1 py-1 px-2 flex items-center">
-  <strong class="flex-none">{{ label }}</strong>
-  {%- if alt %}
-  <sup class="ml-1 flex-none">({{ alt }})</sup>
-  {%- endif %}
+{%- macro ability(label,alt=false,reqs=false) %}
+<li class="mb-1 py-1 px-2 flex items-center gap-2">
+  <strong class="flex-none">
+    {{ label }}
+    {%- if alt %}<sup class="ml-1 font-normal italic">({{ alt }})</sup>{%- endif %}
+  </strong>
   {%- if reqs %}
-  <b class="ml-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
-  <small class="ml-auto pl-4">
+  <hr class="flex-1" aria-hidden="true" />
+  <small class="ml-auto">
     {%- for req in reqs %}
     {{ req }}{% if loop.last %}{% else %},{% endif %}
     {%- endfor %}
@@ -29,7 +29,7 @@ eleventyNavigation:
 </li>
 {%- endmacro %}
 
-<h2>Abilities</h2>
+<h2 class="heading mb-6">Abilities</h2>
 
 <div class="mb-24 lg:(grid-(& cols-2) gap-x-4)">
   <div>
@@ -43,8 +43,8 @@ eleventyNavigation:
     </ul>
   </div>
   <div>
-    <h3 class="m-0 py-1 px-2 border-(b white/30) bg-pri-500/25 text-(sm gray-900) leading-relaxed font-bold hidden uppercase rounded-sm shadow-inner lg:(flex items-center)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
-    <ul class="m-0">
+    <h3 class="py-1 px-2 border-(b white/30) bg-pri-500/25 text-(sm gray-900) leading-relaxed font-bold hidden uppercase rounded-sm shadow-inner lg:(flex items-center)">Ability <small class="ml-auto text-xs uppercase opacity-90">Requirement</small></h3>
+    <ul>
       {%- for item in collections.abilities %}
       {%- if loop.index > 13 %}
       {{ ability(label=item.data.title,alt=item.data.alt,reqs=item.data.reqs) }}
@@ -54,9 +54,9 @@ eleventyNavigation:
   </div>
 </div>
 
-<h2>ST Techniques</h2>
+<h2 class="heading mb-6">ST Techniques</h2>
 
-<ul class="m-0">
+<ul>
   {%- for item in collections.techs %}
   <li id="technique-{{ item.data.page.fileSlug }}">
     <div class="mb-12 lg:(flex)">

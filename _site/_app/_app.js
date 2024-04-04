@@ -8,9 +8,10 @@ import 'iconify-icon';
 import { install, injectGlobal } from '@twind/core';
 import presetAutoprefix from '@twind/preset-autoprefix';
 import presetTailwind from '@twind/preset-tailwind';
+import presetTypography from '@twind/preset-typography';
 
 install({
-  presets: [presetAutoprefix(), presetTailwind()],
+  presets: [presetAutoprefix(), presetTailwind(), presetTypography()],
   darkMode: 'class',
   hash: false,
   theme: {
@@ -26,7 +27,8 @@ install({
         sec: theme('colors.sky'),
       }),
       fontFamily: ({ theme }) => ({
-        serif: ['Averia Serif Libre', ...theme('fontFamily.serif')],
+        serif: ['"Source Serif 4"', ...theme('fontFamily.serif')],
+        heading: ['"Averia Serif Libre"', ...theme('fontFamily.serif')],
       }),
       spacing: {
         '50': '50px',
@@ -64,55 +66,35 @@ install({
     },
   },
   rules: [
-    ['text-wrap-(unset|wrap|nowrap|balance)', 'textWrap'],
-    ['btn', 'group px-3 py-2 border-(t transparent) w-full bg-pri-500/25 font-normal inline-flex items-center uppercase relative rounded ring-(1 pri-500/90) shadow motion-safe:(transition) hover:(border-white/30 bg-white/10 ring-opacity-100 shadow-lg)',],
+    ['text-wrap-(unset|wrap|nowrap|balance|pretty)', 'textWrap'],
+    ['btn', 'group px-3 py-2 border-(t transparent) w-full bg-pri-500/25 font-normal no-underline inline-flex items-center uppercase relative rounded ring-(1 pri-500/90) shadow motion-safe:(transition) hover:(border-white/30 bg-white/10 ring-opacity-100 shadow-lg)',],
   ],
 });
 
 injectGlobal`
   @layer base {
     [x-cloak] { @apply hidden; }
-    a:not([class]),a[class="lb"] { @apply text-black font-bold motion-safe:transition; }
-    a:not([class]):hover,a:not([class]):focus,a[class="lb"]:hover,a[class="lb"]:focus { @apply text-opacity-90 underline; }
-    p:not([class]),ul:not([class]),ol:not([class]),table:not([class]) { @apply mb-5 border-current; }
-    ul:not([class]) ul:not([class]),ul:not([class]) ol:not([class]),ol:not([class]) ol:not([class]),ol:not([class]) ul:not([class]) { @apply mb-0; }
-    ul:not([class]) { @apply ml-5 list-disc; }
-    ol:not([class]) { @apply ml-5 list-decimal; }
-    blockquote:not([class]) { @apply ml-5 pl-5 border-(l-2 pri-500/50); }
-    i:not([class]),em:not([class]) { @apply font-bold; }
-    hr,hr:not([class]) { @apply mb-5 border-black opacity-10; }
-    h1,h1:not([class]),h2,h2:not([class]),h3,h3:not([class]),h4,h4:not([class]),h5,h5:not([class]),h6,h6:not([class]) { @apply mb-5 text-(3xl gray-800/90) font-bold; }
-    h2,h2:not([class]) { @apply text-2xl; }
-    h3,h3:not([class]) { @apply text-xl; }
-    h4,h4:not([class]) { @apply text-lg; }
-    h5,h5:not([class]) { @apply text-base; }
-    h6,h6:not([class]) { @apply text-sm; }
-    table:not([class]) { @apply w-full divide(y gray-600 opacity-25); }
-    table:not([class]) thead tr { @apply text-(sm gray-700) uppercase; }
-    table:not([class]) th,table:not([class]) td { @apply py-[2px] px-2 text-left; }
-    table:not([class]) tbody { @apply divide(y gray-600 opacity-25); }
-    table:not([class]) th { @apply text-(xs pri-900) uppercase; }
+    hr { @apply border-gray-600/25; }
+    .prose { @apply !max-w-none prose-a:(text-gray-900 font-bold) prose-headings:(font-heading) prose-ul:(list-circle) prose-li:([&::marker]:(text-gray-600/50)) prose-hr:(border-gray-600/25) prose-em:(text-gray-900 font-bold) prose-tr:(border-gray-600/25); }
+    .heading {
+      @apply
+        text-(gray-800 2xl)
+        leading-normal
+        font-(bold heading)
+        uppercase
+        flex
+        items-center
+        gap-3
+        before:(w-4 h-4 bg-current opacity-20 -skew-x-12 content-[''])
+        after:(w-auto h-4 bg-current flex-1 opacity-20 -skew-x-12 content-[''])
+        [&_a]:(text-current hover:(text-(current opacity-50) no-underline));
+    }
     .aspect-wide { @apply mb-5 pb-[56.25%] h-0 block overflow-hidden relative; }
     .aspect-wide > iframe,.aspect-wide > embed,.aspect-wide > object,.aspect-wide > video { @apply m-0 border-0 w-full h-full absolute inset-0; }
-    .prose h3:not(:first-child) { @apply mt-16; }
-    .prose h2:not([class]),.prose h3:not([class]),.prose .heading { @apply font-bold leading-normal text-gray-800 uppercase flex items-center; }
-    .prose h2:not([class]):before,.prose h2:not([class]):after,.prose h3:not([class]):before,.prose h3:not([class]):after,.prose .heading:before,.prose .heading:after { @apply mr-3 w-4 h-4 bg-current opacity-20 transform -skew-x-12; content: ""; }
-    .prose h2:after,.prose h3:after,.prose .heading:after { @apply mr-0 ml-3 w-auto flex-1; }
-    .prose h2 a,.prose h3 a,.prose .heading a { @apply text-current hover:(text-current text-opacity-50 no-underline) focus:(text-current text-opacity-50 no-underline); }
-    .prose code { @apply px-1 py-px bg-pri-800 text-(yellow-200 xs) inline-block rounded-sm; }
-    .prose ul:not(.not-prose),.prose ol:not(.not-prose) { @apply space-y-2; }
-    .prose ul:not(.not-prose) > li,.prose ol:not(.not-prose) > li { @apply marker:(text-gray-800/50 font-semibold); }
-    .lb { @apply inline-block relative; }
-    .lb .img-th + .img-note { @apply p-1 bg-pri-900 text-white text-center block absolute inset-x-1 bottom-1 rounded motion-safe:transitio; }
-    .lb:hover .img-th + .img-note,.lb:focus .img-th + .img-note { @apply opacity-100; }
-    .blocker { @apply p-5 w-full h-full bg-black/75 text-center overflow-auto z-[9999] flex items-center justify-center fixed inset-0; }
-    .blocker:before { content: ""; @apply mr-[-0.05em] h-full align-middle inline-block; }
-    .blocker.behind { @apply bg-transparent; }
     .warning { @apply mb-5 p-2 bg-yellow-400 text-(gray-900 wrap-balance) font-bold uppercase rounded; }
     .scene { transform: translateY(var(--translateY)); will-change: transform; }
   }
 `
-
 // jquery-like selector
 window.$_ = function(selector, next) {
   let selectors = document.querySelectorAll(selector);

@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link onload="this.onload=null;this.rel='stylesheet'" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" />
+    <link onload="this.onload=null;this.rel='stylesheet'" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" />
 
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
@@ -30,7 +30,7 @@
 
   </head>
 
-  <body class="font-(serif light) text-gray-800 !block" style="display: none;" data-instant-intensity="mousedown">
+  <body class="text-gray-800 font-serif !block" style="display: none;" data-instant-intensity="mousedown">
 
     <div class="page min-h-screen flex-(& col)">
       <header class="w-full bg-sec-100 flex-none relative z-10 overflow-hidden">
@@ -64,13 +64,13 @@
           <div class="container mx-auto pt-4 px-0 lg:(pt-16 px-4){% if page.url === '/' %} pb-48 text-center lg:(text-left){% else %} pb-32{% endif %}">
             {%- if page.url !== '/' %}
             {%- if title !== '404' %}
-            <h1 class="m-0 pt-4 px-2 text-lg flex items-center justify-center relative z-50 sm:(text-3xl) lg:(pt-0 justify-start)">
+            <h1 class="m-0 pt-4 px-2 text-lg font-heading flex items-center justify-center relative z-50 sm:(text-3xl) lg:(pt-0 justify-start)">
               <img src="/_assets/img/ltr/{{ title.substring(0, 1) | lower }}.png" alt="The letter {{ title.substring(0, 1) }}" class="mr-1" aria-hidden="true" />
               <i class="sr-only">{{ title.substring(0, 1) }}</i>
-              <b class="relative">
-                {{ title.slice(1) }}
+              <span class="relative">
+                <b>{{ title.slice(1) }}</b>
                 {% if story_arc %}<small class="py-px px-3 ring-(1 inset current) bg-white/50 text-[11px] leading-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }} Arc</small>{% endif %}
-              </b>
+              </span>
             </h1>
             {%- endif %}
             {%- else %}
@@ -125,7 +125,7 @@
           {%- endif %}
           #}
           <section class="lg:(-mx-4 flex)">
-            <article class="prose w-full flex-1 md:(px-4)">
+            <article class="w-full flex-1 md:(px-4)">
               {{ content | safe }}
             </article>
             {%- if title !== '404' %}
@@ -167,11 +167,11 @@
               <div class="mx-auto md:(-mx-4 flex)">
                 <nav class="md:(px-4 w-1/3)">
                   <ul class="list-none">
-                    <li class="py-2 text-white font-bold uppercase">Game</li>
+                    <li class="py-2 text-white font-(heading bold) uppercase">Game</li>
                     {%- for item in site.game %}
                     {{ footerNav.x(item.title,url=item.url) }}
                     {%- endfor %}
-                    <li class="py-2 text-white font-bold uppercase">Walkthrough</li>
+                    <li class="py-2 text-white font-(heading bold) uppercase">Walkthrough</li>
                     {%- for item in collections.all | eleventyNavigation('Walkthrough') %}
                     {{ footerNav.x(item.key,url=item.url) }}
                     {%- endfor %}
@@ -179,7 +179,7 @@
                 </nav>
                 <nav class="md:(px-4 w-1/3)">
                   <ul class="list-none">
-                    <li class="py-2 text-white font-bold uppercase">Encyclopedias</li>
+                    <li class="py-2 text-white font-(heading bold) uppercase">Encyclopedias</li>
                     {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
                     {{ footerNav.x(item.key,url=item.url) }}
                     {%- endfor %}
@@ -187,7 +187,7 @@
                 </nav>
                 <nav class="md:(px-4 w-1/3)">
                   <ul class="list-none">
-                    <li class="py-2 text-white font-bold uppercase">Extras</li>
+                    <li class="py-2 text-white font-(heading bold) uppercase">Extras</li>
                     {%- for item in collections.all | eleventyNavigation('Extras') %}
                     {{ footerNav.x(item.key,url=item.hash) }}
                     {%- endfor %}
@@ -202,7 +202,7 @@
                   {{ footerLink.x('Craig Erskine',url='https://craigerskine.com') }}
               </p>
               <div>
-                <h4 class="foot-host-label mb-2 text-(white sm) font-bold uppercase">Tech</h4>
+                <h4 class="foot-host-label mb-2 text-(white sm) font-(heading bold) uppercase">Tech</h4>
                 <ul class="foot-host m-0 inline-flex space-x-4">
                   {%- for item in site.tech %}
                   <li>
@@ -215,7 +215,7 @@
                 </ul>
               </div>
               <div>
-                <h4 class="foot-donate-label mb-2 text-(white sm) font-bold uppercase">Donate / Support</h4>
+                <h4 class="foot-donate-label mb-2 text-(white sm) font-(heading bold) uppercase">Donate / Support</h4>
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {%- for item in site.donate %}
                   <li>
@@ -236,7 +236,7 @@
 
     <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('/_assets/img/chalk.png');"></div>
 
-    <div x-show="modal" x-trap.noscroll.inert="modal" class="modal p-4 bg-gray-900/80 flex justify-center items-center fixed inset-0 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
+    <div x-show="modal" x-trap.noscroll.inert="modal" x-on:keydown.window.prevent.escape="modal = false" class="modal p-4 bg-gray-900/80 flex justify-center items-center fixed inset-0 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
       <div class="relative shadow-lg" @click.outside="modal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
         <button type="button" @click="modal = false" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute -right-4 -top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="mdi:close" title="Close"></iconify-icon> <span class="sr-only">Close</span></button>
         <div>

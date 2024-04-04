@@ -23,7 +23,7 @@ eleventyNavigation:
     {%- endcall %}
   </div>
   <div class="prose">
-    <h3>Info</h3>
+    <h2 class="heading">Info</h2>
     {{ item.templateContent | safe }}
     {%- if item.data.info %}
     <table>
@@ -37,7 +37,7 @@ eleventyNavigation:
       </tbody>
     </table>
     {%- endif %}
-    <h3>Ingredient <small class="ml-2 text-xs opacity-90">Order</small></h3>
+    <h2 class="heading">Ingredients <small class="ml-2 text-xs opacity-90">Order</small></h2>
     <ul class="ml-5 list-[circle] [&>li::marker]:(text-pri-600 font-black)">
       {%- for ing in item.data.ingredient %}
       <li class="mb-1 py-1 px-2 rounded{% if loop.index % 2 === 0 %} bg-pri-800/10{% endif %}">{{ ing }}</li>

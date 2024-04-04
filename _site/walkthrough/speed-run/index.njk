@@ -9,24 +9,22 @@ eleventyNavigation:
   order: 4
 ---
 
+<div class="prose">
+
 <h2>Dragon Arc</h2>
 <p>If you are doing a true speed run, choose the <em>2H Sword</em>. If you eventually want to get max stats on a New Game+, choose: <em>1H Sword</em>.</p>
 
 <p class="float-right ml-4 mb-5">
-  <a href="#map-speedrun" class="lb" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/speed-run/map.jpg', imgalt: 'Speed Run Start' })">
+  <a href="#map-speedrun" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/speed-run/map.jpg', imgalt: 'Speed Run Start' })">
     <img src="/_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play Area" class="img-th" />
-    <strong class="img-note">Zoom +</strong>
   </a>
 </p>
 <div id="map-speedrun" aria-hidden="true"></div>
 
-{% renderTemplate "md" %}
+{% renderTemplate 'md' %}
 * *Play Area:* Far Right / 5 space from the top
 * *Mailbox:* Center
-* *Skills*  
-  - Lunge  
-  - Spin  
-  - ST: Rising Crush
+* *Skills:* Lunge, Spin, ST: Rising Crush
 * Exit house
 * Talk to Sproutling, top answer
 * Exit to world map
@@ -384,3 +382,4 @@ After:
 
 The end. **😉**{.text-3xl} {.flex .items-center .gap-2}
 {% endrenderTemplate %}
+</div>

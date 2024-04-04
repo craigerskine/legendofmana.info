@@ -22,13 +22,11 @@ eleventyNavigation:
   </div>
 {%- endmacro %}
 
-<ul class="not-prose mb-6 grid-(& cols-1) gap-5 md:(grid-cols-3)">
+<ul class="mb-6 grid-(& cols-1) gap-5 md:(grid-cols-3)">
   {%- for item in collections.extras %}
   <li>
-    <h2>
-      <span class="text-lg">{{ item.data.title }}</span>
-    </h2>
-    <p class="-mt-5 mb-5 pl-7 text-xs">{{ item.data.sub }}</p>
+    <h2 class="heading text-lg">{{ item.data.title }}</h2>
+    <p class="mb-4 pl-7 text-(gray-700 xs)">{{ item.data.sub }}</p>
     {{ download(label=item.data.title,file=item.data.file,img=item.data.img) }}
   </li>
   {%- endfor %}
@@ -36,6 +34,8 @@ eleventyNavigation:
 
 {%- for item in collections.extras %}
 {%- if loop.last %}
+<div class="prose">
 {{ item.templateContent | safe }}
+</div>
 {%- endif %}
 {%- endfor %}

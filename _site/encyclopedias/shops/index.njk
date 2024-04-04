@@ -12,10 +12,10 @@ eleventyNavigation:
 {%- import 'components/heading.njk' as heading %}
 {%- import 'components/alert.njk' as alert %}
 
-{%- macro mats(label='',data='') %}
-<li class="py-1 flex items-center">
+{%- macro mats(label,data) %}
+<li class="flex items-center gap-4">
   <p class="flex-none">{{ label }}</p>
-  <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
+  <hr class="flex-1" aria-hidden="true" />
   <i class="not-italic flex-none">
     {{ data }}
     <sup class="italic text-(xs black/50)" title="Lucre">$L</sup>
@@ -23,15 +23,18 @@ eleventyNavigation:
 </li>
 {%- endmacro %}
 
-{% renderTemplate "md" %}
-## Shop Item Types
+<div class="prose">
+{% renderTemplate 'md' %}
+## Shop Item Types { .heading }
+
 Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton? Check out the following tables to see which items are located at what Level Shop. There is also a list of the seeds and jewels available at the Bone Fortress and Bejeweled City.
 {% endrenderTemplate %}
+</div>
 
-<ul class="not-prose m-0 mb-12 grid-(& cols-2) gap-4 md:(grid-cols-4)">
+<ul class="my-12 grid-(& cols-2) gap-x-4 gap-y-8 md:(grid-cols-4)">
   {%- for item in collections.shops %}
   <li>
-    <p class="mb-1 pb-px border-(b black/10) font-bold">{{ item.data.title }}</p>
+    <p class="mb-2 pb-2 border-(b gray-600/25) font-bold">{{ item.data.title }}</p>
     <ul class="m-0 text-sm space-y-1">
       {%- for sub in item.data.shop_types %}
       <li>
@@ -44,26 +47,26 @@ Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton?
   {%- endfor %}
 </ul>
 
-<hr class="mb-12 invisible" />
-<h2>Shop Levels</h2>
+<h2 class="heading mb-6">Shop Levels</h2>
 
 {{ alert.x('Before you start freaking out...',sub='The following information is ONLY valid if you follow the map placement and event order from the walkthrough on this site!') }}
 
-<ul class="m-0">
+<ul class="space-y-12">
   {%- for item in collections.shops_lvl %}
   <li id="shop-{{ item.data.page.fileSlug }}">
-    <div class="mb-12 lg:(flex)">
+    <div class="lg:(flex)">
       <div class="lg:(w-1/3)">
         {%- call heading.x(tag='h2',sub=item.data.location,border=false) %}
           {{ item.data.title }}
         {%- endcall %}
       </div>
-      <ul class="m-0 flex-1 lg:(ml-2)">
+      <ul class="flex-1 space-y-2 lg:(ml-2)">
         <li>
-          <h3 class="m-0 py-1 text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex items-center">
+          <p class="pb-2 text-xs text-gray-900 tracking-wider font-bold uppercase flex items-center">
             <span>Material</span>
             <span class="ml-auto">Price</span>
-          </h3>
+          </p>
+          <hr />
         </li>
         {%- for mat in item.data.materials %}
         {{ mats(label=mat.material,data=mat.cost) }}

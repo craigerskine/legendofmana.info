@@ -31,10 +31,12 @@ module.exports = function(eleventyConfig) {
     //filter: 'news', // includes
   });
   
-  //{% renderTemplate "md" %}
+  //{% renderTemplate 'md' %}
   //# Blah{.text-center}
   //{% endrenderTemplate %}
-  let markdownLibrary = mdIt().use(mdSpans).use(mdFoot).use(mdAttrs);
+  let markdownLibrary = mdIt({
+    html: true
+  }).disable('code').use(mdSpans).use(mdFoot).use(mdAttrs);
   eleventyConfig.setLibrary('md', markdownLibrary);
 
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
