@@ -37,8 +37,7 @@ eleventyComputed:
 
 <p class="mb-10">The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take effect immediately after your pet levels up.</p>
 
-<div class="pb-12" x-data="{ legend: false }">
-
+  {# <div class="pb-12" x-data="{ legend: false }">
     <p class="text-sm leading-none">
       {%- call btn.x(tag='button',click='legend = !legend') %}
         <span class="w-full flex items-center justify-center">
@@ -47,7 +46,6 @@ eleventyComputed:
         </span>
       {%- endcall %}
     </p>
-
     <div x-show="legend" x-collapse>
       <div class="py-4 grid-(& cols-1) gap-4 md:(grid-cols-2)">
         <div>
@@ -68,7 +66,7 @@ eleventyComputed:
         </div>
       </div>
     </div>
-  </div>
+  </div> #}
 
 {%- for category, items in collections.produce | groupby('data.color') %}
   {%- if category === page.fileSlug %}
@@ -118,3 +116,26 @@ eleventyComputed:
   {%- endfor %}
   {%- endif %}
 {% endfor %}
+
+{% setblock 'aside' %}
+<section>
+  {%- call heading.x(tag='h2',sub='Legend',img='/_assets/img/encyclopedias/en-events.png') %}
+    Stats
+  {%- endcall %}
+  <ul class="mt-2">
+    {%- for item in legend.pets.stats %}
+    {{ legnd(label=item.title,desc=item.desc) }}
+    {%- endfor %}
+  </ul>
+</section>
+<section>
+  {%- call heading.x(tag='h2',sub='Legend',img='/_assets/img/encyclopedias/en-events.png') %}
+    Personality
+  {%- endcall %}
+  <ul class="mt-2">
+    {%- for item in legend.pets.personality %}
+    {{ legnd(label=item.title,desc=item.desc) }}
+    {%- endfor %}
+  </ul>
+</section>
+{% endsetblock %}
