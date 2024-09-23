@@ -1,12 +1,12 @@
 {%- macro x(heading='h3',label='',sub='',img=false,index='') %}
-  <li class="pt-0 pb-12 flex-(& col) relative md:(flex-row)">
+  <li class="[&:not(:last-child)]:(mb-12 border-(b black/10)) pt-0 pb-12 flex-(& col) relative md:([&:not(:last-child)]:(mb-0 border-0) flex-row)">
     <div class="md:(flex-(& none col))">
       {%- if img %}
       <div class="w-[48px] h-[48px] bg-pri-900/30 flex items-center justify-center rounded shadow-inner overflow-hidden md:(flex-none)"><img src="{{ img }}" alt="{{ label }} sprite icon" /></div>
       {%- else %}
       <b class="w-[48px] h-[48px] text-(xl pri-300) bg-pri-900 flex-(& none) items-center justify-center rounded-full">{{ index.index }}</b>
       {%- endif %}
-      <div class="w-[48px] flex-(& 1) justify-center md:(w-full)">
+      <div class="w-[48px] hidden md:(w-full flex-(& 1) justify-center)">
         <span class="sr-only">{{ label }}</span>
         {%- if index.last %}{% else %}<b class="w-px h-8 bg-gradient-to-b from-black via-black opacity-10 md:(h-full)" aria-hidden="true"></b>{%- endif %}
       </div>
