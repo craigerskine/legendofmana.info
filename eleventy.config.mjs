@@ -1,16 +1,16 @@
-const CleanCSS = require('clean-css');
-const { EleventyRenderPlugin } = require('@11ty/eleventy');
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const esbuild = require('esbuild');
-const mdAttrs = require('markdown-it-attrs');
-const mdFoot = require('markdown-it-footnote');
-const mdIt = require('markdown-it');
-const mdSpans = require('markdown-it-bracketed-spans');
-const recentChanges = require('eleventy-plugin-recent-changes');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const yaml = require('js-yaml');
+import CleanCSS from 'clean-css';
+import { EleventyRenderPlugin } from '@11ty/eleventy';
+import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import esbuild from 'esbuild';
+import mdAttrs from 'markdown-it-attrs';
+import mdFoot from 'markdown-it-footnote';
+import mdIt from 'markdown-it';
+import mdSpans from 'markdown-it-bracketed-spans';
+import recentChanges from 'eleventy-plugin-recent-changes';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import yaml from 'js-yaml';
 
-module.exports = function(eleventyConfig) {
+export default function (eleventyConfig) {
 
   eleventyConfig.setServerOptions({
     domdiff: false,
@@ -25,7 +25,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget('./_site/_app/_app.js');
-  
+
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(recentChanges, {
@@ -33,7 +33,7 @@ module.exports = function(eleventyConfig) {
     //filter: 'news', // includes
   });
   eleventyConfig.addPlugin(syntaxHighlight);
-  
+
   //{% renderTemplate 'md' %}
   //# Blah{.text-center}
   //{% endrenderTemplate %}
@@ -72,7 +72,7 @@ module.exports = function(eleventyConfig) {
     const options = {month: '2-digit', day: '2-digit', year: 'numeric', timeZone: 'UTC'};
     return theDate.toLocaleDateString(locale, options);
   });
-  
+
   // | randomLimit(6, page.url)
   eleventyConfig.addFilter('randomLimit', (arr, limit, currPage) => {
     const pageArr = arr.filter((page) => page.url !== currPage);
@@ -86,7 +86,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('pluck', function (arr, value, attr) {
     return arr.filter((item) => item[attr] === value);
   });
-  
+
   // for item in (items | flatMap('category') | unique('category'))
   eleventyConfig.addFilter('flatMap', (list, key) => list.flatMap((x) => x[key]));
   eleventyConfig.addFilter('unique', (list, key) => {
