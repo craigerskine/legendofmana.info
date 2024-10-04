@@ -76,6 +76,8 @@ injectGlobal`
     [x-cloak] { @apply hidden; }
     hr { @apply border-gray-600/25; }
     pre > code { @apply !bg-transparent !leading-[21px]; }
+    .group-set { @apply py-2 px-4 bg-pri-500/30 space-y-5 rounded-lg; }
+    .legend { @apply w-fit -mt-6 py-1 px-3 bg-pri-700 text-(white lg) leading-[24px] font-bold rounded-md; }
     .prose {
       @apply
         !max-w-none
