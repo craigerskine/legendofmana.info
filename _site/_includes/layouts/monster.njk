@@ -54,7 +54,7 @@ eleventyComputed:
         </ul>
         <div>
           {%- call sectionTitle() %}Initial Stats{%- endcall %}
-          <ul class="-mx-4 text-sm grid-(& cols-4)">
+          <ul class="-mx-4 -mb-2 text-sm grid-(& cols-4) [&>li]:(border-(t-2 r-2 dashed black/20)) [&>li:nth-child(4),&>li:nth-child(8)]:(border-r-0)">
             {%- for key, value in item.data.pet_stats %}
             {%- set statFull %}
               {%- if key === 'Pow' -%}Power
@@ -67,7 +67,7 @@ eleventyComputed:
               {%- elseif key === 'Lck' -%}Luck
               {%- endif -%}
             {%- endset %}
-            <li class="py-1.5 px-4{% if loop.index > 4 %} border-(t pri-500){% endif %}"><strong class="text-xs uppercase block" title="{{ statFull }}">{{ key }}</strong> {{ value }}</li>
+            <li class="py-1.5 px-4"><strong class="text-xs uppercase block" title="{{ statFull }}">{{ key }}</strong> {{ value }}</li>
             {%- endfor %}
           </ul>
         </div>
