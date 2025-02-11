@@ -27,8 +27,7 @@ install({
         sec: theme('colors.sky'),
       }),
       fontFamily: ({ theme }) => ({
-        serif: ['"Source Serif 4"', ...theme('fontFamily.serif')],
-        heading: ['"Averia Serif Libre"', ...theme('fontFamily.serif')],
+        heading: ['Fraunces', ...theme('fontFamily.serif')],
       }),
       spacing: {
         '50': '50px',
@@ -82,9 +81,9 @@ injectGlobal`
       @apply
         !max-w-none
         prose-a:(text-gray-900 font-bold hover:(text-gray-700 no-underline))
-        prose-headings:(font-heading)
+        prose-headings:(font-heading font-black)
         prose-ul:(list-circle)
-        prose-li:([&::marker]:(text-gray-600/70))
+        prose-li:([&::marker]:(text-gray-600/70 [font-variant-numeric:tabular-nums]))
         prose-hr:(border-gray-600/25)
         prose-em:(text-gray-900 font-bold)
         prose-pre:(max-w-[768px] lg:(max-w-[650px]))
@@ -95,8 +94,8 @@ injectGlobal`
       @apply
         text-(gray-800 2xl)
         leading-normal
+        tracking-tight
         font-(bold heading)
-        uppercase
         flex
         items-center
         gap-3

@@ -40,8 +40,15 @@ Rename the downloaded `Legend of Mana (USA).mcr` to the same name as your **.cue
 
 ## __PSP / PS Vita / PSTV__ { .heading }
 
-This is a tricky one as you need to convert the .mcr to .vmp. The *easiest way* to do that is with [vita-mcr2vmp](https://github.com/dots-tb/vita-mcr2vmp).
-The _hardest way_ is with CFW **and** a PSP plugin called [CWCheat](http://google.com/search?q=psp+cwcheat).
+This is a tricky one as you need to convert the .mcr to .vmp.
+
+### Easy
+
+Use [vita-mcr2vmp](https://github.com/dots-tb/vita-mcr2vmp).
+
+### Difficult
+
+CFW **and** a PSP plugin called [CWCheat](http://google.com/search?q=psp+cwcheat).
 
 1. Rename the `Legend of Mana (USA).mcr` to `SLUS_01013-0.mcr`.
 2. Upload/copy the save file to your memory card at `/seplugins/cwcheat/mc/` (on Vita this is located in `ux0:pspemu`).
