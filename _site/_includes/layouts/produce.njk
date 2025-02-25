@@ -73,7 +73,7 @@ eleventyComputed:
   {%- for item in items %}
   <section class="produce scroll-mt-4 md:(grid-(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
     <div>
-      {%- call heading.x(tag='h2',sub=category,img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
+      {%- call heading.x(tag='h2',sub=category | title,img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
       {{ item.data.title }}
       {%- endcall %}
     </div>
