@@ -6,7 +6,7 @@
         <strong>{{ label }}</strong>
         <small class="font-normal flex items-center gap-1 opacity-90">
           {%- if sub %}
-          {% if tag %}<iconify-icon icon="mdi:pound" class="opacity-50" title="{{ sub }} story arc"></iconify-icon>{% endif %} {{ sub }}
+          {% if tag %}<iconify-icon icon="mdi:pound" class="opacity-50" title="{{ sub }} story arc" noobserver></iconify-icon>{% endif %} {{ sub }}
           {%- else %}
           <i class="inline-block opacity-25" aria-hidden="true">~~~</i>
           {%- endif %}

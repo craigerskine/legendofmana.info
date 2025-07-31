@@ -23,7 +23,7 @@ eleventyComputed:
   <p class="flex-none">{{ label }}</p>
   <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
   <i class="text-base not-italic flex-none" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
-    {%- if arrow %}<iconify-icon icon="mdi:{%- if data.substring(0, 1) === '-' %}minus{% else %}plus-circle-outline{%- endif %}" inline="false" class="mr-1 text-lg"></iconify-icon>{%- endif %}
+    {%- if arrow %}<iconify-icon icon="mdi:{%- if data.substring(0, 1) === '-' %}minus{% else %}plus-circle-outline{%- endif %}" inline="false" class="mr-1 text-lg" noobserver></iconify-icon>{%- endif %}
     {%- if arrow %}{{ data.slice(1) | safe }}{%- else %}{{ data | safe }}{%- endif %}
   </i>
 </dd>
@@ -41,7 +41,7 @@ eleventyComputed:
     <p class="text-sm leading-none">
       {%- call btn.x(tag='button',click='legend = !legend') %}
         <span class="w-full flex items-center justify-center">
-          <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="mdi:chevron-right" class="text-lg"></iconify-icon></b>
+          <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="mdi:chevron-right" class="text-lg" noobserver></iconify-icon></b>
           <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
         </span>
       {%- endcall %}

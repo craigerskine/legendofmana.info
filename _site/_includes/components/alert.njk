@@ -1,7 +1,7 @@
 {%- macro x(label,sub='',url='',ico='mdi:chat-processing') %}
   <p class="mb-16 bg-pri-800/10 flex overflow-hidden rounded">
     <b class="py-3 px-5 bg-pri-800/25 flex items-center">
-      <iconify-icon icon="{{ ico }}" class="text-(pri-200 4xl) motion-safe:(animate-wiggle)" title="{{ label }}"></iconify-icon>
+      <iconify-icon icon="{{ ico }}" class="text-(pri-200 4xl) motion-safe:(animate-wiggle)" title="{{ label }}" noobserver></iconify-icon>
     </b>
     <span class="py-3 px-5 flex-1 self-center">
       {%- if url !== '' %}<a href="{{ url }}">{%- endif %}
