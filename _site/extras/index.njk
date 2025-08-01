@@ -7,7 +7,7 @@ eleventyNavigation:
   order: 3
 ---
 
-{%- import 'components/heading.njk' as heading %}
+{%- from 'components/heading.njk' import heading %}
 
 {%- macro download(label='',file='',img='') %}
   <div class="text-center">

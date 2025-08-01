@@ -10,15 +10,15 @@ eleventyNavigation:
 permalink: 'walkthrough/events/'
 ---
 
-{%- import 'components/alert.njk' as alert %}
-{%- import 'components/list-ol.njk' as list %}
+{%- from 'components/alert.njk' import alert %}
+{%- from 'components/list-ol.njk' import list %}
 
 <h2 class="heading mb-6">Event Order</h2>
 
-{{ alert.x(label='Story Arcs',sub='The preceding icon designates a story arc. Some story arcs must be completed in order to trigger the final quest, which lets you finish the game.',ico='mdi:pound') }}
+{{ alert(label='Story Arcs',sub='The preceding icon designates a story arc. Some story arcs must be completed in order to trigger the final quest, which lets you finish the game.',ico='mdi:pound') }}
 
 <ul class="ml-0 mb-10 text-xs grid-(& flow-row cols-1) gap-y-10 gap-x-5 md:(mb-0 text-base grid-cols-2)">
   {%- for item in collections.events %}
-  {{ list.x(label=item.data.title,sub=item.data.story_arc,badge=loop.index,url='/walkthrough/events/'+item.data.page.fileSlug,tag=true) }}
+  {{ list(label=item.data.title,sub=item.data.story_arc,badge=loop.index,url='/walkthrough/events/'+item.data.page.fileSlug,tag=true) }}
   {%- endfor %}
 </ul>

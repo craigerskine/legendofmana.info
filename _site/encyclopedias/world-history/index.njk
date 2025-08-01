@@ -9,11 +9,11 @@ eleventyNavigation:
   order: 8
 ---
 
-{%- import 'components/timeline.njk' as timeline %}
+{%- from 'components/timeline.njk' import timeline %}
 
 <ul class="list-none">
   {%- for item in collections.world_history %}
-  {%- call timeline.x(heading='h2',label=item.data.title,sub='History',index=loop) %}
+  {%- call timeline(heading='h2',label=item.data.title,sub='History',index=loop) %}
   {{ item.templateContent | safe }}
   {%- endcall %}
   {%- endfor %}

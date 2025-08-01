@@ -5,8 +5,8 @@ eleventyComputed:
   title: '{{ title }} - Produce'
 ---
 
-{%- import 'components/heading.njk' as heading %}
-{%- import 'components/btn.njk' as btn %}
+{%- from 'components/heading.njk' import heading %}
+{%- from 'components/btn.njk' import btn %}
 
 {%- macro legnd(label='',desc='') %}
 <li class="mb-2 pb-2 border-(b black/10) text-sm leading-tight flex items-center">
@@ -39,7 +39,7 @@ eleventyComputed:
 
   {# <div class="pb-12" x-data="{ legend: false }">
     <p class="text-sm leading-none">
-      {%- call btn.x(tag='button',click='legend = !legend') %}
+      {%- call btn(tag='button',click='legend = !legend') %}
         <span class="w-full flex items-center justify-center">
           <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="mdi:chevron-right" class="text-lg" noobserver></iconify-icon></b>
           <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
@@ -73,7 +73,7 @@ eleventyComputed:
   {%- for item in items %}
   <section class="produce scroll-mt-4 md:(grid-(& cols-2) gap-8)" id="produce-{{ item.data.page.fileSlug }}">
     <div>
-      {%- call heading.x(tag='h2',sub=category | title,img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
+      {%- call heading(tag='h2',sub=category | title,img='/_assets/img/encyclopedias/produce/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
       {{ item.data.title }}
       {%- endcall %}
     </div>
@@ -119,7 +119,7 @@ eleventyComputed:
 
 {% setblock 'aside' %}
 <section>
-  {%- call heading.x(tag='h2',sub='Legend',img='/_assets/img/encyclopedias/en-events.png') %}
+  {%- call heading(tag='h2',sub='Legend',img='/_assets/img/encyclopedias/en-events.png') %}
     Stats
   {%- endcall %}
   <ul class="mt-2">
@@ -129,7 +129,7 @@ eleventyComputed:
   </ul>
 </section>
 <section>
-  {%- call heading.x(tag='h2',sub='Legend',img='/_assets/img/encyclopedias/en-events.png') %}
+  {%- call heading(tag='h2',sub='Legend',img='/_assets/img/encyclopedias/en-events.png') %}
     Personality
   {%- endcall %}
   <ul class="mt-2">

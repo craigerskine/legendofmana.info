@@ -10,15 +10,15 @@ eleventyNavigation:
   order: 7
 ---
 
-{%- import 'components/heading.njk' as heading %}
-{%- import 'components/alert.njk' as alert %}
+{%- from 'components/heading.njk' import heading %}
+{%- from 'components/alert.njk' import alert %}
 
-{{ alert.x('Mana Forge',sub='The best place to build and test your own recipes.',url='https://forge.grendel.fr/',ico='mdi:hammer-wrench') }}
+{{ alert('Mana Forge',sub='The best place to build and test your own recipes.',url='https://forge.grendel.fr/',ico='mdi:hammer-wrench') }}
 
 {%- for item in collections.recipes %}
 <section class="pb-12 lg:(grid-(& flow-row cols-2) gap-x-4)">
   <div>
-    {%- call heading.x(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
+    {%- call heading(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
       {{ item.data.title }}
     {%- endcall %}
   </div>

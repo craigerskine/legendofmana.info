@@ -9,7 +9,7 @@ eleventyNavigation:
   order: 1
 ---
 
-{%- import 'components/btn.njk' as btn %}
+{%- from 'components/btn.njk' import btn %}
 
 <div class="prose">
 {% renderTemplate 'md' %}
@@ -68,7 +68,7 @@ When you are finished setting everything up and exploring, talk to the Sprouting
 {% endrenderTemplate %}
 <div class="text-center">
   <p class="inline-flex">
-    {%- call btn.x(url="/walkthrough/events/niccolos-business-unusual/",sub='') %}
+    {%- call btn(url="/walkthrough/events/niccolos-business-unusual/",sub='') %}
       First Event
     {%- endcall %}
   </p>

@@ -9,14 +9,14 @@ eleventyNavigation:
   order: 2
 ---
 
-{%- import 'components/heading.njk' as heading %}
+{%- from 'components/heading.njk' import heading %}
 
 {%- set colors = collections.color -%}
 
 <ul class="ml-0 md:(grid-(& cols-2) gap-x-4)">
   {% for color in colors %}
   <li class="pb-8">
-    {%- call heading.x(tag='h2',sub=color.data.seed +' seed',url='/encyclopedias/produce/'+ color.data.page.fileSlug +'/',img=color.data.img) %}
+    {%- call heading(tag='h2',sub=color.data.seed +' seed',url='/encyclopedias/produce/'+ color.data.page.fileSlug +'/',img=color.data.img) %}
       {{ color.data.title | replace(' - Produce', '') }}
     {%- endcall %}
     <ul class="m-0 -mt-2 ml-14 pb-4 pl-1">

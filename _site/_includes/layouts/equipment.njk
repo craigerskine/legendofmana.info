@@ -5,8 +5,8 @@ eleventyComputed:
   category: '{{ tags[0] }}'
 ---
 
-{%- import 'components/heading.njk' as heading %}
-{%- import 'components/timeline.njk' as timeline %}
+{%- from 'components/heading.njk' import heading %}
+{%- from 'components/timeline.njk' import timeline %}
 
 {%- macro list(info='') %}
   <li class="mb-1 py-1 flex">
@@ -37,7 +37,7 @@ eleventyComputed:
 {%- for item in items %}
   {%- set sub %}{{ title | replace(' - Equipment', ' '+ category) }}{%- endset %}
   <ul class="scroll-mt-4" id="{{ tags | join }}-{{ item.title | slugify }}">
-  {%- call timeline.x(heading='h2',label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
+  {%- call timeline(heading='h2',label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
     <ul class="equip-stats text-sm">
       {%- call list(info=item.base) %}Material:{%- endcall %}
       {%- call list(info=item.power) %}{%- if (tags | join) == 'weapons' %}Strength:{%- else %}Defense:{%- endif %}{%- endcall %}
