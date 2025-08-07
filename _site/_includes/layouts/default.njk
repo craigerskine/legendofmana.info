@@ -71,7 +71,7 @@
           <div class="container mx-auto pt-4 px-0 lg:(pt-16 px-4){% if page.url === '/' %} pb-48 text-center lg:(text-left){% else %} pb-32{% endif %}">
             {%- if page.url !== '/' %}
             {%- if title !== '404' %}
-            <h1 class="m-0 pt-4 px-2 text-xl font-headingracking-tight flex items-center justify-center relative z-50 sm:(text-4xl) lg:(pt-0 justify-start)">
+            <h1 class="m-0 pt-4 px-2 text-xl font-heading tracking-tight flex items-center justify-center relative z-50 sm:(text-4xl) lg:(pt-0 justify-start)">
               <img src="/_assets/img/ltr/{{ title.substring(0, 1) | lower }}.png" alt="The letter {{ title.substring(0, 1) }}" class="mr-1" aria-hidden="true" />
               <i class="sr-only">{{ title.substring(0, 1) }}</i>
               <span class="relative">
@@ -205,7 +205,7 @@
             </div>
             <div class="foot-info mx-auto px-4 max-w-md text-xs text-center leading-relaxed space-y-7 md:(mx-0 w-1/4 max-w-full text-right)">
               <p class="foot-copy mt-6 pt-6 border-(t pri-500/50) md:mt-0 md:pt-0 md:border-0">Legend of Mana game media and intellectual property &copy; Square Enix.</p>
-              <p class="foot-credit">
+              <p class="foot-credit text-wrap-balance">
                 This site was lovingly designed and hand-coded by
                   {{ footerLink('Craig Erskine',url='https://craigerskine.com') }}
               </p>

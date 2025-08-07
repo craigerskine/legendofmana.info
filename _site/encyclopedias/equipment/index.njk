@@ -24,7 +24,7 @@ eleventyNavigation:
       {%- for weapon in item.data.items %}
       <li>
         <a href="/encyclopedias/equipment/{{ item.data.page.fileSlug }}/#weapons-{{ weapon.title | slugify }}" class="font-normal inline-flex items-center hover:(underline)">
-          <img src="/_assets/img/li.png" alt="Swirl" class="mr-2" aria-hidden="true" />
+          <iconify-icon icon="game-icons:swirl-string" class="iconify mr-2 text-xs opacity-25" noobserver></iconify-icon>
           {{ weapon.title }}
         </a>
       </li>
@@ -34,7 +34,7 @@ eleventyNavigation:
   {%- endfor %}
 </ul>
 
-<h2>Armor</h2>
+<h2 class="heading">Armor</h2>
 
 <ul class="mt-16 md:(grid-(& cols-2) gap-x-4)">
   {%- for item in collections.armor %}
@@ -46,7 +46,7 @@ eleventyNavigation:
       {%- for armor in item.data.items %}
       <li>
         <a href="/encyclopedias/equipment/{{ item.data.page.fileSlug }}/#armor-{{ armor.title | slugify }}" class="font-normal inline-flex items-center hover:(underline)">
-          <img src="/_assets/img/li.png" alt="Swirl" class="mr-2" aria-hidden="true" />
+          <iconify-icon icon="game-icons:swirl-string" class="iconify mr-2 text-xs opacity-25" noobserver></iconify-icon>
           {{ armor.title }}
         </a>
       </li>

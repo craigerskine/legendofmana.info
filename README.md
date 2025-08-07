@@ -23,7 +23,7 @@ $ npm install
 # start a local hot version of the site
 $ npm start
 ```
-4. Open http://localhost:8080 in your browser of choice
+4. Open [http://localhost:8080](http://localhost:8080) in your browser of choice
 5. Start editing the local files in your editor of choice and watch in amazement as your browser hot reloads your saved changes
 
 All data, markup, components, layouts, scripts, files, and images are in the `_site` folder. The site will deploy locally to a `public` folder. Theoretically you could upload that folder to any web host since it's just static HTML.

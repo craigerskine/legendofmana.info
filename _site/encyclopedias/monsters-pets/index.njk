@@ -26,7 +26,7 @@ eleventyNavigation:
         {%- for item in items %}
         <li>
           <a href="/encyclopedias/monsters-pets/{{ item.data.type.toLowerCase() }}/#monster-{{ item.data.page.fileSlug }}" class="font-normal inline-flex items-center hover:(underline)">
-            <img src="/_assets/img/li.png" alt="Swirl" class="mr-2" aria-hidden="true" />
+            <iconify-icon icon="game-icons:swirl-string" class="iconify mr-2 text-xs opacity-25" noobserver></iconify-icon>
             {{ item.data.title }}
           </a>
         </li>
