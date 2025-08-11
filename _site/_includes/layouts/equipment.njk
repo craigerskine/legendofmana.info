@@ -9,10 +9,10 @@ eleventyComputed:
 {%- from 'components/timeline.njk' import timeline %}
 
 {%- macro list(info='') %}
-  <li class="mb-1 py-1 flex">
-    <strong class="text-xs text-black leading-relaxed tracking-wider font-bold uppercase flex-none">{{ caller() }}</strong>
-    <b class="mt-2.5 mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
-    <p class="w-full max-w-[50%]">
+  <li class="mb-1 py-1 flex gap-4">
+    <strong class="text-(black xs) leading-relaxed tracking-wider font-bold uppercase shrink-0">{{ caller() }}</strong>
+    <b class="mt-2.5 h-px bg-gray-600/25 flex-1 grow" aria-hidden="true"></b>
+    <p class="ml-auto max-w-[150px] text-end shrink-0">
       {%- if info.monster %}
         {%- for item in info.monster %}
           {% set last = loop.last %}

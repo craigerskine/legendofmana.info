@@ -14,12 +14,12 @@ eleventyNavigation:
 
 {%- macro ability(label,alt=false,reqs=false) %}
 <li class="mb-1 py-1 px-2 flex items-center gap-2">
-  <strong class="flex-none">
+  <strong class="shrink-0">
     {{ label }}
     {%- if alt %}<sup class="ml-1 font-normal italic">({{ alt }})</sup>{%- endif %}
   </strong>
   {%- if reqs %}
-  <hr class="flex-1" aria-hidden="true" />
+  <b class="h-px bg-gray-600/25 grow" aria-hidden="true"></b>
   <small class="ml-auto">
     {%- for req in reqs %}
     {{ req }}{% if loop.last %}{% else %},{% endif %}

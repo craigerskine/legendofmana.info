@@ -19,9 +19,9 @@ eleventyComputed:
 {%- endmacro %}
 
 {%- macro dd(label='',data='',arrow=false) %}
-<dd class="py-1 pl-2 text-sm flex items-center{%- if data.substring(0, 1) === '-' %} text-red-900{% else %} text-pri-900{%- endif %}">
-  <p class="flex-none">{{ label }}</p>
-  <b class="mx-4 h-px text-black bg-current flex-1 opacity-10" aria-hidden="true"></b>
+<dd class="py-1 pl-2 text-sm flex items-center gap-4{%- if data.substring(0, 1) === '-' %} text-red-900{% else %} text-pri-900{%- endif %}">
+  <p class="shrink-0">{{ label }}</p>
+  <b class="h-px bg-gray-600/25 grow" aria-hidden="true"></b>
   <i class="text-xs not-italic font-mono shrink-0 flex items-center" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
     {%- if arrow %}<iconify-icon icon="mdi:{%- if data.substring(0, 1) === '-' %}minus{% else %}plus-circle-outline{%- endif %}" class="mr-1 text-lg" noobserver></iconify-icon>{%- endif %}
     <span>{%- if arrow %}{{ data.slice(1) | safe }}{%- else %}{{ data | safe }}{%- endif %}</span>
