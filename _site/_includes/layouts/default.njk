@@ -234,7 +234,9 @@
                   </li>
                   {%- endfor %}
                 </ul>
-                <p class="foot-updated pt-6 text-xs">Updated on <a href="/changes/" class="text-pri-400 motion-safe:(transition) hover:(text-white underline)"><time datetime="{{ _utils.date.raw }}">{{ _utils.date.formatted }}</time></a></p>
+                <p class="foot-updated pt-6 text-xs">Updated on <a href="/changes/" class="text-pri-400 motion-safe:(transition) hover:(text-white underline)">
+                  <time datetime="{% build 'raw' %}">{% build %}</time>
+                </a></p>
               </div>
             </div>
           </div>
