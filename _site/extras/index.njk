@@ -22,7 +22,8 @@ eleventyNavigation:
   </div>
 {%- endmacro %}
 
-<ul class="mb-6 grid-(& cols-1) gap-5 md:(grid-cols-3)">
+{%- setblock 'aside' %}
+<ul class="mx-auto mb-6 w-full max-w-xs grid-(& cols-1) gap-5">
   {%- for item in collections.extras %}
   <li>
     <h2 class="heading text-lg">{{ item.data.title }}</h2>
@@ -31,6 +32,7 @@ eleventyNavigation:
   </li>
   {%- endfor %}
 </ul>
+{%- endsetblock %}
 
 {%- for item in collections.extras %}
 {%- if loop.last %}
