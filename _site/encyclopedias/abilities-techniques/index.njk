@@ -56,34 +56,34 @@ eleventyNavigation:
 
 <h2 class="heading mb-6">ST Techniques</h2>
 
-<ul>
-  {%- for item in collections.techs %}
-  <li id="technique-{{ item.data.page.fileSlug }}">
-    <div class="mb-12 lg:(flex)">
-      <div class="lg:(w-1/3)">
-        {%- call heading(tag='h3',sub='ST Technique',img='/_assets/img/encyclopedias/weapons/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
+<div class="space-y-5">
+{%- for item in collections.techs %}
+    <details id="technique-{{ item.data.page.fileSlug }}" class="[interpolate-size:allow-keywords] [&::details-content]:([block-size:0] overflow-hidden motion-safe:(transition-all [transition-behavior:allow-discrete])) [&[open]::details-content]:[block-size:auto] [&[open]_summary]:(bg-black/5 after:(rotate-[135deg]))">
+      <summary class="p-1 pr-3 flex items-center select-none cursor-pointer rounded transition hover:bg-black/5 after:(ml-auto w-3 h-3 border-(t-2 r-2 current) block opacity-50 rotate-45 transition) [&::marker,&::-webkit-details-marker]:content-['']">
+        {%- call heading(tag='h3',spacing=false,sub='ST Technique',img='/_assets/img/encyclopedias/weapons/'+ item.data.page.fileSlug +'.png',alt=item.data.title,border=false) %}
           {{ item.data.title }}
         {%- endcall %}
+      </summary>
+      <div class="details-content pt-5">
+        <ul>
+          <li class="hidden sm:block">
+            <h4 class="mb-2 py-1 px-2 border-(b black/10) text-sm uppercase grid grid-cols-[auto_auto_1fr] items-center gap-x-1">
+              Technique <sup class="text-[75%]">Cost</sup> <span class="text-end">Requirement</span>
+            </h4>
+          </li>
+          {%- for tech in item.data.techniques %}
+          <li class="mb-1 py-1 px-2 grid grid-cols-[auto_auto_1fr] items-center gap-x-1 rounded{% if loop.index % 2 === 0 %} bg-pri-800/10{% endif %}">
+            <strong>{{ tech.title }}</strong>
+            <sup class="text-xs" title="Cost" aria-label="Cost">{{ tech.cost }}</sup>
+            <small class="col-span-3 sm:(text-end col-span-1)" title="Requirements" aria-label="Requirements">
+              {%- for req in tech.prerequisite %}
+              {{ req }}{% if loop.last %}{% else %},{% endif %}
+              {%- endfor %}
+            </small>
+          </li>
+          {%- endfor %}
+        </ul>
       </div>
-      <ul class="m-0 flex-1 lg:(ml-2)">
-        <li>
-          <h4 class="mb-2 py-1 px-2 border-(b black/10) font-bold text-xs uppercase hidden items-center lg:(flex)">
-            Technique <b class="mx-2 h-4 border-(l black/10)" aria-hidden="true"></b> Cost <small class="ml-auto text-xs">Requirement</small>
-          </h4>
-        </li>
-        {%- for tech in item.data.techniques %}
-        <li class="mb-1 py-1 px-2 flex-(& col) sm:(flex-row items-center justify-start) rounded{% if loop.index % 2 === 0 %} bg-pri-800/10{% endif %}">
-          <strong>{{ tech.title }}</strong>
-          <small class="mx-1.5 text-xs" title="Cost">{{ tech.cost }}</small>
-          <small class="sm:(ml-auto text-right)">
-            {%- for req in tech.prerequisite %}
-            {{ req }}{% if loop.last %}{% else %},{% endif %}
-            {%- endfor %}
-          </small>
-        </li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </li>
+    </details>
   {%- endfor %}
-</ul>
+</div>
