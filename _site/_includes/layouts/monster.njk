@@ -54,7 +54,7 @@ eleventyComputed:
         </ul>
         <div>
           {%- call sectionTitle() %}Initial Stats{%- endcall %}
-          <ul class="-mx-4 -mb-2 text-sm grid-(& cols-4) [&>li]:(border-(t-2 r-2 dashed black/20) relative before:(content-[''] border-(t-2 dashed white/25) pointer-events-none absolute inset-0)) [&>li:nth-child(4),&>li:nth-child(8)]:(border-r-0)">
+          <ul class="-mx-4 -mb-2 text-sm grid-(& cols-4) [&>li]:(border-(t-2 r-2 dashed gray-600/25) relative before:(content-[''] border-(t-2 dashed white/25) pointer-events-none absolute inset-0)) [&>li:nth-child(4),&>li:nth-child(8)]:(border-r-0)">
             {%- for key, value in item.data.pet_stats %}
             {%- set statFull %}
               {%- if key === 'Pow' -%}Power

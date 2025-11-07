@@ -12,4 +12,11 @@ eleventyNavigation:
   order: 1
 date: 0001-00-00
 ---
-The tree from Sword of Mana on the GBA(GameBoy Advance), modded by me... for you.
+
+### Info
+
+The infamous Sword of Mana marketing image for **GBA** (GameBoy Advance). It was heavily modded by me to make it less busy and more appropriate for wide-ish screens. { .text-wrap-balance }
+
+- **Size:** 156 kb
+- **Format:** JPG
+- **Dimensions:** 1680 &times; 1050 pixels

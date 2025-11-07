@@ -4,7 +4,7 @@ layout: 'layouts/default.njk'
 
 {%- macro eventNav(label='',sub='',url='') %}
 <a href="{{ url }}" class="group block relative">
-  <b class="mb-1 pb-1 border-(b black/10) text-xs font-normal uppercase block opacity-90 motion-safe:(transition) group-hover:(border-opacity-0)">{{ sub }}:</b>
+  <b class="mb-1 pb-1 border-(b gray-600/25) text-xs font-normal uppercase block opacity-90 motion-safe:(transition) group-hover:(border-opacity-0)">{{ sub }}:</b>
   {{ label }}
   <b class="h-px bg-current absolute -bottom-1 inset-x-0 opacity-0 transform scale-0 motion-safe:(transition) group-hover:(opacity-50 scale-100)" aria-hidden="true"></b>
 </a>
@@ -19,7 +19,7 @@ layout: 'layouts/default.njk'
 </div>
 
 {%- if nextPost %}
-<blockquote class="mt-16 mb-5 border-(l-[10px] t pri-100/25) px-5 py-2 space-x-4 bg-white/10 flex items-center relative rounded shadow-lg md:(py-5)">
+<blockquote class="mt-16 mb-5 border-(l-[10px] t gray-600/25) px-5 py-2 space-x-4 bg-white/10 flex items-center relative rounded shadow-lg md:(py-5)">
   <img src="/_assets/img/walkthrough/cactus.png" alt="Cactus sprite" class="motion-safe:(animate-wiggle)">
   <p class="m-0 flex-1">
     <strong>Upon Completion:</strong>
