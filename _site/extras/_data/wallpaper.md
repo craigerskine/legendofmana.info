@@ -6,8 +6,8 @@ file: /_assets/files/wall-swom-tree.jpg
 tags:
   - extras
 eleventyNavigation:
-  key: 'Wallpaper'
-  hash: /extras/#wall
+  key: Wallpaper
+  hash: /extras/#wallpaper
   parent: Extras
   order: 1
 date: 0001-00-00

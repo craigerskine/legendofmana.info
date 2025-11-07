@@ -23,7 +23,7 @@ eleventyNavigation:
 {%- endmacro -%}
 
 {%- for item in collections.extras %}
-<div class="{{ 'mb-8 pb-8 border-(b gray-600/25)' if not loop.last }} flex flex-col gap-8 lg:flex-row">
+<div id="{{ item.data.title | slugify }}" class="{{ 'mb-8 pb-8 border-(b gray-600/25)' if not loop.last }} flex flex-col gap-8 lg:flex-row">
   <aside class="shrink-0 lg:w-1/3">
     <div class="mx-auto max-w-xs sticky top-4">
       <h2 class="heading">{{ item.data.title }}</h2>
