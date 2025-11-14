@@ -26,7 +26,7 @@ US **PSX** version save file that can be used in emulators or on [real hardware]
 
 ### Usage { .heading }
 
-### [OpenEmu](http://openemu.org/)
+### [OpenEmu](https://openemu.org/)
 
 1. Start the game at least once so OpenEmu can create a blank memory card.
 2. Quit the game and quit OpenEmu.
@@ -40,7 +40,7 @@ US **PSX** version save file that can be used in emulators or on [real hardware]
 
 ***
 
-### [RetroArch](http://retroarch.com/) / [RetroPie](https://retropie.org.uk/)
+### [RetroArch](https://retroarch.com/) / [RetroPie](https://retropie.org.uk/)
 
 Rename the downloaded `Legend of Mana (USA).mcr` to the same name as your **.cue**, **.bin**, **.iso**, etc. and copy it to the same place (you may have to change the extension to **.srm** as required by the core being used). Depending on how you have RetroArch set up you may have to copy the file to `~/retroarch/saves/`
 
