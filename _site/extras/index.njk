@@ -13,9 +13,9 @@ eleventyNavigation:
   <div class="text-center">
     <a href="{{ file }}" class="group text-pri-300 inline-flex relative transition hover:(motion-safe:animate-waggle text-pri-50)" download title="Download {{ label }}" aria-label="Download {{ label }}">
       <div>
-        <img src="{{ img }}" alt="{{ label }} artwork" class="relative z-[-1] rounded shadow-md ring-(1 black/75)">
+        <img src="{{ img }}" alt="{{ label }} thumbnail" class="relative z-[-1] rounded shadow-md ring-(1 black/75)">
         <div class="p-4 w-16 bg-pri-900 text-3xl flex items-center justify-center absolute z-10 left-0 inset-y-0 motion-safe:(transition-all) group-hover:(w-full bg-pri-900/75 backdrop-blur-sm)">
-          <iconify-icon icon="mdi:download-box-outline" noobserver></iconify-icon>
+          <iconify-icon icon="mdi:download-box-outline" class="group-hover:animate-bounce" noobserver></iconify-icon>
         </div>
       </div>
     </a>
@@ -23,16 +23,16 @@ eleventyNavigation:
 {%- endmacro -%}
 
 {%- for item in collections.extras %}
-<div id="{{ item.data.title | slugify }}" class="{{ 'mb-8 pb-8 border-(b gray-600/25)' if not loop.last }} flex flex-col gap-8 lg:flex-row">
-  <aside class="shrink-0 lg:w-1/3">
-    <div class="mx-auto max-w-xs sticky top-4">
-      <h2 class="heading">{{ item.data.title }}</h2>
-      <p class="mb-4 pl-7 text-(gray-700 xs)">{{ item.data.sub }}</p>
-      {{ download(label=item.data.title,file=item.data.file,img=item.data.img) }}
+  <div id="{{ item.data.title | slugify }}" class="{{ 'mb-8 pb-8 border-(b gray-600/25)' if not loop.last }} flex flex-col gap-8 lg:flex-row">
+    <aside class="shrink-0 lg:w-1/3">
+      <div class="mx-auto max-w-xs sticky top-4">
+        <h2 class="heading">{{ item.data.title }}</h2>
+        <p class="mb-4 pl-7 text-(gray-700 xs)">{{ item.data.sub }}</p>
+        {{ download(label=item.data.title,file=item.data.file,img=item.data.img) }}
+      </div>
+    </aside>
+    <div class="prose grow lg:(pl-8 border-(l dashed gray-600/25))">
+      {{ item.templateContent | safe }}
     </div>
-  </aside>
-  <div class="prose grow lg:(pl-8 border-(l dashed gray-600/25))">
-    {{ item.templateContent | safe }}
   </div>
-</div>
 {%- endfor %}
