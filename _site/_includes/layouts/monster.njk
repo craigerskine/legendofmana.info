@@ -12,9 +12,9 @@ eleventyComputed:
 {%- endmacro -%}
 
 {%- macro dataItem(param) -%}
-<li class="flex items-center">
+<li class="flex items-center gap-x-px">
   <span class="{{ param.classes }} grow flex items-center gap-2 after:(h-px bg-gray-600/25 grow)" title="{{ param.attrTitle if param.attrTitle else '' }}">{{ caller() }}</span>
-  <span class="border-(1 gray-600/25) w-5 h-5 text-xs font-mono shrink-0 flex items-center justify-center rounded-full">{{ param.no }}</span>
+  <span class="border-(t white/30) ring-(1 gray-600/25) w-5 h-5 bg-white/20 text-xs font-mono shrink-0 flex items-center justify-center rounded-full shadow">{{ param.no }}</span>
 </li>
 {%- endmacro -%}
 
