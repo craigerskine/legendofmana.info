@@ -21,17 +21,19 @@ eleventyComputed:
     <div class="md:(grid-(& cols-2) gap-5)">
       <div class="monster group-set mb-10 md:(mb-0)">
         <h2 class="legend">Monster</h2>
-        {%- call sectionTitle() %}Locations{%- endcall %}
-        <ul>
-          {%- for loc in item.data.monster_locations %}
-          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
-          {%- endfor %}
-        </ul>
-        {%- call sectionTitle() %}Battle Drops{%- endcall %}
+        <div>
+          {%- call sectionTitle() %}Locations{%- endcall %}
+          <ul>
+            {%- for loc in item.data.monster_locations %}
+            <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {%- call sectionTitle() %}Battle Drops <i class="block text-xs leading-none font-normal opacity-60 normal-case">1 = most common; 8 = least common</i>{%- endcall %}
         <ol class="text-sm grid-(& flow-col rows-4) gap-1.5">
           {%- for drop in item.data.monster_drops %}
           <li class="flex items-center gap-1.5">
-            <small class="w-4 h-4 text-xs flex items-center justify-center opacity-60 ring-(1 current) rounded-full" aria-hidden="true">{{ loop.index }}</small>
+            <small class="w-4 h-4 text-xs font-mono flex items-center justify-center ring-(1 gray-600/25) rounded-full" aria-hidden="true">{{ loop.index }}</small>
             {{ drop }}
           </li>
           {%- endfor %}
@@ -40,21 +42,23 @@ eleventyComputed:
       {%- if item.data.page.fileSlug !== 'machine-golem' %}
       <div class="pet group-set">
         <h2 class="legend">Pet</h2>
-        {%- call sectionTitle() %}
-        {%- if page.fileSlug === 'demi-human' %}Location{% else %}Egg Locations{%- endif %}
-        {%- endcall %}
-        <ul>
-          {%- for loc in item.data.egg_locations %}
-          <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
-          {%- endfor %}
-        </ul>
-        <ul class="grid-(& cols-2)">
+        <div>
+          {%- call sectionTitle() %}
+          {%- if page.fileSlug === 'demi-human' %}Location{% else %}Egg Locations{%- endif %}
+          {%- endcall %}
+          <ul>
+            {%- for loc in item.data.egg_locations %}
+            <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
+            {%- endfor %}
+          </ul>
+        </div>
+        <ul class="grid-(& cols-2) gap-4">
           <li>{%- call sectionTitle() %}Sync{%- endcall %} <span class="text-sm">{{ item.data.syncro_effect }}</span></p>
           <li>{%- call sectionTitle() %}Sell{%- endcall %} <span class="text-sm">{{ item.data.sell_price }} <sup class="italic text-(xs black/50)" title="Lucre">$L</sup></span></p>
         </ul>
         <div>
-          {%- call sectionTitle() %}Initial Stats{%- endcall %}
-          <ul class="-mx-4 -mb-2 px-4 pb-4 text-sm grid-(& cols-2) gap-4 relative sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+          {%- call sectionTitle() %}Base Stats{%- endcall %}
+          <ul class="py-2 text-xs grid-(& cols-2) gap-y-2 gap-x-4 relative">
             {%- for key, value in item.data.pet_stats %}
             {%- set statFull %}
               {%- if key === 'Pow' -%}Power
@@ -67,9 +71,9 @@ eleventyComputed:
               {%- elseif key === 'Lck' -%}Luck
               {%- endif -%}
             {%- endset %}
-            <li class="py-1 bg-pri-900 text-white text-xs flex items-center justify-center gap-2 rounded-full">
-              <strong class="uppercase" title="{{ statFull }}">{{ key }}:</strong>
-              {{ value }}
+            <li class="flex items-center gap-1">
+              <b class="uppercase grow flex items-center gap-1 after:(h-px bg-gray-600/25 grow)" title="{{ statFull }}">{{ key }}:</b>
+              <span class="w-4 h-4 font-mono ring-(1 gray-600/25) shrink-0 flex items-center justify-center rounded-full">{{ value }}</span>
             </li>
             {%- endfor %}
           </ul>
