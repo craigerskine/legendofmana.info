@@ -7,9 +7,16 @@ eleventyComputed:
 
 {%- from 'components/heading.njk' import heading %}
 
-{%- macro sectionTitle() %}
+{%- macro sectionTitle() -%}
 <p class="mb-1 text-(sm gray-900) font-bold uppercase">{{ caller() }}</p>
-{%- endmacro %}
+{%- endmacro -%}
+
+{%- macro dataItem(param) -%}
+<li class="flex items-center">
+  <span class="{{ param.classes }} grow flex items-center gap-2 after:(h-px bg-gray-600/25 grow)" title="{{ param.attrTitle if param.attrTitle else '' }}">{{ caller() }}</span>
+  <span class="border-(1 gray-600/25) w-5 h-5 text-xs font-mono shrink-0 flex items-center justify-center rounded-full">{{ param.no }}</span>
+</li>
+{%- endmacro -%}
 
 {%- for category, items in collections.monsters_pets | groupby('data.type') %}
   {%- if category === page.fileSlug %}
@@ -29,15 +36,20 @@ eleventyComputed:
             {%- endfor %}
           </ul>
         </div>
-        {%- call sectionTitle() %}Battle Drops <i class="block text-xs leading-none font-normal opacity-60 normal-case">1 = most common; 8 = least common</i>{%- endcall %}
-        <ol class="text-sm grid-(& flow-col rows-4) gap-1.5">
-          {%- for drop in item.data.monster_drops %}
-          <li class="flex items-center gap-1.5">
-            <small class="w-4 h-4 text-xs font-mono flex items-center justify-center ring-(1 gray-600/25) rounded-full" aria-hidden="true">{{ loop.index }}</small>
-            {{ drop }}
-          </li>
-          {%- endfor %}
-        </ol>
+        <div>
+          {%- call sectionTitle() %}Battle Rewards <small class="text-xs font-normal normal-case leading-none block opacity-60">Drops/Loot/Crystals/Sacks</small>{%- endcall %}
+          <ol class="pt-2 text-sm grid-(& flow-col rows-4) gap-y-2 gap-x-4 relative">
+            {%- for drop in item.data.monster_drops %}
+              {%- call dataItem({
+                no: loop.index,
+                attrTitle: statFull
+              }) %}
+                {{ drop }}
+              {%- endcall %}
+            {%- endfor %}
+          </ol>
+        </div>
+        <p class="text-xs leading-none italic opacity-60"><b class="mx-px inline-block not-italic font-mono">1</b> is the most &amp; <b class="mx-px inline-block not-italic font-mono">8</b> is least common</p>
       </div>
       {%- if item.data.page.fileSlug !== 'machine-golem' %}
       <div class="pet group-set">
@@ -60,21 +72,24 @@ eleventyComputed:
           {%- call sectionTitle() %}Base Stats{%- endcall %}
           <ul class="py-2 text-xs grid-(& cols-2) gap-y-2 gap-x-4 relative">
             {%- for key, value in item.data.pet_stats %}
-            {%- set statFull %}
-              {%- if key === 'Pow' -%}Power
-              {%- elseif key === 'Skl' -%}Skill
-              {%- elseif key === 'Def' -%}Defense
-              {%- elseif key === 'Mgc' -%}Magic
-              {%- elseif key === 'HP' -%}Hit Points
-              {%- elseif key === 'Spr' -%}Spirit
-              {%- elseif key === 'Chm' -%}Charm
-              {%- elseif key === 'Lck' -%}Luck
-              {%- endif -%}
-            {%- endset %}
-            <li class="flex items-center gap-1">
-              <b class="uppercase grow flex items-center gap-1 after:(h-px bg-gray-600/25 grow)" title="{{ statFull }}">{{ key }}:</b>
-              <span class="w-4 h-4 font-mono ring-(1 gray-600/25) shrink-0 flex items-center justify-center rounded-full">{{ value }}</span>
-            </li>
+              {%- set statFull %}
+                {%- if key === 'Pow' -%}Power
+                {%- elseif key === 'Skl' -%}Skill
+                {%- elseif key === 'Def' -%}Defense
+                {%- elseif key === 'Mgc' -%}Magic
+                {%- elseif key === 'HP' -%}Hit Points
+                {%- elseif key === 'Spr' -%}Spirit
+                {%- elseif key === 'Chm' -%}Charm
+                {%- elseif key === 'Lck' -%}Luck
+                {%- endif -%}
+              {%- endset %}
+              {%- call dataItem({
+                no: value,
+                classes: 'uppercase',
+                attrTitle: statFull
+              }) %}
+                {{ key }}
+              {%- endcall %}
             {%- endfor %}
           </ul>
         </div>
