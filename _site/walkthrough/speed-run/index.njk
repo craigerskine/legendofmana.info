@@ -15,7 +15,7 @@ eleventyNavigation:
 <p>If you are doing a true speed run, choose the <em>2H Sword</em>. If you eventually want to get max stats on a New Game+, choose: <em>1H Sword</em>.</p>
 
 <p class="thumb float-right ml-4 mb-5">
-  <a href="#map-speedrun" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/speed-run/map.jpg', imgalt: 'Speed Run Start' })">
+  <a href="#map-speedrun" @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'walkthrough/speed-run/map.jpg', imgalt: 'Speed Run Start' })">
     <img src="/_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play Area" class="img-th" />
   </a>
 </p>

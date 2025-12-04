@@ -32,7 +32,7 @@ eleventyComputed:
           {%- call sectionTitle() %}Locations{%- endcall %}
           <ul>
             {%- for loc in item.data.monster_locations %}
-            <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
+            <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
             {%- endfor %}
           </ul>
         </div>
@@ -60,7 +60,7 @@ eleventyComputed:
           {%- endcall %}
           <ul>
             {%- for loc in item.data.egg_locations %}
-            <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="modal = !modal; $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
+            <li class="text-sm flex"><a href="#map-{{ loc | slugify }}" class="lb hover:underline" @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'walkthrough/maps/{{ loc | slugify }}.png', imgalt: '{{ loc }}' })"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mr-1 flex-none opacity-30" noobserver></iconify-icon> <span class="font-normal">{{ loc }}</span></a><div id="map-{{ loc | slugify }}" aria-hidden="true"></div></li>
             {%- endfor %}
           </ul>
         </div>

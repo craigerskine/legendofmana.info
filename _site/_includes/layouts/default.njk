@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-[#0A0D0A] antialiased motion-safe:(scroll-smooth)" x-data="{ modal: false, modal_img: 'x.gif', modal_imgalt: 'Alt', }" @modal.window="modal_img = $event.detail.img; modal_imgalt = $event.detail.imgalt;">
+<html lang="en" class="bg-[#0A0D0A] antialiased [&:has(:is(dialog[open]))]:(overflow-hidden [scrollbar-gutter:stable]) motion-safe:(scroll-smooth)" x-data="{ modal_img: 'x.gif', modal_imgalt: 'Alt', }" @modal.window="modal_img = $event.detail.img; modal_imgalt = $event.detail.imgalt;">
 
   <head>
     <meta charset="utf-8" />
@@ -39,7 +39,7 @@
 
   <body class="text-gray-800 font-serif !block" style="display: none;" data-instant-intensity="mousedown">
 
-    <div class="page min-h-screen flex-(& col)">
+    <div id="page" class="page min-h-screen flex-(& col)">
       <header class="w-full bg-sec-100 flex-none relative z-10 overflow-hidden">
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex-(& col) items-center lg:(py-4 flex-row space-x-8)">
@@ -84,7 +84,7 @@
             <ul class="mx-auto mb-0 px-4 inline-grid grid-(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
               {%- for item in mast %}
               <li{% if loop.first %} class="row-span-2"{% endif %}>
-                <a href="{{ item.url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none)"{% if loop.first %} @click.prevent="modal = !modal; $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
+                <a href="{{ item.url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none)"{% if loop.first %} @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
                   <div>
                     <img src="{{ item.img }}" alt="{{ item.title }}" class="relative z-[-1] ring-(1 pri-900) rounded shadow-md motion-safe:(transition) group-hover:(ring-4) group-focus:(ring-4)" />
                     <div class="py-px px-3 bg-pri-900 text-(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ item.title }}</div>
@@ -246,15 +246,45 @@
 
     <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('/_assets/img/chalk.png');"></div>
 
-    <div x-show="modal" x-trap.noscroll.inert="modal" x-on:keydown.window.prevent.escape="modal = false" class="modal p-4 bg-gray-900/80 flex justify-center items-center fixed inset-0 z-[9999]" x-transition:enter="ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" role="dialog">
-      <div class="relative shadow-lg" @click.outside="modal = false" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100">
-        <button type="button" @click="modal = false" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute -right-4 -top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="mdi:close" title="Close" noobserver></iconify-icon> <span class="sr-only">Close</span></button>
-        <div>
-          <img x-show="modal" :src="'/_assets/img/'+ modal_img" :alt="modal_imgalt +' div'" class="w-auto h-auto max-w-full max-h-[90vh]" />
-          <div class="sr-only" x-text="modal_imgalt"></div>
+    <template x-teleport="main">
+      <dialog x-ref="dialog" class="
+        dialog
+        m-0
+        p-0
+        w-full
+        max-w-none
+        h-full
+        max-h-none
+        min-h-screen
+        bg-transparent
+        text-[inherit]
+        invisible
+        grid
+        items-center
+        justify-items-center
+        fixed
+        inset-0
+        pointer-events-none
+        overflow-y-hidden
+        [overscroll-behavior:contain]
+        opacity-0
+        motion-safe:(transition-all)
+        [&[open]]:(pointer-events-auto visible opacity-100)
+        [&[open]_.dialog-box]:(translate-y-0 scale-100)
+        [&::backdrop]:(bg-black/70)
+      ">
+        <div class="dialog-box p-8 w-auto max-w-[91.66666667%] max-h-[calc(100vh-5em)] col-start-1 row-start-1 overflow-y-auto [overscroll-behavior:contain] translate-y-3 scale-90 motion-safe:(transition-all)">
+          <button type="button" @click="$el.closest('dialog').close()" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute right-4 top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="mdi:close" title="Close" noobserver></iconify-icon> <span class="sr-only">Close</span></button>
+          <div class="shadow-xl">
+            <img :src="'/_assets/img/'+ modal_img" :alt="modal_imgalt +' div'" class="w-auto h-auto max-w-full max-h-[90vh]" />
+            <div class="sr-only" x-text="modal_imgalt"></div>
+          </div>
         </div>
-      </div>
-    </div>
+        <form method="dialog" class="text-transparent grid col-start-1 row-start-1 self-stretch justify-self-stretch fixed inset-0 -z-[1]">
+          <button>Close</button>
+        </form>
+      </dialog>
+    </template>
 
     {%- renderblock 'js' %}
     <script src="/_assets/js/_app.js?v={% bust %}"></script>
