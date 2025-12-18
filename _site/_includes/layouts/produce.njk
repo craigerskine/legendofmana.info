@@ -18,10 +18,10 @@ eleventyComputed:
 </li>
 {%- endmacro %}
 
-{%- macro dd(label='',data='',arrow=false) %}
+{%- macro dd(label='',data='',arrow=false,line=true) %}
 <dd class="py-1 pl-2 text-sm flex items-center gap-4{%- if data.substring(0, 1) === '-' %} text-red-900{% else %} text-pri-900{%- endif %}">
   <p class="shrink-0">{{ label }}</p>
-  <b class="h-px bg-gray-600/25 grow" aria-hidden="true"></b>
+  {%- if line %}<b class="h-px bg-gray-600/25 grow" aria-hidden="true"></b>{%- endif %}
   <i class="text-xs not-italic font-mono shrink-0 flex items-center" title="{%- if data.substring(0, 1) === '+' %}Up: {{ data }}{% elseif data.substring(0,1) === '-' %}Down: {{ data }}{%- endif %}">
     {%- if arrow %}<iconify-icon icon="mdi:{%- if data.substring(0, 1) === '-' %}minus{% else %}plus-circle-outline{%- endif %}" class="mr-1 text-lg" noobserver></iconify-icon>{%- endif %}
     <span>{%- if arrow %}{{ data.slice(1) | safe }}{%- else %}{{ data | safe }}{%- endif %}</span>
@@ -37,37 +37,6 @@ eleventyComputed:
 
 <p class="mb-10">The following data charts represent pet statistic adjustments based on the produce you have placed in the feeding box in your pet sanctuary. The adjustments take effect immediately after your pet levels up.</p>
 
-  {# <div class="pb-12" x-data="{ legend: false }">
-    <p class="text-sm leading-none">
-      {%- call btn(tag='button',click='legend = !legend') %}
-        <span class="w-full flex items-center justify-center">
-          <b :class="['mx-1 opacity-50 transform motion-safe:(transition)', legend ? 'rotate-90' : '']"><iconify-icon icon="mdi:chevron-right" class="text-lg" noobserver></iconify-icon></b>
-          <span x-text="legend ? 'Hide Legend' : 'Show Legend'" class="ml-1 normal-case"></span>
-        </span>
-      {%- endcall %}
-    </p>
-    <div x-show="legend" x-collapse>
-      <div class="py-4 grid-(& cols-1) gap-4 md:(grid-cols-2)">
-        <div>
-          <h2 class="heading text-base">Stats</h2>
-          <ul class="mt-2">
-            {%- for item in legend.pets.stats %}
-            {{ legnd(label=item.title,desc=item.desc) }}
-            {%- endfor %}
-          </ul>
-        </div>
-        <div>
-          <h2 class="heading text-base">Personality</h2>
-          <ul class="mt-2">
-            {%- for item in legend.pets.personality %}
-            {{ legnd(label=item.title,desc=item.desc) }}
-            {%- endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div> #}
-
 {%- for category, items in collections.produce | groupby('data.color') %}
   {%- if category === page.fileSlug %}
   {%- for item in items %}
@@ -78,37 +47,34 @@ eleventyComputed:
       {%- endcall %}
     </div>
     <div>
-      {%- if item.data.stats %}
       <dl class="prod-stats mb-6">
-        {{ dt(label='Pet Stats') }}
-        {%- for key, value in item.data.stats %}
-        {{ dd(label=key,data=value,arrow=true) }}
-        {%- endfor %}
+        {{ dt(label='Pet Feeding Results') }}
+        {%- if item.data.stats %}
+          {%- for key, value in item.data.stats %}
+            {{ dd(label=key,data=value,arrow=true) }}
+          {%- endfor %}
+        {%- endif %}
+        {%- if item.data.resist %}
+          {%- for key, value in item.data.resist %}
+            {{ dd(label=key+' resist',data=value,arrow=true) }}
+          {%- endfor %}
+        {%- endif %}
+        {%- if item.data.personality %}
+          {%- for key, value in item.data.personality %}
+            {{ dd(label=key+' personality',data=value,arrow=true) }}
+          {%- endfor %}
+        {%- endif %}
+        {%- if not item.data.stats and not item.data.resist and not item.data.personality %}
+          {{ dd(label='Nothing',data='',line=false) }}
+        {%- endif %}
       </dl>
-      {%- endif %}
-      {%- if item.data.resist %}
-      <dl class="prod-resist mb-6">
-        {{ dt(label='Pet Resist') }}
-        {%- for key, value in item.data.resist %}
-        {{ dd(label=key,data=value,arrow=true) }}
-        {%- endfor %}
-      </dl>
-      {%- endif %}
-      {%- if item.data.personality %}
-      <dl class="prod-personality mb-6">
-        {{ dt(label='Pet Personalities') }}
-        {%- for key, value in item.data.personality %}
-        {{ dd(label=key,data=value,arrow=true) }}
-        {%- endfor %}
-      </dl>
-      {%- endif %}
       {%- if item.data.seeds %}
-      <dl class="prod-seeds mb-6">
-        {{ dt(label='Seed Formulas') }}
-        {%- for key, value in item.data.seeds %}
-        {{ dd(label=key,data=value+'<sup class="ml-px opacity-70">%</sup>') }}
-        {%- endfor %}
-      </dl>
+        <dl class="prod-seeds mb-6">
+          {{ dt(label='Seed Formulas') }}
+          {%- for key, value in item.data.seeds %}
+            {{ dd(label=key,data=value+'<sup class="ml-px opacity-70">%</sup>') }}
+          {%- endfor %}
+        </dl>
       {%- endif %}
     </div>
     {%- if loop.last %}{% else %}<hr class="my-12 md:(col-span-2)" />{%- endif %}
