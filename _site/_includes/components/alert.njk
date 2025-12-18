@@ -4,7 +4,7 @@
       <iconify-icon icon="{{ ico }}" class="text-(pri-200 4xl) motion-safe:(animate-wiggle)" title="{{ label }}" noobserver></iconify-icon>
     </b>
     <span class="py-3 px-5 flex-1 self-center">
-      {%- if url !== '' %}<a href="{{ url }}">{%- endif %}
+      {%- if url !== '' %}<a href="{{ url }}" class="underline underline-offset-2 transition hover:no-underline">{%- endif %}
         <strong>{{ label }}</strong>
       {%- if url !== '' %}</a>{%- endif %}
       <small class="text-(sm wrap-balance) block">{{ sub }}</small>
