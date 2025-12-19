@@ -8,6 +8,44 @@ eleventyNavigation:
   img: '/_assets/img/walkthrough/maps.png'
   parent: Walkthrough
   order: 3
+
+grid:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 25
+  - 24
+  - 16
+  - 15
+  - 14
+  - ''
+  - 22
+  - 20
+  - 17
+  - 23
+  - 12
+  - 18
+  - 10
+  - 13
+  - 19
+  - 11
+  - 8
+  - ''
+  - 9
+  - 26
+  - 2
+  - 21
+  - 7
+  - ''
+  - 4
+  - 3
+  - 1
+  - 5
+  - 6
+  - ''
 ---
 
 {%- from 'components/list-ol.njk' import list %}
@@ -57,46 +95,10 @@ If you are following the included [Walkthrough](/walkthrough/events/), you shoul
     {%- endfor -%}
   </div>
   <div class="flex-none">
-    <ul class="mx-auto mb-5 w-48 h-48 bg-cover text-black/75 font-bold inline-flex flex-wrap relative">
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center">25</li>
-      <li class="w-8 h-8 flex items-center justify-center">24</li>
-      <li class="w-8 h-8 flex items-center justify-center">16</li>
-      <li class="w-8 h-8 flex items-center justify-center">15</li>
-      <li class="w-8 h-8 flex items-center justify-center">14</li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center">22</li>
-      <li class="w-8 h-8 flex items-center justify-center">20</li>
-      <li class="w-8 h-8 flex items-center justify-center">17</li>
-      <li class="w-8 h-8 flex items-center justify-center">23</li>
-      <li class="w-8 h-8 flex items-center justify-center">12</li>
-      <li class="w-8 h-8 flex items-center justify-center">18</li>
-      <li class="w-8 h-8 flex items-center justify-center">10</li>
-      <li class="w-8 h-8 flex items-center justify-center">13</li>
-      <li class="w-8 h-8 flex items-center justify-center">19</li>
-      <li class="w-8 h-8 flex items-center justify-center">11</li>
-      <li class="w-8 h-8 flex items-center justify-center">8</li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center">9</li>
-      <li class="w-8 h-8 flex items-center justify-center">26</li>
-      <li class="w-8 h-8 flex items-center justify-center">2</li>
-      <li class="w-8 h-8 flex items-center justify-center">21</li>
-      <li class="w-8 h-8 flex items-center justify-center">7</li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="w-8 h-8 flex items-center justify-center">4</li>
-      <li class="w-8 h-8 flex items-center justify-center">3</li>
-      <li class="w-8 h-8 flex items-center justify-center">1</li>
-      <li class="w-8 h-8 flex items-center justify-center">5</li>
-      <li class="w-8 h-8 flex items-center justify-center">6</li>
-      <li class="w-8 h-8 flex items-center justify-center"></li>
-      <li class="absolute inset-0 z-[-1]">
-        <img src="/_assets/img/walkthrough/maps/world-zoom.jpg" alt="map" class="w-full h-full" />
-      </li>
+    <ul class="mx-auto mb-5 w-48 h-48 bg-cover bg-contain text-black/75 font-bold grid-(& cols-6 rows-6) relative [&>li]:(flex items-center justify-center)" style="background-image: url('/_assets/img/walkthrough/maps/world-zoom.jpg')">
+      {%- for item in grid %}
+        <li class="{{ '' if item else 'bg-red-500/30 text-(red-800/75 xl) font-bold' }}">{{ item if item else '&times;' | safe }}</li>
+      {%- endfor %}
     </ul>
     <ul class="mb-8">
       {{ list(label='The Flames',sub='Underworld',badge='14',url='#map-the-flames',star=true,modal_img='walkthrough/maps/the-flames.png',modal_imgalt='The Flames') }}
