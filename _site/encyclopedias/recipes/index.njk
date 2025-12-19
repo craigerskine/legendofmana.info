@@ -22,7 +22,7 @@ eleventyNavigation:
         {{ item.data.title }}
       {%- endcall %}
     </div>
-    <div class="prose [&>p]:(text-wrap-pretty)">
+    <div class="prose prose-p:text-wrap-pretty">
       <h2 class="heading">Info</h2>
       {{ item.templateContent | safe }}
       {%- if item.data.info %}
