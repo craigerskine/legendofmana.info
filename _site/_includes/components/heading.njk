@@ -1,4 +1,4 @@
-{%- macro heading(tag='div',sub='',url='',img='',alt='',spacing=true,border=true) %}
+{%- macro heading(tag='div',sub='',url='',img='',alt='',spacing=true,border=true,classes='') %}
   {%- set alt -%}
     {%- if alt === '' -%}
       {{ sub }}
@@ -6,7 +6,7 @@
       {{ alt }}
     {%- endif -%}
   {%- endset -%}
-  <{{ tag }} class="{{ 'mb-5 pb-5 ' if spacing }}text-black text-opacity-90 font-(heading bold)
+  <{{ tag }} class="{{ 'mb-5 pb-5 ' if spacing }}text-black text-opacity-90 font-(heading bold) {{ classes }}
     {%- if tag == 'h1' %}
       md:text-3xl
     {%- elseif tag == 'h2' %}

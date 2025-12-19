@@ -18,7 +18,7 @@ eleventyNavigation:
 {%- for item in collections.recipes %}
   <section class="pb-12 lg:(grid-(& flow-row cols-2) gap-x-4)">
     <div>
-      {%- call heading(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
+      {%- call heading(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false,classes='sticky top-4') %}
         {{ item.data.title }}
       {%- endcall %}
     </div>
