@@ -16,34 +16,34 @@ eleventyNavigation:
 {{ alert('Mana Forge',sub='The best place to build and test your own recipes.',url='https://forge.grendel.fr/',ico='mdi:hammer-wrench') }}
 
 {%- for item in collections.recipes %}
-<section class="pb-12 lg:(grid-(& flow-row cols-2) gap-x-4)">
-  <div>
-    {%- call heading(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
-      {{ item.data.title }}
-    {%- endcall %}
-  </div>
-  <div class="prose">
-    <h2 class="heading">Info</h2>
-    {{ item.templateContent | safe }}
-    {%- if item.data.info %}
-    <table>
-      <tbody>
-        {%- for key, value in item.data.info %}
-        <tr>
-          <th>{{ key }}</th>
-          <td class="text-sm">{{ value }}</td>
-        </tr>
+  <section class="pb-12 lg:(grid-(& flow-row cols-2) gap-x-4)">
+    <div>
+      {%- call heading(tag='h2',sub=item.data.sub,img='/_assets/img/encyclopedias/en-armory.png',border=false) %}
+        {{ item.data.title }}
+      {%- endcall %}
+    </div>
+    <div class="prose [&>p]:(text-wrap-pretty)">
+      <h2 class="heading">Info</h2>
+      {{ item.templateContent | safe }}
+      {%- if item.data.info %}
+        <table>
+          <tbody>
+            {%- for key, value in item.data.info %}
+            <tr>
+              <th>{{ key }}</th>
+              <td class="text-sm">{{ value }}</td>
+            </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      {%- endif %}
+      <h2 class="heading">Ingredients <small class="text-xs opacity-75">Order / QTY</small></h2>
+      <ul class="m-0 p-0 list-none text-sm flex-(& col) gap-2">
+        {%- for ing in item.data.ingredient %}
+          <li class="m-0 p-0 flex items-center gap-2"><span class="grow flex items-center gap-2 after:(h-px bg-gray-600/25 grow)">{{ ing.title }}</span> {{ '<b class="text-base leading-none">&times;</b>' | safe if ing.qty }}<span class="px-1.5 border-(t white/30) ring-(1 gray-600/25) min-w-[1.25rem] h-5 bg-white/20 text-xs font-mono shrink-0 flex items-center justify-center rounded-full shadow">{{ ing.qty if ing.qty else '1' }}</span></li>
         {%- endfor %}
-      </tbody>
-    </table>
-    {%- endif %}
-    <h2 class="heading">Ingredients <small class="ml-2 text-xs opacity-90">Order</small></h2>
-    <ul class="ml-5 list-[circle] [&>li::marker]:(text-pri-600 font-black)">
-      {%- for ing in item.data.ingredient %}
-      <li class="mb-1 py-1 px-2 rounded{% if loop.index % 2 === 0 %} bg-pri-800/10{% endif %}">{{ ing }}</li>
-      {%- endfor %}
-    </ul>
-  </div>
-</section>
-{%- if loop.last %}{% else %}<hr class="mb-16 invisible" />{%- endif %}
+      </ul>
+    </div>
+  </section>
+  {%- if not loop.last %}<hr class="mb-16 invisible" />{%- endif %}
 {%- endfor %}

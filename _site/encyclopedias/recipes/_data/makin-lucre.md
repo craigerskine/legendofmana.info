@@ -4,11 +4,9 @@ tags:
   - recipes
 sub: 26,643 $L
 ingredient:
-  - Wind Cap
-  - Clear Feather
-  - Clear Feather
-  - Clear Feather
-  - Clear Feather
+  - title: Wind Cap
+  - title: Clear Feather
+    qty: 4
 date: 0004-00-00
 ---
 **26,643 $L**

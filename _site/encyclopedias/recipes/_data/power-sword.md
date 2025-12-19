@@ -10,14 +10,12 @@ info:
   Stats: 01-01-00-01-03-03-00-00
   Resists: 07-09-09-09-09-09-09-09
 ingredient:
-  - Firestone
-  - Windstone
-  - Flat Seed
-  - Bell Grapes
-  - Flat Seed
-  - Holy Water
-  - Holy Water
-  - Holy Water
-  - Holy Water
+  - title: Firestone
+  - title: Windstone
+  - title: Flat Seed
+  - title: Bell Grapes
+  - title: Flat Seed
+  - title: Holy Water
+    qty: 4
 date: 0001-00-00
 ---

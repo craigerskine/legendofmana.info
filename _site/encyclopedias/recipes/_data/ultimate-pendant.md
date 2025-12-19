@@ -12,37 +12,38 @@ info:
   Immunity: All
   Effects: Extra Lucre
 ingredient:
-  - Shade Silver
-  - Aura Silver
-  - Gnome Silver
-  - Wisp Silver
-  - Undine Silver
-  - Moth Wing
-  - Gnome Silver
-  - Moth Wing
-  - Chaos Crystal
-  - Jinn Silver
-  - Moth Wing
-  - Sala Silver
-  - Moth Wing
-  - Any Seed
-  - Sulfur
-  - Sulfur
-  - Card-Item (e.g. Lilipods)
-  - Wicked Eye
-  - Wicked Eye
-  - Virgin's(Damsel's) Sigh
-  - Pine o' Clock
-  - Stinky Breath
-  - Angry Eye
-  - Squalphin
-  - Fishy Fruit
-  - Ghost's Howl
-  - Blackened Bat
-  - Zombie Claw
-  - Spiny Seed
-  - Ghost's Howl
-  - Dragon Blood x15
-  - Moth Wing
+  - title: Shade Silver
+  - title: Aura Silver
+  - title: Gnome Silver
+  - title: Wisp Silver
+  - title: Undine Silver
+  - title: Moth Wing
+  - title: Gnome Silver
+  - title: Moth Wing
+  - title: Chaos Crystal
+  - title: Jinn Silver
+  - title: Moth Wing
+  - title: Sala Silver
+  - title: Moth Wing
+  - title: Any Seed
+  - title: Sulfur
+    qty: 2
+  - title: Card-Item (e.g. Lilipods)
+  - title: Wicked Eye
+    qty: 2
+  - title: Virgin's(Damsel's) Sigh
+  - title: Pine o' Clock
+  - title: Stinky Breath
+  - title: Angry Eye
+  - title: Squalphin
+  - title: Fishy Fruit
+  - title: Ghost's Howl
+  - title: Blackened Bat
+  - title: Zombie Claw
+  - title: Spiny Seed
+  - title: Ghost's Howl
+  - title: Dragon Blood
+    qty: 15
+  - title: Moth Wing
 date: 0003-00-00
 ---

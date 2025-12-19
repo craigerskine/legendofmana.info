@@ -4,16 +4,18 @@ tags:
   - recipes
 sub: Non-Wood, Non-Aerolite
 ingredient:
-  - Round Seed
-  - 3x Sulfur
-  - Round Seed
-  - Needle/Needlettuce
-  - Springana or Ear of Wheat *
-  - Spiny Seed
-  - Poison Fang
-  - Spiny Seed
-  - Lilipods
-  - 9x Meat
+  - title: Round Seed
+  - title: Sulfur
+    qty: 3
+  - title: Round Seed
+  - title: Needle/Needlettuce
+  - title: Springana or Ear of Wheat *
+  - title: Spiny Seed
+  - title: Poison Fang
+  - title: Spiny Seed
+  - title: Lilipods
+  - title: Meat
+    qty: 9
 date: 0002-00-00
 ---
 **Non-Wood, Non-Aerolite ONLY!!!**
