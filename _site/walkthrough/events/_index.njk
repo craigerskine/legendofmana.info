@@ -17,8 +17,16 @@ permalink: 'walkthrough/events/'
 
 {{ alert(label='Story Arcs',sub='The preceding icon designates a story arc. Some story arcs must be completed in order to trigger the final quest, which lets you finish the game.',ico='mdi:pound') }}
 
-<ul class="ml-0 mb-10 text-xs grid-(& flow-row cols-1) gap-y-10 gap-x-5 md:(mb-0 text-base grid-cols-2)">
-  {%- for item in collections.events %}
-  {{ list(label=item.data.title,sub=item.data.story_arc,badge=loop.index,url='/walkthrough/events/'+item.data.page.fileSlug,tag=true) }}
-  {%- endfor %}
-</ul>
+<div class="prose">
+  <ol class="">
+    {%- for item in collections.events %}
+    <li class="m-0">
+      <div class="p-2 flex items-center justify-between gap-2 relative">
+        <a href="{{ item.url }}" class="font-normal no-underline before:(absolute inset-0 rounded transition) hover:(underline before:bg-gray-600/10)">{{ item.data.title }}</a>
+        {% if item.data.story_arc %}<small class="flex items-center gap-px"><iconify-icon icon="mdi:pound" class="iconify opacity-50" noobserver></iconify-icon>{{ item.data.story_arc }}</small>{% endif %}
+      </div>
+    </li>
+    {# {{ list(label=item.data.title,sub=item.data.story_arc,badge=loop.index,url='/walkthrough/events/'+item.data.page.fileSlug,tag=true) }} #}
+    {%- endfor %}
+  </ol>
+</div>
