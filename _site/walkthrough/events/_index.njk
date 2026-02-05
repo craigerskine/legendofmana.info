@@ -15,18 +15,94 @@ permalink: 'walkthrough/events/'
 
 <h2 class="heading mb-6">Event Order</h2>
 
-{{ alert(label='Story Arcs',sub='The preceding icon designates a story arc. Some story arcs must be completed in order to trigger the final quest, which lets you finish the game.',ico='mdi:pound') }}
+{{ alert(label='Story Arcs',sub='The preceding icon designates a story arc. Some story arcs must be completed in order to trigger the final end game quest.',ico='mdi:pound') }}
 
-<div class="prose">
-  <ol class="">
-    {%- for item in collections.events %}
-    <li class="m-0">
-      <div class="p-2 flex items-center justify-between gap-2 relative">
-        <a href="{{ item.url }}" class="font-normal no-underline before:(absolute inset-0 rounded transition) hover:(underline before:bg-gray-600/10)">{{ item.data.title }}</a>
-        {% if item.data.story_arc %}<small class="flex items-center gap-px"><iconify-icon icon="mdi:pound" class="iconify opacity-50" noobserver></iconify-icon>{{ item.data.story_arc }}</small>{% endif %}
-      </div>
-    </li>
-    {# {{ list(label=item.data.title,sub=item.data.story_arc,badge=loop.index,url='/walkthrough/events/'+item.data.page.fileSlug,tag=true) }} #}
-    {%- endfor %}
-  </ol>
+{%- set navEvents %}
+[
+  {%- for item in collections.events %}
+  { 
+    title: '{{ item.data.title }}',
+    url: '{{ item.url }}',
+    story_arc: '{{ item.data.story_arc }}',
+  },
+  {%- endfor %}
+]
+{%- endset %}
+
+<div 
+  x-data="{
+    query: '',
+    navEvents: {{ navEvents }},
+
+    slugify(str) {
+      if (!str) return '';
+      return str
+        .toString()
+        .toLowerCase()
+        .trim()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, ' ')
+        .replace(/-+/g, '-')
+        .trim();
+    },
+
+    get filteredEvents() {
+      if (!this.query.trim()) return this.navEvents;
+      const q = this.slugify(this.query);
+      return this.navEvents.filter(item => {
+        const title = this.slugify(item.title);
+        const arc = this.slugify(item.story_arc);
+        return title.includes(q) || arc.includes(q);
+      });
+    },
+  }"
+  @keydown.window.prevent.meta.k="$refs.eventsSearch.focus()"
+  class="prose"
+>
+
+<div class="flex items-center justify-center gap-2 [&::before,&::after]:(h-px bg-current grow hidden opacity-25 content-[''] sm:block)">
+  <label class="w-full max-w-[13.75rem] inline-flex">
+    <span class="sr-only">Search</span>
+    <input
+      x-model="query"
+      x-ref="eventsSearch"
+      type="search"
+      placeholder="Search events... [⌘K]"
+      class="px-3 border-(& pri-800/20) w-full h-9 bg-pri-800/10 text-sm rounded-full placeholder:(text-pri-700 italic) [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block) motion-safe:(transition)"
+    />
+  </label>
+</div>
+  <div class="mt-6">
+
+
+    <div x-show="query.trim() && filteredEvents.length === 0" class="text-center py-8 px-4 bg-pri-800/10 rounded shadow">
+      <p>No events match your search.</p>
+      <p class="text-sm mt-2">Try different keywords or clear the search.</p>
+    </div>
+
+    <ol x-show="filteredEvents.length > 0" :class="query.length && 'list-disc'">
+      <template x-for="item in filteredEvents" :key="item.url">
+        <li class="m-0">
+          <div class="p-2 flex items-center justify-between gap-3 relative group">
+            <a 
+              :href="item.url" 
+              class="font-medium no-underline flex-1 before:(absolute inset-0 rounded transition) hover:(text-gray-900 underline underline-offset-2 before:bg-gray-600/10)"
+              x-html="item.title"
+            ></a>
+
+            <template x-if="item.story_arc">
+              <small class="flex items-center gap-1 text-gray-600 text-sm whitespace-nowrap">
+                <iconify-icon icon="mdi:pound" class="iconify opacity-60" noobserver></iconify-icon>
+                <span x-text="item.story_arc"></span>
+              </small>
+            </template>
+          </div>
+        </li>
+      </template>
+    </ol>
+
+  </div>
+
 </div>
