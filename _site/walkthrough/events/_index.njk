@@ -63,14 +63,15 @@ permalink: 'walkthrough/events/'
 >
 
 <div class="flex items-center justify-center gap-2 [&::before,&::after]:(h-px bg-current grow hidden opacity-25 content-[''] sm:block)">
-  <label class="w-full max-w-[13.75rem] inline-flex">
-    <span class="sr-only">Search</span>
+  <label class="group px-2 w-full max-w-[13.75rem] h-9 border-(& pri-800/20) bg-pri-800/10 text-sm inline-flex items-center gap-1 rounded-full outline-(& 2 pri-800/20 offset-1) focus-within:(outline-current)">
+    <span class="text-(pri-700 2xl) pointer-events-none select-none shrink-0 transition group-focus-within:text-current" aria-label="Search"><iconify-icon icon="mdi:magnify" class="iconify block" noobserver></iconify-icon></span>
     <input
       x-model="query"
       x-ref="eventsSearch"
+      @keydown.escape.stop="query=''; $el.blur()"
       type="search"
-      placeholder="Search events... [⌘K]"
-      class="px-3 border-(& pri-800/20) w-full h-9 bg-pri-800/10 text-sm rounded-full placeholder:(text-pri-700 italic) [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block) motion-safe:(transition)"
+      placeholder="Event/Arc [⌘K]"
+      class="p-0 border-0 bg-transparent grow placeholder:(text-pri-700 italic) focus:outline-none [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block cursor-pointer) motion-safe:(transition)"
     />
   </label>
 </div>
@@ -78,22 +79,24 @@ permalink: 'walkthrough/events/'
 
 
     <div x-show="query.trim() && filteredEvents.length === 0" class="text-center py-8 px-4 bg-pri-800/10 rounded shadow">
-      <p>No events match your search.</p>
-      <p class="text-sm mt-2">Try different keywords or clear the search.</p>
+      <p>
+        <strong>No events match your search.</strong>
+        <small class="mt-1 text-xs block">Try different keywords or clear the search.</small>
+      </p>
     </div>
 
     <ol x-show="filteredEvents.length > 0" :class="query.length && 'list-disc'">
-      <template x-for="item in filteredEvents" :key="item.url">
+      <template x-for="item in filteredEvents" :key="item.url" hidden>
         <li class="m-0">
           <div class="p-2 flex items-center justify-between gap-3 relative group">
             <a 
               :href="item.url" 
-              class="font-medium no-underline flex-1 before:(absolute inset-0 rounded transition) hover:(text-gray-900 underline underline-offset-2 before:bg-gray-600/10)"
+              class="font-medium no-underline before:(absolute inset-0 rounded transition) hover:(text-gray-900 underline underline-offset-2 before:bg-gray-600/10)"
               x-html="item.title"
             ></a>
 
-            <template x-if="item.story_arc">
-              <small class="flex items-center gap-1 text-gray-600 text-sm whitespace-nowrap">
+            <template x-if="item.story_arc" hidden>
+              <small class="flex items-center gap-1 text-gray-600 text-sm whitespace-nowrap shrink-0">
                 <iconify-icon icon="mdi:pound" class="iconify opacity-60" noobserver></iconify-icon>
                 <span x-text="item.story_arc"></span>
               </small>
