@@ -10,7 +10,7 @@ Place the Medallion AF in the space directly above the *Mekiv Caverns* to create
 
 Talk to Sotherbee in the first area. Go Right and return immediately to try to catch the Lilipea. Follow the Lilipea to the Right and talk to it. Keep following it and it will lead you to a guy that will cast a spell to keep you from getting lost (ironic that it's super easy to get lost in this map).
 
-Instruction thanks to Niko H. { .italic .text-sm .flex .items-center .gap-2 .before:border-t .before:border-dashed .before:border-gray-600/25 .before:grow }
+Instructions credit: Niko H. { .italic .text-sm .flex .items-center .gap-2 .before:border-t .before:border-dashed .before:border-gray-600/25 .before:grow }
 
 **To get back to the entrance:**
 
