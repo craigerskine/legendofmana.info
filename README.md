@@ -5,18 +5,18 @@
 - https://legendofmana-info.netlify.app/ (in case the domain expires)
 
 ### Tech used
-- [Twind](https://twind.style/)
-- [11ty](https://11ty.dev/)
+- [11ty](https://11ty.dev/) - static site generator
+  - [Nunjucks](https://mozilla.github.io/nunjucks/) - templating
+- [Alpine.js](https://alpinejs.dev/) - js framework
+- [Twind](https://twind.style/) - tailwind-in-js
 
 ### Instructions
 1. [Install node.js](https://nodejs.org/) on your computer
-2. Download this repository and extract to a folder where you want to store it locally
-3. Open a Terminal or Command prompt:
+2. Download an integrated IDE like [VSCode](https://code.visualstudio.com/download)
+3. Download this repository and extract to a folder where you want to store it locally
+4. Drag the folder into an empty IDE window and open the integrated terminal [⌃ + `]
 
 ```bash
-# change to the site folder
-$ cd /path/to-folder/from-step-2
-
 # install the site dependencies
 $ npm install
 
