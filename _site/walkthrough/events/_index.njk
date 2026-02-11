@@ -74,9 +74,10 @@ permalink: 'walkthrough/events/'
         x-ref="eventsSearch"
         @keydown.escape.stop="query=''; $el.blur()"
         type="search"
-        placeholder="Event/Arc [⌘K]"
-        class="p-0 border-0 bg-transparent grow placeholder:(text-pri-600 italic) focus:outline-none [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block cursor-pointer) motion-safe:(transition)"
+        placeholder="Search event/arc"
+        class="p-0 border-0 w-full bg-transparent grow placeholder:(text-pri-600 italic) focus:outline-none [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block cursor-pointer) transition"
       />
+      <span class="text-(pri-600 xs) pointer-events-none select-none shrink-0 group-focus-within:hidden">⌘K</span>
     </label>
   </div>
   <div class="mt-6">
