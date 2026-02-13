@@ -1,33 +1,21 @@
 ---
 layout: layouts/default.njk
-title: Change Log
+title: Stargazers
+body: |
+  ## Thank you
+  
+  Thanks to all the [stargazers](https://github.com/craigerskine/legendofmana.info/stargazers) who have shown their support for this project! Your stars are greatly appreciated and help us continue to improve and maintain this project.
+
+  Star this [project on GitHub](https://github.com/craigerskine/legendofmana.info) and in a week or so your profile will show here! {.text-sm}
+  
+  ***
 ---
 
 <section>
-  <ol class="mx-auto w-full max-w-2xl">
-    {%- for commit in collections.recentChanges %}
-    <li class="flex">
-      <hgroup class="pb-10 text-end flex-none lg:(w-full flex-auto)">
-        <h2 class="mb-1 text-sm leading-6 font-black"><time>{{ commit.authorDate | dateOnly }}</time></h2>
-        <p class="text-xs opacity-70">#{{ commit.abbrevHash }}</p>
-      </hgroup>
-      <div class="px-3 flex-(& col shrink-0) items-center lg:(px-10)">
-        <a href="https://github.com/craigerskine/legendofmana.info/commit/{{ commit.hash }}" class="w-6 h-6 border-(1 gray-600/25) bg-gray-500/10 text-xs flex-(& shrink-0) items-center justify-center rounded-full motion-safe:(transition) hover:(scale-105) lg:(w-8 h-8 text-base)">#</a>
-        {%- if not loop.last %}
-        <i class="w-px bg-current flex-1 opacity-20"></i>
-        {%- endif %}
-      </div>
-      <article class="pb-10 w-full">
-        <p class="mb-1 leading-6">{{ commit.subject }}</p>
-        <p class="text-xs opacity-70">{{ commit.authorName }}</p>
-      </article>
-    </li>
-    {%- endfor %}
-  </ol>
-</section>
-
-<section>
-  <ul class="mx-auto max-w-sm grid-(& cols-1) gap-10 md:(grid-cols-2 max-w-none)">
+  <article class="prose">
+    {{ body | md | safe }}
+  </article>
+  <ul class="mx-auto pt-8 max-w-sm grid-(& cols-1) gap-10 md:(grid-cols-2 max-w-none)">
     {%- for item in stars_github %}
       <li class="p-4 text-center space-y-3 relative">
         <picture>

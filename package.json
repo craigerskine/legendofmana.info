@@ -12,6 +12,7 @@
   "author": "craigerskine",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-fetch": "^5.1.1",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@alpinejs/collapse": "^3.15.8",

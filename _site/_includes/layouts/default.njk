@@ -199,6 +199,10 @@
                     {%- for item in collections.all | eleventyNavigation('Extras') %}
                     {{ footerNav(item.key,url=item.hash) }}
                     {%- endfor %}
+                    <li class="py-2 text-white font-(headingold) uppercase">Site</li>
+                    {%- set updatedOn -%}{% build %}{%- endset -%}
+                    {{ footerNav('Stargazers',url='/stargazers/') }}
+                    {{ footerNav('Updates',url='/changes/') }}
                   </ul>
                 </nav>
               </div>
@@ -234,9 +238,6 @@
                   </li>
                   {%- endfor %}
                 </ul>
-                <p class="foot-updated pt-6 text-xs">Updated on <a href="/changes/" class="text-pri-400 motion-safe:(transition) hover:(text-white underline)">
-                  <time datetime="{% build 'raw' %}">{% build %}</time>
-                </a></p>
               </div>
             </div>
           </div>
