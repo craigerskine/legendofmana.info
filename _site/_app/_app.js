@@ -8,10 +8,11 @@ import 'iconify-icon';
 import { install, injectGlobal } from '@twind/core';
 import presetAutoprefix from '@twind/preset-autoprefix';
 import presetTailwind from '@twind/preset-tailwind';
+import presetLineclamp from '@twind/preset-line-clamp';
 import presetTypography from '@twind/preset-typography';
 
 install({
-  presets: [presetAutoprefix(), presetTailwind(), presetTypography()],
+  presets: [presetAutoprefix(), presetTailwind(), presetLineclamp(), presetTypography()],
   darkMode: 'class',
   hash: false,
   theme: {
