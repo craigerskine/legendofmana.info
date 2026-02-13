@@ -2,10 +2,11 @@ name: Weekly Netlify Deploy
 
 on:
   schedule:
-    - cron: '0 0 * * 0' # every Sunday 00:00 UTC
+    - cron: '0 0 * * 0' # Every Sunday at 00:00 UTC (midnight Sunday → early Sunday morning)
+  workflow_dispatch: # Optional: allows manual trigger from GitHub Actions tab
 
 jobs:
-  deploy:
+  trigger-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Netlify build
