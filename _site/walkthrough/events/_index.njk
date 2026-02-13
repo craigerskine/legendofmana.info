@@ -75,9 +75,9 @@ permalink: 'walkthrough/events/'
         @keydown.escape.stop="query=''; $el.blur()"
         type="search"
         placeholder="Search event/arc"
-        class="p-0 border-0 w-full bg-transparent grow placeholder:(text-pri-600 italic) focus:outline-none [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block cursor-pointer) transition"
+        class="peer p-0 border-0 w-full bg-transparent grow placeholder:(text-pri-600 italic) focus:outline-none [&::-webkit-search-cancel-button]:(ml-2 w-3 h-6 appearance-none bg-(close center no-repeat) block cursor-pointer) transition"
       />
-      <span class="text-(pri-600 xs) pointer-events-none select-none shrink-0 group-focus-within:hidden">⌘K</span>
+      <span class="text-(pri-600 xs) pointer-events-none select-none shrink-0 hidden group-focus-within:hidden peer-placeholder-shown:block">⌘K</span>
     </label>
   </div>
   <div class="mt-6">
