@@ -109,7 +109,7 @@ injectGlobal`
     .aspect-wide { @apply mb-5 pb-[56.25%] h-0 block overflow-hidden relative; }
     .aspect-wide > iframe,.aspect-wide > embed,.aspect-wide > object,.aspect-wide > video { @apply m-0 border-0 w-full h-full absolute inset-0; }
     .warning { @apply mb-5 p-2 bg-yellow-400 text-(gray-900 wrap-balance) font-bold uppercase rounded; }
-    .thumb { @apply [&_a]:(p-2 bg-white/20 flex-(& col) gap-2 relative outline-(& 2 dashed pri-900/20) rounded-lg shadow-lg after:(content-['⇪'] w-6 h-6 bg-pri-900 text-pri-50 leading-none flex items-center justify-center ring-(2 current) absolute -top-3 -right-3 rounded-full shadow-lg animate-bounce)) [&_img]:m-0; }
+    .thumb { @apply [&_a]:(p-2 bg-white/20 flex-(& col) gap-2 relative outline-(& 2 dashed pri-900/20) rounded-lg shadow-lg after:(content-['↗'] w-6 h-6 bg-pri-900 text-pri-50 leading-none flex items-center justify-center ring-(2 current) absolute -top-3 -right-3 rounded-full shadow-lg animate-bounce)) [&_img]:m-0; }
     .scene { transform: translateY(var(--translateY)); will-change: transform; }
   }
 `
