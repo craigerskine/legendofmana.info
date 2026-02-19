@@ -25,34 +25,3 @@ title: Change Log
     {%- endfor %}
   </ol>
 </section>
-
-<section>
-  <ul class="mx-auto max-w-sm grid-(& cols-1) gap-10 md:(grid-cols-2 max-w-none)">
-    {%- for item in stars_github %}
-      <li class="p-4 text-center space-y-3 relative">
-        <picture>
-          <img src="{{ item.avatar_url }}" alt="{{ item.login }} avatar" class="mx-auto w-16 h-16 rounded-full" />
-        </picture>
-        <div>
-          <a href="{{ item.html_url | url }}" class="group inline-flex text-(pri-700 lg) dark:(text-pri-500)">
-            {%- set name -%}
-              {%- if item.name -%}
-                {{ item.name }}
-              {%- else -%}
-                {{ item.login }}
-              {%- endif -%}
-            {%- endset -%}
-            <b class="truncate block" title="{{ name }}...">{{ name }}</b>
-            <span class="absolute inset-0" aria-hidden="true">
-              <span class="bg-pri-500/50 absolute inset-0 opacity-0 rounded-xl motion-safe:(transition group-hover:(animate-blob)) group-hover:(opacity-20)"></span>
-            </span>
-          </a>
-          <div class="pointer-events-none">
-            <small class="my-1 text-xs block opacity-70">@{{ item.login }}</small>
-            <p class="text-(sm wrap-balance) line-clamp-3">{{ item.bio if item.bio else '...' }}</p>
-          </div>
-        </div>
-      </li>
-    {%- endfor %}
-  </ul>
-</section>
