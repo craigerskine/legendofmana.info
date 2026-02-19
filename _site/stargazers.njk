@@ -2,45 +2,53 @@
 layout: layouts/default.njk
 title: Stargazers
 body: |
-  ## Thank you
+  ## Thank you!!!
   
-  Thanks to all the [stargazers](https://github.com/craigerskine/legendofmana.info/stargazers) who have shown their support for this project! Your stars are greatly appreciated and help us continue to improve and maintain this project.
+  Thanks to all the [stargazers](https://github.com/craigerskine/legendofmana.info/stargazers) who have shown their support for this project! Your stars are greatly appreciated and help me continue to improve and maintain this project.
 
-  Star this [project on GitHub](https://github.com/craigerskine/legendofmana.info) and in a week or so your profile will show here! {.text-sm}
+  Star this [project on GitHub](https://github.com/craigerskine/legendofmana.info) and in about a week your profile will show here! {.text-sm}
   
   ***
 ---
+
+{%- macro card(param) -%}
+  <li class="flex gap-4 relative">
+    <picture class="w-11 shrink-0">
+      <img src="{{ param.item.avatar_url }}" alt="{{ param.item.login }} avatar" class="mt-1 w-full rounded-full" />
+    </picture>
+    <div class="grow">
+      <a href="{{ param.item.html_url | url }}" class="inline-flex text-(pri-800 lg) transition hover:(text-pri-900 underline underline-offset-2) after:(absolute inset-0)">
+        {%- set name -%}
+          {%- if param.item.name -%}
+            {{ param.item.name }}
+          {%- else -%}
+            {{ param.item.login }}
+          {%- endif -%}
+        {%- endset -%}
+        <b class="truncate block" title="{{ name }}...">{{ name }}</b>
+      </a>
+      <div class="pointer-events-none">
+        <small class="my-1 text-xs block opacity-70">@{{ param.item.login }}</small>
+        <p class="text-(sm wrap-balance) line-clamp-3">{{ param.item.bio if param.item.bio else '...' }}</p>
+      </div>
+    </div>
+  </li>
+{%- endmacro -%}
 
 <section>
   <article class="prose">
     {{ body | md | safe }}
   </article>
-  <ul class="mx-auto py-8 max-w-sm grid-(& cols-1) gap-10 md:(grid-cols-2 max-w-none)">
+  <ul class="mx-auto py-8 grid-(& cols-1) gap-12 md:(grid-cols-2)">
     {%- for item in stars_github %}
-      <li class="p-4 text-center space-y-3 relative">
-        <picture>
-          <img src="{{ item.avatar_url }}" alt="{{ item.login }} avatar" class="mx-auto w-16 h-16 rounded-full" />
-        </picture>
-        <div>
-          <a href="{{ item.html_url | url }}" class="group inline-flex text-(pri-700 lg)">
-            {%- set name -%}
-              {%- if item.name -%}
-                {{ item.name }}
-              {%- else -%}
-                {{ item.login }}
-              {%- endif -%}
-            {%- endset -%}
-            <b class="truncate block" title="{{ name }}...">{{ name }}</b>
-            <span class="absolute inset-0" aria-hidden="true">
-              <span class="border-(t pri-50/25) bg-pri-50/10 absolute inset-0 opacity-0 scale-90 rounded-xl shadow motion-safe:(transition) group-hover:(opacity-100 scale-100)"></span>
-            </span>
-          </a>
-          <div class="pointer-events-none">
-            <small class="my-1 text-xs block opacity-70">@{{ item.login }}</small>
-            <p class="text-(sm wrap-balance) line-clamp-3">{{ item.bio if item.bio else '...' }}</p>
-          </div>
-        </div>
-      </li>
+      {%- if item.login === 'craigerskine' %}  
+        {{ card({ item: item }) }}
+      {%- endif %}
+    {%- endfor %}
+    {%- for item in stars_github %}
+      {%- if item.login !== 'craigerskine' %}  
+        {{ card({ item: item }) }}
+      {%- endif %}
     {%- endfor %}
   </ul>
 </section>
