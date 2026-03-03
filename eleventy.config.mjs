@@ -19,12 +19,12 @@ export default function (eleventyConfig) {
   eleventyConfig.setDataFileBaseName('_data');
 
   eleventyConfig.addPassthroughCopy({
-    '_site/_assets/files': '_assets/files',
-    '_site/_assets/img': '_assets/img',
-    '_site/_assets/_root': './',
+    '_src/_assets/files': '_assets/files',
+    '_src/_assets/img': '_assets/img',
+    '_src/_assets/_root': './',
   });
 
-  eleventyConfig.addWatchTarget('./_site/_app/_app.js');
+  eleventyConfig.addWatchTarget('./_src/_app/_app.js');
 
   eleventyConfig.addPlugin(EleventyRenderPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -113,7 +113,7 @@ export default function (eleventyConfig) {
   // esbuild
   eleventyConfig.on('eleventy.before', async () => {
     await esbuild.build({
-      entryPoints: ['_site/_app/_app.js'],
+      entryPoints: ['_src/_app/_app.js'],
       outfile: 'public/_assets/js/_app.js',
       bundle: true,
       minify: true,
@@ -126,7 +126,7 @@ export default function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     dir: {
-      input: '_site',
+      input: '_src',
       output: 'public',
     },
   };

@@ -26,7 +26,7 @@ $ npm start
 4. Open [http://localhost:8080](http://localhost:8080) in your browser of choice
 5. Start editing the local files in your editor of choice and watch in amazement as your browser hot reloads your saved changes
 
-All data, markup, components, layouts, scripts, files, and images are in the `_site` folder. The site will deploy locally to a `public` folder. Theoretically you could upload that folder to any web host since it's just static HTML.
+All data, markup, components, layouts, scripts, files, and images are in the `_src` folder. The site will deploy locally to a `public` folder. Theoretically you could upload that folder to any web host since it's just static HTML.
 
 Keep in mind that there are no CSS files anywhere to be found. This is intentional since I used [Twind](https://twind.style/) (which auto generates CSS on the client-side during browsing). Everything is styled using [Tailwind CSS](https://tailwindcss.com/) v3.0 syntax and kept organized via [Twind](https://twind.style/) grouping/one-offs.
 
