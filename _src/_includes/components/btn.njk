@@ -1,6 +1,18 @@
-{%- macro btn(tag='a',url='',sub='',click='') %}
-  <{%- if tag === 'a' %}{{ tag }} href="{{ url }}"{%- elseif tag === 'button' %}{{ tag }} type="button"{%- else %}{{ tag }}{%- endif %}{%- if click !== '' %} @click.prevent="{{ click }}" {%- endif %}class="btn">
-    {%- if sub !== '' %}<b class="px-3 bg-pri-900 text-(white xs) absolute -top-2 -left-1 rounded-full">{{ sub }}</b>{%- endif %}
-    {{ caller() }}
+{%- macro btn(param) -%}
+  {%- set tag = param.tag if param.tag else 'a' -%}
+  {%- set href = param.url if param.url else '#' -%}
+  {%- set attr -%}
+    {%- if tag === 'a' -%}href="{{ url }}"{%- else -%}type="button"{%- endif -%}
+    {%- if param.click -%} @click="{{ param.click }}"{%- endif -%}
+  {%- endset -%}
+
+  <{{ tag }} {{ attr | safe }} class="group border-(t transparent) w-full bg-pri-500/25 font-normal no-underline grow inline-flex items-center gap-2 uppercase rounded ring-(1 pri-500/90) shadow transition hover:(border-white/30 bg-white/10 ring-opacity-100 shadow-lg">
+    <span class="px-3 py-2 grow inline-flex items-center gap-2 relative">
+      {%- if param.sub %}<b class="px-3 bg-pri-900 text-white text-xs absolute -left-1 -top-2 rounded-full">{{ param.sub }}</b>{%- endif %}
+      {%- if param.ico %}<iconify-icon icon="{{ param.ico }}" class="{{ 'text-2xl' if param.slot else 'm-auto text-5xl' }} shrink-0" noobserver></iconify-icon>{%- endif %}
+      {%- if param.slot %}
+        <span class="grow">{{ param.slot | safe }}</span>
+      {%- endif %}
+    </span>
   </{{ tag }}>
-{%- endmacro %}
+{%- endmacro -%}
