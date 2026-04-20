@@ -47,9 +47,9 @@ layout: 'layouts/default.njk'
   <div class="pt-5 col-span-2">
     <h2 class="heading">Original Version</h2>
   </div>
-  <div class="game-info pb-8 md:(p-0)">
+  <div class="game-info group pb-8 relative md:(p-0)">
     <div>
-      <img src="/_assets/img/game.png" alt="Legend of Mana game art" class="mx-auto" />
+      <img src="/_assets/img/game.png" alt="Legend of Mana game art" class="mx-auto group-hover:(motion-safe:animate-waggle)" />
       <div class="pt-2 pb-5 text-sm">Legend of Mana is an RPG developed and published by Square in 1999 for the Sony Playstation (also on PSN).</div>
     </div>
     <p>
@@ -57,13 +57,14 @@ layout: 'layouts/default.njk'
           slot: 'Original Game',
           sub: 'Buy',
           url: 'https://amazon.com/dp/B00004SWM0?tag=qrayg-20',
-          ico: 'mdi:disc'
+          ico: 'mdi:disc',
+          block: true
         }) }}
     </p>
   </div>
-  <div class="game-info pb-8 md:(p-0)">
+  <div class="game-info group pb-8 relative md:(p-0)">
     <div>
-      <img src="/_assets/img/ost.png" alt="Legend of Mana OST art" class="mx-auto" />
+      <img src="/_assets/img/ost.png" alt="Legend of Mana OST art" class="mx-auto group-hover:(motion-safe:animate-waggle)" />
       <div class="pt-2 pb-5 text-sm">Legend of Mana OST was composed by Yoko Shimomura and contains some extremely beautify compositions.</div>
     </div>
     <p>
@@ -71,11 +72,9 @@ layout: 'layouts/default.njk'
         slot: 'Original Game',
         sub: 'Buy',
         url: 'https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091',
-        ico: 'mdi:music'
+        ico: 'mdi:music',
+        block: true
       }) }}
-      {# {%- call btn(url='https://www.play-asia.com/seiken-densetsu-the-legend-of-mana-original-soundtrack/13/70bty?tagid=145091', sub='Buy') %}
-        <iconify-icon icon="mdi:music" class="mr-2 text-2xl" noobserver></iconify-icon> Original OST
-      {%- endcall %} #}
     </p>
   </div>
 
