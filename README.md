@@ -3,6 +3,7 @@
 ### Live sites
 - https://legendofmana.info
 - https://legendofmana-info.netlify.app/ (in case the domain expires)
+- https://craigerskine.github.io/legendofmana.info/ (in case the domain expires)
 
 ### Tech used
 - [11ty](https://11ty.dev/) - static site generator
