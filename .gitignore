@@ -2,7 +2,6 @@
 *.code-workspace
 /.cache
 /node_modules
-/package-lock.json
 /public
 /_dev
 /_design

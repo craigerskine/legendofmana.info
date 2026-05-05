@@ -17,7 +17,7 @@ body: |
 
   <div class="thumb not-prose float-right ml-4 mb-5">
     <a href="#map-speedrun" @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'walkthrough/maps/world-start.jpg', imgalt: 'Walkthrough Start' })">
-      <img src="/_assets/img/walkthrough/maps/world-start-th.jpg" alt="Play Area" class="img-th" />
+      <img src="../../_assets/img/walkthrough/maps/world-start-th.jpg" alt="Play Area" class="img-th" />
     </a>
   </div>
 
@@ -31,7 +31,7 @@ body: |
 
   ## Home Map { .heading }
 
-  ![Home map locations](/_assets/img/walkthrough/maps/home.png){.mx-auto .w-full .max-w-[300px]}
+  ![Home map locations](../../_assets/img/walkthrough/maps/home.png){.mx-auto .w-full .max-w-[300px]}
 
   ## Recommended Skills { .heading }
 
@@ -71,7 +71,7 @@ body: |
   <p class="inline-flex">
     {{ btn({
       slot: 'First Event',
-      url: '/walkthrough/events/niccolos-business-unusual/'
+      url: '/walkthrough/events/niccolos-business-unusual/'| url
     }) }}
   </p>
 </div>

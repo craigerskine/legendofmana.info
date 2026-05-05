@@ -18,12 +18,12 @@ eleventyComputed:
           {% set last = loop.last %}
           {%- for m in collections.monsters_pets %}
           {%- if m.data.title === item %}
-          <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none" noobserver></iconify-icon> <a href="/encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}"><span class="font-normal">{{ item }}</span></a></span>
+          <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none" noobserver></iconify-icon> <a href="{{ '/' | url }}encyclopedias/monsters-pets/{{ m.data.type.toLowerCase() }}/#monster-{{ m.data.page.fileSlug }}"><span class="font-normal">{{ item }}</span></a></span>
           {%- endif %}
           {%- endfor %}
         {%- endfor %}
       {%- elseif info.event %}
-        <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none" noobserver></iconify-icon> <a href="/walkthrough/events/{{ info.event | replace("'", "") | slugify }}/"><span class="font-normal">{{ info.event }}</span></a></span>
+        <span class="flex"><iconify-icon icon="mdi:arrow-top-right" width="1em" height="1em" inline="false" class="mt-[3px] mr-1 opacity-50 flex-none" noobserver></iconify-icon> <a href="{{ '/' | url }}walkthrough/events/{{ info.event | replace("'", "") | slugify }}/"><span class="font-normal">{{ info.event }}</span></a></span>
       {%- elseif info.info %}
         {{ info.info }}
       {%- else %}
@@ -37,7 +37,7 @@ eleventyComputed:
 {%- for item in items %}
   {%- set sub %}{{ title | replace(' - Equipment', ' '+ category) }}{%- endset %}
   <ul class="scroll-mt-4" id="{{ tags | join }}-{{ item.title | slugify }}">
-  {%- call timeline(heading='h2',label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png',index=loop) %}
+  {%- call timeline(heading='h2',label=item.title,sub=sub,img='/_assets/img/encyclopedias/'+ tags +'/'+ page.fileSlug +'.png' | url,index=loop) %}
     <ul class="equip-stats text-sm">
       {%- call list(info=item.base) %}Material:{%- endcall %}
       {%- call list(info=item.power) %}{%- if (tags | join) == 'weapons' %}Strength:{%- else %}Defense:{%- endif %}{%- endcall %}

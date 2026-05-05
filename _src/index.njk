@@ -5,14 +5,14 @@ layout: 'layouts/default.njk'
 {%- from 'components/heading.njk' import heading %}
 {%- from 'components/btn.njk' import btn %}
 
-{%- call heading(tag='h1',sub=site.meta.lead,img='/_assets/img/encyclopedias/en-info.png') %}
+{%- call heading(tag='h1',sub=site.meta.lead,img='/_assets/img/encyclopedias/en-info.png' | url) %}
 {{ site.meta.title }}
 {%- endcall %}
 
 <div class="not-prose md:(grid-(& cols-2) gap-6)">
 
   <div class="game-info col-span-2">
-    <a href="https://www.play-asia.com/search/legend+of+mana+remastered?tagid=145091" class="mb-8 w-full h-48 bg-(cover center) block rounded hover:(motion-safe:animate-waggle)" style="background-image: url('/_assets/img/lom-hd.jpg');"><b class="sr-only">Buy HD Remaster</b></a>
+    <a href="https://www.play-asia.com/search/legend+of+mana+remastered?tagid=145091" class="mb-8 w-full h-48 bg-(cover center) block rounded hover:(motion-safe:animate-waggle)" style="background-image: url('{{ '/' | url }}_assets/img/lom-hd.jpg');"><b class="sr-only">Buy HD Remaster</b></a>
     <ul class="ml-0 grid-(& cols-2) gap-6 md:grid-cols-4">
       <li>
         {{ btn({
@@ -49,7 +49,7 @@ layout: 'layouts/default.njk'
   </div>
   <div class="game-info group pb-8 relative md:(p-0)">
     <div>
-      <img src="/_assets/img/game.png" alt="Legend of Mana game art" class="mx-auto group-hover:(motion-safe:animate-waggle)" />
+      <img src="{{ '/' | url }}_assets/img/game.png" alt="Legend of Mana game art" class="mx-auto group-hover:(motion-safe:animate-waggle)" />
       <div class="pt-2 pb-5 text-sm">Legend of Mana is an RPG developed and published by Square in 1999 for the Sony Playstation (also on PSN).</div>
     </div>
     <p>
@@ -64,7 +64,7 @@ layout: 'layouts/default.njk'
   </div>
   <div class="game-info group pb-8 relative md:(p-0)">
     <div>
-      <img src="/_assets/img/ost.png" alt="Legend of Mana OST art" class="mx-auto group-hover:(motion-safe:animate-waggle)" />
+      <img src="{{ '/' | url }}_assets/img/ost.png" alt="Legend of Mana OST art" class="mx-auto group-hover:(motion-safe:animate-waggle)" />
       <div class="pt-2 pb-5 text-sm">Legend of Mana OST was composed by Yoko Shimomura and contains some extremely beautify compositions.</div>
     </div>
     <p>

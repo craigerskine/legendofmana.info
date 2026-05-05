@@ -11,9 +11,9 @@ eleventyNavigation:
 
 {%- macro download(label='',file='',img='') -%}
   <div class="text-center">
-    <a href="{{ file }}" class="group text-pri-300 inline-flex relative transition hover:(motion-safe:animate-waggle text-pri-50)" download title="Download {{ label }}" aria-label="Download {{ label }}">
+    <a href="{{ file | url }}" class="group text-pri-300 inline-flex relative transition hover:(motion-safe:animate-waggle text-pri-50)" download title="Download {{ label }}" aria-label="Download {{ label }}">
       <div>
-        <img src="{{ img }}" alt="{{ label }} thumbnail" class="relative z-[-1] rounded shadow-md ring-(1 black/75)">
+        <img src="{{ img | url }}" alt="{{ label }} thumbnail" class="relative z-[-1] rounded shadow-md ring-(1 black/75)">
         <div class="p-4 w-16 bg-pri-900 text-3xl flex items-center justify-center absolute z-10 left-0 inset-y-0 motion-safe:(transition-all) group-hover:(w-full bg-pri-900/75 backdrop-blur-sm)">
           <iconify-icon icon="mdi:download-box-outline" class="group-hover:animate-bounce" noobserver></iconify-icon>
         </div>

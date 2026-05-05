@@ -14,7 +14,7 @@ body: |
 {%- macro card(param) -%}
   <li class="flex gap-4 relative">
     <picture class="w-11 shrink-0">
-      <img src="{{ param.item.avatar_url }}" alt="{{ param.item.login }} avatar" class="mt-1 w-full rounded-full" />
+      <img src="{{ param.item.avatar_url | url }}" alt="{{ param.item.login }} avatar" class="mt-1 w-full rounded-full" />
     </picture>
     <div class="grow">
       <a href="{{ param.item.html_url | url }}" class="inline-flex text-(pri-800 lg) transition hover:(text-pri-900 underline underline-offset-2) after:(absolute inset-0)">

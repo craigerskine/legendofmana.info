@@ -2,7 +2,7 @@
   {%- set tag = param.tag if param.tag else 'a' -%}
   {%- set href = param.url if param.url else '#' -%}
   {%- set attr -%}
-    {%- if tag === 'a' -%}href="{{ href }}"{%- else -%}type="button"{%- endif -%}
+    {%- if tag === 'a' -%}href="{{ href | url }}"{%- else -%}type="button"{%- endif -%}
     {%- if param.click -%} @click="{{ param.click }}"{%- endif -%}
   {%- endset -%}
 

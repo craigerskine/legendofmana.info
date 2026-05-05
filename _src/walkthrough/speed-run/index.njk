@@ -16,7 +16,7 @@ eleventyNavigation:
 
 <p class="thumb float-right ml-4 mb-5">
   <a href="#map-speedrun" @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'walkthrough/speed-run/map.jpg', imgalt: 'Speed Run Start' })">
-    <img src="/_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play Area" class="img-th" />
+    <img src="{{ '/' | url }}_assets/img/walkthrough/speed-run/map-th.jpg" alt="Play Area" class="img-th" />
   </a>
 </p>
 <div id="map-speedrun" aria-hidden="true"></div>

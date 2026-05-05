@@ -135,20 +135,6 @@ $_('.scene', function(el) {
   }).start()
 });
 
-// mana day
-let realDate = new Date();
-let realDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-let manaDays = ['Mana Holy', 'Aura', 'Salamander', 'Undine', 'Dryad', 'Jinn', 'Gnome'];
-let realDay = realDays[realDate.getDay()];
-let manaDay = manaDays[realDate.getDay()];
-$_('#head-day img', function(el){
-  el.setAttribute('src', '/_assets/img/dotw/'+ realDay +'.png')
-  el.setAttribute('alt', manaDay)
-});
-$_('#head-day b span', function(el){
-  el.innerText = manaDay
-});
-
 // alpinejs
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';

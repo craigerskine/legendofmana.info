@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link onload="this.onload=null;this.rel='stylesheet'" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" />
 
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="{{ '/' | url }}site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ '/' | url }}apple-touch-icon.png" />
 
     <meta property="og:title" content="{% if title %}{{ title +' - '+ site.meta.title }}{% else %}{{ site.meta.title }}{% endif %}" />
     <meta property="og:description" content="{{ site.meta.description }}" />
@@ -44,15 +44,15 @@
         <nav class="nav relative z-20">
           <ul class="container mx-auto mb-0 px-4 uppercase flex-(& col) items-center lg:(py-4 flex-row space-x-8)">
             <li class="pt-2 flex-1 lg:(pt-0 flex-none)">
-              <a href="/" class="inline-block hover:motion-safe:animate-waggle">
-                <img src="/_assets/img/logo.png" alt="Legend of Mana: Fan Site" />
+              <a href="{{ '/' | url }}" class="inline-block hover:motion-safe:animate-waggle">
+                <img src="{{ '/' | url }}_assets/img/logo.png" alt="Legend of Mana: Fan Site" />
               </a>
             </li>
             <li class="w-full flex lg:(w-auto flex-1 justify-end)">
               <ul class="mx-auto py-5 text-(pri-700 xs) flex items-center space-x-5 lg:(m-0 py-0 text-base space-x-8)">
                 {%- for item in collections.all | eleventyNavigation %}
                 <li class="leading-tight">
-                  <a href="{{ item.url }}" class="group text-pri-900 font-bold flex flex-col hover:(text-pri-900) lg:(font-normal items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
+                  <a href="{{ item.url | url }}" class="group text-pri-900 font-bold flex flex-col hover:(text-pri-900) lg:(font-normal items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
                     {%- if item.url == page.url or item.url in page.url %} aria-current="page"{%- endif -%}
                   >
                     {{ item.key }}
@@ -72,7 +72,7 @@
             {%- if page.url !== '/' %}
             {%- if title !== '404' %}
             <h1 class="m-0 pt-4 px-2 text-xl font-heading tracking-tight flex items-center justify-center relative z-50 sm:(text-4xl) lg:(pt-0 justify-start)">
-              <img src="/_assets/img/ltr/{{ title.substring(0, 1) | lower }}.png" alt="The letter {{ title.substring(0, 1) }}" class="mr-1" aria-hidden="true" />
+              <img src="{{ '/' | url }}_assets/img/ltr/{{ title.substring(0, 1) | lower }}.png" alt="The letter {{ title.substring(0, 1) }}" class="mr-1" aria-hidden="true" />
               <i class="sr-only">{{ title.substring(0, 1) }}</i>
               <span class="relative">
                 <b>{{ title.slice(1) }}</b>
@@ -84,9 +84,9 @@
             <ul class="mx-auto mb-0 px-4 inline-grid grid-(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
               {%- for item in mast %}
               <li{% if loop.first %} class="row-span-2"{% endif %}>
-                <a href="{{ item.url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none)"{% if loop.first %} @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
+                <a href="{{ item.url | url }}" class="group block relative hover:(shadow-xl motion-safe:(animate-waggle)) focus:(outline-none)"{% if loop.first %} @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
                   <div>
-                    <img src="{{ item.img }}" alt="{{ item.title }}" class="relative z-[-1] ring-(1 pri-900) rounded shadow-md motion-safe:(transition) group-hover:(ring-4) group-focus:(ring-4)" />
+                    <img src="{{ item.img | url }}" alt="{{ item.title }}" class="relative z-[-1] ring-(1 pri-900) rounded shadow-md motion-safe:(transition) group-hover:(ring-4) group-focus:(ring-4)" />
                     <div class="py-px px-3 bg-pri-900 text-(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm)">{{ item.title }}</div>
                   </div>
                 </a>
@@ -96,17 +96,20 @@
             </ul>
             {%- endif %}
           </div>
-          <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100" aria-hidden="true"><div class="mountains h-32 bg-(repeat-x top) opacity-25" style="background-image: url('/_assets/img/mountains.png')"></div></div>
-          <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40" aria-hidden="true"><div class="tree-line h-32 bg-(repeat-x bottom) flex" style="background-image: url('/_assets/img/tree-line.png');"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-10" data-modifier="100" aria-hidden="true"><div class="mountains h-32 bg-(repeat-x top) opacity-25" style="background-image: url('{{ '/' | url }}_assets/img/mountains.png')"></div></div>
+          <div class="scene absolute bottom-0 inset-x-0 z-30" data-modifier="40" aria-hidden="true"><div class="tree-line h-32 bg-(repeat-x bottom) flex" style="background-image: url('{{ '/' | url }}_assets/img/tree-line.png');"></div></div>
           <div class="scene absolute bottom-0 inset-x-0 z-40" data-modifier="30" aria-hidden="true"><div class="mist h-32 bg-gradient-to-t from-white via-transparent opacity-80"></div></div>
           <div class="tree hidden absolute right-4 z-20 motion-safe:animate-float top-0 lg:(block)">
-            <img src="/_assets/img/tree.png" alt="Mana Tree"{% if page.url !== '/'%} class="w-48"{% endif %} />
+            <img src="{{ '/' | url }}_assets/img/tree.png" alt="Mana Tree"{% if page.url !== '/'%} class="w-48"{% endif %} />
           </div>
         </section>
-        <div class="clouds scene h-32 bg-(repeat-x bottom) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('/_assets/img/clouds.png'); --translateY:0px;" aria-hidden="true"></div>
-        <p id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
-          <img class="motion-safe:(animate-wiggle) group-hover:(motion-safe:(animate-none))" />
-          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 absolute left-2 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:(transition-all) group-hover:(left-6 opacity-75)"><small class="block opacity-50">Today is</small><span></span> Day</b>
+        <div class="clouds scene h-32 bg-(repeat-x bottom) absolute top-0 inset-x-0 z-[-1] motion-safe:(animate-slide)" data-modifier="400" style="background-image: url('{{ '/' | url }}_assets/img/clouds.png'); --translateY:0px;" aria-hidden="true"></div>
+        <p x-data="{
+          realDay: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][new Date().getDay()],
+          manaDay: ['Mana Holy','Aura','Salamander','Undine','Dryad','Jinn','Gnome'][new Date().getDay()],
+        }" id="head-day" class="group text-xs absolute left-4 bottom-4 z-50">
+          <img :src="'{{ '/' | url }}_assets/img/dotw/' + realDay + '.png'" :alt="manaDay" class="motion-safe:(animate-wiggle) group-hover:(motion-safe:(animate-none))" />
+          <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 absolute left-2 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:(transition-all) group-hover:(left-6 opacity-75)"><small class="block opacity-50">Today is</small> <span x-text="manaDay"></span> Day</b>
         </p>
       </header>
       <main class="py-8 pb-16 w-full bg-(pri-400 fixed) relative z-20" style="background-image: url('/_assets/img/paper.png')">
@@ -277,7 +280,7 @@
         <div class="dialog-box p-8 w-auto max-w-[91.66666667%] max-h-[calc(100vh-5em)] col-start-1 row-start-1 overflow-y-auto [overscroll-behavior:contain] translate-y-3 scale-90 motion-safe:(transition-all)">
           <button type="button" @click="$el.closest('dialog').close()" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute right-4 top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="mdi:close" title="Close" noobserver></iconify-icon> <span class="sr-only">Close</span></button>
           <div class="shadow-xl">
-            <img :src="'/_assets/img/'+ modal_img" :alt="modal_imgalt +' div'" class="w-auto h-auto max-w-full max-h-[90vh]" />
+            <img :src="'{{ '/' | url }}_assets/img/'+ modal_img" :alt="modal_imgalt +' div'" class="w-auto h-auto max-w-full max-h-[90vh]" />
             <div class="sr-only" x-text="modal_imgalt"></div>
           </div>
         </div>
@@ -288,7 +291,7 @@
     </template>
 
     {%- renderblock 'js' %}
-    <script src="/_assets/js/_app.js?v={% bust %}"></script>
+    <script src="{{ '/' | url }}_assets/js/_app.js?v={% bust %}"></script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EHVBHBCCDB"></script>
     <script>

@@ -1,6 +1,6 @@
 {%- macro footerNav(label,url='#',inline=false) %}
   <li class="py-1">
-    <a href="{{ url }}" class="group py-1 font-normal text-pri-400 inline-flex items-center gap-1.5 relative motion-safe:(transition) hover:(text-pri-100)">
+    <a href="{{ url | url }}" class="group py-1 font-normal text-pri-400 inline-flex items-center gap-1.5 relative motion-safe:(transition) hover:(text-pri-100)">
       {%- if inline %}{% else %}<iconify-icon icon="game-icons:swirl-string" class="iconify text-xs opacity-50" noobserver></iconify-icon>{%- endif %}
       {{ label }}
       <b class="h-px opacity-50 flex absolute inset-x-0 bottom-1">
