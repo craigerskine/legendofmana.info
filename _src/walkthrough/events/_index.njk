@@ -22,7 +22,7 @@ permalink: 'walkthrough/events/'
   {%- for item in collections.events %}
   { 
     title: {{ item.data.title | dump | safe }},
-    url: {{ item.url | dump | safe }},
+    url: {{ item.url | url | dump | safe }},
     story_arc: {{ item.data.story_arc | default('') | dump | safe }},
   },
   {%- endfor %}

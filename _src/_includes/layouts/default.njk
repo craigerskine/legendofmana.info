@@ -112,28 +112,9 @@
           <b class="py-0.5 px-2 bg-pri-900 text-white whitespace-nowrap opacity-0 absolute left-2 top-1/2 rounded shadow-lg transform -translate-y-1/2 motion-safe:(transition-all) group-hover:(left-6 opacity-75)"><small class="block opacity-50">Today is</small> <span x-text="manaDay"></span> Day</b>
         </p>
       </header>
-      <main class="py-8 pb-16 w-full bg-(pri-400 fixed) relative z-20" style="background-image: url('/_assets/img/paper.png')">
-        <b class="-mt-4 w-full h-8 bg-(top repeat-x) absolute top-1 inset-x-0" style="background-image: url('/_assets/img/grass.png')" aria-hidden="true"></b>
+      <main class="py-8 pb-16 w-full bg-(pri-400 fixed) relative z-20" style="background-image: url('{{ '/' | url }}_assets/img/paper.png')">
+        <b class="-mt-4 w-full h-8 bg-(top repeat-x) absolute top-1 inset-x-0" style="background-image: url('{{ '/' | url }}_assets/img/grass.png')" aria-hidden="true"></b>
         <div class="container mx-auto p-4">
-          {#
-          {%- if page.url === '/' %}
-          <div class="mx-12 -mt-20 mb-12 px-6 py-12 max-w-3xl bg-pri-900/75 text-center relative isolate overflow-hidden rounded-xl shadow-2xl sm:(px-16) lg:(mx-auto)">
-            <hgroup class="flex-(& col) items-center">
-              <h1 class="text-(white wrap-balance)">Legend of Mana Info Fan Site</h1>
-              <p class="max-w-md text-(pri-300 wrap-balance) sm:(text-xl)">The ultimate resource for all things related to the deep world of Fa'Diel. Enjoy!</p>
-            </hgroup>
-            <svg viewBox="0 0 1024 1024" class="absolute left-1/2 bottom-1/2 z-[-1] h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]" aria-hidden="true">
-              <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)" fill-opacity="0.7" />
-              <defs>
-                <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217">
-                  <stop stop-color="#FFF" />
-                  <stop offset="1" stop-color="#FFF" />
-                </radialGradient>
-              </defs>
-            </svg>
-          </div>
-          {%- endif %}
-          #}
           <section class="flex flex-col lg:(-mx-4 flex-row)">
             <article class="grow md:(px-4)">
               {{ content | safe }}
@@ -154,7 +135,7 @@
                     </ul>
                   </section>
                   <section>
-                    {%- call heading(tag='h3',sub='Info',url='/encyclopedias/',img='/_assets/img/encyclopedias/en-info.png') %}
+                    {%- call heading(tag='h3',sub='Info',url='/encyclopedias/' | url,img='/_assets/img/encyclopedias/en-info.png' | url) %}
                     Encyclopedias
                     {%- endcall %}
                     <ul class="ml-0 grid-(& cols-2) gap-4">
@@ -169,7 +150,7 @@
             {%- endif %}
           </section>
         </div>
-        <div class="h-[32px] bg-(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('/_assets/img/border-bottom.png');" aria-hidden="true"></div>
+        <div class="h-[32px] bg-(bottom repeat-x) absolute bottom-0 inset-x-0" style="background-image: url('{{ '/' | url }}_assets/img/border-bottom.png');" aria-hidden="true"></div>
       </main>
       <footer class="pt-10 pb-6 w-full text-(pri-500 xs) md:(text-sm)">
         <div class="container mx-auto px-4">
@@ -221,7 +202,7 @@
                 <ul class="foot-host m-0 inline-flex space-x-4">
                   {%- for item in site.tech %}
                   <li>
-                    <a href="{{ item.url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
+                    <a href="{{ item.url | url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
                       <iconify-icon icon="{{ item.ico }}" width="1em" height="1em" inline="false" class="text-2xl" title="{{ item.title }}" noobserver></iconify-icon>
                       <span class="sr-only">{{ item.title }}</span>
                     </a>
@@ -234,7 +215,7 @@
                 <ul class="foot-donate m-0 inline-flex space-x-4">
                   {%- for item in site.donate %}
                   <li>
-                    <a href="{{ item.url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
+                    <a href="{{ item.url | url }}" class="w-[30px] h-[30px] text-pri-400 flex items-center justify-center motion-safe:(transition) hover:(text-pri-100)">
                       <iconify-icon icon="{{ item.ico }}" width="1em" height="1em" inline="false" class="text-2xl" title="Donate via {{ item.title }}" noobserver></iconify-icon>
                       <span class="sr-only">Donate via {{ item.title }}</span>
                     </a>
@@ -248,7 +229,7 @@
       </footer>
     </div>
 
-    <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('/_assets/img/chalk.png');"></div>
+    <div class="bg-fixed fixed inset-0 z-[-1]" style="background-image: url('{{ '/' | url }}_assets/img/chalk.png');"></div>
 
     <template x-teleport="main">
       <dialog x-ref="dialog" class="
