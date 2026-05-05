@@ -51,7 +51,7 @@ grid:
 {%- from 'components/list-ol.njk' import list %}
 
 <div class="prose">
-{% renderTemplate 'md' %}
+{%- set body %}
 ## Play Area { .heading }
 
 <div class="thumb not-prose float-right ml-4 mb-5">
@@ -78,7 +78,9 @@ If you are following the included [Walkthrough](../events/), you should place yo
 - [Wimpy Thugling](../events/the-wimpy-thugling/) Event
 
 *** { .mb-6 }
-{% endrenderTemplate %}
+{%- endset %}
+
+{{ body | md | safe }}
 </div>
 
 <div class="md:(flex space-x-6)">

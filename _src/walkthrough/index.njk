@@ -10,11 +10,12 @@ eleventyNavigation:
 {%- from 'components/heading.njk' import heading %}
 
 <div class="prose">
-{% renderTemplate 'md' %}
+{%- set body %}
 ## Game Systems { .heading }
 
 This walkthrough contains detailed instructions (with graphical maps of every land) on how to complete every single event in a single play-through as well as a re-imagined **'Round the Tree Again** map configuration from the [Map/Artifact Placement Guide](https://gamefaqs.gamespot.com/ps/256525-legend-of-mana/faqs/10037) at GameFaqs.
-{% endrenderTemplate %}
+{%- endset %}
+{{ body | md | safe }}
 </div>
 
 <ul class="mt-16 gap-x-4 md:(grid-(& cols-2))">

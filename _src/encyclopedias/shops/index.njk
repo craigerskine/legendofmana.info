@@ -24,11 +24,12 @@ eleventyNavigation:
 {%- endmacro %}
 
 <div class="prose">
-{% renderTemplate 'md' %}
+{%- set body %}
 ## Shop Item Types { .heading }
 
 Looking for a specific item for a Recipe? Can't seem to find that Topple Cotton? Check out the following tables to see which items are located at what Level Shop. There is also a list of the seeds and jewels available at the Bone Fortress and Bejeweled City.
-{% endrenderTemplate %}
+{%- endset %}
+{{ body | md | safe }}
 </div>
 
 <ul class="my-12 grid-(& cols-2) gap-x-4 gap-y-8 md:(grid-cols-4)">

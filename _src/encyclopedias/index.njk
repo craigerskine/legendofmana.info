@@ -9,9 +9,7 @@ eleventyNavigation:
 
 {%- from 'components/heading.njk' import heading %}
 
-{% renderTemplate 'md' %}
-## Game Systems { .heading }
-{% endrenderTemplate %}
+{{ '## Game Systems { .heading }' | md | safe }}
 
 <ul class="mt-16 gap-x-4 md:(grid-(& cols-2))">
   {%- for item in collections.all | eleventyNavigation('Encyclopedias') %}
