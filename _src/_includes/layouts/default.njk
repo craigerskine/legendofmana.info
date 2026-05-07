@@ -1,10 +1,12 @@
+{%- set pageTitle -%}{%- if title -%}{{ title + site.meta.separator }}{%- endif -%} {{ site.meta.title }}{%- endset -%}
+
 <!doctype html>
 <html lang="en" class="bg-[#0A0D0A] antialiased [&:has(:is(dialog[open]))]:(overflow-hidden [scrollbar-gutter:stable]) motion-safe:(scroll-smooth)" x-data="{ modal_img: 'x.gif', modal_imgalt: 'Alt', }" @modal.window="modal_img = $event.detail.img; modal_imgalt = $event.detail.imgalt;">
 
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>{%- if title -%}{{ title +' - ' }}{%- endif -%} {{ site.meta.title }}</title>
+    <title>{{ pageTitle | safe }}</title>
     <meta name="description" content="{{ site.meta.description }}" />
     <meta name="author" content="{{ site.meta.author + ' - '+ site.meta.author_url }}" />
     <meta name="generator" content="{{ eleventy.generator }}" />
@@ -17,11 +19,17 @@
     <link rel="manifest" href="{{ '/' | url }}site.webmanifest" />
     <link rel="apple-touch-icon" sizes="57x57" href="{{ '/' | url }}apple-touch-icon.png" />
 
-    <meta property="og:title" content="{% if title %}{{ title +' - '+ site.meta.title }}{% else %}{{ site.meta.title }}{% endif %}" />
-    <meta property="og:description" content="{{ site.meta.description }}" />
+    <meta name="title" content="{{ pageTitle | safe }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://legendofmana.info{{ page.url }}" />
-    <meta property="og:image" content="https://legendofmana.info/_assets/img/lom-hd.jpg" />
+    <meta property="og:url" content="{{ site.meta.url }}{{ page.url | url }}" />
+    <meta property="og:title" content="{{ pageTitle | safe }}" />
+    <meta property="og:description" content="{{ site.meta.description }}" />
+    <meta property="og:image" content="{{ site.meta.url }}{{ '/' | url }}og-image.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ site.meta.url }}{{ page.url | url }}" />
+    <meta property="twitter:title" content="{{ pageTitle | safe }}" />
+    <meta property="twitter:description" content="{{ site.meta.description }}" />
+    <meta property="twitter:image" content="{{ site.meta.url }}{{ '/' | url }}og-image.jpg" />
 
     {%- from 'components/heading.njk' import heading -%}
     {%- from 'components/aside-link.njk' import asideLink -%}
