@@ -52,7 +52,3 @@ donate:
     url: https://github.com/sponsors/craigerskine
     type: sponsor
     enabled: true
-analytics: |
-  // google analytics
-  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-  ga('create', 'UA-6318307-4', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')

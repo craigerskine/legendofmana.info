@@ -137,7 +137,6 @@ $_('.scene', function(el) {
 
 // alpinejs
 import Alpine from 'alpinejs';
-import collapse from '@alpinejs/collapse';
-Alpine.plugin([collapse]);
+// Alpine.plugin([anchor]);
 window.Alpine = Alpine;
 Alpine.start();
