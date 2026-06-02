@@ -23,9 +23,18 @@ install({
     },
     extend: {
       colors: ({ theme }) => ({
-        gray: theme('colors.neutral'),
-        pri: theme('colors.emerald'),
-        sec: theme('colors.sky'),
+        gray: {
+          ...theme('colors.neutral'),
+          950: '#0A0A0A',
+        },
+        pri: {
+          ...theme('colors.emerald'),
+          950: '#022C22',
+        },
+        sec: {
+          ...theme('colors.sky'),
+          950: '#082F49',
+        },
       }),
       fontFamily: ({ theme }) => ({
         heading: ['Fraunces', ...theme('fontFamily.serif')],
