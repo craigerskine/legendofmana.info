@@ -95,7 +95,7 @@
             <ul class="mx-auto mb-0 px-4 inline-grid grid-(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
               {%- for item in mast %}
               <li{% if loop.first %} class="row-span-2"{% endif %}>
-                <a href="{{ item.url | url }}" class="group block relative outline-(& 2 transparent offset-2) rounded transition-all hover:(outline-pri-900 motion-safe:(animate-waggle))"{% if loop.first %} @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
+                <a href="{{ item.url | url }}" class="group block relative outline-(& 2 transparent offset-2) rounded transition-all hover:(outline-current motion-safe:(animate-waggle)) focus-visible:(outline-current)"{% if loop.first %} @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
                   <img src="{{ item.img | url }}" alt="{{ item.title }}" class="relative z-[-1] ring-(1 pri-900) rounded shadow-md" />
                   <span class="py-px px-3 bg-pri-900 text-(white [10px]) font-normal block absolute z-10 left-0 bottom-1 rounded-r md:(text-sm) transition group-hover:(bg-pri-950)">{{ item.title }}</span>
                 </a>
