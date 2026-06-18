@@ -15,7 +15,7 @@
     "instant.page"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-fetch": "^5.1.2",
     "@11ty/eleventy-navigation": "^1.0.5",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
@@ -31,7 +31,7 @@
     "esbuild": "^0.25.12",
     "iconify-icon": "^3.0.2",
     "instant.page": "^5.2.0",
-    "js-yaml": "^4.1.1",
+    "js-yaml": "^4.2.0",
     "markdown-it-attrs": "^4.5.0",
     "markdown-it-bracketed-spans": "^1.0.1",
     "markdown-it-footnote": "^4.0.0"

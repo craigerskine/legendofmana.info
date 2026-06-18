@@ -1,7 +1,54 @@
+# dependencies
+.lerna
+node_modules/
+npm-debug.log*
+package-lock.json
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# output
+/build/
+/dist/
+/public/
+
+# cache
+.cache/
+.eleventy/
+
+# environment
+.env
+.env.*.local
+.env.local
+
+# logs
+*.log
+logs/
+
+# runtime data
+*.pid
+*.pid.lock
+*.seed
+pids/
+
+# os
+._*
 .DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ide
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+.claude/
+.idea/
+.vscode/*
 *.code-workspace
-/.cache
-/node_modules
-/public
-/_dev
-/_design
+*.swo
+*.swp
+*~
