@@ -266,7 +266,7 @@
         [&[open]]:(pointer-events-auto visible opacity-100)
         [&[open]_.dialog-box]:(translate-y-0 scale-100)
         [&::backdrop]:(bg-black/70)
-      ">
+      " @close="modal_img = 'x.gif', modal_imgalt = ''">
         <div class="dialog-box p-8 w-auto max-w-[91.66666667%] max-h-[calc(100vh-5em)] col-start-1 row-start-1 overflow-y-auto [overscroll-behavior:contain] translate-y-3 scale-90 motion-safe:(transition-all)">
           <button type="button" @click="$el.closest('dialog').close()" class="w-8 h-8 bg-black text-white font-black flex items-center justify-center absolute right-4 top-4 shadow rounded-full ring-(inset 2 white)"><iconify-icon icon="mdi:close" title="Close" noobserver></iconify-icon> <span class="sr-only">Close</span></button>
           <div class="shadow-xl">
