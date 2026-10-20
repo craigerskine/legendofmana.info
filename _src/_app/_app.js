@@ -38,7 +38,7 @@ install({
       }),
       fontFamily: ({ theme }) => ({
         heading: ['Fraunces', ...theme('fontFamily.serif')],
-        serif: ['"Source Serif 4"', ...theme('fontFamily.serif')],
+        serif: ['Aleo', ...theme('fontFamily.serif')],
       }),
       spacing: {
         '50': '50px',
