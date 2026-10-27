@@ -63,14 +63,12 @@
               <ul class="mx-auto py-5 text-(pri-700 xs) flex items-center space-x-5 lg:(m-0 py-0 text-base space-x-8)">
                 {%- for item in collections.all | eleventyNavigation %}
                 <li class="leading-tight">
-                  <a href="{{ item.url | url }}" class="group text-pri-900 font-bold flex flex-col hover:(text-pri-900) lg:(font-normal items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
+                  <a href="{{ item.url | url }}" class="group text-pri-900 font-bold flex-(& col) hover:(text-pri-900) lg:(items-end) relative{% if item.url == page.url or item.url in page.url %} active{% endif %}"
                     {%- if item.url == page.url or item.url in page.url %} aria-current="page"{%- endif -%}
                   >
                     {{ item.key }}
                     <small class="text-xs normal-case font-normal order-first lg:(tracking-widest)">{{ item.title }}</small>
-                    <b class="w-full flex absolute -bottom-1 inset-x-0">
-                      <b class="m-auto py-px bg-pri-700 opacity-50 motion-safe:(transition-all) group-hover:(w-full){% if item.url == page.url or item.url in page.url %} w-full{% else %} w-0{% endif %}"></b>
-                    </b>
+                    <i class="w-full flex absolute -bottom-1 inset-x-0"><i class="m-auto py-px bg-pri-700 opacity-50 motion-safe:(transition-all) group-hover:(w-full){% if item.url == page.url or item.url in page.url %} w-full{% else %} w-0{% endif %}"></i></i>
                   </a>
                 </li>
                 {%- endfor %}
