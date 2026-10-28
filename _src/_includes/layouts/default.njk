@@ -85,12 +85,12 @@
               <i class="sr-only">{{ title.substring(0, 1) }}</i>
               <span class="relative">
                 <b>{{ title.slice(1) }}</b>
-                {%- if story_arc %}<small class="py-px px-3 ring-(1 inset current) bg-white/50 text-[11px] leading-normal tracking-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }} Arc</small>{%- endif %}
+                {%- if story_arc %}<small class="py-px px-3 ring-(1 inset current) bg-white/50 text-[11px] leading-normal font-(serif bold) tracking-normal inline-block absolute top-full left-0 rounded-full">{{ story_arc }} Arc</small>{%- endif %}
               </span>
             </h1>
             {%- endif %}
             {%- else %}
-            <ul class="mx-auto mb-0 px-4 inline-grid grid-(flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
+            <ul class="mx-auto mb-0 px-4 w-fit grid-(& flow-row cols-2) gap-5 relative z-30 lg:(px-0 grid-cols-4)">
               {%- for item in mast %}
               <li{% if loop.first %} class="row-span-2"{% endif %}>
                 <a href="{{ item.url | url }}" class="group block relative outline-(& 2 transparent offset-2) rounded transition-all hover:(outline-current motion-safe:(animate-waggle)) focus-visible:(outline-current)"{% if loop.first %} @click.prevent="$refs.dialog.showModal(); $dispatch('modal', { img: 'mana-story.jpg', imgalt: 'The Mana Story' })"{% endif %}>
